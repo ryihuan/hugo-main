@@ -1,0 +1,16 @@
+baseURL = 'https://ryihuan.github.io/'
+languageCode = 'zh-cn'
+title = '????'
+theme = 'hugo-theme-fluency-master'
+
+defaultContentLanguage = 'zh-cn'
+hasCJKLanguage = true
+
+[params]
+  description = '??????'
+
+[menu]
+  [[menu.main]]
+    name = '??'
+    url = '/'
+    weight = 1
