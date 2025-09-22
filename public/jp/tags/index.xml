@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tags on SOS</title>
-    <link>http://localhost:1313/jp/tags/</link>
+    <link>https://ryihuan.github.io/jp/tags/</link>
     <description>Recent content in tags on SOS</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sat, 01 Feb 2025 10:00:00 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/jp/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ryihuan.github.io/jp/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>にゃー</title>
-      <link>http://localhost:1313/jp/tags/%E3%81%AB%E3%82%83%E3%83%BC/</link>
+      <link>https://ryihuan.github.io/jp/tags/%E3%81%AB%E3%82%83%E3%83%BC/</link>
       <pubDate>Sat, 01 Feb 2025 10:00:00 -0300</pubDate>
-      <guid>http://localhost:1313/jp/tags/%E3%81%AB%E3%82%83%E3%83%BC/</guid>
+      <guid>https://ryihuan.github.io/jp/tags/%E3%81%AB%E3%82%83%E3%83%BC/</guid>
       <description></description>
     </item>
     <item>
       <title>ゴゴ</title>
-      <link>http://localhost:1313/jp/tags/%E3%82%B4%E3%82%B4/</link>
+      <link>https://ryihuan.github.io/jp/tags/%E3%82%B4%E3%82%B4/</link>
       <pubDate>Wed, 29 Jan 2025 21:05:11 -0300</pubDate>
-      <guid>http://localhost:1313/jp/tags/%E3%82%B4%E3%82%B4/</guid>
+      <guid>https://ryihuan.github.io/jp/tags/%E3%82%B4%E3%82%B4/</guid>
       <description></description>
     </item>
   </channel>

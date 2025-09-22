@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tags on SOS</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://ryihuan.github.io/tags/</link>
     <description>Recent content in tags on SOS</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 01 Feb 2025 10:00:00 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ryihuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>meow</title>
-      <link>http://localhost:1313/tags/meow/</link>
+      <link>https://ryihuan.github.io/tags/meow/</link>
       <pubDate>Sat, 01 Feb 2025 10:00:00 -0300</pubDate>
-      <guid>http://localhost:1313/tags/meow/</guid>
+      <guid>https://ryihuan.github.io/tags/meow/</guid>
       <description></description>
     </item>
     <item>
       <title>rawr</title>
-      <link>http://localhost:1313/tags/rawr/</link>
+      <link>https://ryihuan.github.io/tags/rawr/</link>
       <pubDate>Wed, 29 Jan 2025 21:05:11 -0300</pubDate>
-      <guid>http://localhost:1313/tags/rawr/</guid>
+      <guid>https://ryihuan.github.io/tags/rawr/</guid>
       <description></description>
     </item>
   </channel>
