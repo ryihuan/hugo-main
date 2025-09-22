@@ -1,0 +1,9 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'zh-cn'
+title = '????'
+theme = 'hugo-theme-fluency-master'
+defaultContentLanguage = 'zh-cn'
+hasCJKLanguage = true
+
+[params]
+  description = '??????'

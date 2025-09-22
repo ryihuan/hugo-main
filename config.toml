@@ -1,16 +1,4 @@
-baseURL = 'https://ryihuan.github.io/'
+baseURL = 'https://ryihuan.github.io/hugo-main/'
 languageCode = 'zh-cn'
 title = '????'
 theme = 'hugo-theme-fluency-master'
-
-defaultContentLanguage = 'zh-cn'
-hasCJKLanguage = true
-
-[params]
-  description = '??????'
-
-[menu]
-  [[menu.main]]
-    name = '??'
-    url = '/'
-    weight = 1
