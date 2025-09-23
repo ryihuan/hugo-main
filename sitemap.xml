@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://ryihuan.github.io/hugo-main/</loc>
-  </url><url>
-    <loc>https://ryihuan.github.io/hugo-main/categories/</loc>
-  </url><url>
-    <loc>https://ryihuan.github.io/hugo-main/tags/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://ryihuan.github.io/note/sitemap.xml</loc>
+    
+      <lastmod>2025-09-23T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://ryihuan.github.io/paint/sitemap.xml</loc>
+    
+      <lastmod>2025-09-16T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://ryihuan.github.io/write/sitemap.xml</loc>
+    
+      <lastmod>2025-09-23T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>
