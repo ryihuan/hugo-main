@@ -298,6 +298,14 @@ a:hover {
 main {
     padding: 1em;
     padding-top: 0;
+    /* 宽度控制 */
+    max-width: min(900px, 90vw); /* 最大800px，但在小屏幕上不超过视口90% */
+    margin: 0 auto;
+    width: 100%;
+    /* 文本换行控制 */
+    overflow-wrap: break-word;
+    /* 关键：防止内部元素撑开main */
+    overflow-x: hidden;
 }
 
 #top {
@@ -541,10 +549,33 @@ header h1 a:hover {
 }
 
 pre {
-    border:1px solid var(--outline-color);
-    border-radius:6px;
-    padding:0.75rem 1rem;
-    margin:1.2rem 0;
-    overflow-x:auto;  
+    border: 1px solid var(--outline-color);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin: 1.2rem 0;
+    overflow-x: auto;
+    /* 确保pre宽度不超过父容器main */
+    max-width: 100%;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
 }
+/* 强制所有屏幕尺寸都显示滚动条 */
+@media (min-width: 769px) {
+    pre {
+        overflow-x: auto; /* 桌面端也显示滚动条 */
+    }
+}
+
+/* 手机端优化 */
+@media (max-width: 768px) {
+    pre {
+        margin: 1.2rem -0.5rem;
+        border-radius: 4px;
+        padding: 0.5rem;
+        /* 手机端更明显的滚动提示 */
+        scrollbar-width: thin;
+    }
+}
+
 </style>

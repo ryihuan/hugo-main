@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="write">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>GD Script教程笔记|Brackeys | SOS</title>
+    <link rel="canonical" href="http://localhost:1313/">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+    
+    <meta name="description" content="对照Brackeys的教程做的个人学习笔记
+本来写在星屑页面上，但觉得搭个博客来写会更好阅读一些，于是就搭了这个博客（？饺子醋）
+YouTube的Brackeys频道
+B站搬运熟肉
+Hello, World！
+ func _ready()
+
+节点第一次进入场景时会调用此函数。可以在此放置需要游戏运行时立刻执行的代码。
+
+pass
+
+意味着什么都不做，出现在尚未填写的函数中
+
+print(&quot;Hello, World!&quot;)
+
+
+控制台会打印输入的信息
+
+
+gdscript使用tab缩进来确定代码的结构，并对大小写敏感
+
+
+Modifying nodes 1.0
+
+
+调整字体大小：右侧栏-control-theme overrides-font sizes
+
+
+通过脚本来编辑标签：1.引用label；2.获取label中的属性（右侧栏上有，鼠标停留会显示代码）
+引用：可以将左侧栏的laber拖拽到脚本中，通过.text来获取text属性
+也可以用这种方法改变其他的东西，如颜色
+有一个叫modulate的属性，可以用来修改立绘和UI的颜色（右侧栏-CanvasItem-Visibility-Modulate）
+
+
+func _ready() -&gt; void:
+	$Label.text = &#34;Hello, World!&#34;
+	$Label.modulate = Color.GREEN
+Input
+
+
+项目-项目设置-输入映射
+在此可以添加动作，动作允许我们将键位绑定到某些事件上
+命名并添加动作，点击加号输入需要绑定的键位
+
+
+在脚本中，需要创建一个输入函数，输入func _input回车，会自动补全
+这个函数会在每次游戏接收任何输入时调用。需要检查触发输入的事件是否是我们按下的操作：
+if event.is_action_pressed():括号会弹出可选的目标动作
+假设操作对象是label，需要在按键时将其颜色改为红色，则引用label，
+$Label.modulate = Color.RED
+
+
+检查动作何时结束
+if event.is_action_released():
+利用相同的代码将颜色改回绿色
+$Label.modulate = Color.GREEN
+
+
+Variables 1.0
+
+
+变量：保存信息的容器
+例如使用变量保存玩家角色的信息
+
+
+将默认血量设置为100
+var health = 100
+然后可以在_ready()函数中打印这个变量
+print(health)
+
+
+可以对血量进行计算
+
+
+health = 40
+health = 20&#43;30
+health &#43;= 20
+health -= 10
+health *= 4
+health /= 2
+
+写一个每次按键减少血量的脚本
+
+extends Node
+
+var health: int = 100
+
+func _input(event: InputEvent) -&gt; void:
+	if event.is_action_pressed(&#34;my_action&#34;):
+		health -= 10
+		print(&#34;Health: %d&#34; % health)
+If-statements（条件语句）
+
+
+if语句检测一个条件是否被满足">
+    
+    
+    <meta name="keywords" content="Godot, GD Script">
+    
+    
+    <style>
+
+
+
+
+    
+        
+    
+
+
+:root {
+    --site-bg: url("/bg-rain.gif");
+    --accent-color: #f55cc0;
+    --select-color: #ffc1e9;
+    --link-color: #5083C1;
+    --bg-color: #CEEAFF;
+    --text-color: #191919;
+    --bg-color2: white;
+    --border-color: #215697;
+    --special-text-color: #215697;
+    --post-header-color: white;
+    --post-shadow-color: #21569760;
+    --outline-color: #6EAAD6;
+    --outline-color2: #CEEAFF;
+    --list-style-type: "";
+    --list-style-image: url("/flower.png");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-color) #00000000;
+    }
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    -webkit-border-radius: .3rem;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+::selection {
+    background: var(--select-color);
+    color: var(--border-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: var(--site-bg);
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+p {line-height: 1.5em;}
+
+div.tags {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: .5rem 0;
+}
+
+div.tags > p.tags {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+div.tags > a {
+    margin-top: .5rem;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: var(--post-header-color);
+    filter: drop-shadow(2px 0 0 var(--outline-color)) drop-shadow(0 2px 0 var(--outline-color)) drop-shadow(-2px 0 0 var(--outline-color)) drop-shadow(0 -2px 0 var(--outline-color))drop-shadow(0 1px 1px var(--outline-color2)) drop-shadow(1px 0 1px var(--outline-color2));
+}
+
+h4,
+h5,
+h6 {color: var(--special-text-color);}
+
+header {
+    background-size: 100%;
+    background-position: center;
+    min-height: 80px;
+    margin: 0 0;
+    align-content: center;
+}
+
+header > h1 {
+    background-color: var(--bg-color2);
+    color: var(--special-text-color);
+    margin: 0 auto;
+    font-size: 2em;
+ 
+     
+    max-width: 48rem;
+    padding: 6px 12px;
+    border-radius: 1em;
+    border: 4px double var(--outline-color);
+    filter: none;
+    text-align: center;
+}
+
+ul.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+
+ul.tags {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+ul.tags li {
+    display: inline-block;
+    margin: 0 .2rem;
+}
+
+li.page-item {
+    list-style: none;
+}
+
+li.page-item a{
+    display: inline-flex;
+    font-size: 1rem;
+    margin: .2rem;
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+    padding: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: .3em;
+    margin-bottom: 1em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+
+    text-decoration: none;
+    user-select: none;
+}
+
+li.page-item.active a{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+li.page-item.disabled a{
+    cursor: not-allowed;
+}
+
+li.page-item:not(.disabled):not(.active) a:hover{
+    background-color: var(--select-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+li {
+    
+        list-style-image: var(--list-style-image);
+    
+}
+
+nav {margin: 1em;}
+
+nav.links > ul {
+    max-width: 960px;
+    margin: auto;
+    line-height: 3rem;
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: space-evenly;
+}
+
+nav.links li {
+    text-align: center;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+nav.links li > a {
+    font-weight: bold;
+    background-color: var(--bg-color);
+    border: 4px double var(--outline-color);
+    padding: .5em 3em;
+    text-decoration: none;
+}
+
+nav.links li > a:visited {color: var(--link-color);}
+nav.links li > a:hover {
+    color: var(--accent-color);
+    background-color: var(--select-color);
+}
+
+nav.languages {
+    margin: .3em;
+    text-align: center;
+}
+
+
+nav.languages ul {
+    display: inline-block;
+}
+
+nav.languages ul li {
+    display: inline-block;
+}
+
+a {
+    color: var(--link-color);
+    border-radius: .3em;
+    transition: .2s ease-out;
+}
+
+a:visited {
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: .2s ease;
+}
+
+#sidebar {
+    background-color: var(--bg-color2);
+    color: var(--special-text-color);
+    height: fit-content;
+    min-width: 320px;
+    margin-top: 1em;
+    margin-right: 2em;
+    border-radius: .5em;
+}
+
+.small-box {
+    max-width: 240px;
+    margin: auto;
+    border: 2px solid var(--bg-color);
+    font-size: 11px;
+    line-height: 1.5rem;
+}
+
+#avatar {
+    margin: .5em;
+    max-width: 320px;
+}
+
+ 
+.flower {
+    width: 300px; 
+    aspect-ratio: 1;
+    
+    
+        border-radius: 50%;
+    
+    
+}
+
+#bio {
+    margin: 20px;
+    padding: .2em;
+    background: var(--bg-color);
+    border: 4px double var(--bg-color2);
+    border-radius: 2em;
+    font-size: small;
+}
+
+#bio p { margin: 1em; }
+
+#content {
+    display: flex;
+    max-width: 960px;
+    margin: auto;
+}
+
+main {
+    padding: 1em;
+    padding-top: 0;
+     
+    max-width: min(900px, 90vw);  
+    margin: 0 auto;
+    width: 100%;
+     
+    overflow-wrap: break-word;
+     
+    overflow-x: hidden;
+}
+
+#top {
+    background-color: var(--bg-color);
+}
+
+#top section {
+    background-color: var(--bg-color2);
+    border-radius: .5em;
+    margin-bottom: 10px;
+    padding: .5em 1em;
+    width: 100%;
+}
+
+article {
+    background-color: var(--bg-color2);
+    padding: 1em;
+    border: 2px solid var(--border-color);
+    border-radius: .3em;
+    margin-bottom: 1em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+}
+article img {
+    max-width: 100%;
+}
+
+.readmore summary {
+    font-weight: bold;
+    color: var(--special-text-color);
+    list-style: none;
+    cursor: pointer;
+}
+
+header h1 a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--special-text-color);
+}
+
+header h1 a:visited {
+    color: inherit;
+}
+
+header h1 a:hover {
+    color: inherit;
+}
+
+.readmore div {
+    display: inline;
+}
+
+.readmore div p {
+    display: inline;
+}
+
+.readmore summary::-webkit-details-marker {
+  display: none;
+}
+
+.readmore[open] > summary {
+    border-bottom: 2px dashed var(--bg-color);
+    padding-bottom: .6em;
+    margin-bottom: .6em;
+}
+
+.post-header {
+    color: var(--special-text-color);
+    font-weight: bold;
+    padding: .5rem 0;
+    border-bottom: 4px double var(--outline-color);
+}
+
+.timestamp {
+    font-weight: normal;
+    font-size: smaller;
+    margin: .2em;
+    float: right;
+}
+
+.tag-item p {
+    font-size: smaller;
+}
+
+.photosetx2,
+.photosetx3 {
+    display: grid;
+    gap: 4px;
+    align-items: center;
+}
+
+.photosetx2 {grid-template-columns: 1fr 1fr;}
+.photosetx3 {grid-template-columns: 1fr 1fr 1fr;}
+
+.cropped {
+    width: 156px;
+    height: 156px;
+    overflow: hidden;
+    object-position: 25% 25%;
+}
+.photosetx2 img,
+.photosetx3 img {object-fit: cover;}
+
+.center { text-align: center; }
+
+.img-right {
+    max-width: 7.5em;
+    max-height: 7.5em;
+    float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.small-text {
+    font-size: 11px;
+    text-shadow: var(--bg-color) 1px 1px;
+}
+
+.dropbox-btn {
+    color: var(--link-color);
+    font-weight: bold;
+    background-color: var(--bg-color);
+     
+    border: 1px solid var(--outline-color);
+     
+    text-decoration: none;
+}
+
+.dropbox-content[visible] {
+    display: block;
+}
+
+.dropbox-content {
+    display: none;
+    position: absolute;
+    z-index: 1
+}
+
+.table-of-contents {
+    background-color: var(--bg-color2);
+    padding: .3em;
+    border: 2px solid var(--border-color);
+    border-radius: .3em;
+    box-shadow: var(--post-shadow-color) 5px 5px;
+}
+
+.table-of-contents.sidebar {
+    position: sticky;
+    top: 1rem;
+    height: fit-content;
+    width: 10rem;
+    flex-shrink: 0;
+    max-height: calc(100vh - 2rem);
+    overflow-x: auto;
+}
+
+.table-of-contents.float {
+    width: max-content;
+    max-width: 50vw;
+    max-height: 50%;
+    overflow: auto;
+}
+
+.table-of-contents nav {
+    margin: 0 .5em;
+}
+
+.table-of-contents nav ul {
+    margin: .5em 1em;
+    padding: 0;
+}
+
+.table-of-contents nav li {
+    margin: .3em 0;
+}
+
+#single-post {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#single-post > article {
+    max-width: 48rem
+}
+
+#single-post > article > #post-toc-mobile {
+    display: none;
+}
+
+ 
+@media only screen and (max-width: 800px) {
+    #content {
+        flex-wrap: wrap;
+    }
+    #sidebar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 0;
+        margin-right: 0;
+        margin-bottom: 1em;
+        border-radius: .3em;
+    }
+    header {min-height: 110px;}
+    header > h1 { 
+        width: fit-content;
+        padding: .3em 1em;
+    }
+    nav.links > ul {
+     
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #bio {width: 50%;}
+    
+    #sidebar ul {
+        line-height: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    #sidebar > .small-box li {
+        margin: .3em 1em;
+    }
+
+    #single-post > .table-of-contents.sidebar {
+        display: none;
+    }
+
+    #single-post > article > #post-toc-mobile {
+        display: inline;
+    }
+}
+
+pre {
+    border: 1px solid var(--outline-color);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin: 1.2rem 0;
+    overflow-x: auto;
+     
+    max-width: 100%;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
+}
+ 
+@media (min-width: 769px) {
+    pre {
+        overflow-x: auto;  
+    }
+}
+
+ 
+@media (max-width: 768px) {
+    pre {
+        margin: 1.2rem -0.5rem;
+        border-radius: 4px;
+        padding: 0.5rem;
+         
+        scrollbar-width: thin;
+    }
+}
+
+</style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta charset="utf-8">
+</head>
+<body>
+        <header><h1 id="SOS"><a href="http://localhost:1313/write/">SOS</a></h1></header>
+<main>
+    
+<div id="single-post">
+    <aside class="table-of-contents sidebar">
+            
+
+  <nav class="toc">
+  <ul>
+
+      <li>
+        <a href="/write/posts/note/#hello-world" class="toc-item toc-level-1">
+          
+          
+          
+          1.
+           Hello, World！
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#modifying-nodes-10" class="toc-item toc-level-1">
+          
+          
+          
+          2.
+           Modifying nodes 1.0
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#input" class="toc-item toc-level-1">
+          
+          
+          
+          3.
+           Input
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#variables-10" class="toc-item toc-level-1">
+          
+          
+          
+          4.
+           Variables 1.0
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#if-statements%e6%9d%a1%e4%bb%b6%e8%af%ad%e5%8f%a5" class="toc-item toc-level-1">
+          
+          
+          
+          5.
+           If-statements（条件语句）
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#comments" class="toc-item toc-level-1">
+          
+          
+          
+          6.
+           Comments
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#variables-20" class="toc-item toc-level-1">
+          
+          
+          
+          7.
+           Variables 2.0
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#data-types" class="toc-item toc-level-1">
+          
+          
+          
+          8.
+           DATA TYPES
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#functions" class="toc-item toc-level-1">
+          
+          
+          
+          9.
+           Functions
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#random-numbers" class="toc-item toc-level-1">
+          
+          
+          
+          10.
+           Random numbers
+        </a>
+      </li>
+  </ul>
+  </nav>
+
+    </aside>
+    
+
+    <article>
+        <div id="post-toc-mobile">
+            <button id="post-toc-btn" class="dropbox-btn" onclick="toggleDropbox('post-toc')" >☰</button>
+            <div id="post-toc" class="dropbox-content table-of-contents float">
+                
+
+  <nav class="toc">
+  <ul>
+
+      <li>
+        <a href="/write/posts/note/#hello-world" class="toc-item toc-level-1">
+          
+          
+          
+          1.
+           Hello, World！
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#modifying-nodes-10" class="toc-item toc-level-1">
+          
+          
+          
+          2.
+           Modifying nodes 1.0
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#input" class="toc-item toc-level-1">
+          
+          
+          
+          3.
+           Input
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#variables-10" class="toc-item toc-level-1">
+          
+          
+          
+          4.
+           Variables 1.0
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#if-statements%e6%9d%a1%e4%bb%b6%e8%af%ad%e5%8f%a5" class="toc-item toc-level-1">
+          
+          
+          
+          5.
+           If-statements（条件语句）
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#comments" class="toc-item toc-level-1">
+          
+          
+          
+          6.
+           Comments
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#variables-20" class="toc-item toc-level-1">
+          
+          
+          
+          7.
+           Variables 2.0
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#data-types" class="toc-item toc-level-1">
+          
+          
+          
+          8.
+           DATA TYPES
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#functions" class="toc-item toc-level-1">
+          
+          
+          
+          9.
+           Functions
+        </a>
+      </li>
+
+      <li>
+        <a href="/write/posts/note/#random-numbers" class="toc-item toc-level-1">
+          
+          
+          
+          10.
+           Random numbers
+        </a>
+      </li>
+  </ul>
+  </nav>
+
+            </div>
+        </div>
+        
+        <h2>GD Script教程笔记|Brackeys</h2>
+        
+        tags:
+        
+        <a href="/write/tags/Godot">Godot</a>,
+        
+        <a href="/write/tags/GD%20Script">GD Script</a>
+        
+        <div class="post-header">
+        @me <span class="timestamp">23/09/2025</span>
+        </div>
+        <p><p>对照Brackeys的教程做的个人学习笔记</p>
+<p><!-- raw HTML omitted -->本来写在星屑页面上，但觉得搭个博客来写会更好阅读一些，于是就搭了这个博客（？饺子醋）<!-- raw HTML omitted --></p>
+<p><a href="https://www.youtube.com/watch?v=e1zJS31tr88">YouTube的Brackeys频道</a><br>
+<a href="https://www.bilibili.com/BV1fx4y1p79u">B站搬运熟肉</a></p>
+<h2 id="hello-world">Hello, World！</h2>
+<p><code> func _ready()</code></p>
+<ul>
+<li>节点第一次进入场景时会调用此函数。可以在此放置需要游戏运行时立刻执行的代码。</li>
+</ul>
+<p><code>pass</code></p>
+<ul>
+<li>意味着什么都不做，出现在尚未填写的函数中</li>
+</ul>
+<p><code>print(&quot;Hello, World!&quot;)</code></p>
+<ul>
+<li>
+<p>控制台会打印输入的信息</p>
+</li>
+<li>
+<p>gdscript使用tab缩进来确定代码的结构，并对大小写敏感</p>
+</li>
+</ul>
+<h2 id="modifying-nodes-10">Modifying nodes 1.0</h2>
+<ul>
+<li>
+<p>调整字体大小：右侧栏-control-theme overrides-font sizes</p>
+</li>
+<li>
+<p>通过脚本来编辑标签：1.引用label；2.获取label中的属性（右侧栏上有，鼠标停留会显示代码）<br>
+引用：可以将左侧栏的laber拖拽到脚本中，通过<code>.text</code>来获取text属性<br>
+也可以用这种方法改变其他的东西，如颜色<br>
+有一个叫modulate的属性，可以用来修改立绘和UI的颜色（右侧栏-CanvasItem-Visibility-Modulate）</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_ready</span>() <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">void</span>:
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">$Label</span><span style="color:#f92672">.</span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, World!&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">$Label</span><span style="color:#f92672">.</span>modulate <span style="color:#f92672">=</span> <span style="color:#a6e22e">Color</span><span style="color:#f92672">.</span>GREEN
+</span></span></code></pre></div><h2 id="input">Input</h2>
+<ul>
+<li>
+<p>项目-项目设置-输入映射<br>
+在此可以添加动作，动作允许我们将键位绑定到某些事件上<br>
+命名并添加动作，点击加号输入需要绑定的键位</p>
+</li>
+<li>
+<p>在脚本中，需要创建一个输入函数，输入<code>func _input</code>回车，会自动补全<br>
+这个函数会在每次游戏接收任何输入时调用。需要检查触发输入的事件是否是我们按下的操作：<br>
+<code>if event.is_action_pressed():</code>括号会弹出可选的目标动作<br>
+假设操作对象是label，需要在按键时将其颜色改为红色，则引用label，<br>
+<code>$Label.modulate = Color.RED</code></p>
+</li>
+<li>
+<p>检查动作何时结束<br>
+<code>if event.is_action_released():</code><br>
+利用相同的代码将颜色改回绿色<br>
+<code>$Label.modulate = Color.GREEN</code></p>
+</li>
+</ul>
+<h2 id="variables-10">Variables 1.0</h2>
+<ul>
+<li>
+<p>变量：保存信息的容器<br>
+例如使用变量保存玩家角色的信息</p>
+</li>
+<li>
+<p>将默认血量设置为100<br>
+<code>var health = 100</code><br>
+然后可以在<code>_ready()</code>函数中打印这个变量<br>
+<code>print(health)</code></p>
+</li>
+<li>
+<p>可以对血量进行计算</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span>health <span style="color:#f92672">=</span> <span style="color:#ae81ff">40</span>
+</span></span><span style="display:flex;"><span>health <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span><span style="color:#f92672">+</span><span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span>health <span style="color:#f92672">+=</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>health <span style="color:#f92672">-=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>health <span style="color:#f92672">*=</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>health <span style="color:#f92672">/=</span> <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><ul>
+<li>写一个每次按键减少血量的脚本</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Node</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> health: <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_input</span>(event: <span style="color:#a6e22e">InputEvent</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">void</span>:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> event<span style="color:#f92672">.</span><span style="color:#a6e22e">is_action_pressed</span>(<span style="color:#e6db74">&#34;my_action&#34;</span>):
+</span></span><span style="display:flex;"><span>		health <span style="color:#f92672">-=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>		print(<span style="color:#e6db74">&#34;Health: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> health)
+</span></span></code></pre></div><h2 id="if-statements条件语句">If-statements（条件语句）</h2>
+<ul>
+<li>
+<p>if语句检测一个条件是否被满足</p></p>
+        
+        <div class="auto-numbering" id="full-content"></li>
+<li>
+<p>可以用if语句对变量做出反应，如希望玩家在血量为0时死亡</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> health <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>	health <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>	print(<span style="color:#e6db74">&#34;Game Over&#34;</span>)
+</span></span></code></pre></div><p>此代码中使用<code>if health &lt;= 0:</code>将血量与0比较。<br>
+其他的比较还有：<br>
+x == y 等于<br>
+x &gt; y 大于<br>
+x &gt;= y 大于等于<br>
+x != y 不等于<br>
+x &lt; y 小于<br>
+x &lt;= y 小于等于</p>
+<ul>
+<li>
+<p>可以使用<code>and</code>关键词添加另一个条件并确保两者都需要满足<br>
+使用<code>or</code>确保只需要满足其中之一条件<br>
+<code>if x == y or y &gt; z</code></p>
+</li>
+<li>
+<p>还可以使用<code>else</code>关键词来定义当条件不满足时发生什么</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>	print(<span style="color:#e6db74">&#34;You are still alive&#34;</span>)
+</span></span></code></pre></div><ul>
+<li>用<code>elif</code>合并else和if语句</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> health <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>	health <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>	print(<span style="color:#e6db74">&#34;Game Over&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> health <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">50</span>:
+</span></span><span style="display:flex;"><span>	print(<span style="color:#e6db74">&#34;Warning: Low Health&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>	print(<span style="color:#e6db74">&#34;You are still alive&#34;</span>)
+</span></span></code></pre></div><h2 id="comments">Comments</h2>
+<ul>
+<li>
+<p>在一行的上方或后方对代码进行注释<br>
+<code># This is a comment</code></p>
+</li>
+<li>
+<p>可以通过在代码前面加&quot;#&ldquo;暂时删除部分代码的执行<br>
+编程规范：如果注释掉的是代码的话，不要在&rdquo;#&ldquo;后加空格<br>
+<code>#print()</code></p>
+</li>
+<li>
+<p>可以选择多行代码，右键单击切换注释（godot内有效，vs code没找到这个功能）<br>
+但：不能有一个完全空白的函数，需要添加关键字<code>pass</code>避免报错</p>
+</li>
+</ul>
+<h2 id="variables-20">Variables 2.0</h2>
+<ul>
+<li>创建和声明变量时，需要考虑在哪里这样做<br>
+如果在if语句内部声明一个变量，就只能在该if语句里使用该变量。这叫做<strong>SCOPE</strong>（范围）<br>
+如果希望在脚本的各个地方都能读取变量，应该将其放在代码的顶部，在任何函数之外</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Node</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> script_variable <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_ready</span>():
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> ready _variable <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span></code></pre></div><ul>
+<li>gdscript的优点：可以声明变量而无需考虑数据类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> godot_is_cool <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> coolness <span style="color:#f92672">=</span> <span style="color:#ae81ff">9001</span>
+</span></span><span style="display:flex;"><span>coolness <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><h2 id="data-types">DATA TYPES</h2>
+<ul>
+<li>
+<p>在gdscript中，有四种经典数据类型：<br>
+Boolean/bool（布尔变量）：表示true和false<br>
+integer/int：表示整数<br>
+float：表示小数<br>
+string（字符串）：表示文字</p>
+</li>
+<li>
+<p>从一种类型转为另一种类型：casting（类型转换）</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> number <span style="color:#f92672">=</span><span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Meaning of Life: &#34;</span> <span style="color:#f92672">+</span> str(number)
+</span></span><span style="display:flex;"><span>print(text)
+</span></span></code></pre></div><p>通过<code>str()</code>将其转化为字符串，输出：Meaning of Life: 42</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> pi <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#66d9ef">int</span>(pi))
+</span></span></code></pre></div><p>将小数输出为整数。需要注意的是它只是去掉了小数点后的数字，不会进行四舍五入。</p>
+<ul>
+<li>两种常见数据结构：Vector2和Vector3<br>
+Vector2存储两个浮点数：x和y，<br>
+Vector3存储三个浮点数：x和y和z</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> position <span style="color:#f92672">=</span> <span style="color:#a6e22e">Vector3</span>(<span style="color:#ae81ff">3</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>position<span style="color:#f92672">.</span>x <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>print(position)
+</span></span></code></pre></div><ul>
+<li>默认情况下，gdscript是动态类型，这意味着创建变量时，不需要定义它可以储存什么类型的数据<br>
+然而，它也更容易出现错误，并且它的性能低于静态类型<br>
+但gdscript允许我们定义变量的类型<br>
+<code>var damage: int = 15</code>
+也可以通过写<code>:= 15</code>来让godot自动确认数据类型，这称为推断类型，得出的结果是一样的，godot意识到15是个整数，于是将变量设置为int<br>
+这也意味着该变量不能更改为其他类型。如果尝试将其设置为一个字符串，</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> damage <span style="color:#f92672">:=</span> <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_ready</span>():
+</span></span><span style="display:flex;"><span>	damage <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;A lot!&#34;</span>
+</span></span></code></pre></div><p>将会报错。</p>
+<ul>
+<li>在变量前添加<code>@export</code>可以将其暴露在检查器里。<br>
+<code>@export var damage := 15</code><br>
+保存代码并点击左侧栏的节点（Node）,可以在右侧栏检查器中设置变量</li>
+</ul>
+<p><img src="/w/250903.png" alt="在检查器中设置变量"></p>
+<p>如果<code>print(damage)</code>，可以看到通过检查器设置的值会在游戏中更新。可以按小圆圈恢复到默认值</p>
+<ul>
+<li>constant（常量）：定义一个不想改变的变量<br>
+<code>const GRAVITY = -9.81</code><br>
+使用大写字母表示常量。<br>
+常量不能被改写，否则会报错</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<ul>
+<li>
+<p>函数是编程的基础，它们允许您将代码捆绑在可重复利用的packages</p>
+</li>
+<li>
+<p><code>func _ready()</code> <code>func _input()</code> 下划线表明这些函数不是由我们激活或调用的，而是由引擎本身</p>
+</li>
+<li>
+<p>在godot中，可以创建自己的函数<br>
+<code>func jump()</code> <code>func die()</code> <code>func shoot()</code> <code>func respawn()</code></p>
+</li>
+<li>
+<p>开始创建一个函数</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">jump</span>():
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#添加向上的力</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#播放声音</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#播放跳跃动画</span>
+</span></span><span style="display:flex;"><span>	print(<span style="color:#e6db74">&#34;JUMP!&#34;</span>)
+</span></span></code></pre></div><p>为了不让每次按下空格就调用这个函数，于是在前面写input函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_input</span>(event):
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> event<span style="color:#f92672">.</span><span style="color:#a6e22e">is_action_pressed</span>():
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">jump</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">jump</span>():
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#添加向上的力</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#播放声音</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#播放跳跃动画</span>
+</span></span><span style="display:flex;"><span>	print(<span style="color:#e6db74">&#34;JUMP!&#34;</span>)
+</span></span></code></pre></div><ul>
+<li>
+<p>在代码中，我们将给函数的输入称为参数（parameters），将输出称为返回值（returns）</p>
+</li>
+<li>
+<p>创建一个将两个数字相加的函数<code>func add():</code>，在括号中添加参数<code>func add(num1, num2):</code>。在函数中，我们可以将它们加在一起并将它们储存在一个叫result的变量中</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">add</span>(num1, num2):
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> result <span style="color:#f92672">=</span> num1 <span style="color:#f92672">+</span> num2
+</span></span><span style="display:flex;"><span>	print(result)
+</span></span></code></pre></div><p>可以在ready函数中调用add()：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_ready</span>():
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div><p>运行后会打印出8。</p>
+<ul>
+<li>但该函数目前并不返回结果，只是打印结果。为了在ready函数访问并调用add函数的结果，我们将add函数的print替换为return。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">add</span>(num1, num2):
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> result <span style="color:#f92672">=</span> num1 <span style="color:#f92672">+</span> num2
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span>(result)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_ready</span>():
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> result <span style="color:#f92672">=</span> <span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>	print(result)
+</span></span></code></pre></div><ul>
+<li>利用return还可以做更多的事：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">add</span>(num1, num2):
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> result <span style="color:#f92672">=</span> num1 <span style="color:#f92672">+</span> num2
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span>(result)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_ready</span>():
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> result <span style="color:#f92672">=</span> <span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>	result <span style="color:#f92672">=</span> <span style="color:#a6e22e">add</span>(result, <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>	print(result)
+</span></span></code></pre></div><p>打印25。</p>
+<ul>
+<li>和声明变量时一样，也可以定义函数的参数和返回类型<br>
+<code>func add(num1: int, num2: int) -&gt; int:</code><br>
+使用箭头<code>-&gt;</code>来设置返回值类型</li>
+</ul>
+<h2 id="random-numbers">Random numbers</h2>
+<ul>
+<li>函数randf给出0-1之间的随机数，非常适合为代码分配概率。（抽卡）</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_ready</span>():
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> roll <span style="color:#f92672">=</span> randf()
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> roll <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0.8</span>:
+</span></span><span style="display:flex;"><span>		print(<span style="color:#e6db74">&#34;Common item&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">elif</span> roll <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0.95</span>:
+</span></span><span style="display:flex;"><span>		print(<span style="color:#e6db74">&#34;Rare item&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>		print(<span style="color:#e6db74">&#34;Legendary item&#34;</span>)
+</span></span></code></pre></div><p><!-- raw HTML omitted --> (真的没问题吗用这个代码抽了十次出了四次rare )<!-- raw HTML omitted --></p>
+<ul>
+<li><strong>（试着结合目前学的写了个按下按键抽卡的代码：</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Node</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> roll: <span style="color:#66d9ef">float</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> item_type: <span style="color:#a6e22e">String</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_input</span>(event: <span style="color:#a6e22e">InputEvent</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">void</span>:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> event<span style="color:#f92672">.</span><span style="color:#a6e22e">is_action_pressed</span>(<span style="color:#e6db74">&#34;my_action&#34;</span>):
+</span></span><span style="display:flex;"><span>		roll <span style="color:#f92672">=</span> randf()
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> roll <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0.8</span>:
+</span></span><span style="display:flex;"><span>			item_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Common item&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">elif</span> roll <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0.95</span>:
+</span></span><span style="display:flex;"><span>			item_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Rare item&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>			item_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Legendary item&#34;</span>
+</span></span><span style="display:flex;"><span>		print(item_type)
+</span></span></code></pre></div><ul>
+<li>还可以使用<code>randf_range()</code>和<code>randi_range()</code>来得到一个指定范围内的随机整数或小数<br>
+比如给角色随机生成身高可以用</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> character_height <span style="color:#f92672">=</span> randi_range(<span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">210</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Your character is &#34;</span> <span style="color:#f92672">+</span> str(character_height) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;cm tall.&#34;</span>)
+</span></span></code></pre></div><ul>
+<li><strong>GD的官方文档和编辑器是连着的。</strong><br>
+这意味着按住ctrl并单击代码中想要了解更多信息的内容，它会在编辑器中直接打开官方文档</li>
+</ul>
+<p><em>未完待续</em></p></div>
+        
+    </article>
+    <script>
+    window.addEventListener('click', e => {
+        let dropboxs = document.getElementsByClassName("dropbox-content");
+        let dropbox_btns = document.getElementsByClassName("dropbox-btn");
+
+        if (dropbox_btns.namedItem(e.target.id) != null) return;
+
+        if(dropboxs.namedItem(e.target.id) == null) {
+            for (let i = 0; i < dropboxs.length; i++) {
+                dropboxs[i].removeAttribute("visible");
+            }
+        }
+    }, true)
+
+    function toggleDropbox(id) {
+        let dropbox = document.getElementById(id);
+
+        dropbox.toggleAttribute("visible");
+    }
+    </script>
+</div>
+
+    
+</main>
+</body>
+</html>

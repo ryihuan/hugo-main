@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="note">
 <head>
-	<meta name="generator" content="Hugo 0.150.0">
+	<meta name="generator" content="Hugo 0.150.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <title>SOS</title>
-    <link rel="canonical" href="https://ryihuan.github.io/">
+    <link rel="canonical" href="http://localhost:1313/">
     
     
     <link rel="icon" href="/favicon.ico">
@@ -24,7 +24,7 @@
 
 
 :root {
-    --site-bg: url("/flowertile.png");
+    --site-bg: url("/bg-rain.gif");
     --accent-color: #f55cc0;
     --select-color: #ffc1e9;
     --link-color: #5083C1;
@@ -308,6 +308,14 @@ a:hover {
 main {
     padding: 1em;
     padding-top: 0;
+     
+    max-width: min(900px, 90vw);  
+    margin: 0 auto;
+    width: 100%;
+     
+    overflow-wrap: break-word;
+     
+    overflow-x: hidden;
 }
 
 #top {
@@ -551,12 +559,35 @@ header h1 a:hover {
 }
 
 pre {
-    border:1px solid var(--outline-color);
-    border-radius:6px;
-    padding:0.75rem 1rem;
-    margin:1.2rem 0;
-    overflow-x:auto;  
+    border: 1px solid var(--outline-color);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin: 1.2rem 0;
+    overflow-x: auto;
+     
+    max-width: 100%;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
 }
+ 
+@media (min-width: 769px) {
+    pre {
+        overflow-x: auto;  
+    }
+}
+
+ 
+@media (max-width: 768px) {
+    pre {
+        margin: 1.2rem -0.5rem;
+        border-radius: 4px;
+        padding: 0.5rem;
+         
+        scrollbar-width: thin;
+    }
+}
+
 </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -564,7 +595,7 @@ pre {
     <meta charset="utf-8">
 </head>
 <body>
-        <header><h1 id="SOS"><a href="https://ryihuan.github.io/">SOS</a></h1></header>
+        <header><h1 id="SOS"><a href="http://localhost:1313/">SOS</a></h1></header>
 <main>
     
     
@@ -572,11 +603,11 @@ pre {
         <ul>
         
         <li>
-            <a href="/jp/">日本語</a>
+            <a href="/write/">写</a>
         </li>
         
         <li>
-            <a href="/zh-cn/">中文</a>
+            <a href="/paint/">画</a>
         </li>
         
         </ul>
@@ -592,8 +623,8 @@ pre {
         
         <div id="bio">
         
-            <p>meow! mochi here, your purrfect companion</p>
-<p>rawr do you like my blog?</p>
+            <p>折腾这个部落格</p>
+<p>耗尽了我几个晚上的生命</p>
 
         
         </div>
@@ -601,8 +632,8 @@ pre {
         <div class="small-box">
             
                 <ul>
-<li>age: 5</li>
-<li>pronouns: she/her</li>
+<li>年龄: -1d</li>
+<li>脑容量：8G（比iCloud免费额度大点）</li>
 </ul>
 
             
@@ -610,27 +641,14 @@ pre {
         </div>
 
         
-        <div>
-            <div class="tags">
-                <p class="tags">Tags</p>
-            </div>
-
-            <ul class="tags">
-            
-            
-            
-            <li><a href="https://ryihuan.github.io/tags/meow/">meow</a></li><li><a href="https://ryihuan.github.io/tags/rawr/">rawr</a></li>
-            </ul>
-            
-        
         
         <nav class="links">
             <ul>
             
             
-                <li><a href="https://itch.io">itch.io</a></li>
+                <li><a href="https://stelpolva.moe/@R1A_">無名星屑</a></li>
             
-                <li><a href="https://www.patreon.com">patreon</a></li>
+                <li><a href="https://bsky.app/profile/ber1a.bsky.social">Bluesky</a></li>
             
             
             </ul>
@@ -641,26 +659,26 @@ pre {
             
             <section>
             <div class="img-right">
-                <img src="/cat.png">
+                <img src="/bruno.jpg">
             </div>
             <div>
-            <h1>welcome to my blog~!</h1>
+            <h1>我要猝死了</h1>
             
-                <p>this is an example introduction. feel free to customize it!</p>
+                <p>现在在vs code里面敲简介这个应该是这样的吗</p>
             
-                <p>add more lines to make it personal.</p>
+                <p>是不是有更加简便直观的更新博客的方法</p>
             
             </div>
             </section>
             <section>
-            <h4>things i love:</h4>
+            <h4>最近的兴趣：</h4>
                 <ul>
                 
-                    <li>coding</li>
+                    <li>假面骑士</li>
                 
-                    <li>cats</li>
+                    <li>Godot</li>
                 
-                    <li>coffee</li>
+                    <li>除了上班</li>
                 
                 </ul>
             </section>
@@ -670,91 +688,30 @@ pre {
     
     
         <article id="post-0">
-            <button id="post-toc-btn-0" class="dropbox-btn" onclick="toggleDropbox('post-toc-0')" >☰</button>
-            <div id="post-toc-0" class="dropbox-content table-of-contents float">
-                
-
-  <nav class="toc">
-  <ul>
-
-      <li>
-        <a href="/posts/mysterious-meow/#meow" class="toc-item toc-level-1">
-          
-          
-          
-          1.
-           meow
-        </a>
-      </li>
-
-      <li>
-        <a href="/posts/mysterious-meow/#rawr" class="toc-item toc-level-2">
-          
-          
-          
-          1.1.
-           rawr
-        </a>
-      </li>
-  </ul>
-  </nav>
-
-            </div>
-            
-            <h2><a href="/posts/mysterious-meow/">mysterious meow</a></h2>
+            <h2><a href="/posts/%E6%88%90%E7%AB%8B%E5%8D%9A%E5%AE%A2/">成立博客</a></h2>
             
             tags:
             
-            <a href="/tags/meow">meow</a>
+            <a href="/tags/%e5%bc%80%e5%a7%8b">开始</a>
             
             <div class="post-header">
-                @mochi <span class="timestamp">01/02/2025</span>
+                @me <span class="timestamp">23/09/2025</span>
             </div>
-            <p><h2 id="meow">meow</h2>
-<p>meow&hellip; meow rawr, meow meow meow!</p></p>
-            
-            <div class="photosetx2">
-                
-                <a href="/photo6.png" target="_blank"><img src="/photo6.png"></a>
-                
-            </div>
+            <p><p>谢谢莱特雷的<a href="https://letere-gzj.github.io/hugo-stack/p/hugo/custom-blog/">Hugo+Github部署博客教程</a></p>
+<p>谢谢网友们让我觉得应该把开博客作为互联网生涯的一个选项（？</p>
+<p>谢谢gpt老师 deepseek老师</p>
+<h3 id="总之我终于可以开启博客生涯耶耶耶">总之我终于可以开启博客生涯耶耶耶</h3></p>
             
             <div class="post-content readmore">
                 
                 
-                <div class="text-content"><h3 id="rawr">rawr</h3>
-<p>rawr meow, meow meow rawr, rawr meow meow. meow rawr meow meow, rawr rawr rawr meow rawr, rawr meow meow.
-meow …</p></div>
-                <div class="full-content" style="display: none;"><h3 id="rawr">rawr</h3>
-<p>rawr meow, meow meow rawr, rawr meow meow. meow rawr meow meow, rawr rawr rawr meow rawr, rawr meow meow.
-meow rawr, meow rawr meow!</p></div>
-                <summary class="read-more-btn" onclick="toggleReadMore('post-0')" style="display: inline;">Read More</summary>
+                <div class="full-content"></div>
                 
             </div>
             
         </article>
     
     
-    <ul class="pagination pagination-default">
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item">
-        <a href="/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
     <script>
     window.addEventListener('click', e => {
         let dropboxs = document.getElementsByClassName("dropbox-content");
@@ -778,11 +735,11 @@ meow rawr, meow rawr meow!</p></div>
         if (fullContent.style.display === "none") {
             textContent.style.display = "none";
             fullContent.style.display = "inline";
-            btnText.innerHTML = "Read More";
+            btnText.innerHTML = "收起";
         } else {
             textContent.style.display = "inline";
             fullContent.style.display = "none";
-            btnText.innerHTML = "Read More";
+            btnText.innerHTML = "更多";
         }
     }
 

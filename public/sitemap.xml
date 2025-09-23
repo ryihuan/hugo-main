@@ -2,23 +2,23 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>https://ryihuan.github.io/en/sitemap.xml</loc>
+    <loc>http://localhost:1313/note/sitemap.xml</loc>
     
-      <lastmod>2025-02-01T10:00:00-03:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://ryihuan.github.io/jp/sitemap.xml</loc>
-    
-      <lastmod>2025-02-01T10:00:00-03:00</lastmod>
+      <lastmod>2025-09-23T00:00:00+00:00</lastmod>
     
   </sitemap>
   
   <sitemap>
-    <loc>https://ryihuan.github.io/zh-cn/sitemap.xml</loc>
+    <loc>http://localhost:1313/paint/sitemap.xml</loc>
     
-      <lastmod>2025-02-01T10:00:00-03:00</lastmod>
+      <lastmod>2025-09-16T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:1313/write/sitemap.xml</loc>
+    
+      <lastmod>2025-09-23T00:00:00+00:00</lastmod>
     
   </sitemap>
   

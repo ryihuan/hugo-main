@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="note">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <title>categories | SOS</title>
-    <link rel="canonical" href="https://ryihuan.github.io/">
+    <link rel="canonical" href="http://localhost:1313/">
     
     
     <link rel="icon" href="/favicon.ico">
@@ -23,7 +23,7 @@
 
 
 :root {
-    --site-bg: url("/flowertile.png");
+    --site-bg: url("/bg-rain.gif");
     --accent-color: #f55cc0;
     --select-color: #ffc1e9;
     --link-color: #5083C1;
@@ -307,6 +307,14 @@ a:hover {
 main {
     padding: 1em;
     padding-top: 0;
+     
+    max-width: min(900px, 90vw);  
+    margin: 0 auto;
+    width: 100%;
+     
+    overflow-wrap: break-word;
+     
+    overflow-x: hidden;
 }
 
 #top {
@@ -550,12 +558,35 @@ header h1 a:hover {
 }
 
 pre {
-    border:1px solid var(--outline-color);
-    border-radius:6px;
-    padding:0.75rem 1rem;
-    margin:1.2rem 0;
-    overflow-x:auto;  
+    border: 1px solid var(--outline-color);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin: 1.2rem 0;
+    overflow-x: auto;
+     
+    max-width: 100%;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
 }
+ 
+@media (min-width: 769px) {
+    pre {
+        overflow-x: auto;  
+    }
+}
+
+ 
+@media (max-width: 768px) {
+    pre {
+        margin: 1.2rem -0.5rem;
+        border-radius: 4px;
+        padding: 0.5rem;
+         
+        scrollbar-width: thin;
+    }
+}
+
 </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -563,7 +594,7 @@ pre {
     <meta charset="utf-8">
 </head>
 <body>
-        <header><h1 id="SOS"><a href="https://ryihuan.github.io/">SOS</a></h1></header>
+        <header><h1 id="SOS"><a href="http://localhost:1313/">SOS</a></h1></header>
 <main>
     
     
