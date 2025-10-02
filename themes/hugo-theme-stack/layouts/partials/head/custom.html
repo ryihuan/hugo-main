@@ -1,0 +1,29 @@
+<script>
+// 头像切换功能
+function updateAvatar() {
+  const avatarImg = document.querySelector('.site-avatar .site-logo');
+  if (!avatarImg) return;
+  
+  const isDark = document.documentElement.getAttribute('data-scheme') === 'dark';
+  const lightSrc = avatarImg.getAttribute('data-src-light') || avatarImg.src;
+  const darkSrc = avatarImg.getAttribute('data-src-dark');
+  
+  if (darkSrc && isDark) {
+    avatarImg.src = darkSrc;
+  } else if (lightSrc && !isDark) {
+    avatarImg.src = lightSrc;
+  }
+}
+
+// 初始化
+document.addEventListener('DOMContentLoaded', updateAvatar);
+
+// 监听主题切换
+new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.attributeName === 'data-scheme') {
+      setTimeout(updateAvatar, 50);
+    }
+  });
+}).observe(document.documentElement, { attributes: true });
+</script>

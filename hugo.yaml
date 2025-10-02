@@ -1,73 +1,283 @@
-title: "SOS"
-baseURL: 'https://ryihuan.github.io'
-languageCode: 'zh-cn'
-titleCaseStyle: 'none' # comment this line for forcing capitalized titles on tags
-theme: "neopost"
+baseurl: https://ryihuan.github.io
+languageCode: zh-cn
+theme: hugo-theme-stack
+title: 小窝
+copyright: 尺途
+
+# Theme i18n support
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+DefaultContentLanguage: zh-cn
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage: true
 
 languages:
-  note:
-    languageName: "首页"
-    contentDir: content/home
-    languageCode: cn
-    weight: 1
-    params:
-      sidebar:
-        tags:
-        ennable: true # default = true?
-        limit: 2 # limit showcasing only up to this number of tags in bio, defaults to 5
-        more-text: "更多标签……" # show a hyperlink with this text if there's more tags than tags-limit
-          
-      read-more:
-        length-limit: 50 # if the text exceeds this number of characters, the read more button will appear to expand the text
-        text:
-          more: "更多"
-          less: "收起"
+    # en:
+    #     languageName: English
+    #     title: Example Site
+    #     weight: 1
+    #     params:
+    #         sidebar:
+    #             subtitle: Example description
+    zh-cn:
+        languageName: 中文
+        title: 某人的小窝
+        weight: 2
+        params:
+            sidebar:
+                subtitle: 写什么好呢
+    # ar:
+    #     languageName: عربي
+    #     languagedirection: rtl
+    #     title: موقع تجريبي
+    #     weight: 3
+    #     params:
+    #         sidebar:
+    #             subtitle: وصف تجريبي
 
-  write:
-    languageName: "写"
-    contentDir: content/write
-    languageCode: cn
-    weight: 1
-    params:
-      sidebar:
-        tags:
-        ennable: true # default = true?
-        limit: 2 # limit showcasing only up to this number of tags in bio, defaults to 5
-        more-text: "更多标签……" # show a hyperlink with this text if there's more tags than tags-limit
-          
-      read-more:
-        length-limit: 50 # if the text exceeds this number of characters, the read more button will appear to expand the text
-        text:
-          more: "更多"
-          less: "收起"
+services:
+    # Change it to your Disqus shortname before using
+    disqus:
+        shortname: "hugo-theme-stack"
+    # GA Tracking ID
+    googleAnalytics:
+        id:
 
-  paint:
-    languageName: "画"
-    contentDir: content/paint
-    languageCode: cn
-    weight: 1
-    params:
-      sidebar:
-        tags:
-        ennable: true # default = true?
-        limit: 2 # limit showcasing only up to this number of tags in bio, defaults to 5
-        more-text: "更多标签……" # show a hyperlink with this text if there's more tags than tags-limit
-          
-      read-more:
-        length-limit: 50 # if the text exceeds this number of characters, the read more button will appear to expand the text
-        text:
-          more: "更多"
-          less: "收起"
-    
+pagination:
+    pagerSize: 3
 
 permalinks:
-  posts: "/posts/:filename/"  # 将 :filename 改为 :contentbasename
-  
+    post: /p/:slug/
+    page: /:slug/
 
 params:
-  # themes made by neopost: light-blue, dark-blue, light-green, light-yellow, light-pink, light-purple
-  # but you can also create your colored theme at "/data/custom_themes.yaml"!
-  theme: "meow"
-  favicon: "/favicon.ico"
-  posts-per-page: 5 # defaults to 5 if not defined
-  toc-auto-numbering: false
+    mainSections:
+        - post
+    featuredImageField: image
+    rssFullContent: true
+    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+
+    footer:
+        since: 2025
+        customText:
+
+    dateFormat:
+        published: Jan 02, 2006
+        lastUpdated: Jan 02, 2006 15:04 MST
+
+    sidebar:
+        emoji: 
+        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        avatar:
+            enabled: true
+            local: true
+            src: img/light.jpg
+            srcdark: img/dark.jpg
+
+    article:
+        math: false
+        toc: true
+        readingTime: true
+        license:
+            enabled: true
+            default: Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans) 丨 署名 · 非商业性使用 · 禁止演绎
+
+    comments:
+        enabled: true
+        provider: disqus
+
+        disqusjs:
+            shortname:
+            apiUrl:
+            apiKey:
+            admin:
+            adminLabel:
+
+        utterances:
+            repo:
+            issueTerm: pathname
+            label:
+
+        beaudar:
+            repo:
+            issueTerm: pathname
+            label:
+            theme:
+
+        remark42:
+            host:
+            site:
+            locale:
+
+        vssue:
+            platform:
+            owner:
+            repo:
+            clientId:
+            clientSecret:
+            autoCreateIssue: false
+
+        # Waline client configuration see: https://waline.js.org/en/reference/component.html
+        waline:
+            serverURL:
+            lang:
+            pageview:
+            emoji:
+                - https://unpkg.com/@waline/emojis@1.0.1/weibo
+            requiredMeta:
+                - name
+                - email
+                - url
+            locale:
+                admin: Admin
+                placeholder:
+
+        twikoo:
+            envId:
+            region:
+            path:
+            lang:
+
+        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
+        cactus:
+            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
+            serverName: "cactus.chat"
+            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+
+        giscus:
+            repo:
+            repoID:
+            category:
+            categoryID:
+            mapping:
+            lightTheme:
+            darkTheme:
+            reactionsEnabled: 1
+            emitMetadata: 0
+
+        gitalk:
+            owner:
+            admin:
+            repo:
+            clientID:
+            clientSecret:
+            proxy:
+
+        cusdis:
+            host:
+            id:
+    widgets:
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
+        page:
+            - type: toc
+
+    opengraph:
+        twitter:
+            # Your Twitter username
+            site:
+
+            # Available values: summary, summary_large_image
+            card: summary_large_image
+
+    defaultImage:
+        opengraph:
+            enabled: false
+            local: false
+            src:
+
+    colorScheme:
+        # Display toggle
+        toggle: true
+
+        # Available values: auto, light, dark
+        default: auto
+
+    imageProcessing:
+        cover:
+            enabled: true
+        content:
+            enabled: true
+
+### Custom menu
+### See https://stack.jimmycai.com/config/menu
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
+menu:
+    main: []
+
+    social:
+
+        - identifier: misskey
+          name: misskey
+          url: https://stelpolva.moe/@R1A_
+          weight: 1
+          params:
+              icon: misskey
+              
+        - identifier: bluesky
+          name: bluesky
+          url: https://bsky.app/profile/ber1a.bsky.social
+          weight: 2
+          params:
+              icon: bluesky
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
+markup:
+    goldmark:
+        extensions:
+            passthrough:
+                enable: true
+                delimiters:
+                    block:
+                        - - \[
+                          - \]
+                        - - $$
+                          - $$
+                    inline:
+                        - - \(
+                          - \)
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: true
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
+    highlight:
+        noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4
+        style: pastie
+
+# 更新时间：优先读取git时间 -> git时间不存在，就读取本地文件修改时间
+frontmatter:
+  lastmod:
+    - :git
+    - :fileModTime
+
+# 允许获取Git信息		
+enableGitInfo: true

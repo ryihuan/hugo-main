@@ -1,614 +1,723 @@
 <!DOCTYPE html>
-<html lang="note">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title>tags | SOS</title>
-    <link rel="canonical" href="http://localhost:1313/">
-    
-    
-    <link rel="icon" href="/favicon.ico">
-    
-    
-    <meta name="description" content="">
-    
-    
-    
-    <style>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="写什么好呢">
+<title>Tags</title>
+
+<link rel='canonical' href='https://ryihuan.github.io/tags/'>
+
+<link rel="stylesheet" href="/scss/style.min.193b650cc3aaaf1c1b443381dba548f22682893a2c1dbc2e401198db2815b653.css"><meta property='og:title' content="Tags">
+<meta property='og:description' content="写什么好呢">
+<meta property='og:url' content='https://ryihuan.github.io/tags/'>
+<meta property='og:site_name' content='某人的小窝'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-10-03T04:48:45&#43;08:00 '/>
+<meta name="twitter:title" content="Tags">
+<meta name="twitter:description" content="写什么好呢"><link rel="alternate" type="application/rss&#43;xml" href="https://ryihuan.github.io/tags/index.xml"><script>
+
+function updateAvatar() {
+  const avatarImg = document.querySelector('.site-avatar .site-logo');
+  if (!avatarImg) return;
+  
+  const isDark = document.documentElement.getAttribute('data-scheme') === 'dark';
+  const lightSrc = avatarImg.getAttribute('data-src-light') || avatarImg.src;
+  const darkSrc = avatarImg.getAttribute('data-src-dark');
+  
+  if (darkSrc && isDark) {
+    avatarImg.src = darkSrc;
+  } else if (lightSrc && !isDark) {
+    avatarImg.src = lightSrc;
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', updateAvatar);
+
+
+new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.attributeName === 'data-scheme') {
+      setTimeout(updateAvatar, 50);
+    }
+  });
+}).observe(document.documentElement, { attributes: true });
+</script>
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                    
+                        
+                        
+                        <img src="/img/light_hu_ef46a703a97cb3c9.jpg" 
+                            data-src-light="/img/light_hu_ef46a703a97cb3c9.jpg"
+                            data-src-dark="/img/dark_hu_206abf790e78d3dd.jpg"
+                            width="300" 
+                            height="300" 
+                            class="site-logo" 
+                            loading="lazy" 
+                            alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">某人的小窝</a></h1>
+            <h2 class="site-description">写什么好呢</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://stelpolva.moe/@R1A_'
+                        target="_blank"
+                        title="misskey"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler" width="24" height="24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="matrix(0.1521, 0, 0, 0.159514, 2.028044, 2)">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M 10.89 13.792 C 8.778 13.792 6.766 14.144 4.856 14.848 C 1.437 16.054 -1.379 18.217 -3.591 21.334 C -5.703 24.352 -6.759 27.72 -6.759 31.441 L -6.759 97.51 C -6.759 102.337 -5.05 106.51 -1.63 110.03 C 1.889 113.449 6.063 115.159 10.89 115.159 C 15.817 115.159 19.99 113.449 23.41 110.03 C 26.929 106.51 28.688 102.337 28.688 97.51 L 28.688 85.496 C 28.727 82.894 31.407 83.576 32.762 85.496 C 35.3 89.889 40.678 93.662 46.941 93.641 C 53.204 93.62 58.405 90.523 61.12 85.496 C 62.148 84.283 65.047 82.217 65.344 85.496 L 65.344 97.51 C 65.344 102.337 67.053 106.51 70.472 110.03 C 73.992 113.449 78.166 115.159 82.992 115.159 C 87.919 115.159 92.093 113.449 95.512 110.03 C 99.032 106.51 100.791 102.337 100.791 97.51 L 100.791 31.441 C 100.791 27.72 99.686 24.352 97.473 21.334 C 95.362 18.217 92.596 16.054 89.177 14.848 C 87.165 14.144 85.154 13.792 83.143 13.792 C 77.713 13.792 73.137 15.904 69.417 20.128 L 51.506 41.089 C 51.104 41.391 49.771 43.697 46.941 43.697 C 44.11 43.697 42.928 41.391 42.527 41.089 L 24.466 20.128 C 20.845 15.904 16.32 13.792 10.89 13.792 Z M 122.497 13.792 C 118.273 13.792 114.653 15.301 111.636 18.318 C 108.72 21.234 107.262 24.804 107.262 29.028 C 107.262 33.251 108.72 36.871 111.636 39.889 C 114.653 42.805 118.273 44.263 122.497 44.263 C 126.72 44.263 130.34 42.805 133.357 39.889 C 136.375 36.871 137.882 33.251 137.882 29.028 C 137.882 24.804 136.375 21.234 133.357 18.318 C 130.34 15.301 126.72 13.792 122.497 13.792 Z M 122.647 47.279 C 118.423 47.279 114.804 48.788 111.787 51.804 C 108.769 54.822 107.262 58.442 107.262 62.665 L 107.262 99.923 C 107.262 104.147 108.769 107.768 111.787 110.784 C 114.804 113.701 118.423 115.159 122.647 115.159 C 126.871 115.159 130.441 113.701 133.357 110.784 C 136.375 107.768 137.883 104.147 137.883 99.923 L 137.883 62.665 C 137.883 58.442 136.375 54.822 133.357 51.804 C 130.441 48.788 126.871 47.279 122.647 47.279 Z" style="stroke-width: 9px; transform-origin: -6.759px 13.792px;"/>
+  </g>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://bsky.app/profile/ber1a.bsky.social'
+                        target="_blank"
+                        title="bluesky"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler " width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M 6.335 4.147 C 8.627 5.921 11.094 9.518 12 11.449 C 12.905 9.519 15.372 5.921 17.664 4.147 C 19.319 2.868 22 1.877 22 5.029 C 22 5.658 21.649 10.316 21.444 11.073 C 20.73 13.701 18.129 14.372 15.815 13.966 C 19.86 14.676 20.888 17.025 18.667 19.375 C 14.446 23.839 12.601 18.256 12.127 16.826 C 12.041 16.563 12 16.44 12 16.544 C 11.999 16.44 11.958 16.563 11.872 16.826 C 11.399 18.256 9.553 23.84 5.332 19.375 C 3.111 17.025 4.139 14.675 8.184 13.966 C 5.87 14.372 3.269 13.701 2.555 11.073 C 2.35 10.316 2 5.658 2 5.029 C 2 1.877 4.68 2.868 6.335 4.147 Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
 
 
 
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
 
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>搜索</label>
+            <input name="keyword" required placeholder="输入关键词..." />
+        
+            <button title="搜索">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">归档</h2>
+
+        
+        
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/archives/#2025">
+                        
+                            <span class="year">2025</span>
+                            <span class="count">3</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/archives/#2024">
+                        
+                            <span class="year">2024</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">分类</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/categories/diary/" class="font_size_2">
+                博客装修日志
+            </a>
+        
+            <a href="/categories/note/" class="font_size_1">
+                个人学习笔记
+            </a>
+        
+            <a href="/categories/%E6%95%99%E7%A8%8B/" class="font_size_1">
+                教程
+            </a>
+        
+            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="font_size_1">
+                编程
+            </a>
+        
+    </div>
+</section>
+
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">标签云</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/fastapi/" class="font_size_1">
+                Fastapi
+            </a>
+        
+            <a href="/tags/gd-script/" class="font_size_1">
+                GD Script
+            </a>
+        
+            <a href="/tags/godot/" class="font_size_1">
+                Godot
+            </a>
+        
+            <a href="/tags/hugo/" class="font_size_1">
+                Hugo
+            </a>
+        
+            <a href="/tags/python/" class="font_size_1">
+                Python
+            </a>
+        
+            <a href="/tags/redis/" class="font_size_1">
+                Redis
+            </a>
+        
+            <a href="/tags/sqlalchemy/" class="font_size_1">
+                Sqlalchemy
+            </a>
+        
+            <a href="/tags/stack/" class="font_size_1">
+                Stack
+            </a>
+        
+    </div>
+</section>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <header>
+        <h3 class="section-title">
+            
+                章节
+            
+        </h3>
+
+        <div class="section-card">
+            <div class="section-details">
+                <h3 class="section-count">8 个页面</h3>
+                <h1 class="section-term">Tags</h1>
+                
+            </div>
+        </div>
+    </header>
+    
+    <section class="article-list--compact">
+        
+            <article>
+    <a href="/tags/hugo/">
+        <div class="article-details">
+            <h2 class="article-title">Hugo</h2>
+            <footer class="article-time">
+                <time datetime='2025-10-01T00:00:00Z'>Oct 01, 2025</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+            <article>
+    <a href="/tags/stack/">
+        <div class="article-details">
+            <h2 class="article-title">Stack</h2>
+            <footer class="article-time">
+                <time datetime='2025-10-01T00:00:00Z'>Oct 01, 2025</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+            <article>
+    <a href="/tags/gd-script/">
+        <div class="article-details">
+            <h2 class="article-title">GD Script</h2>
+            <footer class="article-time">
+                <time datetime='2025-09-23T00:00:00Z'>Sep 23, 2025</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+    </section>
+    <nav class='pagination'>
+        
+        
+
+        
+            
+                <span class='page-link current'>1</span>
+                
+            
+            
+                    <a class='page-link' href='/tags/page/2/'>2</a>
+                
+            
+            
+                    <a class='page-link' href='/tags/page/3/'>3</a>
+                
+            
+    </nav>
+
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 尺途
+    </section>
     
         
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+
     
-
-
-:root {
-    --site-bg: url("/bg-rain.gif");
-    --accent-color: #f55cc0;
-    --select-color: #ffc1e9;
-    --link-color: #5083C1;
-    --bg-color: #CEEAFF;
-    --text-color: #191919;
-    --bg-color2: white;
-    --border-color: #215697;
-    --special-text-color: #215697;
-    --post-header-color: white;
-    --post-shadow-color: #21569760;
-    --outline-color: #6EAAD6;
-    --outline-color2: #CEEAFF;
-    --list-style-type: "";
-    --list-style-image: url("/flower.png");
-}
-
-* {
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-@-moz-document url-prefix() {
-    * {
-        scrollbar-width: thin;
-        scrollbar-color: var(--accent-color) #00000000;
-    }
-}
-
-::-webkit-scrollbar {
-    height: 8px;
-    width: 8px;
-    background: #00000000;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
-    -webkit-border-radius: .3rem;
-    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
-}
-
-::-webkit-scrollbar-corner {
-    background: #000;
-}
-
-::selection {
-    background: var(--select-color);
-    color: var(--border-color);
-}
-
-body {
-    background-color: var(--bg-color);
-    background-image: var(--site-bg);
-    margin: 0;
-    font-size: 14px;
-    color: var(--text-color);
-}
-
-p {line-height: 1.5em;}
-
-div.tags {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: .5rem 0;
-}
-
-div.tags > p.tags {
-    text-align: center;
-    margin-bottom: 0;
-}
-
-div.tags > a {
-    margin-top: .5rem;
-}
-
-h1 {
-    font-size: 1.5em;
-    color: var(--post-header-color);
-    filter: drop-shadow(2px 0 0 var(--outline-color)) drop-shadow(0 2px 0 var(--outline-color)) drop-shadow(-2px 0 0 var(--outline-color)) drop-shadow(0 -2px 0 var(--outline-color))drop-shadow(0 1px 1px var(--outline-color2)) drop-shadow(1px 0 1px var(--outline-color2));
-}
-
-h4,
-h5,
-h6 {color: var(--special-text-color);}
-
-header {
-    background-size: 100%;
-    background-position: center;
-    min-height: 80px;
-    margin: 0 0;
-    align-content: center;
-}
-
-header > h1 {
-    background-color: var(--bg-color2);
-    color: var(--special-text-color);
-    margin: 0 auto;
-    font-size: 2em;
- 
-     
-    max-width: 48rem;
-    padding: 6px 12px;
-    border-radius: 1em;
-    border: 4px double var(--outline-color);
-    filter: none;
-    text-align: center;
-}
-
-ul.pagination {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-
-ul.tags {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    justify-content: center;
-}
-
-ul.tags li {
-    display: inline-block;
-    margin: 0 .2rem;
-}
-
-li.page-item {
-    list-style: none;
-}
-
-li.page-item a{
-    display: inline-flex;
-    font-size: 1rem;
-    margin: .2rem;
-    background-color: var(--bg-color2);
-    color: var(--text-color);
-    padding: 1em;
-    border: 2px solid var(--border-color);
-    border-radius: .3em;
-    margin-bottom: 1em;
-    box-shadow: var(--post-shadow-color) 5px 5px;
-
-    text-decoration: none;
-    user-select: none;
-}
-
-li.page-item.active a{
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-li.page-item.disabled a{
-    cursor: not-allowed;
-}
-
-li.page-item:not(.disabled):not(.active) a:hover{
-    background-color: var(--select-color);
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-li {
-    
-        list-style-image: var(--list-style-image);
-    
-}
-
-nav {margin: 1em;}
-
-nav.links > ul {
-    max-width: 960px;
-    margin: auto;
-    line-height: 3rem;
-    list-style-type: none;
-    padding-left: 0;
-    justify-content: space-evenly;
-}
-
-nav.links li {
-    text-align: center;
-    list-style-image: none;
-    list-style-type: none;
-}
-
-nav.links li > a {
-    font-weight: bold;
-    background-color: var(--bg-color);
-    border: 4px double var(--outline-color);
-    padding: .5em 3em;
-    text-decoration: none;
-}
-
-nav.links li > a:visited {color: var(--link-color);}
-nav.links li > a:hover {
-    color: var(--accent-color);
-    background-color: var(--select-color);
-}
-
-nav.languages {
-    margin: .3em;
-    text-align: center;
-}
-
-
-nav.languages ul {
-    display: inline-block;
-}
-
-nav.languages ul li {
-    display: inline-block;
-}
-
-a {
-    color: var(--link-color);
-    border-radius: .3em;
-    transition: .2s ease-out;
-}
-
-a:visited {
-    color: var(--text-color);
-}
-
-a:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-    transition: .2s ease;
-}
-
-#sidebar {
-    background-color: var(--bg-color2);
-    color: var(--special-text-color);
-    height: fit-content;
-    min-width: 320px;
-    margin-top: 1em;
-    margin-right: 2em;
-    border-radius: .5em;
-}
-
-.small-box {
-    max-width: 240px;
-    margin: auto;
-    border: 2px solid var(--bg-color);
-    font-size: 11px;
-    line-height: 1.5rem;
-}
-
-#avatar {
-    margin: .5em;
-    max-width: 320px;
-}
-
- 
-.flower {
-    width: 300px; 
-    aspect-ratio: 1;
-    
-    
-        border-radius: 50%;
-    
-    
-}
-
-#bio {
-    margin: 20px;
-    padding: .2em;
-    background: var(--bg-color);
-    border: 4px double var(--bg-color2);
-    border-radius: 2em;
-    font-size: small;
-}
-
-#bio p { margin: 1em; }
-
-#content {
-    display: flex;
-    max-width: 960px;
-    margin: auto;
-}
-
-main {
-    padding: 1em;
-    padding-top: 0;
-     
-    max-width: min(900px, 90vw);  
-    margin: 0 auto;
-    width: 100%;
-     
-    overflow-wrap: break-word;
-     
-    overflow-x: hidden;
-}
-
-#top {
-    background-color: var(--bg-color);
-}
-
-#top section {
-    background-color: var(--bg-color2);
-    border-radius: .5em;
-    margin-bottom: 10px;
-    padding: .5em 1em;
-    width: 100%;
-}
-
-article {
-    background-color: var(--bg-color2);
-    padding: 1em;
-    border: 2px solid var(--border-color);
-    border-radius: .3em;
-    margin-bottom: 1em;
-    box-shadow: var(--post-shadow-color) 5px 5px;
-}
-article img {
-    max-width: 100%;
-}
-
-.readmore summary {
-    font-weight: bold;
-    color: var(--special-text-color);
-    list-style: none;
-    cursor: pointer;
-}
-
-header h1 a {
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--special-text-color);
-}
-
-header h1 a:visited {
-    color: inherit;
-}
-
-header h1 a:hover {
-    color: inherit;
-}
-
-.readmore div {
-    display: inline;
-}
-
-.readmore div p {
-    display: inline;
-}
-
-.readmore summary::-webkit-details-marker {
-  display: none;
-}
-
-.readmore[open] > summary {
-    border-bottom: 2px dashed var(--bg-color);
-    padding-bottom: .6em;
-    margin-bottom: .6em;
-}
-
-.post-header {
-    color: var(--special-text-color);
-    font-weight: bold;
-    padding: .5rem 0;
-    border-bottom: 4px double var(--outline-color);
-}
-
-.timestamp {
-    font-weight: normal;
-    font-size: smaller;
-    margin: .2em;
-    float: right;
-}
-
-.tag-item p {
-    font-size: smaller;
-}
-
-.photosetx2,
-.photosetx3 {
-    display: grid;
-    gap: 4px;
-    align-items: center;
-}
-
-.photosetx2 {grid-template-columns: 1fr 1fr;}
-.photosetx3 {grid-template-columns: 1fr 1fr 1fr;}
-
-.cropped {
-    width: 156px;
-    height: 156px;
-    overflow: hidden;
-    object-position: 25% 25%;
-}
-.photosetx2 img,
-.photosetx3 img {object-fit: cover;}
-
-.center { text-align: center; }
-
-.img-right {
-    max-width: 7.5em;
-    max-height: 7.5em;
-    float: right;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.small-text {
-    font-size: 11px;
-    text-shadow: var(--bg-color) 1px 1px;
-}
-
-.dropbox-btn {
-    color: var(--link-color);
-    font-weight: bold;
-    background-color: var(--bg-color);
-     
-    border: 1px solid var(--outline-color);
-     
-    text-decoration: none;
-}
-
-.dropbox-content[visible] {
-    display: block;
-}
-
-.dropbox-content {
-    display: none;
-    position: absolute;
-    z-index: 1
-}
-
-.table-of-contents {
-    background-color: var(--bg-color2);
-    padding: .3em;
-    border: 2px solid var(--border-color);
-    border-radius: .3em;
-    box-shadow: var(--post-shadow-color) 5px 5px;
-}
-
-.table-of-contents.sidebar {
-    position: sticky;
-    top: 1rem;
-    height: fit-content;
-    width: 10rem;
-    flex-shrink: 0;
-    max-height: calc(100vh - 2rem);
-    overflow-x: auto;
-}
-
-.table-of-contents.float {
-    width: max-content;
-    max-width: 50vw;
-    max-height: 50%;
-    overflow: auto;
-}
-
-.table-of-contents nav {
-    margin: 0 .5em;
-}
-
-.table-of-contents nav ul {
-    margin: .5em 1em;
-    padding: 0;
-}
-
-.table-of-contents nav li {
-    margin: .3em 0;
-}
-
-#single-post {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-#single-post > article {
-    max-width: 48rem
-}
-
-#single-post > article > #post-toc-mobile {
-    display: none;
-}
-
- 
-@media only screen and (max-width: 800px) {
-    #content {
-        flex-wrap: wrap;
-    }
-    #sidebar {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        border-radius: 0;
-        margin-right: 0;
-        margin-bottom: 1em;
-        border-radius: .3em;
-    }
-    header {min-height: 110px;}
-    header > h1 { 
-        width: fit-content;
-        padding: .3em 1em;
-    }
-    nav.links > ul {
-     
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    #bio {width: 50%;}
-    
-    #sidebar ul {
-        line-height: 2em;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1em;
-    }
-    #sidebar > .small-box li {
-        margin: .3em 1em;
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了4篇文章 · 
+        总计7.86k字
+    </section>
+
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+
+</footer>
+
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+    @font-face {
+        font-family: 'mkty';
+        src: url(https://ryihuan.github.io/font/mkty.ttf) format('truetype');
     }
 
-    #single-post > .table-of-contents.sidebar {
+    :root {
+        --base-font-family: 'mkty';
+        --code-font-family: 'mkty';
+    }
+
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+
+    #backTopBtn {
         display: none;
+        position: fixed;
+        bottom: 10px;
+        z-index: 99;
+        cursor: url('/mouse/pointer.png'), pointer;
+        width: 64px;
+        height: 64px;
+        transition: transform 0.2s ease-in-out;
+        background-image: url(https://ryihuan.github.io/icons/backTop.svg);
     }
 
-    #single-post > article > #post-toc-mobile {
-        display: inline;
+    #backTopBtn:hover {
+        transform: scale(1.1);
     }
-}
-
-pre {
-    border: 1px solid var(--outline-color);
-    border-radius: 6px;
-    padding: 0.75rem 1rem;
-    margin: 1.2rem 0;
-    overflow-x: auto;
      
-    max-width: 100%;
-    box-sizing: border-box;
-    width: auto;
-    min-width: 0;
-}
- 
-@media (min-width: 769px) {
-    pre {
-        overflow-x: auto;  
+    [data-scheme="light"] body {
+        background: url(https://ryihuan.github.io/background/light.jpg) no-repeat center top;
+        background-size: cover;
+        background-attachment: fixed;
     }
-}
-
- 
-@media (max-width: 768px) {
-    pre {
-        margin: 1.2rem -0.5rem;
-        border-radius: 4px;
-        padding: 0.5rem;
-         
-        scrollbar-width: thin;
+    [data-scheme="dark"] body {
+        background: url(https://ryihuan.github.io/background/dark.jpg) no-repeat center top;
+        background-size: cover;
+        background-attachment: fixed;
     }
-}
 
 </style>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
-    <meta charset="utf-8">
-</head>
-<body>
-        <header><h1 id="SOS"><a href="http://localhost:1313/">SOS</a></h1></header>
-<main>
-    
-<article style="padding-left: 2rem;">
-    <h2>tags</h2>
-    <ul>
-    
-    <li style="margin-bottom: .5rem;">
-            <a href="http://localhost:1313/tags/%E5%BC%80%E5%A7%8B/">开始</a>
-    </li>
-    
-    </ul>
-</article>
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+     
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
 
-    
-</main>
-</body>
+     
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+<script>
+      
+    let s1 = '2025-09-22'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+<script>
+ 
+document.addEventListener('DOMContentLoaded', function() {
+    const pagination = document.querySelector('.pagination');
+    const pageLinks = document.querySelectorAll('.page-link');
+    let currentPage = document.querySelector('.page-link.current');
+
+    pageLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            
+            if (!this.classList.contains('current') && currentPage) {
+                currentPage.classList.add('reset-style');
+            }
+        });
+
+        link.addEventListener('mouseleave', function() {
+            
+            if (currentPage) {
+                currentPage.classList.remove('reset-style');
+            }
+        });
+    });
+});
+</script>
+    </body>
 </html>

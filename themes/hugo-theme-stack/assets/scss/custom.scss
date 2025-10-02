@@ -1,0 +1,372 @@
+// 【Stack主题鼠标样式写法】
+// default光标图片
+body,
+html,
+.article-content img {
+  cursor: url(../mouse/default.png),
+  auto !important;
+}
+
+// pointer光标图片
+a:hover,
+button:hover,
+.copyCodeButton:hover,
+#dark-mode-toggle {
+  cursor: url(../mouse/pointer.png),
+  auto;
+}
+
+// text光标图片
+input:hover,
+.site-description,
+.article-subtitle,
+.article-content span,
+.article-content li,
+.article-content p {
+  cursor: url(../mouse/text.png),
+  auto;
+}
+
+@media (min-width: 1024px) {
+  .article-list--compact {
+    display: grid;
+    // 目前是两列，如需三列，则后面再加一个1fr，以此类推
+    grid-template-columns: 1fr 1fr 1fr;
+    background: none;
+    box-shadow: none;
+    gap: 1rem;
+
+    article {
+      background: var(--card-background);
+      border: none;
+      box-shadow: var(--shadow-l2);
+      margin-bottom: 8px;
+      margin-right: 8px;
+      border-radius: 16px;
+    }
+  }
+}
+
+// 头像旋转动画
+[data-scheme="dark"] .sidebar header .site-avatar .site-logo {
+  transition: transform 1.65s ease-in-out; // 旋转时间
+}
+
+[data-scheme="dark"] .sidebar header .site-avatar .site-logo:hover {
+  transform: rotate(360deg); // 旋转角度为360度
+}
+
+// 折叠模块增加样式
+details summary {
+    cursor: url('/mouse/pointer.png'), pointer;
+    color: var(--light-red);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(var(--link-background-color), var(--link-background-opacity-hover));
+    }
+
+}
+// 图片多列显示
+.post-content p:has(> img:nth-child(2)){column-count:2;column-gap:8px;margin:6px 0;}
+.post-content p:has(> img:nth-child(3)){column-count:3;}
+.post-content p:has(> img:nth-child(4)){column-count:4;}
+.post-content p:has(> img:nth-child(5)){column-count:5;}
+.post-content p:has(> img:nth-child(6)){column-count:4;}
+.post-content p:has(> img:nth-child(2)) img{display:inherit;}
+.post-content p:has(> img:nth-child(6)) img{margin-bottom:8px;}
+
+// // 图片居中
+// p > img {
+//     display: block;
+//     margin: 0 auto;
+//     max-width: 100%;
+//     height: auto;
+// }
+
+// // 文章内容图片圆角阴影
+// .article-page .main-article .article-content {
+//   img {
+//     max-width: 96% !important;
+//     height: auto !important;
+//     border-radius: 8px;
+//   }
+// }
+
+//页面三栏宽度调整
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  .left-sidebar {
+    order: -3;
+    max-width: var(--left-sidebar-max-width);
+  }
+
+  .right-sidebar {
+    order: -1;
+    max-width: var(--right-sidebar-max-width);
+
+    /// Display right sidebar when min-width: lg
+    @include respond(lg) {
+      display: flex;
+    }
+  }
+
+  &.extended {
+    @include respond(md) {
+      max-width: 1024px;
+      --left-sidebar-max-width: 25%;
+      --right-sidebar-max-width: 22% !important;
+    }
+
+    @include respond(lg) {
+      max-width: 1280px;
+      --left-sidebar-max-width: 20%;
+      --right-sidebar-max-width: 30%;
+    }
+
+    @include respond(xl) {
+      max-width: 1453px; //1536px;
+      --left-sidebar-max-width: 15%;
+      --right-sidebar-max-width: 25%;
+    }
+  }
+
+  &.compact {
+    @include respond(md) {
+      --left-sidebar-max-width: 25%;
+      max-width: 768px;
+    }
+
+    @include respond(lg) {
+      max-width: 1024px;
+      --left-sidebar-max-width: 20%;
+    }
+
+    @include respond(xl) {
+      max-width: 1280px;
+    }
+  }
+}
+
+//全局页面小图片样式微调
+.article-list--compact article .article-image img {
+  width: var(--image-size);
+  height: var(--image-size);
+  object-fit: cover;
+  border-radius: 17%;
+}
+
+// 页面基本配色
+:root {
+  // 全局顶部边距
+  // --main-top-padding: 30px;
+  // 全局卡片圆角
+  // --card-border-radius: 25px;
+  // 标签云卡片圆角
+  --tag-border-radius: 8px;
+  // 卡片间距
+  --section-separation: 40px;
+  // 全局字体大小
+  // --article-font-size: 1.8rem;
+  // 行内代码背景色
+  // --code-background-color: #f8f8f8;
+  // 行内代码前景色
+  --code-text-color: var(--light-red);
+  // 暗色模式下样式
+  &[data-scheme="dark"] {
+    // 行内代码背景色
+    // --code-background-color: #ff6d1b17;
+    // 行内代码前景色
+    --code-text-color: var(--light-red);
+  }
+}
+
+//文章封面高度更改
+.article-list article .article-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+
+  @include respond(md) {
+    height: 200px;
+  }
+
+  @include respond(xl) {
+    height: 305px;
+  }
+}
+
+// 设置选中字体的区域背景颜色
+::selection {
+  color: #fff;
+  background: #b52e29aa;
+}
+// 代码块样式修改
+.highlight {
+  box-shadow: var(--shadow-pre);
+}
+
+[data-scheme="light"] .article-content .highlight {
+  background-color: #d9d9d9;
+}
+
+[data-scheme="light"] .chroma {
+  color: #ff6f00;
+  background-color: #d9d9d9d8;
+}
+
+// 把 block 的高度限制在 20em，并隐藏滚动条
+.article-content {  // line 205
+  .highlight {  // line 331
+    pre {  // line 345
+      margin: initial;
+      padding: 0;
+      margin: 0;
+      width: auto;
+      max-height: 20em;
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        display: none; /* Chrome Safari */
+      }
+    }
+  }
+}
+
+//一大堆悬停效果：文字红色加粗放大
+#main-menu { //左边菜单
+  a {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--light-red);
+      transform: scale(1.05);
+      font-weight: bold;
+      filter: drop-shadow(var(--dropshadow-light));
+    }
+
+    [data-scheme="dark"] & {
+      &:hover {
+        filter: drop-shadow(var(--dropshadow-dark));
+      }
+    }
+  }
+}
+.menu-social { //社交图标
+  svg {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      stroke: var(--light-red);
+      transform: scale(1.05);
+      filter: drop-shadow(var(--dropshadow-light));
+    }
+    [data-scheme="dark"] & {
+      &:hover {
+        filter: drop-shadow(var(--dropshadow-dark));
+      }
+    }
+  }
+}
+#dark-mode-toggle { //暗色模式按钮
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--light-red);
+    filter: drop-shadow(var(--dropshadow-light));
+  }
+
+  [data-scheme="dark"] & {
+    &:hover {
+      filter: drop-shadow(var(--dropshadow-dark));
+    }
+  }
+}
+#TableOfContents { //导航栏
+  a{
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--light-red);
+      font-weight: bold;
+    }
+  }
+}
+.page-link { //页面页码栏（需要添加JavaScript代码实现当前页高亮）
+  transition: all 0.2s ease-in-out;
+
+  &.current.reset-style {
+    font-weight: normal;
+    background-color: var(--card-background);
+    color: var(--card-text-color-secondary);
+  }
+    // 其他页面的悬停效果
+  &:not(.current):hover {
+    color: var(--light-red);
+    background-color: var(--card-background-selected);
+    transform: scale(1.05);
+    font-weight: bold;
+  }
+}
+.archives-year { //右侧栏归档
+  a {
+    span.year {
+      transition: all 0.2s ease-in-out; 
+      transform-origin: left center;
+    }
+
+    &:hover {
+      background-color: var(--card-background-selected);
+      border-radius: var(--card-border-radius);
+      span.year{
+        color: var(--light-red) !important;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+.tagCloud-tags { //标签云（注释掉widgets.scss里标签云的悬停和动画效果）
+  a {
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      box-shadow: inset 0 0 0 999px var(--card-background-selected), var(--shadow-l2);
+      color: var(--light-red);
+      font-weight: bold;
+      transform: scale(1.05);
+    }
+  }
+}
+.search-form { //搜索框
+  transition: all 0.5s ease-in-out;
+  &:hover{
+    svg {
+      transform: scale(1.1);
+      stroke-width: 2;
+    }
+  }
+}
+.article-list article {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: inset 0 0 0 999px var(--card-background-selected), var(--shadow-l2);
+    transform: scale(1.01);
+  }
+}
+
+
+
+// 文章页脚版权链接图标大小调整
+.article-footer {
+  .article-copyright {
+    a:link{
+      svg {
+        width: 12px;
+        height: 12px;
+        margin-top: 0.2rem;
+      }
+    }
+  }
+}
+
+/* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
