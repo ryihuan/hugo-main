@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://ryihuan.github.io/search/'>
 
-<link rel="stylesheet" href="/scss/style.min.193b650cc3aaaf1c1b443381dba548f22682893a2c1dbc2e401198db2815b653.css"><meta property='og:title' content="Search">
+<link rel="stylesheet" href="/scss/style.min.724685d87351664c3616607f652a6da0e623943f71649e13f70f89abe949f573.css"><meta property='og:title' content="Search">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://ryihuan.github.io/search/'>
 <meta property='og:site_name' content='某人的小窝'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2025-10-01T02:00:22&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2025-10-03T04:50:55&#43;08:00'/>
 <meta name="twitter:title" content="Search">
 <meta name="twitter:description" content=""><link rel="alternate" type="application/json" href="https://ryihuan.github.io/search/index.json"><script>
 
@@ -24,9 +24,19 @@ function updateAvatar() {
   
   if (darkSrc && isDark) {
     avatarImg.src = darkSrc;
+    
+    triggerAvatarAnimation(avatarImg);
   } else if (lightSrc && !isDark) {
     avatarImg.src = lightSrc;
   }
+}
+
+
+function triggerAvatarAnimation(avatarImg) {
+  avatarImg.classList.add('rotating-overshoot');
+  setTimeout(() => {
+    avatarImg.classList.remove('rotating-overshoot');
+  }, 2000); 
 }
 
 
@@ -40,7 +50,21 @@ new MutationObserver(function(mutations) {
     }
   });
 }).observe(document.documentElement, { attributes: true });
-</script><link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
+</script>
+
+
+<script>
+document.addEventListener('click', function(e) {
+    const articleDetails = e.target.closest('.article-details');
+    if (articleDetails && !e.target.closest('.article-category a')) {
+        const titleLink = articleDetails.querySelector('.article-title a');
+        if (titleLink) {
+            window.location.href = titleLink.href;
+        }
+    }
+});
+</script>
+<link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
     </head>
     <body class="template-search">
     <script>
@@ -103,7 +127,7 @@ new MutationObserver(function(mutations) {
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">某人的小窝</a></h1>
-            <h2 class="site-description">写什么好呢</h2>
+            <h2 class="site-description">互联网有房一族。</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -170,7 +194,7 @@ new MutationObserver(function(mutations) {
         
         
         <li >
-            <a href='/about/' >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -335,10 +359,8 @@ new MutationObserver(function(mutations) {
         
             
         
-            
-        
-        发表了4篇文章 · 
-        总计7.86k字
+        发表了3篇文章 · 
+        总计7.48k字
     </section>
 
     <section class="powerby">
@@ -417,40 +439,41 @@ new MutationObserver(function(mutations) {
 </style>
 
 <script>
-    function initTocHide() {
+function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+        return;
+    }
+    
+    window.addEventListener('scroll', function() {
         
-        let toc = document.querySelector(".widget--toc");
-        if (!toc) {
-            return;
+        let openUl = document.querySelectorAll(".open");
+        if (openUl.length > 0) {
+            openUl.forEach((ul) => {
+            ul.classList.remove("open")
+            })
         }
         
-        window.addEventListener('scroll', function() {
-            
-            let openUl = document.querySelectorAll(".open");
-            if (openUl.length > 0) {
-              openUl.forEach((ul) => {
-                ul.classList.remove("open")
-              })
-            }
-            
-            let currentLi = document.querySelector(".active-class");
-            if (!currentLi) {
-                return
-            }
-            
-            if (currentLi.children.length > 1) {
-                currentLi.children[1].classList.add("open")
-            }
-            
-            let ul = currentLi.parentElement;
-            do {
-                ul.classList.add("open");
-                ul = ul.parentElement.parentElement
-            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
-        });
-    }
-    initTocHide()
-     
+        let currentLi = document.querySelector(".active-class");
+        if (!currentLi) {
+            return
+        }
+        
+        if (currentLi.children.length > 1) {
+            currentLi.children[1].classList.add("open")
+        }
+        
+        let ul = currentLi.parentElement;
+        do {
+            ul.classList.add("open");
+            ul = ul.parentElement.parentElement
+        } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+}
+initTocHide()
+
+ 
     function initScrollTop() {
         let rightSideBar = document.querySelector(".right-sidebar");
         if (!rightSideBar) {

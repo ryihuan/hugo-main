@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本文基于Stack版本3.31.0\n从Neopost到Stack 我觉得对于像我这样的代码白痴，一开始装修博客就去选冷门主题真的是走弯路了。用Neopost主题的时候遇到很多问题用搜索引擎都搜不到可以抄作业的答案，只能一个劲问ai然后一遍一遍试错……\n虽然看到博客一点一点有个样子了也比较有满足感，但是太折磨了，思来想去还是换了更多人用教程也更全的Stack主题。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Hugo Stack 主题装修历程分享">
 <title>你好，Stack主题</title>
 
 <link rel='canonical' href='https://ryihuan.github.io/p/%E4%BD%A0%E5%A5%BDstack%E4%B8%BB%E9%A2%98/'>
 
-<link rel="stylesheet" href="/scss/style.min.193b650cc3aaaf1c1b443381dba548f22682893a2c1dbc2e401198db2815b653.css"><meta property='og:title' content="你好，Stack主题">
-<meta property='og:description' content="本文基于Stack版本3.31.0\n从Neopost到Stack 我觉得对于像我这样的代码白痴，一开始装修博客就去选冷门主题真的是走弯路了。用Neopost主题的时候遇到很多问题用搜索引擎都搜不到可以抄作业的答案，只能一个劲问ai然后一遍一遍试错……\n虽然看到博客一点一点有个样子了也比较有满足感，但是太折磨了，思来想去还是换了更多人用教程也更全的Stack主题。\n">
+<link rel="stylesheet" href="/scss/style.min.724685d87351664c3616607f652a6da0e623943f71649e13f70f89abe949f573.css"><meta property='og:title' content="你好，Stack主题">
+<meta property='og:description' content="Hugo Stack 主题装修历程分享">
 <meta property='og:url' content='https://ryihuan.github.io/p/%E4%BD%A0%E5%A5%BDstack%E4%B8%BB%E9%A2%98/'>
 <meta property='og:site_name' content='某人的小窝'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Stack' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2025-10-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-10-02T17:21:42&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Stack' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='博客装修' /><meta property='article:published_time' content='2025-10-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-10-04T01:42:48&#43;08:00'/>
 <meta name="twitter:title" content="你好，Stack主题">
-<meta name="twitter:description" content="本文基于Stack版本3.31.0\n从Neopost到Stack 我觉得对于像我这样的代码白痴，一开始装修博客就去选冷门主题真的是走弯路了。用Neopost主题的时候遇到很多问题用搜索引擎都搜不到可以抄作业的答案，只能一个劲问ai然后一遍一遍试错……\n虽然看到博客一点一点有个样子了也比较有满足感，但是太折磨了，思来想去还是换了更多人用教程也更全的Stack主题。\n"><script>
+<meta name="twitter:description" content="Hugo Stack 主题装修历程分享"><script>
 
 function updateAvatar() {
   const avatarImg = document.querySelector('.site-avatar .site-logo');
@@ -24,9 +24,19 @@ function updateAvatar() {
   
   if (darkSrc && isDark) {
     avatarImg.src = darkSrc;
+    
+    triggerAvatarAnimation(avatarImg);
   } else if (lightSrc && !isDark) {
     avatarImg.src = lightSrc;
   }
+}
+
+
+function triggerAvatarAnimation(avatarImg) {
+  avatarImg.classList.add('rotating-overshoot');
+  setTimeout(() => {
+    avatarImg.classList.remove('rotating-overshoot');
+  }, 2000); 
 }
 
 
@@ -41,6 +51,20 @@ new MutationObserver(function(mutations) {
   });
 }).observe(document.documentElement, { attributes: true });
 </script>
+
+
+<script>
+document.addEventListener('click', function(e) {
+    const articleDetails = e.target.closest('.article-details');
+    if (articleDetails && !e.target.closest('.article-category a')) {
+        const titleLink = articleDetails.querySelector('.article-title a');
+        if (titleLink) {
+            window.location.href = titleLink.href;
+        }
+    }
+});
+</script>
+
     </head>
     <body class="
     article-page
@@ -105,7 +129,7 @@ new MutationObserver(function(mutations) {
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">某人的小窝</a></h1>
-            <h2 class="site-description">写什么好呢</h2>
+            <h2 class="site-description">互联网有房一族。</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -172,7 +196,7 @@ new MutationObserver(function(mutations) {
         
         
         <li >
-            <a href='/about/' >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -312,6 +336,15 @@ new MutationObserver(function(mutations) {
         <li><a href="#应用到主页">应用到主页</a></li>
       </ol>
     </li>
+    <li><a href="#添加文章封面渐变效果">添加文章封面渐变效果</a></li>
+    <li><a href="#为元素添加鼠标悬停效果">为元素添加鼠标悬停效果</a>
+      <ol>
+        <li><a href="#代码是什么可以吃吗">代码是什么，可以吃吗？</a></li>
+        <li><a href="#案例左侧菜单栏悬停效果">案例：左侧菜单栏悬停效果</a></li>
+      </ol>
+    </li>
+    <li><a href="#页码栏鼠标悬停效果">页码栏鼠标悬停效果</a></li>
+    <li><a href="#更改主页文章卡片可点击区域">更改主页文章卡片可点击区域</a></li>
   </ol>
 </nav>
         </div>
@@ -342,6 +375,10 @@ new MutationObserver(function(mutations) {
             <a href="/p/%E4%BD%A0%E5%A5%BDstack%E4%B8%BB%E9%A2%98/">你好，Stack主题</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            Hugo Stack 主题装修历程分享
+        </h3>
         
     </div>
 
@@ -374,7 +411,7 @@ new MutationObserver(function(mutations) {
 
 
                 <time>
-                    Oct 02, 2025 17:21 CST
+                    Oct 04, 2025 01:42 CST
                 </time>
             </div>
             <div>
@@ -387,7 +424,7 @@ new MutationObserver(function(mutations) {
 
 
                 <time class="article-time--reading">
-                    阅读时长: 5 分钟
+                    阅读时长: 9 分钟
                 </time>
             </div>
         
@@ -402,7 +439,7 @@ new MutationObserver(function(mutations) {
     <section class="article-content">
     
     
-    <p><small><em>本文基于Stack版本3.31.0</em></small></p>
+    <p><small><em>本文基于Stack版本3.31.0，部分代码使用AI完成</em></small></p>
 <h2 id="从neopost到stack">从Neopost到Stack
 </h2><p>我觉得对于像我这样的代码白痴，一开始装修博客就去选冷门主题真的是走弯路了。用Neopost主题的时候遇到很多问题用搜索引擎都搜不到可以抄作业的答案，只能一个劲问ai然后一遍一遍试错……<br>
 虽然看到博客一点一点有个样子了也比较有满足感，但是太折磨了，思来想去还是换了更多人用教程也更全的Stack主题。</p>
@@ -439,6 +476,16 @@ new MutationObserver(function(mutations) {
 </a>；
 <a class="link" href="https://www.xalaok.top/post/stack-modify/"  target="_blank" rel="noopener"
     >Naive Koala-Hugo Stack 魔改美化
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a>
+<a class="link" href="https://www.blain.top/categories/hugo/"  target="_blank" rel="noopener"
+    >B1ain&rsquo;s Blog-hugo博客装修笔记
     <span style="white-space: nowrap;"><svg width=".7em"
         height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
         <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
@@ -490,242 +537,114 @@ new MutationObserver(function(mutations) {
 <p>以下是我魔改的代码：</p>
 <details>
 <summary>暗色模式下头像旋转（主题目录\assets\scss\custom.scss）</summary>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// 头像旋转动画
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">[</span><span class="nt">data-scheme</span><span class="o">=</span><span class="s2">&#34;dark&#34;</span><span class="o">]</span> <span class="nc">.sidebar</span> <span class="nt">header</span> <span class="nc">.site-avatar</span> <span class="nc">.site-logo</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">transition</span><span class="o">:</span> <span class="ni">transform</span> <span class="mi">1</span><span class="mf">.65</span><span class="kt">s</span> <span class="ni">ease-in-out</span><span class="p">;</span> <span class="c1">// 旋转时间
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">data-scheme</span><span class="o">=</span><span class="s2">&#34;dark&#34;</span><span class="o">]</span> <span class="nc">.sidebar</span> <span class="nt">header</span> <span class="nc">.site-avatar</span> <span class="nc">.site-logo</span><span class="nd">:hover</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">transform</span><span class="o">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">);</span> <span class="c1">// 旋转角度为360度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></details>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1">// 头像旋转动画
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"></span><span class="o">[</span><span class="nt">data-scheme</span><span class="o">=</span><span class="s2">&#34;dark&#34;</span><span class="o">]</span> <span class="nc">.sidebar</span> <span class="nt">header</span> <span class="nc">.site-avatar</span> <span class="nc">.site-logo</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="na">transition</span><span class="o">:</span> <span class="ni">transform</span> <span class="mi">1</span><span class="mf">.65</span><span class="kt">s</span> <span class="ni">ease-in-out</span><span class="p">;</span> <span class="c1">// 旋转时间
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="o">[</span><span class="nt">data-scheme</span><span class="o">=</span><span class="s2">&#34;dark&#34;</span><span class="o">]</span> <span class="nc">.sidebar</span> <span class="nt">header</span> <span class="nc">.site-avatar</span> <span class="nc">.site-logo</span><span class="nd">:hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">  <span class="na">transform</span><span class="o">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">);</span> <span class="c1">// 旋转角度为360度
+</span></span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div></details>
 <details>
 <summary>切换背景图片（主题目录\layouts\partials\footer\custom.html）</summary>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl">    <span class="c">/*修改背景图片*/</span>
-</span></span><span class="line"><span class="cl">    <span class="o">[</span><span class="nt">data-scheme</span><span class="o">=</span><span class="s2">&#34;light&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">{{ (resources.Get &#34;background/light.jpg&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Permalink</span> <span class="p">}</span><span class="err">}</span><span class="o">)</span> <span class="nt">no-repeat</span> <span class="nt">center</span> <span class="nt">top</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">background-size</span><span class="o">:</span> <span class="nt">cover</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">background-attachment</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="err">}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">[</span><span class="nt">data-scheme</span><span class="o">=</span><span class="s2">&#34;dark&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">{{ (resources.Get &#34;background/dark.jpg&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Permalink</span> <span class="p">}</span><span class="err">}</span><span class="o">)</span> <span class="nt">no-repeat</span> <span class="nt">center</span> <span class="nt">top</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">background-size</span><span class="o">:</span> <span class="nt">cover</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">background-attachment</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="err">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></details>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="ln"> 1</span><span class="cl">    <span class="c">/*修改背景图片*/</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="o">[</span><span class="nt">data-scheme</span><span class="o">=</span><span class="s2">&#34;light&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">        <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">{{ (resources.Get &#34;background/light.jpg&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Permalink</span> <span class="p">}</span><span class="err">}</span><span class="o">)</span> <span class="nt">no-repeat</span> <span class="nt">center</span> <span class="nt">top</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">        <span class="nt">background-size</span><span class="o">:</span> <span class="nt">cover</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">        <span class="nt">background-attachment</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="o">[</span><span class="nt">data-scheme</span><span class="o">=</span><span class="s2">&#34;dark&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">        <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">{{ (resources.Get &#34;background/dark.jpg&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Permalink</span> <span class="p">}</span><span class="err">}</span><span class="o">)</span> <span class="nt">no-repeat</span> <span class="nt">center</span> <span class="nt">top</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        <span class="nt">background-size</span><span class="o">:</span> <span class="nt">cover</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">        <span class="nt">background-attachment</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="err">}</span>
+</span></span></code></pre></div></details>
 <details>
 <summary>切换头像</summary>
 <p>先修改<code>主题目录\layouts\partials\head\custom.html</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// 头像切换功能
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">updateAvatar</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">avatarImg</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.site-avatar .site-logo&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">avatarImg</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">isDark</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-scheme&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;dark&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">lightSrc</span> <span class="o">=</span> <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-src-light&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">src</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">darkSrc</span> <span class="o">=</span> <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-src-dark&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">darkSrc</span> <span class="o">&amp;&amp;</span> <span class="nx">isDark</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">darkSrc</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">lightSrc</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">isDark</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">lightSrc</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 初始化
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="nx">updateAvatar</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 监听主题切换
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">new</span> <span class="nx">MutationObserver</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mutations</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">mutations</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mutation</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">mutation</span><span class="p">.</span><span class="nx">attributeName</span> <span class="o">===</span> <span class="s1">&#39;data-scheme&#39;</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">updateAvatar</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">}).</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">,</span> <span class="p">{</span> <span class="nx">attributes</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>再修改<code>主题目录\layouts\partials\sidebar\left.html</code>（在<code>&lt;header&gt;</code>后修改，注释掉原有设置）</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    {{ with .Site.Params.sidebar.avatar }}
-</span></span><span class="line"><span class="cl">        {{ if (default true .enabled) }}
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-avatar&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Site.BaseURL | relLangURL }}&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            {{ if not .local }}
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ .src }}&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;300&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;300&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-logo&#34;</span> <span class="na">loading</span><span class="o">=</span><span class="s">&#34;lazy&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Avatar&#34;</span>
-</span></span><span class="line"><span class="cl">                    <span class="err">{{</span> <span class="na">with</span> <span class="err">.</span><span class="na">srcDark</span> <span class="err">}}</span><span class="na">data-src-dark</span><span class="o">=</span><span class="s">&#34;{{ . }}&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            {{ else }}
-</span></span><span class="line"><span class="cl">                {{ $avatar := resources.Get (.src) }}
-</span></span><span class="line"><span class="cl">                {{ $avatarDark := resources.Get (.srcDark | default .src) }}
-</span></span><span class="line"><span class="cl">                
-</span></span><span class="line"><span class="cl">                {{ if and $avatar $avatarDark }}
-</span></span><span class="line"><span class="cl">                    {{ $avatarResized := $avatar.Resize &#34;300x&#34; }}
-</span></span><span class="line"><span class="cl">                    {{ $avatarDarkResized := $avatarDark.Resize &#34;300x&#34; }}
-</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.RelPermalink }}&#34;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="na">data-src-light</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.RelPermalink }}&#34;</span>
-</span></span><span class="line"><span class="cl">                        <span class="na">data-src-dark</span><span class="o">=</span><span class="s">&#34;{{ $avatarDarkResized.RelPermalink }}&#34;</span>
-</span></span><span class="line"><span class="cl">                        <span class="na">width</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.Width }}&#34;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="na">height</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.Height }}&#34;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-logo&#34;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="na">loading</span><span class="o">=</span><span class="s">&#34;lazy&#34;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Avatar&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                {{ else if $avatar }}
-</span></span><span class="line"><span class="cl">                    {{ $avatarResized := $avatar.Resize &#34;300x&#34; }}
-</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.RelPermalink }}&#34;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="na">width</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.Width }}&#34;</span>
-</span></span><span class="line"><span class="cl">                        <span class="na">height</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.Height }}&#34;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-logo&#34;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="na">loading</span><span class="o">=</span><span class="s">&#34;lazy&#34;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Avatar&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                {{ else }}
-</span></span><span class="line"><span class="cl">                    {{ errorf &#34;Failed loading avatar from %q&#34; . }}
-</span></span><span class="line"><span class="cl">                {{ end }}
-</span></span><span class="line"><span class="cl">            {{ end }}
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            {{ with $.Site.Params.sidebar.emoji }}
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;emoji&#34;</span><span class="p">&gt;</span>{{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            {{ end }}
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        {{ end }}
-</span></span><span class="line"><span class="cl">    {{ end }}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>再在<code>hugo.yaml</code>的<code>sidebar</code>里面添加<code>srcdark: img/dark.jpg</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">    </span><span class="nt">sidebar</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">emoji</span><span class="p">:</span><span class="w"> </span><span class="l">😨</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="l">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">avatar</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">local</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">img/light.jpg</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">srcdark</span><span class="p">:</span><span class="w"> </span><span class="l">img/dark.jpg</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div></details>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="c1">// 头像切换功能
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">updateAvatar</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="kr">const</span> <span class="nx">avatarImg</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.site-avatar .site-logo&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">avatarImg</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="kr">const</span> <span class="nx">isDark</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-scheme&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;dark&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="kr">const</span> <span class="nx">lightSrc</span> <span class="o">=</span> <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-src-light&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">src</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="kr">const</span> <span class="nx">darkSrc</span> <span class="o">=</span> <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-src-dark&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  
+</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">darkSrc</span> <span class="o">&amp;&amp;</span> <span class="nx">isDark</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">darkSrc</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">lightSrc</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">isDark</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">    <span class="nx">avatarImg</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">lightSrc</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="c1">// 初始化
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="nx">updateAvatar</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">
+</span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="c1">// 监听主题切换
+</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="c1"></span><span class="k">new</span> <span class="nx">MutationObserver</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mutations</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">  <span class="nx">mutations</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mutation</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">mutation</span><span class="p">.</span><span class="nx">attributeName</span> <span class="o">===</span> <span class="s1">&#39;data-scheme&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">      <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">updateAvatar</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="p">}).</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">,</span> <span class="p">{</span> <span class="nx">attributes</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>再修改<code>主题目录\layouts\partials\sidebar\left.html</code>（在<code>&lt;header&gt;</code>后修改，注释掉原有设置）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    {{ with .Site.Params.sidebar.avatar }}
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">        {{ if (default true .enabled) }}
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">        <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-avatar&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Site.BaseURL | relLangURL }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">            {{ if not .local }}
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ .src }}&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;300&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;300&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-logo&#34;</span> <span class="na">loading</span><span class="o">=</span><span class="s">&#34;lazy&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Avatar&#34;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">                    <span class="err">{{</span> <span class="na">with</span> <span class="err">.</span><span class="na">srcDark</span> <span class="err">}}</span><span class="na">data-src-dark</span><span class="o">=</span><span class="s">&#34;{{ . }}&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">            {{ else }}
+</span></span><span class="line"><span class="ln">10</span><span class="cl">                {{ $avatar := resources.Get (.src) }}
+</span></span><span class="line"><span class="ln">11</span><span class="cl">                {{ $avatarDark := resources.Get (.srcDark | default .src) }}
+</span></span><span class="line"><span class="ln">12</span><span class="cl">                
+</span></span><span class="line"><span class="ln">13</span><span class="cl">                {{ if and $avatar $avatarDark }}
+</span></span><span class="line"><span class="ln">14</span><span class="cl">                    {{ $avatarResized := $avatar.Resize &#34;300x&#34; }}
+</span></span><span class="line"><span class="ln">15</span><span class="cl">                    {{ $avatarDarkResized := $avatarDark.Resize &#34;300x&#34; }}
+</span></span><span class="line"><span class="ln">16</span><span class="cl">                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.RelPermalink }}&#34;</span> 
+</span></span><span class="line"><span class="ln">17</span><span class="cl">                        <span class="na">data-src-light</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.RelPermalink }}&#34;</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">                        <span class="na">data-src-dark</span><span class="o">=</span><span class="s">&#34;{{ $avatarDarkResized.RelPermalink }}&#34;</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">                        <span class="na">width</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.Width }}&#34;</span> 
+</span></span><span class="line"><span class="ln">20</span><span class="cl">                        <span class="na">height</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.Height }}&#34;</span> 
+</span></span><span class="line"><span class="ln">21</span><span class="cl">                        <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-logo&#34;</span> 
+</span></span><span class="line"><span class="ln">22</span><span class="cl">                        <span class="na">loading</span><span class="o">=</span><span class="s">&#34;lazy&#34;</span> 
+</span></span><span class="line"><span class="ln">23</span><span class="cl">                        <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Avatar&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">                {{ else if $avatar }}
+</span></span><span class="line"><span class="ln">25</span><span class="cl">                    {{ $avatarResized := $avatar.Resize &#34;300x&#34; }}
+</span></span><span class="line"><span class="ln">26</span><span class="cl">                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.RelPermalink }}&#34;</span> 
+</span></span><span class="line"><span class="ln">27</span><span class="cl">                        <span class="na">width</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.Width }}&#34;</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">                        <span class="na">height</span><span class="o">=</span><span class="s">&#34;{{ $avatarResized.Height }}&#34;</span> 
+</span></span><span class="line"><span class="ln">29</span><span class="cl">                        <span class="na">class</span><span class="o">=</span><span class="s">&#34;site-logo&#34;</span> 
+</span></span><span class="line"><span class="ln">30</span><span class="cl">                        <span class="na">loading</span><span class="o">=</span><span class="s">&#34;lazy&#34;</span> 
+</span></span><span class="line"><span class="ln">31</span><span class="cl">                        <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Avatar&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">                {{ else }}
+</span></span><span class="line"><span class="ln">33</span><span class="cl">                    {{ errorf &#34;Failed loading avatar from %q&#34; . }}
+</span></span><span class="line"><span class="ln">34</span><span class="cl">                {{ end }}
+</span></span><span class="line"><span class="ln">35</span><span class="cl">            {{ end }}
+</span></span><span class="line"><span class="ln">36</span><span class="cl">            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl">            {{ with $.Site.Params.sidebar.emoji }}
+</span></span><span class="line"><span class="ln">38</span><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;emoji&#34;</span><span class="p">&gt;</span>{{ . }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">39</span><span class="cl">            {{ end }}
+</span></span><span class="line"><span class="ln">40</span><span class="cl">        <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">41</span><span class="cl">        {{ end }}
+</span></span><span class="line"><span class="ln">42</span><span class="cl">    {{ end }}
+</span></span></code></pre></div><p>再在<code>hugo.yaml</code>的<code>sidebar</code>里面添加<code>srcdark: img/dark.jpg</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="w">    </span><span class="nt">sidebar</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">        </span><span class="nt">emoji</span><span class="p">:</span><span class="w"> </span><span class="l">😨</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w">        </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="l">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">        </span><span class="nt">avatar</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w">            </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="w">            </span><span class="nt">local</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="w">            </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">img/light.jpg</span><span class="w">
+</span></span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="w">            </span><span class="nt">srcdark</span><span class="p">:</span><span class="w"> </span><span class="l">img/dark.jpg</span><span class="w">
+</span></span></span></code></pre></div></details>
 <p>顺说目前的回顶部按钮和鼠标光标是用neopost主题的时候自己画的，我很满意^ ^<br>
 <img src="/p/backtop.png" alt="回顶部" width=32px /><img src="/p/default.png"
 	
@@ -829,21 +748,11 @@ new MutationObserver(function(mutations) {
 <p>把保存的svg文件在VScode里打开，默认会显示图像预览，需要在右上角找到<code>作为源文本重新打开</code>按钮，查看源文本<br>
 为了跟主题原有的图标协调，这里我同时打开了<code>主题目录\assets\icons\brand-twitter.svg</code>的源文本进行比对：</p>
 <details><summary>brand-twitter.svg</summary>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-svg" data-lang="svg"><span class="line"><span class="cl"><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">class=</span><span class="s">&#34;icon icon-tabler icon-tabler-brand-twitter&#34;</span> <span class="na">width=</span><span class="s">&#34;24&#34;</span> <span class="na">height=</span><span class="s">&#34;24&#34;</span> <span class="na">viewBox=</span><span class="s">&#34;0 0 24 24&#34;</span> <span class="na">stroke-width=</span><span class="s">&#34;2&#34;</span> <span class="na">stroke=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">fill=</span><span class="s">&#34;none&#34;</span> <span class="na">stroke-linecap=</span><span class="s">&#34;round&#34;</span> <span class="na">stroke-linejoin=</span><span class="s">&#34;round&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;path</span> <span class="na">stroke=</span><span class="s">&#34;none&#34;</span> <span class="na">d=</span><span class="s">&#34;M0 0h24v24H0z&#34;</span> <span class="na">fill=</span><span class="s">&#34;none&#34;</span><span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">&#34;M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;/svg&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></details>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-svg" data-lang="svg"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">class=</span><span class="s">&#34;icon icon-tabler icon-tabler-brand-twitter&#34;</span> <span class="na">width=</span><span class="s">&#34;24&#34;</span> <span class="na">height=</span><span class="s">&#34;24&#34;</span> <span class="na">viewBox=</span><span class="s">&#34;0 0 24 24&#34;</span> <span class="na">stroke-width=</span><span class="s">&#34;2&#34;</span> <span class="na">stroke=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">fill=</span><span class="s">&#34;none&#34;</span> <span class="na">stroke-linecap=</span><span class="s">&#34;round&#34;</span> <span class="na">stroke-linejoin=</span><span class="s">&#34;round&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nt">&lt;path</span> <span class="na">stroke=</span><span class="s">&#34;none&#34;</span> <span class="na">d=</span><span class="s">&#34;M0 0h24v24H0z&#34;</span> <span class="na">fill=</span><span class="s">&#34;none&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">&#34;M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nt">&lt;/svg&gt;</span>
+</span></span></code></pre></div></details>
 <p>可以直接复制前面两行代码粘贴到正在修改的svg文件中：</p>
 <details><summary>未编辑的svg文件源文本</summary>
 <p><img src="/p/Untitled.svg"
@@ -856,21 +765,11 @@ new MutationObserver(function(mutations) {
 	
 	
 ></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-svg" data-lang="svg"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">&#34;24px&#34;</span> <span class="na">height=</span><span class="s">&#34;24px&#34;</span> <span class="na">version=</span><span class="s">&#34;1.1&#34;</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">viewBox=</span><span class="s">&#34;0 0 24 24&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">&#34;M 6.307 4.451 C 8.615 6.202 11.099 9.759 12.012 11.668 C 12.923 9.76 15.407 6.202 17.717 4.451 C 19.383 3.185 22.083 2.207 22.083 5.321 C 22.083 5.944 21.73 10.549 21.524 11.294 C 20.804 13.893 18.184 14.557 15.854 14.155 C 19.928 14.858 20.964 17.179 18.726 19.501 C 14.477 23.912 12.618 18.395 12.14 16.981 C 12.054 16.722 12.012 16.6 12.012 16.703 C 12.012 16.6 11.97 16.722 11.882 16.981 C 11.407 18.395 9.547 23.912 5.297 19.501 C 3.059 17.179 4.095 14.858 8.17 14.155 C 5.837 14.557 3.219 13.893 2.499 11.294 C 2.294 10.549 1.94 5.944 1.94 5.321 C 1.94 2.207 4.64 3.185 6.307 4.451 Z&#34;</span> <span class="na">style=</span><span class="s">&#34;transform-box: fill-box; transform-origin: 50% 50%;&#34;</span> <span class="na">fill=</span><span class="s">&#34;#000&#34;</span><span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;/svg&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></details>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-svg" data-lang="svg"><span class="line"><span class="ln">1</span><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">&#34;24px&#34;</span> <span class="na">height=</span><span class="s">&#34;24px&#34;</span> <span class="na">version=</span><span class="s">&#34;1.1&#34;</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">viewBox=</span><span class="s">&#34;0 0 24 24&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">&#34;M 6.307 4.451 C 8.615 6.202 11.099 9.759 12.012 11.668 C 12.923 9.76 15.407 6.202 17.717 4.451 C 19.383 3.185 22.083 2.207 22.083 5.321 C 22.083 5.944 21.73 10.549 21.524 11.294 C 20.804 13.893 18.184 14.557 15.854 14.155 C 19.928 14.858 20.964 17.179 18.726 19.501 C 14.477 23.912 12.618 18.395 12.14 16.981 C 12.054 16.722 12.012 16.6 12.012 16.703 C 12.012 16.6 11.97 16.722 11.882 16.981 C 11.407 18.395 9.547 23.912 5.297 19.501 C 3.059 17.179 4.095 14.858 8.17 14.155 C 5.837 14.557 3.219 13.893 2.499 11.294 C 2.294 10.549 1.94 5.944 1.94 5.321 C 1.94 2.207 4.64 3.185 6.307 4.451 Z&#34;</span> <span class="na">style=</span><span class="s">&#34;transform-box: fill-box; transform-origin: 50% 50%;&#34;</span> <span class="na">fill=</span><span class="s">&#34;#000&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nt">&lt;/svg&gt;</span>
+</span></span></code></pre></div></details>
 <p>注意删除正在修改的文件<code>&lt;path&gt;</code>末尾的样式（如<code>style=&quot;&quot;</code>、<code>fill=&quot;&quot;</code>、<code>stroke=&quot;&quot;</code>等等，总之只保留前面一连串看不懂的数字）</p>
 <details><summary>编辑后的源文本</summary>
 <p><img src="/p/bluesky2.svg"
@@ -883,25 +782,264 @@ new MutationObserver(function(mutations) {
 	
 	
 ></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-svg" data-lang="svg"><span class="line"><span class="cl"><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">class=</span><span class="s">&#34;icon icon-tabler icon-tabler-brand-bluesky&#34;</span> <span class="na">width=</span><span class="s">&#34;24&#34;</span> <span class="na">height=</span><span class="s">&#34;24&#34;</span> <span class="na">viewBox=</span><span class="s">&#34;0 0 24 24&#34;</span> <span class="na">stroke-width=</span><span class="s">&#34;2&#34;</span> <span class="na">stroke=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">fill=</span><span class="s">&#34;none&#34;</span> <span class="na">stroke-linecap=</span><span class="s">&#34;round&#34;</span> <span class="na">stroke-linejoin=</span><span class="s">&#34;round&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;path</span> <span class="na">stroke=</span><span class="s">&#34;none&#34;</span> <span class="na">d=</span><span class="s">&#34;M0 0h24v24H0z&#34;</span> <span class="na">fill=</span><span class="s">&#34;none&#34;</span><span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">&#34;M 6.307 4.451 C 8.615 6.202 11.099 9.759 12.012 11.668 C 12.923 9.76 15.407 6.202 17.717 4.451 C 19.383 3.185 22.083 2.207 22.083 5.321 C 22.083 5.944 21.73 10.549 21.524 11.294 C 20.804 13.893 18.184 14.557 15.854 14.155 C 19.928 14.858 20.964 17.179 18.726 19.501 C 14.477 23.912 12.618 18.395 12.14 16.981 C 12.054 16.722 12.012 16.6 12.012 16.703 C 12.012 16.6 11.97 16.722 11.882 16.981 C 11.407 18.395 9.547 23.912 5.297 19.501 C 3.059 17.179 4.095 14.858 8.17 14.155 C 5.837 14.557 3.219 13.893 2.499 11.294 C 2.294 10.549 1.94 5.944 1.94 5.321 C 1.94 2.207 4.64 3.185 6.307 4.451 Z&#34;</span> <span class="na">style=</span><span class="s">&#34;transform-box: fill-box; transform-origin: 50% 50%;&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;/svg&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></details>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-svg" data-lang="svg"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">class=</span><span class="s">&#34;icon icon-tabler icon-tabler-brand-bluesky&#34;</span> <span class="na">width=</span><span class="s">&#34;24&#34;</span> <span class="na">height=</span><span class="s">&#34;24&#34;</span> <span class="na">viewBox=</span><span class="s">&#34;0 0 24 24&#34;</span> <span class="na">stroke-width=</span><span class="s">&#34;2&#34;</span> <span class="na">stroke=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">fill=</span><span class="s">&#34;none&#34;</span> <span class="na">stroke-linecap=</span><span class="s">&#34;round&#34;</span> <span class="na">stroke-linejoin=</span><span class="s">&#34;round&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nt">&lt;path</span> <span class="na">stroke=</span><span class="s">&#34;none&#34;</span> <span class="na">d=</span><span class="s">&#34;M0 0h24v24H0z&#34;</span> <span class="na">fill=</span><span class="s">&#34;none&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">&#34;M 6.307 4.451 C 8.615 6.202 11.099 9.759 12.012 11.668 C 12.923 9.76 15.407 6.202 17.717 4.451 C 19.383 3.185 22.083 2.207 22.083 5.321 C 22.083 5.944 21.73 10.549 21.524 11.294 C 20.804 13.893 18.184 14.557 15.854 14.155 C 19.928 14.858 20.964 17.179 18.726 19.501 C 14.477 23.912 12.618 18.395 12.14 16.981 C 12.054 16.722 12.012 16.6 12.012 16.703 C 12.012 16.6 11.97 16.722 11.882 16.981 C 11.407 18.395 9.547 23.912 5.297 19.501 C 3.059 17.179 4.095 14.858 8.17 14.155 C 5.837 14.557 3.219 13.893 2.499 11.294 C 2.294 10.549 1.94 5.944 1.94 5.321 C 1.94 2.207 4.64 3.185 6.307 4.451 Z&#34;</span> <span class="na">style=</span><span class="s">&#34;transform-box: fill-box; transform-origin: 50% 50%;&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nt">&lt;/svg&gt;</span>
+</span></span></code></pre></div></details>
 <p>这样一个适配主题的svg图标就做好了。</p>
 <h3 id="应用到主页">应用到主页
 </h3><p>把做好的文件放到<code>主题目录\assets\icons\</code>中，并在<code>hugo/yaml</code>里修改<code>menu-social-icon</code>的设置（与文件的标题一致），这样就可以应用到博客页面上了<br>
 如果需要更改图标链接的顺序，在<code>params:</code>前面一行添加<code>weight: 数字</code>即可，数字越小则越前</p>
+<h2 id="添加文章封面渐变效果">添加文章封面渐变效果
+</h2><p>参考了<a class="link" href="https://juejin.cn/post/7115236719019950088"  target="_blank" rel="noopener"
+    >田八-使用CSS让图片透明渐变
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a>中第三种方法的代码。</p>
+<details><summary>效果预览</summary>
+<p><img src="/p/100301.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+</details>
+<p>将以下代码添加到<code>custom.scss</code>中即可：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1">//文章预览图渐变
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"></span><span class="nc">.article-image</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nt">img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="na">mask</span><span class="o">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="n">to</span> <span class="ni">bottom</span><span class="o">,</span> <span class="no">black</span> <span class="mi">0</span><span class="kt">%</span><span class="o">,</span> <span class="no">black</span> <span class="mi">25</span><span class="kt">%</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.8</span><span class="p">)</span> <span class="mi">40</span><span class="kt">%</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.4</span><span class="p">)</span> <span class="mi">70</span><span class="kt">%</span><span class="o">,</span> <span class="ni">transparent</span> <span class="mi">100</span><span class="kt">%</span><span class="p">);</span>  <span class="p">}</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="为元素添加鼠标悬停效果">为元素添加鼠标悬停效果
+</h2><h3 id="代码是什么可以吃吗">代码是什么，可以吃吗？
+</h3><p><strong>先说题外话，</strong> 装修过程中渐渐学会了用开发者工具、定位css文件中的元素位置、简单修改悬停效果和添加动画……这之前我真是一窍不通<br>
+我是小白，所以把这个过程分享出来，希望能帮助到跟我小白程度一样的人吧。</p>
+<p>我一开始还是各种问ai，但ai给出的方案实际上也是它海量检索资料然后缝合的，如果提问的方式不正确，它很难给出跟实际情况适配的答案。<br>
+遇到问题时还是先谷歌搜寻一下，比如我想要上面提到的文章封面渐变效果，先用搜索引擎搜索“CSS 图片渐变”，找到了别人分享的实际内容，再去问ai是否可以应用到我的案例上、如果我需要为透明度添加中间值应该怎么做。这样可以提升效率，而不是在ai给出的海量错误代码中迷失。</p>
+<p>学会使用开发者工具检查元素，查看元素的class属性。<br>
+用vscode的资源管理器打开主题文件夹，再在<code>style.scss</code>给出的文件列表里一个一个<code>ctrl+F</code>查找该属性，这样就能很快锁定这个元素的样式代码。<br>
+通常建议不要直接在原文件上进行修改，应该在<code>custom.scss</code>中添加代码。</p>
+<h3 id="案例左侧菜单栏悬停效果">案例：左侧菜单栏悬停效果
+</h3><p>以下是实现左侧菜单栏悬停效果的具体案例：</p>
+<ol>
+<li>
+<p>用F12定位元素属性<br>
+选择左侧菜单栏中的元素，可以很清楚地看到<code>class=&quot;menu&quot; id=&quot;main-menu&quot;</code></p>
+</li>
+<li>
+<p>查找元素的样式代码<br>
+可以在<code>menu.scss</code>中找到<code>#main-menu</code>关键词，以下是它相关的所有样式代码</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c">/* Menu style */</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="p">#</span><span class="nn">main-menu</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="k">list-style</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="k">overflow-y</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="k">flex-grow</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.4</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">card</span><span class="o">-</span><span class="n">background</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">shadow</span><span class="o">-</span><span class="n">l1</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="nb">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="kc">container</span><span class="o">-</span><span class="n">padding</span><span class="p">)</span> <span class="o">*</span> <span class="mi">-1</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="err">@include</span> <span class="err">respond(xl)</span> <span class="err">{</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">        <span class="k">padding</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">
+</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="o">&amp;,</span> <span class="p">.</span><span class="nc">menu-bottom-section</span> <span class="nt">ol</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">        <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">        <span class="k">gap</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">
+</span></span><span class="line"><span class="ln">23</span><span class="cl">        <span class="err">@include</span> <span class="err">respond(xl)</span> <span class="err">{</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">            <span class="k">gap</span><span class="p">:</span> <span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">
+</span></span><span class="line"><span class="ln">28</span><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">show</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl">
+</span></span><span class="line"><span class="ln">32</span><span class="cl">    <span class="p">@</span><span class="k">include</span> <span class="nt">respond</span><span class="o">(</span><span class="nt">md</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl">        <span class="nt">align-items</span><span class="o">:</span> <span class="nt">flex-end</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl">        <span class="nt">display</span><span class="o">:</span> <span class="nt">flex</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">35</span><span class="cl">        <span class="nt">background-color</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">36</span><span class="cl">        <span class="nt">padding</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl">        <span class="nt">box-shadow</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">38</span><span class="cl">        <span class="nt">margin</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="ln">39</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">40</span><span class="cl">
+</span></span><span class="line"><span class="ln">41</span><span class="cl">    <span class="nt">li</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">42</span><span class="cl">        <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">43</span><span class="cl">        <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">middle</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">44</span><span class="cl">        <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">45</span><span class="cl">
+</span></span><span class="line"><span class="ln">46</span><span class="cl">        <span class="err">@include</span> <span class="err">respond(md)</span> <span class="err">{</span>
+</span></span><span class="line"><span class="ln">47</span><span class="cl">            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">48</span><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="ln">49</span><span class="cl">
+</span></span><span class="line"><span class="ln">50</span><span class="cl">        <span class="nt">svg</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">51</span><span class="cl">            <span class="n">stroke</span><span class="p">:</span> <span class="kc">currentColor</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">52</span><span class="cl">            <span class="n">stroke-width</span><span class="p">:</span> <span class="mf">1.33</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">53</span><span class="cl">            <span class="k">width</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">54</span><span class="cl">            <span class="k">height</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">55</span><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="ln">56</span><span class="cl">
+</span></span><span class="line"><span class="ln">57</span><span class="cl">        <span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">58</span><span class="cl">            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">59</span><span class="cl">            <span class="k">display</span><span class="p">:</span> <span class="kc">inline-flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">60</span><span class="cl">            <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">61</span><span class="cl">            <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">body</span><span class="o">-</span><span class="kc">text</span><span class="o">-</span><span class="kc">color</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">62</span><span class="cl">            <span class="k">gap</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">menu</span><span class="o">-</span><span class="kc">icon</span><span class="o">-</span><span class="n">separation</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">63</span><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="ln">64</span><span class="cl">
+</span></span><span class="line"><span class="ln">65</span><span class="cl">        <span class="nt">span</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">66</span><span class="cl">            <span class="k">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">67</span><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="ln">68</span><span class="cl">
+</span></span><span class="line"><span class="ln">69</span><span class="cl">        <span class="o">&amp;</span><span class="p">.</span><span class="nc">current</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">70</span><span class="cl">            <span class="err">a</span> <span class="err">{</span>
+</span></span><span class="line"><span class="ln">71</span><span class="cl">                <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">accent</span><span class="o">-</span><span class="kc">color</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">72</span><span class="cl">                <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">73</span><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="ln">74</span><span class="cl">        <span class="err">}</span>
+</span></span><span class="line"><span class="ln">75</span><span class="cl">
+</span></span><span class="line"><span class="ln">76</span><span class="cl">        <span class="o">&amp;</span><span class="p">.</span><span class="nc">menu-bottom-section</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">77</span><span class="cl">            <span class="k">margin-top</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">78</span><span class="cl">
+</span></span><span class="line"><span class="ln">79</span><span class="cl">            <span class="err">ol</span> <span class="err">{</span>
+</span></span><span class="line"><span class="ln">80</span><span class="cl">                <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">81</span><span class="cl">                <span class="k">padding-left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">82</span><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="ln">83</span><span class="cl">        <span class="err">}</span>
+</span></span><span class="line"><span class="ln">84</span><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="ln">85</span><span class="cl"><span class="err">}</span>
+</span></span></code></pre></div><ol start="3">
+<li>在<code>custom.scss</code>中添加样式<br>
+这是我为实现左侧菜单栏悬停后变色并加粗放大和添加阴影效果（并做暗色模式区分）而写的代码：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="p">#</span><span class="nn">main-menu</span> <span class="p">{</span> <span class="err">//左边菜单</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="err">li</span> <span class="err">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="err">&amp;:hover</span> <span class="err">a{</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">      <span class="k">transition</span><span class="p">:</span> <span class="kc">all</span> <span class="mf">0.2</span><span class="kt">s</span> <span class="kc">ease-in-out</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">      <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">light</span><span class="o">-</span><span class="kc">red</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">      <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.05</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">      <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">      <span class="k">filter</span><span class="p">:</span> <span class="nb">drop-shadow</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">dropshadow</span><span class="o">-</span><span class="n">light</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="o">[</span><span class="nt">data-scheme</span><span class="o">=</span><span class="s2">&#34;dark&#34;</span><span class="o">]</span> <span class="o">&amp;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">      <span class="err">&amp;:hover</span> <span class="err">{</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">        <span class="k">filter</span><span class="p">:</span> <span class="nb">drop-shadow</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">dropshadow</span><span class="o">-</span><span class="n">dark</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">  <span class="err">}</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="err">}</span>
+</span></span></code></pre></div><p>对于像我这样的小白来说，写悬停效果只需要学会写<code>:hover</code>（悬停状态）、<code>transition</code>（动画效果）、<code>transform</code>（变形）这些很简单的代码，并学会看原样式代码的层级结构就可以了。</p>
+<p>如果写的代码效果与预期不一致，或者报错，此时再把已经写好的代码和原本的样式代码贴给ai让它进行修改，比什么都不做就茫然地向ai求助更有效率。</p>
+<p>我为我的博客写了一大堆悬停效果，因为它最简单也最容易提升博客阅读体验。<small>（当然，移动端看不了鼠标悬停效果= =  </small></p>
+<p>全部的代码就不放出了，总之基本上都是重复上述案例的步骤，不同的元素根据它原有样式的不同可能会有差分<br>
+<small>如果需要实现复杂的功能效果，可能需要编辑<code>layouts/partials/footer/custon.html</code>这个文件，这就涉及我知识盲区了&gt; &lt; </small></p>
+<h2 id="页码栏鼠标悬停效果">页码栏鼠标悬停效果
+</h2><p>因为有点复杂，java部分借助了ai</p>
+<p>效果预览： <br>
+<img src="/p/%e9%a1%b5%e7%a0%81%e6%a0%8f.gif"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+></p>
+<p>这个效果拆分为：</p>
+<ol>
+<li>当前页码高亮（stack自带）</li>
+<li>鼠标悬停在非当前页码时高亮（会写上面的代码就会写这个），同时当前页码变回默认样式</li>
+<li>鼠标悬停在当前页码时不发生改变</li>
+</ol>
+<p>实现这一效果的代码：</p>
+<ol>
+<li>编辑<code>custom.scss</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="p">.</span><span class="nc">page-link</span> <span class="p">{</span> <span class="err">//页面页码栏（需要添加JavaScript代码实现当前页高亮）</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="k">transition</span><span class="p">:</span> <span class="kc">all</span> <span class="mf">0.2</span><span class="kt">s</span> <span class="kc">ease-in-out</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="err">&amp;.current.reset-style</span> <span class="err">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">card</span><span class="o">-</span><span class="n">background</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">card</span><span class="o">-</span><span class="kc">text</span><span class="o">-</span><span class="kc">color</span><span class="o">-</span><span class="n">secondary</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="o">&amp;</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">current</span><span class="o">)</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="err">//</span> <span class="err">其他页面的悬停效果</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">light</span><span class="o">-</span><span class="kc">red</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">card</span><span class="o">-</span><span class="n">background</span><span class="o">-</span><span class="n">selected</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.05</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="err">}</span>
+</span></span></code></pre></div><ol start="2">
+<li>编辑<code>custom.html</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cm">/* 页码栏分页悬停效果 */</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="kr">const</span> <span class="nx">pagination</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.pagination&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="kr">const</span> <span class="nx">pageLinks</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.page-link&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="kd">let</span> <span class="nx">currentPage</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.page-link.current&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="nx">pageLinks</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">link</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        <span class="nx">link</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">            <span class="c1">// 如果悬停的不是当前页面
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;current&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">currentPage</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">                <span class="nx">currentPage</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;reset-style&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">
+</span></span><span class="line"><span class="ln">16</span><span class="cl">        <span class="nx">link</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;mouseleave&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">            <span class="c1">// 恢复当前页面样式
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">currentPage</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">                <span class="nx">currentPage</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;reset-style&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></span></code></pre></div><h2 id="更改主页文章卡片可点击区域">更改主页文章卡片可点击区域
+</h2><p>Stack主题中，主页的文章卡片的默认点击区域只有文章标题区域，<br>
+以下这些代码可以把点击打开文章的区域更改为除分类标签以外的所有区域。</p>
+<p>在<code>custom.html</code>中添加：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c">&lt;!--</span> <span class="nx">扩大主页文章卡片可点击区域</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="kr">const</span> <span class="nx">articleDetails</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">closest</span><span class="p">(</span><span class="s1">&#39;.article-details&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">articleDetails</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">closest</span><span class="p">(</span><span class="s1">&#39;.article-category a&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">        <span class="kr">const</span> <span class="nx">titleLink</span> <span class="o">=</span> <span class="nx">articleDetails</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.article-title a&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">titleLink</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">            <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">titleLink</span><span class="p">.</span><span class="nx">href</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></span></code></pre></div><p>在<code>custom.scss</code>中添加：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="ln">1</span><span class="cl"><span class="o">//</span><span class="nt">扩大主页文章卡片可点击区域</span><span class="o">(</span><span class="nt">java</span><span class="o">)</span><span class="err">，</span><span class="nt">同步更改鼠标光标样式</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="p">.</span><span class="nc">article-details</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="k">cursor</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s1">&#39;/mouse/pointer.png&#39;</span><span class="p">),</span> <span class="kc">pointer</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>如果没有自定义鼠标样式，去掉url的部分就好了。</p>
+<p><small><em>未完待续？</em></small></p>
 
 </section>
 
@@ -913,6 +1051,8 @@ new MutationObserver(function(mutations) {
             <a href="/tags/stack/">Stack</a>
         
             <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%BF%AE/">博客装修</a>
         
     </section>
 
@@ -948,7 +1088,7 @@ new MutationObserver(function(mutations) {
 
 
         <span>
-            最后更新于 Oct 02, 2025 17:21 CST
+            最后更新于 Oct 04, 2025 01:42 CST
         </span>
     </section></footer>
 
@@ -1062,10 +1202,8 @@ new MutationObserver(function(mutations) {
         
             
         
-            
-        
-        发表了4篇文章 · 
-        总计7.86k字
+        发表了3篇文章 · 
+        总计7.48k字
     </section>
 
     <section class="powerby">
@@ -1222,40 +1360,41 @@ new MutationObserver(function(mutations) {
 </style>
 
 <script>
-    function initTocHide() {
+function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+        return;
+    }
+    
+    window.addEventListener('scroll', function() {
         
-        let toc = document.querySelector(".widget--toc");
-        if (!toc) {
-            return;
+        let openUl = document.querySelectorAll(".open");
+        if (openUl.length > 0) {
+            openUl.forEach((ul) => {
+            ul.classList.remove("open")
+            })
         }
         
-        window.addEventListener('scroll', function() {
-            
-            let openUl = document.querySelectorAll(".open");
-            if (openUl.length > 0) {
-              openUl.forEach((ul) => {
-                ul.classList.remove("open")
-              })
-            }
-            
-            let currentLi = document.querySelector(".active-class");
-            if (!currentLi) {
-                return
-            }
-            
-            if (currentLi.children.length > 1) {
-                currentLi.children[1].classList.add("open")
-            }
-            
-            let ul = currentLi.parentElement;
-            do {
-                ul.classList.add("open");
-                ul = ul.parentElement.parentElement
-            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
-        });
-    }
-    initTocHide()
-     
+        let currentLi = document.querySelector(".active-class");
+        if (!currentLi) {
+            return
+        }
+        
+        if (currentLi.children.length > 1) {
+            currentLi.children[1].classList.add("open")
+        }
+        
+        let ul = currentLi.parentElement;
+        do {
+            ul.classList.add("open");
+            ul = ul.parentElement.parentElement
+        } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+}
+initTocHide()
+
+ 
     function initScrollTop() {
         let rightSideBar = document.querySelector(".right-sidebar");
         if (!rightSideBar) {

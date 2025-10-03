@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="写什么好呢">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
 <title>Archives</title>
 
 <link rel='canonical' href='https://ryihuan.github.io/archives/'>
 
-<link rel="stylesheet" href="/scss/style.min.193b650cc3aaaf1c1b443381dba548f22682893a2c1dbc2e401198db2815b653.css"><meta property='og:title' content="Archives">
-<meta property='og:description' content="写什么好呢">
+<link rel="stylesheet" href="/scss/style.min.724685d87351664c3616607f652a6da0e623943f71649e13f70f89abe949f573.css"><meta property='og:title' content="Archives">
+<meta property='og:description' content="">
 <meta property='og:url' content='https://ryihuan.github.io/archives/'>
 <meta property='og:site_name' content='某人的小窝'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-10-03T04:48:45&#43;08:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-10-04T01:56:49&#43;08:00 '/>
 <meta name="twitter:title" content="Archives">
-<meta name="twitter:description" content="写什么好呢"><link rel="alternate" type="application/rss&#43;xml" href="https://ryihuan.github.io/archives/index.xml"><script>
+<meta name="twitter:description" content=""><link rel="alternate" type="application/rss&#43;xml" href="https://ryihuan.github.io/archives/index.xml"><script>
 
 function updateAvatar() {
   const avatarImg = document.querySelector('.site-avatar .site-logo');
@@ -24,9 +24,19 @@ function updateAvatar() {
   
   if (darkSrc && isDark) {
     avatarImg.src = darkSrc;
+    
+    triggerAvatarAnimation(avatarImg);
   } else if (lightSrc && !isDark) {
     avatarImg.src = lightSrc;
   }
+}
+
+
+function triggerAvatarAnimation(avatarImg) {
+  avatarImg.classList.add('rotating-overshoot');
+  setTimeout(() => {
+    avatarImg.classList.remove('rotating-overshoot');
+  }, 2000); 
 }
 
 
@@ -41,6 +51,20 @@ new MutationObserver(function(mutations) {
   });
 }).observe(document.documentElement, { attributes: true });
 </script>
+
+
+<script>
+document.addEventListener('click', function(e) {
+    const articleDetails = e.target.closest('.article-details');
+    if (articleDetails && !e.target.closest('.article-category a')) {
+        const titleLink = articleDetails.querySelector('.article-title a');
+        if (titleLink) {
+            window.location.href = titleLink.href;
+        }
+    }
+});
+</script>
+
     </head>
     <body class="template-archives">
     <script>
@@ -103,7 +127,7 @@ new MutationObserver(function(mutations) {
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">某人的小窝</a></h1>
-            <h2 class="site-description">写什么好呢</h2>
+            <h2 class="site-description">互联网有房一族。</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -170,7 +194,7 @@ new MutationObserver(function(mutations) {
         
         
         <li >
-            <a href='/about/' >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -282,32 +306,6 @@ new MutationObserver(function(mutations) {
                 
                     
 <article class="">
-    <a href="/categories/%E7%BC%96%E7%A8%8B/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">编程</h2>
-        </div>
-    </a>
-</article>
-
-                
-                    
-<article class="">
-    <a href="/categories/%E6%95%99%E7%A8%8B/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">教程</h2>
-        </div>
-    </a>
-</article>
-
-                
-                    
-<article class="">
     <a href="/categories/diary/">
         
         
@@ -394,25 +392,6 @@ new MutationObserver(function(mutations) {
         </div>
     </div>
     
-    
-    <div class="archives-group" id="2024">
-        <h2 class="archives-date section-title"><a href="/archives/#2024">2024</a></h2>
-        <div class="article-list--compact">
-            
-                <article>
-    <a href="/p/%E6%B5%8B%E8%AF%95/">
-        <div class="article-details">
-            <h2 class="article-title">测试</h2>
-            <footer class="article-time">
-                <time datetime='2024-01-15T00:00:00Z'>Jan 15, 2024</time>
-            </footer>
-        </div>
-    </a>
-</article>
-            
-        </div>
-    </div>
-    
 
     <footer class="site-footer">
     <section class="copyright">
@@ -447,10 +426,8 @@ new MutationObserver(function(mutations) {
         
             
         
-            
-        
-        发表了4篇文章 · 
-        总计7.86k字
+        发表了3篇文章 · 
+        总计7.48k字
     </section>
 
     <section class="powerby">
@@ -529,40 +506,41 @@ new MutationObserver(function(mutations) {
 </style>
 
 <script>
-    function initTocHide() {
+function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+        return;
+    }
+    
+    window.addEventListener('scroll', function() {
         
-        let toc = document.querySelector(".widget--toc");
-        if (!toc) {
-            return;
+        let openUl = document.querySelectorAll(".open");
+        if (openUl.length > 0) {
+            openUl.forEach((ul) => {
+            ul.classList.remove("open")
+            })
         }
         
-        window.addEventListener('scroll', function() {
-            
-            let openUl = document.querySelectorAll(".open");
-            if (openUl.length > 0) {
-              openUl.forEach((ul) => {
-                ul.classList.remove("open")
-              })
-            }
-            
-            let currentLi = document.querySelector(".active-class");
-            if (!currentLi) {
-                return
-            }
-            
-            if (currentLi.children.length > 1) {
-                currentLi.children[1].classList.add("open")
-            }
-            
-            let ul = currentLi.parentElement;
-            do {
-                ul.classList.add("open");
-                ul = ul.parentElement.parentElement
-            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
-        });
-    }
-    initTocHide()
-     
+        let currentLi = document.querySelector(".active-class");
+        if (!currentLi) {
+            return
+        }
+        
+        if (currentLi.children.length > 1) {
+            currentLi.children[1].classList.add("open")
+        }
+        
+        let ul = currentLi.parentElement;
+        do {
+            ul.classList.add("open");
+            ul = ul.parentElement.parentElement
+        } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+}
+initTocHide()
+
+ 
     function initScrollTop() {
         let rightSideBar = document.querySelector(".right-sidebar");
         if (!rightSideBar) {
@@ -628,12 +606,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentPage.classList.remove('reset-style');
             }
         });
-    });
-});
-</script>
-    </body>
-</html>
-;
     });
 });
 </script>

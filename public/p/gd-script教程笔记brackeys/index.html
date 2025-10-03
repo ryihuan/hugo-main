@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://ryihuan.github.io/p/gd-script%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0brackeys/'>
 
-<link rel="stylesheet" href="/scss/style.min.193b650cc3aaaf1c1b443381dba548f22682893a2c1dbc2e401198db2815b653.css"><meta property='og:title' content="GD Script教程笔记|Brackeys">
+<link rel="stylesheet" href="/scss/style.min.724685d87351664c3616607f652a6da0e623943f71649e13f70f89abe949f573.css"><meta property='og:title' content="GD Script教程笔记|Brackeys">
 <meta property='og:description' content="对照Brackeys的教程做的个人学习笔记\n本来写在星屑页面上，但觉得搭个博客来写会更好阅读一些，于是就搭了这个博客（？饺子醋）\n">
 <meta property='og:url' content='https://ryihuan.github.io/p/gd-script%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0brackeys/'>
 <meta property='og:site_name' content='某人的小窝'>
@@ -24,9 +24,19 @@ function updateAvatar() {
   
   if (darkSrc && isDark) {
     avatarImg.src = darkSrc;
+    
+    triggerAvatarAnimation(avatarImg);
   } else if (lightSrc && !isDark) {
     avatarImg.src = lightSrc;
   }
+}
+
+
+function triggerAvatarAnimation(avatarImg) {
+  avatarImg.classList.add('rotating-overshoot');
+  setTimeout(() => {
+    avatarImg.classList.remove('rotating-overshoot');
+  }, 2000); 
 }
 
 
@@ -41,6 +51,20 @@ new MutationObserver(function(mutations) {
   });
 }).observe(document.documentElement, { attributes: true });
 </script>
+
+
+<script>
+document.addEventListener('click', function(e) {
+    const articleDetails = e.target.closest('.article-details');
+    if (articleDetails && !e.target.closest('.article-category a')) {
+        const titleLink = articleDetails.querySelector('.article-title a');
+        if (titleLink) {
+            window.location.href = titleLink.href;
+        }
+    }
+});
+</script>
+
     </head>
     <body class="
     article-page
@@ -105,7 +129,7 @@ new MutationObserver(function(mutations) {
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">某人的小窝</a></h1>
-            <h2 class="site-description">写什么好呢</h2>
+            <h2 class="site-description">互联网有房一族。</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -172,7 +196,7 @@ new MutationObserver(function(mutations) {
         
         
         <li >
-            <a href='/about/' >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -450,19 +474,10 @@ new MutationObserver(function(mutations) {
 有一个叫modulate的属性，可以用来修改立绘和UI的颜色（右侧栏-CanvasItem-Visibility-Modulate）</p>
 </li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">void</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">$Label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Hello, World!&#34;</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">$Label</span><span class="o">.</span><span class="n">modulate</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="n">GREEN</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="input">Input
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">void</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="nx">$Label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Hello, World!&#34;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">	<span class="nx">$Label</span><span class="o">.</span><span class="n">modulate</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="n">GREEN</span>
+</span></span></code></pre></div><h2 id="input">Input
 </h2><ul>
 <li>
 <p>项目-项目设置-输入映射<br>
@@ -499,50 +514,24 @@ new MutationObserver(function(mutations) {
 <p>可以对血量进行计算</p>
 </li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="n">health</span> <span class="o">=</span> <span class="mi">40</span>
-</span></span><span class="line"><span class="cl"><span class="n">health</span> <span class="o">=</span> <span class="mi">20</span><span class="o">+</span><span class="mi">30</span>
-</span></span><span class="line"><span class="cl"><span class="n">health</span> <span class="o">+=</span> <span class="mi">20</span>
-</span></span><span class="line"><span class="cl"><span class="n">health</span> <span class="o">-=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl"><span class="n">health</span> <span class="o">*=</span> <span class="mi">4</span>
-</span></span><span class="line"><span class="cl"><span class="n">health</span> <span class="o">/=</span> <span class="mi">2</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">health</span> <span class="o">=</span> <span class="mi">40</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">health</span> <span class="o">=</span> <span class="mi">20</span><span class="o">+</span><span class="mi">30</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="n">health</span> <span class="o">+=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="n">health</span> <span class="o">-=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="n">health</span> <span class="o">*=</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="n">health</span> <span class="o">/=</span> <span class="mi">2</span>
+</span></span></code></pre></div><ul>
 <li>写一个每次按键减少血量的脚本</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">extends</span> <span class="nc">Node</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">health</span><span class="p">:</span> <span class="kt">int</span> <span class="o">=</span> <span class="mi">100</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_input</span><span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="nc">InputEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">void</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="nf">is_action_pressed</span><span class="p">(</span><span class="s2">&#34;my_action&#34;</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">health</span> <span class="o">-=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Health: </span><span class="si">%d</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">health</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="if-statements条件语句">If-statements（条件语句）
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">extends</span> <span class="nc">Node</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="kd">var</span> <span class="n">health</span><span class="p">:</span> <span class="kt">int</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="kd">func</span> <span class="nf">_input</span><span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="nc">InputEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">void</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="nf">is_action_pressed</span><span class="p">(</span><span class="s2">&#34;my_action&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">		<span class="n">health</span> <span class="o">-=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Health: </span><span class="si">%d</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">health</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="if-statements条件语句">If-statements（条件语句）
 </h2><ul>
 <li>
 <p>if语句检测一个条件是否被满足</p>
@@ -551,19 +540,10 @@ new MutationObserver(function(mutations) {
 <p>可以用if语句对变量做出反应，如希望玩家在血量为0时死亡</p>
 </li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">health</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">health</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Game Over&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>此代码中使用<code>if health &lt;= 0:</code>将血量与0比较。<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">if</span> <span class="n">health</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="n">health</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Game Over&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>此代码中使用<code>if health &lt;= 0:</code>将血量与0比较。<br>
 其他的比较还有：<br>
 x == y 等于<br>
 x &gt; y 大于<br>
@@ -581,40 +561,19 @@ x &lt;= y 小于等于</p>
 <p>还可以使用<code>else</code>关键词来定义当条件不满足时发生什么</p>
 </li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You are still alive&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You are still alive&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
 <li>用<code>elif</code>合并else和if语句</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">health</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="n">health</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Game Over&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">health</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Warning: Low Health&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You are still alive&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="comments">Comments
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">if</span> <span class="n">health</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="n">health</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Game Over&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="k">elif</span> <span class="n">health</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Warning: Low Health&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;You are still alive&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="comments">Comments
 </h2><ul>
 <li>
 <p>在一行的上方或后方对代码进行注释<br>
@@ -636,40 +595,19 @@ x &lt;= y 小于等于</p>
 如果在if语句内部声明一个变量，就只能在该if语句里使用该变量。这叫做<strong>SCOPE</strong>（范围）<br>
 如果希望在脚本的各个地方都能读取变量，应该将其放在代码的顶部，在任何函数之外</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">extends</span> <span class="nc">Node</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">script_variable</span> <span class="o">=</span> <span class="mi">100</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="n">ready</span> <span class="n">_variable</span> <span class="o">=</span> <span class="mi">100</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">extends</span> <span class="nc">Node</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="kd">var</span> <span class="n">script_variable</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">	<span class="kd">var</span> <span class="n">ready</span> <span class="n">_variable</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span></code></pre></div><ul>
 <li>gdscript的优点：可以声明变量而无需考虑数据类型</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">godot_is_cool</span> <span class="o">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">coolness</span> <span class="o">=</span> <span class="mi">9001</span>
-</span></span><span class="line"><span class="cl"><span class="n">coolness</span> <span class="o">=</span> <span class="kc">true</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="data-types">DATA TYPES
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">var</span> <span class="n">godot_is_cool</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="kd">var</span> <span class="n">coolness</span> <span class="o">=</span> <span class="mi">9001</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="n">coolness</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span></code></pre></div><h2 id="data-types">DATA TYPES
 </h2><ul>
 <li>
 <p>在gdscript中，有四种经典数据类型：<br>
@@ -682,48 +620,22 @@ string（字符串）：表示文字</p>
 <p>从一种类型转为另一种类型：casting（类型转换）</p>
 </li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">number</span> <span class="o">=</span><span class="mi">42</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Meaning of Life: &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>通过<code>str()</code>将其转化为字符串，输出：Meaning of Life: 42</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>将小数输出为整数。需要注意的是它只是去掉了小数点后的数字，不会进行四舍五入。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">var</span> <span class="n">number</span> <span class="o">=</span><span class="mi">42</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="kd">var</span> <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Meaning of Life: &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</span></span></code></pre></div><p>通过<code>str()</code>将其转化为字符串，输出：Meaning of Life: 42</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">var</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+</span></span></code></pre></div><p>将小数输出为整数。需要注意的是它只是去掉了小数点后的数字，不会进行四舍五入。</p>
 <ul>
 <li>两种常见数据结构：Vector2和Vector3<br>
 Vector2存储两个浮点数：x和y，<br>
 Vector3存储三个浮点数：x和y和z</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">position</span> <span class="o">=</span> <span class="nc">Vector3</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">var</span> <span class="n">position</span> <span class="o">=</span> <span class="nc">Vector3</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
 <li>默认情况下，gdscript是动态类型，这意味着创建变量时，不需要定义它可以储存什么类型的数据<br>
 然而，它也更容易出现错误，并且它的性能低于静态类型<br>
 但gdscript允许我们定义变量的类型<br>
@@ -731,21 +643,11 @@ Vector3存储三个浮点数：x和y和z</li>
 也可以通过写<code>:= 15</code>来让godot自动确认数据类型，这称为推断类型，得出的结果是一样的，godot意识到15是个整数，于是将变量设置为int<br>
 这也意味着该变量不能更改为其他类型。如果尝试将其设置为一个字符串，</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">damage</span> <span class="o">:=</span> <span class="mi">15</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">	<span class="n">damage</span> <span class="o">=</span> <span class="s2">&#34;A lot!&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>将会报错。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">var</span> <span class="n">damage</span> <span class="o">:=</span> <span class="mi">15</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">	<span class="n">damage</span> <span class="o">=</span> <span class="s2">&#34;A lot!&#34;</span>
+</span></span></code></pre></div><p>将会报错。</p>
 <ul>
 <li>在变量前添加<code>@export</code>可以将其暴露在检查器里。<br>
 <code>@export var damage := 15</code><br>
@@ -784,48 +686,22 @@ Vector3存储三个浮点数：x和y和z</li>
 <p>开始创建一个函数</p>
 </li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">jump</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">#添加向上的力</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">#播放声音</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">#播放跳跃动画</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;JUMP!&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>为了不让每次按下空格就调用这个函数，于是在前面写input函数：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_input</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="nf">is_action_pressed</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">jump</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">jump</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">#添加向上的力</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">#播放声音</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">#播放跳跃动画</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;JUMP!&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">func</span> <span class="nf">jump</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="c1">#添加向上的力</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">	<span class="c1">#播放声音</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">	<span class="c1">#播放跳跃动画</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;JUMP!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>为了不让每次按下空格就调用这个函数，于是在前面写input函数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">func</span> <span class="nf">_input</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="nf">is_action_pressed</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">		<span class="nf">jump</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="kd">func</span> <span class="nf">jump</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">	<span class="c1">#添加向上的力</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">	<span class="c1">#播放声音</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">	<span class="c1">#播放跳跃动画</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;JUMP!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
 <li>
 <p>在代码中，我们将给函数的输入称为参数（parameters），将输出称为返回值（returns）</p>
 </li>
@@ -833,79 +709,35 @@ Vector3存储三个浮点数：x和y和z</li>
 <p>创建一个将两个数字相加的函数<code>func add():</code>，在括号中添加参数<code>func add(num1, num2):</code>。在函数中，我们可以将它们加在一起并将它们储存在一个叫result的变量中</p>
 </li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>可以在ready函数中调用add()：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">	<span class="nf">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>运行后会打印出8。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span></code></pre></div><p>可以在ready函数中调用add()：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="nf">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span></code></pre></div><p>运行后会打印出8。</p>
 <ul>
 <li>但该函数目前并不返回结果，只是打印结果。为了在ready函数访问并调用add函数的结果，我们将add函数的print替换为return。</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">	<span class="k">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
 <li>利用return还可以做更多的事：</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="n">result</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>打印25。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">	<span class="k">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">	<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">	<span class="n">result</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span></code></pre></div><p>打印25。</p>
 <ul>
 <li>和声明变量时一样，也可以定义函数的参数和返回类型<br>
 <code>func add(num1: int, num2: int) -&gt; int:</code><br>
@@ -915,83 +747,40 @@ Vector3存储三个浮点数：x和y和z</li>
 </h2><ul>
 <li>函数randf给出0-1之间的随机数，非常适合为代码分配概率。（抽卡）</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="n">roll</span> <span class="o">=</span> <span class="nb">randf</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">roll</span> <span class="o">&lt;=</span> <span class="mf">0.8</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Common item&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">elif</span> <span class="n">roll</span> <span class="o">&lt;=</span> <span class="mf">0.95</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Rare item&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Legendary item&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><small> (真的没问题吗用这个代码抽了十次出了四次rare )</small></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="kd">var</span> <span class="n">roll</span> <span class="o">=</span> <span class="nb">randf</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">	<span class="k">if</span> <span class="n">roll</span> <span class="o">&lt;=</span> <span class="mf">0.8</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Common item&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">	<span class="k">elif</span> <span class="n">roll</span> <span class="o">&lt;=</span> <span class="mf">0.95</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Rare item&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">	<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Legendary item&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p><small> (真的没问题吗用这个代码抽了十次出了四次rare )</small></p>
 <ul>
 <li><strong>（试着结合目前学的写了个按下按键抽卡的代码：</strong></li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">extends</span> <span class="nc">Node</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">roll</span><span class="p">:</span> <span class="kt">float</span> <span class="o">=</span> <span class="mf">0.0</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">item_type</span><span class="p">:</span> <span class="nc">String</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_input</span><span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="nc">InputEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">void</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="nf">is_action_pressed</span><span class="p">(</span><span class="s2">&#34;my_action&#34;</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">		<span class="n">roll</span> <span class="o">=</span> <span class="nb">randf</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">roll</span> <span class="o">&lt;=</span> <span class="mf">0.8</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">item_type</span> <span class="o">=</span> <span class="s2">&#34;Common item&#34;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">elif</span> <span class="n">roll</span> <span class="o">&lt;=</span> <span class="mf">0.95</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">item_type</span> <span class="o">=</span> <span class="s2">&#34;Rare item&#34;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">			<span class="n">item_type</span> <span class="o">=</span> <span class="s2">&#34;Legendary item&#34;</span>
-</span></span><span class="line"><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="n">item_type</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kd">extends</span> <span class="nc">Node</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="kd">var</span> <span class="n">roll</span><span class="p">:</span> <span class="kt">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kd">var</span> <span class="n">item_type</span><span class="p">:</span> <span class="nc">String</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="kd">func</span> <span class="nf">_input</span><span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="nc">InputEvent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">void</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">	<span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="nf">is_action_pressed</span><span class="p">(</span><span class="s2">&#34;my_action&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">		<span class="n">roll</span> <span class="o">=</span> <span class="nb">randf</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">		<span class="k">if</span> <span class="n">roll</span> <span class="o">&lt;=</span> <span class="mf">0.8</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">			<span class="n">item_type</span> <span class="o">=</span> <span class="s2">&#34;Common item&#34;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">		<span class="k">elif</span> <span class="n">roll</span> <span class="o">&lt;=</span> <span class="mf">0.95</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">			<span class="n">item_type</span> <span class="o">=</span> <span class="s2">&#34;Rare item&#34;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">		<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">			<span class="n">item_type</span> <span class="o">=</span> <span class="s2">&#34;Legendary item&#34;</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="n">item_type</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
 <li>还可以使用<code>randf_range()</code>和<code>randi_range()</code>来得到一个指定范围内的随机整数或小数<br>
 比如给角色随机生成身高可以用</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">character_height</span> <span class="o">=</span> <span class="nb">randi_range</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span> <span class="mi">210</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Your character is &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">character_height</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;cm tall.&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="ln">1</span><span class="cl"><span class="kd">var</span> <span class="n">character_height</span> <span class="o">=</span> <span class="nb">randi_range</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span> <span class="mi">210</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Your character is &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">character_height</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;cm tall.&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
 <li><strong>GD的官方文档和编辑器是连着的。</strong><br>
 这意味着按住ctrl并单击代码中想要了解更多信息的内容，它会在编辑器中直接打开官方文档</li>
 </ul>
@@ -1133,10 +922,8 @@ Vector3存储三个浮点数：x和y和z</li>
         
             
         
-            
-        
-        发表了4篇文章 · 
-        总计7.86k字
+        发表了3篇文章 · 
+        总计7.48k字
     </section>
 
     <section class="powerby">
@@ -1293,40 +1080,41 @@ Vector3存储三个浮点数：x和y和z</li>
 </style>
 
 <script>
-    function initTocHide() {
+function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+        return;
+    }
+    
+    window.addEventListener('scroll', function() {
         
-        let toc = document.querySelector(".widget--toc");
-        if (!toc) {
-            return;
+        let openUl = document.querySelectorAll(".open");
+        if (openUl.length > 0) {
+            openUl.forEach((ul) => {
+            ul.classList.remove("open")
+            })
         }
         
-        window.addEventListener('scroll', function() {
-            
-            let openUl = document.querySelectorAll(".open");
-            if (openUl.length > 0) {
-              openUl.forEach((ul) => {
-                ul.classList.remove("open")
-              })
-            }
-            
-            let currentLi = document.querySelector(".active-class");
-            if (!currentLi) {
-                return
-            }
-            
-            if (currentLi.children.length > 1) {
-                currentLi.children[1].classList.add("open")
-            }
-            
-            let ul = currentLi.parentElement;
-            do {
-                ul.classList.add("open");
-                ul = ul.parentElement.parentElement
-            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
-        });
-    }
-    initTocHide()
-     
+        let currentLi = document.querySelector(".active-class");
+        if (!currentLi) {
+            return
+        }
+        
+        if (currentLi.children.length > 1) {
+            currentLi.children[1].classList.add("open")
+        }
+        
+        let ul = currentLi.parentElement;
+        do {
+            ul.classList.add("open");
+            ul = ul.parentElement.parentElement
+        } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+}
+initTocHide()
+
+ 
     function initScrollTop() {
         let rightSideBar = document.querySelector(".right-sidebar");
         if (!rightSideBar) {

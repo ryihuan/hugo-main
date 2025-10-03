@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="写什么好呢">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="互联网有房一族。">
 <title>Category: 个人学习笔记 - 某人的小窝</title>
 
 <link rel='canonical' href='https://ryihuan.github.io/categories/note/'>
 
-<link rel="stylesheet" href="/scss/style.min.193b650cc3aaaf1c1b443381dba548f22682893a2c1dbc2e401198db2815b653.css"><meta property='og:title' content="Category: 个人学习笔记 - 某人的小窝">
-<meta property='og:description' content="写什么好呢">
+<link rel="stylesheet" href="/scss/style.min.724685d87351664c3616607f652a6da0e623943f71649e13f70f89abe949f573.css"><meta property='og:title' content="Category: 个人学习笔记 - 某人的小窝">
+<meta property='og:description' content="互联网有房一族。">
 <meta property='og:url' content='https://ryihuan.github.io/categories/note/'>
 <meta property='og:site_name' content='某人的小窝'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-10-03T04:48:45&#43;08:00 '/><meta property='og:image' content='https://ryihuan.github.io/categories/note/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg' />
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-10-04T01:56:49&#43;08:00 '/><meta property='og:image' content='https://ryihuan.github.io/categories/note/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg' />
 <meta name="twitter:title" content="Category: 个人学习笔记 - 某人的小窝">
-<meta name="twitter:description" content="写什么好呢"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="互联网有房一族。"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://ryihuan.github.io/categories/note/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg' /><link rel="alternate" type="application/rss&#43;xml" href="https://ryihuan.github.io/categories/note/index.xml"><script>
 
 function updateAvatar() {
@@ -25,9 +25,19 @@ function updateAvatar() {
   
   if (darkSrc && isDark) {
     avatarImg.src = darkSrc;
+    
+    triggerAvatarAnimation(avatarImg);
   } else if (lightSrc && !isDark) {
     avatarImg.src = lightSrc;
   }
+}
+
+
+function triggerAvatarAnimation(avatarImg) {
+  avatarImg.classList.add('rotating-overshoot');
+  setTimeout(() => {
+    avatarImg.classList.remove('rotating-overshoot');
+  }, 2000); 
 }
 
 
@@ -42,6 +52,20 @@ new MutationObserver(function(mutations) {
   });
 }).observe(document.documentElement, { attributes: true });
 </script>
+
+
+<script>
+document.addEventListener('click', function(e) {
+    const articleDetails = e.target.closest('.article-details');
+    if (articleDetails && !e.target.closest('.article-category a')) {
+        const titleLink = articleDetails.querySelector('.article-title a');
+        if (titleLink) {
+            window.location.href = titleLink.href;
+        }
+    }
+});
+</script>
+
     </head>
     <body class="">
     <script>
@@ -104,7 +128,7 @@ new MutationObserver(function(mutations) {
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">某人的小窝</a></h1>
-            <h2 class="site-description">写什么好呢</h2>
+            <h2 class="site-description">互联网有房一族。</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -171,7 +195,7 @@ new MutationObserver(function(mutations) {
         
         
         <li >
-            <a href='/about/' >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -324,14 +348,6 @@ new MutationObserver(function(mutations) {
                         
                     </a> 
                 </div>
-            <div class="archives-year">
-                    <a href="/archives/#2024">
-                        
-                            <span class="year">2024</span>
-                            <span class="count">1</span>
-                        
-                    </a> 
-                </div>
             
         </div>
     </section>
@@ -363,14 +379,6 @@ new MutationObserver(function(mutations) {
                 个人学习笔记
             </a>
         
-            <a href="/categories/%E6%95%99%E7%A8%8B/" class="font_size_1">
-                教程
-            </a>
-        
-            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="font_size_1">
-                编程
-            </a>
-        
     </div>
 </section>
 
@@ -392,10 +400,6 @@ new MutationObserver(function(mutations) {
 
     <div class="tagCloud-tags">
         
-            <a href="/tags/fastapi/" class="font_size_1">
-                Fastapi
-            </a>
-        
             <a href="/tags/gd-script/" class="font_size_1">
                 GD Script
             </a>
@@ -408,20 +412,12 @@ new MutationObserver(function(mutations) {
                 Hugo
             </a>
         
-            <a href="/tags/python/" class="font_size_1">
-                Python
-            </a>
-        
-            <a href="/tags/redis/" class="font_size_1">
-                Redis
-            </a>
-        
-            <a href="/tags/sqlalchemy/" class="font_size_1">
-                Sqlalchemy
-            </a>
-        
             <a href="/tags/stack/" class="font_size_1">
                 Stack
+            </a>
+        
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%BF%AE/" class="font_size_1">
+                博客装修
             </a>
         
     </div>
@@ -503,10 +499,8 @@ new MutationObserver(function(mutations) {
         
             
         
-            
-        
-        发表了4篇文章 · 
-        总计7.86k字
+        发表了3篇文章 · 
+        总计7.48k字
     </section>
 
     <section class="powerby">
@@ -585,40 +579,41 @@ new MutationObserver(function(mutations) {
 </style>
 
 <script>
-    function initTocHide() {
+function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+        return;
+    }
+    
+    window.addEventListener('scroll', function() {
         
-        let toc = document.querySelector(".widget--toc");
-        if (!toc) {
-            return;
+        let openUl = document.querySelectorAll(".open");
+        if (openUl.length > 0) {
+            openUl.forEach((ul) => {
+            ul.classList.remove("open")
+            })
         }
         
-        window.addEventListener('scroll', function() {
-            
-            let openUl = document.querySelectorAll(".open");
-            if (openUl.length > 0) {
-              openUl.forEach((ul) => {
-                ul.classList.remove("open")
-              })
-            }
-            
-            let currentLi = document.querySelector(".active-class");
-            if (!currentLi) {
-                return
-            }
-            
-            if (currentLi.children.length > 1) {
-                currentLi.children[1].classList.add("open")
-            }
-            
-            let ul = currentLi.parentElement;
-            do {
-                ul.classList.add("open");
-                ul = ul.parentElement.parentElement
-            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
-        });
-    }
-    initTocHide()
-     
+        let currentLi = document.querySelector(".active-class");
+        if (!currentLi) {
+            return
+        }
+        
+        if (currentLi.children.length > 1) {
+            currentLi.children[1].classList.add("open")
+        }
+        
+        let ul = currentLi.parentElement;
+        do {
+            ul.classList.add("open");
+            ul = ul.parentElement.parentElement
+        } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+}
+initTocHide()
+
+ 
     function initScrollTop() {
         let rightSideBar = document.querySelector(".right-sidebar");
         if (!rightSideBar) {
