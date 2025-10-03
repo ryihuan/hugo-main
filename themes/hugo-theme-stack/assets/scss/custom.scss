@@ -47,25 +47,41 @@ input:hover,
   }
 }
 
-// 头像旋转动画
+//头像动画效果（配合java）
 [data-scheme="dark"] .sidebar header .site-avatar .site-logo {
-  transition: transform 1.65s ease-in-out; // 旋转时间
+  transition: transform 1.65s ease-in-out;
+  // 旋转超调动画类
+  &.rotating-overshoot {
+    animation: rotateOvershoot 1s ease-in-out;
+  }
 }
-
 [data-scheme="dark"] .sidebar header .site-avatar .site-logo:hover {
-  transform: rotate(360deg); // 旋转角度为360度
+  transform: rotate(360deg);
+}
+// 定义旋转超调动画：旋转375度后归位
+@keyframes rotateOvershoot {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(375deg); // 旋转到375度（超调15度）
+  }
+  100% {
+    transform: rotate(360deg); // 归位到360度
+  }
 }
 
 // 折叠模块增加样式
 details summary {
-    cursor: url('/mouse/pointer.png'), pointer;
-    color: var(--light-red);
-    transition: all 0.3s ease;
+  cursor: url('/mouse/pointer.png'), pointer;
+  color: var(--light-red);
+  transition: all 0.3s ease-in-out;
 
+  @media (hover: hover) and (pointer: fine) { //移动端去除hover效果
     &:hover {
       background: rgba(var(--link-background-color), var(--link-background-opacity-hover));
     }
-
+  }
 }
 // 图片多列显示
 .post-content p:has(> img:nth-child(2)){column-count:2;column-gap:8px;margin:6px 0;}
@@ -207,17 +223,20 @@ details summary {
 .highlight {
   box-shadow: var(--shadow-pre);
 }
-
 [data-scheme="light"] .article-content .highlight {
   background-color: #d9d9d9;
 }
-
 [data-scheme="light"] .chroma {
-  color: #ff6f00;
   background-color: #d9d9d9d8;
 }
+[data-scheme="dark"] .article-content .highlight {
+  background-color: #282722;
+}
+[data-scheme="dark"] .chroma {
+  background-color: #282722c5;
+}
 
-// 把 block 的高度限制在 20em，并隐藏滚动条
+// 把代码块的高度限制在 20em，并隐藏滚动条
 .article-content {  // line 205
   .highlight {  // line 331
     pre {  // line 345
@@ -225,7 +244,7 @@ details summary {
       padding: 0;
       margin: 0;
       width: auto;
-      max-height: 20em;
+      max-height: 17em;
       scrollbar-width: none; /* Firefox */
       &::-webkit-scrollbar {
         display: none; /* Chrome Safari */
@@ -236,10 +255,9 @@ details summary {
 
 //一大堆悬停效果：文字红色加粗放大
 #main-menu { //左边菜单
-  a {
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
+  li {
+    &:hover a{
+      transition: all 0.2s ease-in-out;
       color: var(--light-red);
       transform: scale(1.05);
       font-weight: bold;
@@ -270,28 +288,37 @@ details summary {
   }
 }
 #dark-mode-toggle { //暗色模式按钮
-  transition: all 0.2s ease-in-out;
-
   &:hover {
-    color: var(--light-red);
-    filter: drop-shadow(var(--dropshadow-light));
+    span, svg{
+      color: var(--light-red);
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.05);
+      font-weight: bold;
+      stroke-width: 2;
+      filter: drop-shadow(var(--dropshadow-light));
+    }
   }
-
   [data-scheme="dark"] & {
     &:hover {
       filter: drop-shadow(var(--dropshadow-dark));
     }
   }
 }
-#TableOfContents { //导航栏
-  a{
+// 文章目录导航栏
+.widget--toc li > a {
     transition: all 0.2s ease-in-out;
-
-    &:hover {
-      color: var(--light-red);
-      font-weight: bold;
-    }
-  }
+    display: inline-block;
+}
+/* 只对直接悬停的链接应用效果，不影响子级 */
+.widget--toc li > a:hover {
+    color: var(--light-red);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+/* 活动项悬停时应用效果 */
+.widget--toc .active-class > a:hover {
+    /* 确保border-left保持原位置，不参与缩放 */
+    transform-origin: left center;
 }
 .page-link { //页面页码栏（需要添加JavaScript代码实现当前页高亮）
   transition: all 0.2s ease-in-out;
@@ -301,8 +328,7 @@ details summary {
     background-color: var(--card-background);
     color: var(--card-text-color-secondary);
   }
-    // 其他页面的悬停效果
-  &:not(.current):hover {
+  &:not(.current):hover { // 其他页面的悬停效果
     color: var(--light-red);
     background-color: var(--card-background-selected);
     transform: scale(1.05);
@@ -346,14 +372,71 @@ details summary {
     }
   }
 }
-.article-list article {
+//首页文章列表卡片
+.article-list article *:not(img) {
   transition: all 0.2s ease-in-out;
+}
+.article-list img {
+  transition: all 0.6s ease-in-out;
+}
+.article-list article {
   &:hover {
     box-shadow: inset 0 0 0 999px var(--card-background-selected), var(--shadow-l2);
     transform: scale(1.01);
+    img {
+      transform: scale(1.05);
+    }
   }
 }
-
+.subsection-list { //归档栏分类卡片
+  overflow: visible;
+  article{
+    transition: all 0.2s ease-in-out;
+    img {
+    transition: all 0.6s ease-in-out;
+    }
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: inset 0 0 0 999px var(--card-background-selected), var(--shadow-l2);
+      img {
+        transform: scale(1.25);
+      }
+    }
+  }
+}
+.article-list--compact article{ //归档栏文章卡片
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: inset 0 0 0 999px var(--card-background-selected), var(--shadow-l2);
+  }
+  .article-image {
+    img {
+      mask: none;
+    }
+  }
+}
+.related-content { //相关文章
+  overflow: visible;
+  article{
+    transition: all 0.2s ease-in-out;
+    img {
+    transition: all 0.6s ease-in-out;
+    }
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: inset 0 0 0 999px var(--card-background-selected), var(--shadow-l2);
+      img {
+        transform: scale(1.15);
+      }
+    }
+  }
+  .article-image {
+    img {
+      mask: none;
+    }
+  }
+}
 
 
 // 文章页脚版权链接图标大小调整
@@ -368,5 +451,49 @@ details summary {
     }
   }
 }
+@media (max-width: 768px) {
+  .article-footer {
+    section {
+      // 只针对直接子元素的 SVG，不包含嵌套的
+      & > svg {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px;
+        min-height: 20px;
+      }
+    }
+  }
+}
+
+
+// 隐藏一大堆滚动条
+#TableOfContents, //导航栏
+#main-menu { //左侧菜单
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+#TableOfContents::-webkit-scrollbar,
+#main-menu::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+//文章预览图渐变
+.article-image {
+  img {
+  mask: linear-gradient(to bottom, black 0%, black 25%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);  }
+}
+
+//副标题文字大小更改
+.article-subtitle {
+  font-size: 1.6rem;
+  margin-top: 5px;
+}
+
+//扩大主页文章卡片可点击区域(java)，同步更改鼠标光标样式
+.article-details {
+  cursor: url('/mouse/pointer.png'), pointer;
+}
+
 
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */

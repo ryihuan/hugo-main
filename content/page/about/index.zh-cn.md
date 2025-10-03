@@ -1,5 +1,5 @@
 ---
-title: about
+title: 关于
 menu:
     main: 
         name: "关于"
@@ -7,5 +7,4 @@ menu:
         params:
             icon: user
 ---
-
-This is a test page for i18n support.
+懒得写

@@ -10,9 +10,19 @@ function updateAvatar() {
   
   if (darkSrc && isDark) {
     avatarImg.src = darkSrc;
+    // 触发旋转动画
+    triggerAvatarAnimation(avatarImg);
   } else if (lightSrc && !isDark) {
     avatarImg.src = lightSrc;
   }
+}
+
+// 触发头像动画
+function triggerAvatarAnimation(avatarImg) {
+  avatarImg.classList.add('rotating-overshoot');
+  setTimeout(() => {
+    avatarImg.classList.remove('rotating-overshoot');
+  }, 2000); // 动画时长2秒
 }
 
 // 初始化
@@ -26,4 +36,17 @@ new MutationObserver(function(mutations) {
     }
   });
 }).observe(document.documentElement, { attributes: true });
+</script>
+
+<!-- 扩大主页文章卡片可点击区域 -->
+<script>
+document.addEventListener('click', function(e) {
+    const articleDetails = e.target.closest('.article-details');
+    if (articleDetails && !e.target.closest('.article-category a')) {
+        const titleLink = articleDetails.querySelector('.article-title a');
+        if (titleLink) {
+            window.location.href = titleLink.href;
+        }
+    }
+});
 </script>

@@ -26,7 +26,7 @@ languages:
         weight: 2
         params:
             sidebar:
-                subtitle: 写什么好呢
+                subtitle: 互联网有房一族。
     # ar:
     #     languageName: عربي
     #     languagedirection: rtl
@@ -269,7 +269,7 @@ markup:
         guessSyntax: true
         lineNoStart: 1
         lineNos: true
-        lineNumbersInTable: true
+        lineNumbersInTable: false
         tabWidth: 4
         style: pastie
 
