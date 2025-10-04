@@ -21,17 +21,22 @@
     #backTopBtn {
         display: none;
         position: fixed;
-        bottom: 10px;
+        bottom: 20px;
         z-index: 99;
         cursor: url('/mouse/pointer.png'), pointer;
-        width: 64px;
-        height: 64px;
-        transition: transform 0.2s ease-in-out;
-        background-image: url({{ (resources.Get "icons/backTop.svg").Permalink }});
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+        background-color: var(--body-text-color);
+        mask-image: url({{ (resources.Get "icons/top.svg").Permalink }});
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: 30px 30px;
     }
 
     #backTopBtn:hover {
         transform: scale(1.1);
+        background-color: var(--light-red);
     }
     /*修改背景图片*/
     [data-scheme="light"] body {

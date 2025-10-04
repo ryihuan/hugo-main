@@ -495,5 +495,7 @@ details summary {
   cursor: url('/mouse/pointer.png'), pointer;
 }
 
-
+#backTopBtn {
+  color: var(--accent-color);
+}
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
