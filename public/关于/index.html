@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://ryihuan.github.io/%E5%85%B3%E4%BA%8E/'>
 
-<link rel="stylesheet" href="/scss/style.min.724685d87351664c3616607f652a6da0e623943f71649e13f70f89abe949f573.css"><meta property='og:title' content="关于">
+<link rel="stylesheet" href="/scss/style.min.cc22e77f6c42791d0bb9e7cb863d4cd930e0c38cd14edbf072a192fa34645e66.css"><meta property='og:title' content="关于">
 <meta property='og:description' content="懒得写\n">
 <meta property='og:url' content='https://ryihuan.github.io/%E5%85%B3%E4%BA%8E/'>
 <meta property='og:site_name' content='某人的小窝'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2025-10-03T04:50:55&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:modified_time' content='2025-10-04T03:53:10&#43;08:00'/>
 <meta name="twitter:title" content="关于">
 <meta name="twitter:description" content="懒得写\n"><script>
 
@@ -333,7 +333,7 @@ document.addEventListener('click', function(e) {
 
 
                 <time>
-                    Oct 03, 2025 04:50 CST
+                    Oct 04, 2025 03:53 CST
                 </time>
             </div>
             <div>
@@ -379,8 +379,8 @@ document.addEventListener('click', function(e) {
 
 
 
-        <span>Licensed under <a class="link" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans"  target="_blank" rel="noopener"
-    >CC BY-NC-ND 4.0
+        <span>Licensed under <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0
     <span style="white-space: nowrap;"><svg width=".7em"
         height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
         <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
@@ -388,7 +388,7 @@ document.addEventListener('click', function(e) {
             fill="currentColor">
     </svg></span>
     
-</a> 丨 署名 · 非商业性使用 · 禁止演绎</span>
+</a> 丨 署名 · 非商业性使用 · 相同方式共享</span>
     </section>
     <section class="article-lastmod">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -400,7 +400,7 @@ document.addEventListener('click', function(e) {
 
 
         <span>
-            最后更新于 Oct 03, 2025 04:50 CST
+            最后更新于 Oct 04, 2025 03:53 CST
         </span>
     </section></footer>
 
@@ -415,46 +415,23 @@ document.addEventListener('click', function(e) {
      
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
+    <script src='//unpkg.com/@waline/client@v3/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v3/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
 <style>
-    .disqus-container {
+    .waline-container {
         background-color: var(--card-background);
         border-radius: var(--card-border-radius);
         box-shadow: var(--shadow-l1);
         padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
     }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+    init({ $config | jsonify | safeJS });
 </script>
 
     
@@ -623,17 +600,22 @@ document.addEventListener('click', function(e) {
     #backTopBtn {
         display: none;
         position: fixed;
-        bottom: 10px;
+        bottom: 20px;
         z-index: 99;
         cursor: url('/mouse/pointer.png'), pointer;
-        width: 64px;
-        height: 64px;
-        transition: transform 0.2s ease-in-out;
-        background-image: url(https://ryihuan.github.io/icons/backTop.svg);
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+        background-color: var(--body-text-color);
+        mask-image: url(https://ryihuan.github.io/icons/top.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: 30px 30px;
     }
 
     #backTopBtn:hover {
         transform: scale(1.1);
+        background-color: var(--light-red);
     }
      
     [data-scheme="light"] body {

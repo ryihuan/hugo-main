@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://ryihuan.github.io/links/'>
 
-<link rel="stylesheet" href="/scss/style.min.724685d87351664c3616607f652a6da0e623943f71649e13f70f89abe949f573.css"><meta property='og:title' content="links">
+<link rel="stylesheet" href="/scss/style.min.cc22e77f6c42791d0bb9e7cb863d4cd930e0c38cd14edbf072a192fa34645e66.css"><meta property='og:title' content="links">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://ryihuan.github.io/links/'>
 <meta property='og:site_name' content='某人的小窝'>
@@ -394,8 +394,8 @@ links:
 
 
 
-        <span>Licensed under <a class="link" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans"  target="_blank" rel="noopener"
-    >CC BY-NC-ND 4.0
+        <span>Licensed under <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0
     <span style="white-space: nowrap;"><svg width=".7em"
         height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
         <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
@@ -403,7 +403,7 @@ links:
             fill="currentColor">
     </svg></span>
     
-</a> 丨 署名 · 非商业性使用 · 禁止演绎</span>
+</a> 丨 署名 · 非商业性使用 · 相同方式共享</span>
     </section>
     <section class="article-lastmod">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -619,17 +619,22 @@ links:
     #backTopBtn {
         display: none;
         position: fixed;
-        bottom: 10px;
+        bottom: 20px;
         z-index: 99;
         cursor: url('/mouse/pointer.png'), pointer;
-        width: 64px;
-        height: 64px;
-        transition: transform 0.2s ease-in-out;
-        background-image: url(https://ryihuan.github.io/icons/backTop.svg);
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+        background-color: var(--body-text-color);
+        mask-image: url(https://ryihuan.github.io/icons/top.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: 30px 30px;
     }
 
     #backTopBtn:hover {
         transform: scale(1.1);
+        background-color: var(--light-red);
     }
      
     [data-scheme="light"] body {
