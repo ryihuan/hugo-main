@@ -31,7 +31,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --scrollbar-track: var(--body-background);
 
     &[data-scheme="dark"] {
-        --body-background: #303030;
+        --body-background: #000000;
         --accent-color: #ecf0f1;
         --accent-color-darker: #bdc3c7;
         --accent-color-text: #000;
@@ -120,7 +120,8 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --link-background-opacity: 0.5;
     --link-background-opacity-hover: 0.7;
 
-    --pre-background-color: #272822;
+    // --pre-background-color: #272822;
+    --pre-background-color: #212121;
     --pre-text-color: #f8f8f2;
 
     --code-background-color: rgba(0, 0, 0, 0.12);
@@ -161,13 +162,15 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
 [data-scheme="light"] {
     --pre-text-color: #272822;
-    --pre-background-color: #fafafa;
+    // --pre-background-color: #fafafa;
+    --pre-background-color: #d9d9d9;
     @import "partials/highlight/light.scss";
 }
 
 [data-scheme="dark"] {
     --pre-text-color: #f8f8f2;
-    --pre-background-color: #272822;
+    // --pre-background-color: #272822;
+    --pre-background-color: #212121;
     @import "partials/highlight/dark.scss";
 }
 

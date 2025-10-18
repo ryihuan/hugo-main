@@ -1,12 +1,26 @@
+
+<!-- 在 layouts/partials/head.html 中添加 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
 <style>
     @font-face {
         font-family: 'mkty';
         src: url({{ (resources.Get "font/mkty.ttf").Permalink }}) format('truetype');
     }
 
+    @font-face {
+        font-family: 'Fira Code';
+        src: 
+            url('/font/fira-code/FiraCode-Light.woff2') format('woff2'),
+            url('/font/fira-code/FiraCode-Light.woff') format('woff');
+    }
+
     :root {
         --base-font-family: 'mkty';
-        --code-font-family: 'mkty';
+        --code-font-family: 'Fira Code', 'mkty';
     }
 
     #TableOfContents > ul, ol {
@@ -38,7 +52,7 @@
         transform: scale(1.1);
         background-color: var(--light-red);
     }
-    /*修改背景图片*/
+    /* 修改背景图片
     [data-scheme="light"] body {
         background: url({{ (resources.Get "background/light.jpg").Permalink }}) no-repeat center top;
         background-size: cover;
@@ -48,9 +62,23 @@
         background: url({{ (resources.Get "background/dark.jpg").Permalink }}) no-repeat center top;
         background-size: cover;
         background-attachment: fixed;
-    }
+    } */
 
 </style>
+
+<!-- 修改背景图片代码优化 -->
+{{ $lightBg := resources.Get "background/light.jpg" | fingerprint }}
+{{ $darkBg := resources.Get "background/dark.jpg" | fingerprint }}
+
+<style>
+[data-scheme="light"] body {
+    background: url('{{ $lightBg.RelPermalink }}') no-repeat center top/cover fixed;
+}
+[data-scheme="dark"] body {
+    background: url('{{ $darkBg.RelPermalink }}') no-repeat center top/cover fixed;
+}
+</style>
+<!-- end -->
 
 <script>
 function initTocHide() {
@@ -155,4 +183,198 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+</script>
+
+<style>
+    .highlight {
+        /* 你可以根据需要调整这个高度 */
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(var(--card-background)));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn, .code-less-btn {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 78px;
+        background: none;
+    }
+
+    .code-less-btn {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .code-more-img, .code-less-img{
+        display: block;
+        margin: auto;
+        padding-right: 1rem;
+        width: 60px;
+        position: absolute;
+        right: 2.5rem;
+        bottom: 30px;
+    }
+
+    .code-less-img {
+        bottom: 25px !important;
+    }
+</style>
+
+<!-- deepseek：代码折叠展开 -->
+<script>
+  function initCodeMoreBox() {
+    // 新增代码开始
+    // 检测是否为移动端
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        // 移动端直接移除所有高度限制
+        document.querySelectorAll('.highlight').forEach(block => {
+            block.style.maxHeight = 'none';
+            block.style.overflow = 'auto';
+        });
+        return;
+    }
+    // 新增代码结束
+
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks || codeBlocks.length === 0) {
+        return;
+    }
+    
+    codeBlocks.forEach(codeBlock => {
+        // 校验是否overflow
+        if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+            return;
+        }
+      
+        // 保存初始位置
+        const originalPosition = codeBlock.getBoundingClientRect().top + window.pageYOffset;
+      
+        // 创建 code-more-box
+        let codeMoreBox = document.createElement('div');
+        codeMoreBox.classList.add('code-more-box');
+        
+        // 创建 code-more-btn
+        let codeMoreBtn = document.createElement('span');
+        codeMoreBtn.classList.add('code-more-btn');
+      
+        // 创建 code-more-img
+        let moreImg = document.createElement('img');
+        moreImg.classList.add('code-more-img');
+        moreImg.src = {{ (resources.Get "icons/bottom.svg").Permalink }};
+        
+        // 组装更多按钮
+        codeMoreBtn.appendChild(moreImg);
+        codeMoreBox.appendChild(codeMoreBtn);
+        codeBlock.appendChild(codeMoreBox);
+      
+        // 点击更多按钮事件
+        codeMoreBox.addEventListener('click', function() {
+            // 隐藏更多按钮
+            codeMoreBox.style.display = 'none';
+            
+            // 展开代码块
+            codeBlock.classList.add('code-show');
+            
+            // 创建折叠按钮
+            let codeLessBox = document.createElement('div');
+            codeLessBox.classList.add('code-less-box');
+            
+            let codeLessBtn = document.createElement('span');
+            codeLessBtn.classList.add('code-less-btn');
+            
+            let lessImg = document.createElement('img');
+            lessImg.classList.add('code-less-img');
+            lessImg.src = {{ (resources.Get "icons/top-pre.svg").Permalink }};
+            
+            // 组装折叠按钮
+            codeLessBtn.appendChild(lessImg);
+            codeLessBox.appendChild(codeLessBtn);
+            codeBlock.appendChild(codeLessBox);
+            
+            // 点击折叠按钮事件
+            codeLessBox.addEventListener('click', function() {
+                // 移除折叠按钮
+                codeLessBox.remove();
+                
+                // 隐藏展开状态
+                codeBlock.classList.remove('code-show');
+                
+                // 显示更多按钮
+                codeMoreBox.style.display = 'block';
+                
+                // 只在初始位置不在视口内时才滚动
+                scrollToInitialPositionIfNeeded(originalPosition, codeBlock);
+                
+                // 触发resize事件
+                window.dispatchEvent(new Event('resize'));
+            });
+            
+            // 触发resize事件
+            window.dispatchEvent(new Event('resize'));
+        });
+    });
+}
+
+    function scrollToInitialPositionIfNeeded(originalPosition, codeBlock) {
+        // 获取当前视口信息
+        const viewportHeight = window.innerHeight;
+        const currentScroll = window.pageYOffset;
+        
+        // 计算初始位置是否在视口内
+        const isOriginalPositionInViewport = 
+        originalPosition >= currentScroll && 
+        originalPosition <= currentScroll + viewportHeight;
+        
+        // 计算代码块当前是否在视口内
+        const codeBlockRect = codeBlock.getBoundingClientRect();
+        const isCodeBlockInViewport = 
+        codeBlockRect.top >= 0 && 
+        codeBlockRect.top <= viewportHeight;
+        
+        // 只有当初始位置不在视口内，且代码块也不在视口内时才滚动
+        if (!isOriginalPositionInViewport && !isCodeBlockInViewport) {
+            const header = document.querySelector('header');
+            let headerOffset = 0;
+      
+        if (header) {
+            const headerHeight = window.getComputedStyle(header).getPropertyValue('height');
+            headerOffset = parseInt(headerHeight.replace('px', '')) || 0;
+        }
+      
+        // 计算最终滚动位置（考虑header高度和一点边距）
+        const targetPosition = originalPosition - headerOffset - 20;
+      
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+      
+        console.log('触发滚动：初始位置不在视口内');
+        } else {
+        console.log('不触发滚动：初始位置或代码块在视口内');
+        }
+    }
+  
+    // 初始化
+    document.addEventListener('DOMContentLoaded', function() {
+        initCodeMoreBox();
+    });
 </script>

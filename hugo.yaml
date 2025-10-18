@@ -45,7 +45,7 @@ services:
         id:
 
 pagination:
-    pagerSize: 3
+    pagerSize: 9
 
 permalinks:
     post: /p/:slug/
@@ -56,7 +56,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+    favicon: /favicon.png # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
 
     footer:
         since: 2025
@@ -120,18 +120,25 @@ params:
 
         # Waline client configuration see: https://waline.js.org/en/reference/component.html
         waline:
-            serverURL: 'https://hugo-waline-zzqv6997i-ryihuans-projects.vercel.app/'
+            serverURL: https://hugo-waline-eosin.vercel.app/
             lang: zh-cn
+            visitor: false
             pageview:
             emoji:
-                - https://unpkg.com/@waline/emojis@1.0.1/weibo
-            requiredMeta:
+                - https://gcore.jsdelivr.net/gh/Saidosi/azuki-emoji-for-waline@1.0/azukisan/
+            requiredMeta: 
                 - name
                 - email
                 - url
             locale:
-                admin: Admin
-                placeholder:
+                admin: 博主
+                placeholder: |-
+                    您无需登录即可发表评论。如果需要收到回复通知，请留下您的邮箱地址。
+                    非登录状态下，如果您留下邮箱，您的头像将自动获取并设置为您的邮箱账户头像。
+                    由于vercle.app域名受到DNS污染，大陆ip地址无法参与评论。
+                nick: 昵称（选填）
+                mail: 邮箱（选填）
+                link: 网址（选填）
 
         twikoo:
             envId:
@@ -256,9 +263,12 @@ markup:
                     inline:
                         - - \(
                           - \)
+                        - - $
+                          - $
         renderer:
             ## Set to true if you have HTML content inside Markdown
             unsafe: true
+                    
     tableOfContents:
         endLevel: 4
         ordered: true
@@ -271,13 +281,19 @@ markup:
         lineNos: true
         lineNumbersInTable: false
         tabWidth: 4
-        style: pastie
+        style: ""
+        caption: title
+
 
 # 更新时间：优先读取git时间 -> git时间不存在，就读取本地文件修改时间
 frontmatter:
-  lastmod:
-    - :git
-    - :fileModTime
+    lastmod:
+        - :git
+        - :fileModTime
 
 # 允许获取Git信息		
 enableGitInfo: true
+
+# 构建排除草稿
+build: 
+    excludeDrafts: true
