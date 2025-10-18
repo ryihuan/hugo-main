@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>游戏制作 on 某人的小窝</title>
+        <link>https://ryihuan.github.io/tags/%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C/</link>
+        <description>Recent content in 游戏制作 on 某人的小窝</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>尺途</copyright>
+        <lastBuildDate>Sat, 18 Oct 2025 00:23:41 +0800</lastBuildDate><atom:link href="https://ryihuan.github.io/tags/%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第一个2D游戏</title>
+        <link>https://ryihuan.github.io/p/%E7%AC%AC%E4%B8%80%E4%B8%AA2d%E6%B8%B8%E6%88%8F/</link>
+        <pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ryihuan.github.io/p/%E7%AC%AC%E4%B8%80%E4%B8%AA2d%E6%B8%B8%E6%88%8F/</guid>
+        <description>&lt;img src="https://ryihuan.github.io/p/first2dgame.png" alt="Featured image of post 第一个2D游戏" /&gt;&lt;p&gt;&lt;em&gt;根据Godot官方入门指引按图索骥做的小游戏，只是把美术资源更换成自己画的图片了。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;成品展示&#34;&gt;成品展示
+&lt;/h2&gt;&lt;p&gt;操作环境：电脑网页，不支持移动端&lt;/p&gt;
+&lt;p&gt;操作方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;控制移动：&lt;kbd&gt;W&lt;/kbd&gt;&lt;kbd&gt;A&lt;/kbd&gt;&lt;kbd&gt;S&lt;/kbd&gt;&lt;kbd&gt;D&lt;/kbd&gt; / &lt;kbd&gt;↑&lt;/kbd&gt;&lt;kbd&gt;←&lt;/kbd&gt;&lt;kbd&gt;↓&lt;/kbd&gt;&lt;kbd&gt;→&lt;/kbd&gt;&lt;/li&gt;
+&lt;li&gt;开始游戏快捷键：&lt;kbd&gt;Enter&lt;/kbd&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;游戏目标：操作艾克赛德躲避幻梦。&lt;/p&gt;
+&lt;iframe src=&#34;https://ryihuan.github.io/games/first2dgame/index.html&#34; style=&#34;width:480px;height:720px;max-width:100%;max-height:93vh;border:none;border-radius:8px&#34;&gt;&lt;/iframe&gt;  
+&lt;ul&gt;
+&lt;li&gt;如果网页加载缓慢或遇到问题可以用&lt;a class=&#34;link&#34; href=&#34;https://pan.quark.cn/s/0450c85ac5ba&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;夸克网盘
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;制作过程与感想&#34;&gt;制作过程与感想
+&lt;/h2&gt;&lt;p&gt;步骤参见&lt;a class=&#34;link&#34; href=&#34;https://docs.godotengine.org/zh-cn/4.5/getting_started/first_2d_game/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Godot简体中文文档-你的第一个2D游戏
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;从零学习做游戏中，学完GD Script还是对于怎么做游戏一头雾水，于是决定从官方文档指引的入门游戏开始做。&lt;br&gt;
+过程上只要按图索骥就好了，偶有报错也是因为代码打错了这种小问题&lt;/p&gt;
+&lt;p&gt;做完之后感觉，确实只是一个入门教程，只能说是起到了给零基础的新人开发者展示游戏制作过程的效果，对于代码为什么要这么写、节点为什么要这样设置，还是只能有一个朦胧的概念而无法确切理解&lt;/p&gt;
+&lt;p&gt;不过这个小游戏还挺有意思，有意思就有意思在制作过程中可以把Godot提供的素材替换成自己画的素材……&lt;br&gt;
+如果有感兴趣的朋友可以下载一个Godot直接对着教程上手，官方教程中完整给出了需要用到的代码。&lt;/p&gt;
+&lt;h2 id=&#34;如何导出godot网页游戏并通过hugo部署到博客页面&#34;&gt;如何导出Godot网页游戏并通过Hugo部署到博客页面
+&lt;/h2&gt;&lt;p&gt;我先是找了一下怎么在网页游玩Godot网页游戏的教程，看到有用Vercel部署的，也有用Netflix等的，前者比较熟悉但&lt;code&gt;Vercel.app&lt;/code&gt;域名大陆访问不了，后者没接触过&lt;br&gt;
+问了下AI原来可以直接用iframe嵌入博客文章里，那对我来说这是最好的方式了&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建项目时渲染器选择&lt;code&gt;兼容&lt;/code&gt;，也可以在创建项目之后在项目设置里把渲染方法改为&lt;code&gt;gl_compatibility&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;导出时选择Web（如果没有下载过导出模板，推荐先去&lt;a class=&#34;link&#34; href=&#34;https://godotengine.org/download/windows/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官网下载
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;，下载&lt;code&gt;Export templates&lt;/code&gt;，如果用C++就下载&lt;code&gt;.NET&lt;/code&gt;版&lt;/li&gt;
+&lt;li&gt;在导出路径里把文件名写成&lt;code&gt;index.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;把导出的项目文件夹放在你的博客&lt;code&gt;根目录/static/games/&lt;/code&gt;路径下&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;.md&lt;/code&gt;文件正文使用&lt;code&gt;&amp;lt;iframe src=&amp;quot;/games/你的游戏项目文件夹/index.html&amp;quot; style=&amp;quot;width:100%; height:80vh;&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/code&gt;，从而在文章中嵌入游戏&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

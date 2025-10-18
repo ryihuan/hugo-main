@@ -7,21 +7,29 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>尺途</copyright>
-        <lastBuildDate>Fri, 03 Oct 2025 04:50:55 +0800</lastBuildDate><atom:link href="https://ryihuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 13 Oct 2025 22:26:09 +0800</lastBuildDate><atom:link href="https://ryihuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Godot学习笔记</title>
+        <link>https://ryihuan.github.io/categories/note/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://ryihuan.github.io/categories/note/</guid>
+        <description>&lt;img src="https://ryihuan.github.io/categories/note/godot_hit_me.png" alt="Featured image of post Godot学习笔记" /&gt;</description>
+        </item>
+        <item>
+        <title>Godot游戏制作</title>
+        <link>https://ryihuan.github.io/categories/godot/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://ryihuan.github.io/categories/godot/</guid>
+        <description>&lt;img src="https://ryihuan.github.io/categories/godot/first2dgame.png" alt="Featured image of post Godot游戏制作" /&gt;</description>
+        </item>
+        <item>
         <title>博客装修日志</title>
         <link>https://ryihuan.github.io/categories/diary/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://ryihuan.github.io/categories/diary/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>个人学习笔记</title>
-        <link>https://ryihuan.github.io/categories/note/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://ryihuan.github.io/categories/note/</guid>
-        <description>&lt;img src="https://ryihuan.github.io/categories/note/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post 个人学习笔记" /&gt;</description>
+        <description>&lt;img src="https://ryihuan.github.io/categories/diary/home.png" alt="Featured image of post 博客装修日志" /&gt;</description>
         </item>
         
     </channel>
