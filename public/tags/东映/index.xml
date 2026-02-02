@@ -1,0 +1,3030 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>东映 on 某人的小窝</title>
+        <link>https://ryihuan.github.io/tags/%E4%B8%9C%E6%98%A0/</link>
+        <description>Recent content in 东映 on 某人的小窝</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>尺途</copyright>
+        <lastBuildDate>Sat, 31 Jan 2026 16:04:34 +0800</lastBuildDate><atom:link href="https://ryihuan.github.io/tags/%E4%B8%9C%E6%98%A0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>特摄吃</title>
+        <link>https://ryihuan.github.io/p/%E7%89%B9%E6%91%84%E5%90%83/</link>
+        <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://ryihuan.github.io/p/%E7%89%B9%E6%91%84%E5%90%83/</guid>
+        <description>&lt;img src="https://ryihuan.github.io/26/011004.png" alt="Featured image of post 特摄吃" /&gt;&lt;p&gt;&lt;em&gt;持续更新中&lt;/em&gt;&lt;br&gt;
+严重不建议在手机上翻阅这篇文章。&lt;/p&gt;
+&lt;p&gt;趁记忆还没有完全从我的脑子里流走，一边翻着写的观影串回忆一边写一下短评吧&lt;br&gt;
+NeoDB受网络影响加载不出来属于正常现象，为此画了加载图，可爱吧！&lt;/p&gt;
+&lt;p&gt;如果这篇文章有人看的话，我想说我写的全部是主观感受，而且我看剧不是特别追求逻辑，让我看爽了的就是好的。&lt;br&gt;
+短评可能会含有大量剧透！谨慎观看！&lt;/p&gt;
+&lt;h2 id=&#34;假面骑士&#34;&gt;假面骑士
+&lt;/h2&gt;&lt;h3 id=&#34;旧平成骑士&#34;&gt;旧平成骑士
+&lt;/h3&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-71A0raBngMyRmCKuJ9zYZ4&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-71A0raBngMyRmCKuJ9zYZ4-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/71A0raBngMyRmCKuJ9zYZ4&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-71A0raBngMyRmCKuJ9zYZ4-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-71A0raBngMyRmCKuJ9zYZ4-content&#34;&gt;
+                
+                没看完
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-71A0raBngMyRmCKuJ9zYZ4-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-71A0raBngMyRmCKuJ9zYZ4&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/71A0raBngMyRmCKuJ9zYZ4&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;没看完&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-1B1j99tn9Ol9ZkDR15iW0a&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-1B1j99tn9Ol9ZkDR15iW0a-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/1B1j99tn9Ol9ZkDR15iW0a&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-1B1j99tn9Ol9ZkDR15iW0a-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-1B1j99tn9Ol9ZkDR15iW0a-content&#34;&gt;
+                
+                没看完
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-1B1j99tn9Ol9ZkDR15iW0a-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-1B1j99tn9Ol9ZkDR15iW0a&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/1B1j99tn9Ol9ZkDR15iW0a&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;没看完&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-3BzeXZq7M6ORVfyE6VTHw6&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-3BzeXZq7M6ORVfyE6VTHw6-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/3BzeXZq7M6ORVfyE6VTHw6&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-3BzeXZq7M6ORVfyE6VTHw6-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-3BzeXZq7M6ORVfyE6VTHw6-content&#34;&gt;
+                
+                是我看的第二部小林阿姨写的骑士，&lt;del&gt;开局女人与狗就很有兴趣了&lt;/del&gt;&lt;br&gt;
+看前几集感觉真司怪baka的，是被卖了还要帮忙数钱的类型，好喜欢真司被北冈哄骗的剧情呵呵呵&lt;br&gt;
+龙骑真的好多人啊，啊啊，原来是魔法少女小圆吗，神崎士郎是丘比。跟我签订契约成为假面骑士吧！&lt;br&gt;
+我觉得每个角色都塑造得很完整（但是太多人了我不想一个一个点评啊啊），比较记忆深刻的应该还是律师、吾郎、浅仓威这条线，以及卷入其中的真司吧。也很喜欢莲虽然觉得自己该去杀人但始终存有对夺去别人生命的恐惧这件事。大家互相都是竞争对手，但在过程中又产生了复杂又深刻的感情，有很多打动我的地方，虽然整体氛围太压抑了看得我心好累……虽然也有轻松诙谐的部分&lt;del&gt;敏树写了几个单元回又弥补了这点&lt;/del&gt;。感觉每个人都被不战斗就无法生存逼到了极限……&lt;br&gt;
+哥没有考虑过优衣的感受一厢情愿把优衣逼到跳楼也十分印象深刻。我始终没有办法理解哥。但是最后一集两个人在房子里画画还是把我眼睛看得尿尿了TT。&lt;br&gt;
+龙骑绝对是佳作，但我每次想到这部作品心情就变得阴暗，哈哈全死光了，结局也说不好算不算圆满，敏树写的剧场版我好像也看了但没能留下很深的印象，&lt;del&gt;记忆全被男同上床覆盖了&lt;/del&gt;&lt;br&gt;
+小林阿姨写的骑士总是带一点不圆满和悲伤，但这部对我来说实在太压抑了……对这部作品我也没有太深的理解，我觉得我的本能在抗拒代入其中……
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-3BzeXZq7M6ORVfyE6VTHw6-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-3BzeXZq7M6ORVfyE6VTHw6&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/3BzeXZq7M6ORVfyE6VTHw6&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;是我看的第二部小林阿姨写的骑士，\u003cdel\u003e开局女人与狗就很有兴趣了\u003c\/del\u003e\u003cbr\u003e\r\n看前几集感觉真司怪baka的，是被卖了还要帮忙数钱的类型，好喜欢真司被北冈哄骗的剧情呵呵呵\u003cbr\u003e\r\n龙骑真的好多人啊，啊啊，原来是魔法少女小圆吗，神崎士郎是丘比。跟我签订契约成为假面骑士吧！\u003cbr\u003e\r\n我觉得每个角色都塑造得很完整（但是太多人了我不想一个一个点评啊啊），比较记忆深刻的应该还是律师、吾郎、浅仓威这条线，以及卷入其中的真司吧。也很喜欢莲虽然觉得自己该去杀人但始终存有对夺去别人生命的恐惧这件事。大家互相都是竞争对手，但在过程中又产生了复杂又深刻的感情，有很多打动我的地方，虽然整体氛围太压抑了看得我心好累……虽然也有轻松诙谐的部分\u003cdel\u003e敏树写了几个单元回又弥补了这点\u003c\/del\u003e。感觉每个人都被不战斗就无法生存逼到了极限……\u003cbr\u003e\r\n哥没有考虑过优衣的感受一厢情愿把优衣逼到跳楼也十分印象深刻。我始终没有办法理解哥。但是最后一集两个人在房子里画画还是把我眼睛看得尿尿了TT。\u003cbr\u003e\r\n龙骑绝对是佳作，但我每次想到这部作品心情就变得阴暗，哈哈全死光了，结局也说不好算不算圆满，敏树写的剧场版我好像也看了但没能留下很深的印象，\u003cdel\u003e记忆全被男同上床覆盖了\u003c\/del\u003e\u003cbr\u003e\r\n小林阿姨写的骑士总是带一点不圆满和悲伤，但这部对我来说实在太压抑了……对这部作品我也没有太深的理解，我觉得我的本能在抗拒代入其中……&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-6S6Mtt8Dzo2qtyqvaAhIEd&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-6S6Mtt8Dzo2qtyqvaAhIEd-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/6S6Mtt8Dzo2qtyqvaAhIEd&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-6S6Mtt8Dzo2qtyqvaAhIEd-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-6S6Mtt8Dzo2qtyqvaAhIEd-content&#34;&gt;
+                
+                可能我亚极陀还没看完，我目前觉得555是井上敏树写得最好的假面骑士。虽然555也有多角恋但我觉得好清新啊。要说难看的部分可能是结花跟真理雌竞吧，但篇幅没有很长我原谅了……&lt;br&gt;
+555已经是我旧平成最喜欢的骑士作品了怎么办。哪怕别人觉得难看的部分我都溺爱了。《消失的天堂》《异形之花》也溺爱了，除了20周年剧场版实在溺爱不起来、、&lt;br&gt;
+&lt;br&gt;
+好喜欢菊池洗衣店，好喜欢木场三个人的公寓，好有家的感觉，在这部作品找到价值观共鸣了……好喜欢TV的巧真理啊，少女捡狼的故事，遇到真理之前巧过得像行尸走肉，没有目的没有梦想，每一天得过且过，被真理和启太郎捡到洗衣店之后就像有了家和家人一样。有了可以付出生命去守护的东西……&lt;br&gt;
+&lt;br&gt;
+结花和启太郎也很萌啊，我觉得这是两个有缺陷的人互相救赎的故事。启太郎想要把世界上每一件衣服都洗得干干净净，让世界上每一个人都得到幸福。过得并不幸福的结花给启太郎发短信，也总是报告自己很幸福。启太郎就好像活在幻想泡泡里一样，明明最喜欢的人正在遭遇霸凌死掉，他也看不到。当然也是有人物成长的，比如接受了奥菲以诺的存在，结局终于知道网友就是长田小姐，也可以很自然地抱住结花，但这一次终究还是没有看到结花死去……即使在外传小说，结花也还是死了，好像是以鹤的形态死在启太郎面前，我有点忘了。&lt;br&gt;
+虽然大家看启太郎网恋的故事都会说一嘴敏式误会什么的、但我觉得就是因为错过了这么多集，结尾的抱抱才有含金量。生前被排挤被霸凌、没有感受过爱，成为奥菲以诺之后也自觉丑陋、自我价值感低以至于倒贴海堂的结花，在再一次死前终于得到了无偿的爱和拥抱，一个可以容纳泪水的肩膀。&lt;br&gt;
+&lt;br&gt;
+木场和巧这条线也写得好好，我觉得木场始终隐藏了真实的自己，0个人知道他一开始复仇杀前女友了，即使跟巧从猜忌试探走到相互信任，他也还是用伪善粉饰了自己。木场是那种在付出之前会衡量价值的人，他观察人类也观察奥菲以诺，是为了肯定人和奥菲以诺共存的价值，结花死后木场心里共存的价值也瓦解崩塌了，整个人变得不安定起来，于是迅速倒向奥菲以诺这边，曾经跟巧那么腻歪如今也成前男友了……&lt;del&gt;杀前任这回事也是一回生二回熟&lt;/del&gt;。但这样的木场结尾却被巧的坚定打服（打服），明明巧跟自己一样也是奥菲以诺，也见过了这么多人性的丑陋，却能够这么义无反顾，这样的巧就像洪水里的一棵树。。终于，木场又选择了相信巧的坚定，相信巧找到的答案并付出自己的生命&lt;br&gt;
+&lt;br&gt;
+草加，草加是一个我看完TV又看完外传也喜欢不起来的人，不过他工作挺认真努力的（呃），但人品就算了吧。也很难理解草加，草加心海底针。&lt;br&gt;
+至于海堂、海堂是猫。&lt;br&gt;
+反派四叶草的塑造也可圈可点吧不过我记忆力有限实在记不清了。&lt;br&gt;
+&lt;br&gt;
+我觉得555的人物塑造和剧情走向是相辅相成的，每一个角色都在为主题服务，都有存在的价值，虽然敏的xp很狗血八点档，但真的不得不感叹他的笔力……虽然如今很多细节记不清了，但看的时候真的好沉迷，好喜欢他笔下各有缺点的角色以及角色之间萌生的各种关系。
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-6S6Mtt8Dzo2qtyqvaAhIEd-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-6S6Mtt8Dzo2qtyqvaAhIEd&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/6S6Mtt8Dzo2qtyqvaAhIEd&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;可能我亚极陀还没看完，我目前觉得555是井上敏树写得最好的假面骑士。虽然555也有多角恋但我觉得好清新啊。要说难看的部分可能是结花跟真理雌竞吧，但篇幅没有很长我原谅了……\u003cbr\u003e\r\n555已经是我旧平成最喜欢的骑士作品了怎么办。哪怕别人觉得难看的部分我都溺爱了。《消失的天堂》《异形之花》也溺爱了，除了20周年剧场版实在溺爱不起来、、\u003cbr\u003e\r\n\u003cbr\u003e\r\n好喜欢菊池洗衣店，好喜欢木场三个人的公寓，好有家的感觉，在这部作品找到价值观共鸣了……好喜欢TV的巧真理啊，少女捡狼的故事，遇到真理之前巧过得像行尸走肉，没有目的没有梦想，每一天得过且过，被真理和启太郎捡到洗衣店之后就像有了家和家人一样。有了可以付出生命去守护的东西……\u003cbr\u003e\r\n\u003cbr\u003e\r\n结花和启太郎也很萌啊，我觉得这是两个有缺陷的人互相救赎的故事。启太郎想要把世界上每一件衣服都洗得干干净净，让世界上每一个人都得到幸福。过得并不幸福的结花给启太郎发短信，也总是报告自己很幸福。启太郎就好像活在幻想泡泡里一样，明明最喜欢的人正在遭遇霸凌死掉，他也看不到。当然也是有人物成长的，比如接受了奥菲以诺的存在，结局终于知道网友就是长田小姐，也可以很自然地抱住结花，但这一次终究还是没有看到结花死去……即使在外传小说，结花也还是死了，好像是以鹤的形态死在启太郎面前，我有点忘了。\u003cbr\u003e\r\n虽然大家看启太郎网恋的故事都会说一嘴敏式误会什么的、但我觉得就是因为错过了这么多集，结尾的抱抱才有含金量。生前被排挤被霸凌、没有感受过爱，成为奥菲以诺之后也自觉丑陋、自我价值感低以至于倒贴海堂的结花，在再一次死前终于得到了无偿的爱和拥抱，一个可以容纳泪水的肩膀。\u003cbr\u003e\r\n\u003cbr\u003e\r\n木场和巧这条线也写得好好，我觉得木场始终隐藏了真实的自己，0个人知道他一开始复仇杀前女友了，即使跟巧从猜忌试探走到相互信任，他也还是用伪善粉饰了自己。木场是那种在付出之前会衡量价值的人，他观察人类也观察奥菲以诺，是为了肯定人和奥菲以诺共存的价值，结花死后木场心里共存的价值也瓦解崩塌了，整个人变得不安定起来，于是迅速倒向奥菲以诺这边，曾经跟巧那么腻歪如今也成前男友了……\u003cdel\u003e杀前任这回事也是一回生二回熟\u003c\/del\u003e。但这样的木场结尾却被巧的坚定打服（打服），明明巧跟自己一样也是奥菲以诺，也见过了这么多人性的丑陋，却能够这么义无反顾，这样的巧就像洪水里的一棵树。。终于，木场又选择了相信巧的坚定，相信巧找到的答案并付出自己的生命\u003cbr\u003e\r\n\u003cbr\u003e\r\n草加，草加是一个我看完TV又看完外传也喜欢不起来的人，不过他工作挺认真努力的（呃），但人品就算了吧。也很难理解草加，草加心海底针。\u003cbr\u003e\r\n至于海堂、海堂是猫。\u003cbr\u003e\r\n反派四叶草的塑造也可圈可点吧不过我记忆力有限实在记不清了。\u003cbr\u003e\r\n\u003cbr\u003e\r\n我觉得555的人物塑造和剧情走向是相辅相成的，每一个角色都在为主题服务，都有存在的价值，虽然敏的xp很狗血八点档，但真的不得不感叹他的笔力……虽然如今很多细节记不清了，但看的时候真的好沉迷，好喜欢他笔下各有缺点的角色以及角色之间萌生的各种关系。&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-0VPCzIuAkP7r7m1FkHtzAI&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-0VPCzIuAkP7r7m1FkHtzAI-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/0VPCzIuAkP7r7m1FkHtzAI&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-0VPCzIuAkP7r7m1FkHtzAI-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-0VPCzIuAkP7r7m1FkHtzAI-content&#34;&gt;
+                
+                剑可能没那么好看，但它的结局和贡献的梗又弥补了这点&lt;br&gt;
+看前几集脸盲得很，后来看网友吃播剑发现大家都会脸盲，原来是人之常情。（不过越往后看发现剑崎越帅啊！就是身材好竹竿，没办法工资都发不出了吃不起饭给人饿的、）&lt;br&gt;
+看到第14集我已经开始意识涣散开始搜网上的评价了，网友说：“一定要坚持看下去啊！”“熬过16集，你会发现不一样的世界！”我、好、好吧&lt;br&gt;
+但我实际觉得开始好看了可能还是在三十几集吧（呃开始卖剑始了）&lt;br&gt;
+我觉得剑崎这么想救相川始是因为他曾经是火灾唯一幸存者，自己的父母没能得救，这导致他遇到能救的都想捞一把……偏偏这时候的相川始又显得那么孤立无援。不过我不觉得剑崎对相川始这个个体有很重的情结，我觉得是剑崎把自己放在了救世主的位置上，对相川始是神爱世人，反而被剑崎这么对待的始内心对剑崎的亏欠会更重一些、、&lt;br&gt;
+结局真的太唯美了，我看到最后除了尊这一个字什么也说不出，给会川升磕个响头吧……我把我所有的眼泪都流在了最后一集&lt;br&gt;
+“我要和命运战斗并证明给你看”，好伟大的台词好伟大的概念好伟大的剑崎一真。求DCD编剧米村正二不要祸害……
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-0VPCzIuAkP7r7m1FkHtzAI-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-0VPCzIuAkP7r7m1FkHtzAI&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/0VPCzIuAkP7r7m1FkHtzAI&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;剑可能没那么好看，但它的结局和贡献的梗又弥补了这点\u003cbr\u003e\r\n看前几集脸盲得很，后来看网友吃播剑发现大家都会脸盲，原来是人之常情。（不过越往后看发现剑崎越帅啊！就是身材好竹竿，没办法工资都发不出了吃不起饭给人饿的、）\u003cbr\u003e\r\n看到第14集我已经开始意识涣散开始搜网上的评价了，网友说：“一定要坚持看下去啊！”“熬过16集，你会发现不一样的世界！”我、好、好吧\u003cbr\u003e\r\n但我实际觉得开始好看了可能还是在三十几集吧（呃开始卖剑始了）\u003cbr\u003e\r\n我觉得剑崎这么想救相川始是因为他曾经是火灾唯一幸存者，自己的父母没能得救，这导致他遇到能救的都想捞一把……偏偏这时候的相川始又显得那么孤立无援。不过我不觉得剑崎对相川始这个个体有很重的情结，我觉得是剑崎把自己放在了救世主的位置上，对相川始是神爱世人，反而被剑崎这么对待的始内心对剑崎的亏欠会更重一些、、\u003cbr\u003e\r\n结局真的太唯美了，我看到最后除了尊这一个字什么也说不出，给会川升磕个响头吧……我把我所有的眼泪都流在了最后一集\u003cbr\u003e\r\n“我要和命运战斗并证明给你看”，好伟大的台词好伟大的概念好伟大的剑崎一真。求DCD编剧米村正二不要祸害……&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-4w1b0RjNP6m8cyQXJvAIFc&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-4w1b0RjNP6m8cyQXJvAIFc-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/4w1b0RjNP6m8cyQXJvAIFc&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-4w1b0RjNP6m8cyQXJvAIFc-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-4w1b0RjNP6m8cyQXJvAIFc-content&#34;&gt;
+                
+                没看
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-4w1b0RjNP6m8cyQXJvAIFc-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-4w1b0RjNP6m8cyQXJvAIFc&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/4w1b0RjNP6m8cyQXJvAIFc&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;没看&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-6RV4fdXJOpBwWZqNOJH013&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-6RV4fdXJOpBwWZqNOJH013-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/6RV4fdXJOpBwWZqNOJH013&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-6RV4fdXJOpBwWZqNOJH013-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-6RV4fdXJOpBwWZqNOJH013-content&#34;&gt;
+                
+                没看
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-6RV4fdXJOpBwWZqNOJH013-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-6RV4fdXJOpBwWZqNOJH013&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/6RV4fdXJOpBwWZqNOJH013&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;没看&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-0kwPRMzmJ0hzfVqgDtKdwp&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-0kwPRMzmJ0hzfVqgDtKdwp-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/0kwPRMzmJ0hzfVqgDtKdwp&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-0kwPRMzmJ0hzfVqgDtKdwp-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-0kwPRMzmJ0hzfVqgDtKdwp-content&#34;&gt;
+                
+                第一次看的小林靖子写的骑士。电王真好看！看着看着已经在心里给良太郎开好了大院，我觉得良太郎很有表游戏的气质，虽然看起来很弱气但是内心很坚强，也很有自己坚持的东西，强大到足以驯服这么多异魔神……&lt;br&gt;
+几乎可以说每一个角色都好喜欢，小龙，侑斗，爱理，hana酱……第一次看靖子阿姨写的骑士就已经是靖子阿姨的狗了，主人我要永远追随你&lt;br&gt;
+之前有看到网友说写一个好结局的技巧是一件成功的事、一件失败的事、一件模棱两可的事（大意）。我觉得靖子阿姨好会写这种结局，处于BE和HE之间的模糊地带，还说不上来结局是否圆满，眼泪就已经在流了，只知道列车还会一直地开。&lt;br&gt;
+回忆起来有很多很有印象的片段，虽然细节都已经有点记不清了……我觉得我最喜欢的还是圣诞节吧，在最开心最美的时候把一切打碎，打碎之后又修修补补缝回来，虽然赚了我好多眼泪但电王还是我心里特别特别美好的一个奇幻故事。
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-0kwPRMzmJ0hzfVqgDtKdwp-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-0kwPRMzmJ0hzfVqgDtKdwp&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/0kwPRMzmJ0hzfVqgDtKdwp&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;第一次看的小林靖子写的骑士。电王真好看！看着看着已经在心里给良太郎开好了大院，我觉得良太郎很有表游戏的气质，虽然看起来很弱气但是内心很坚强，也很有自己坚持的东西，强大到足以驯服这么多异魔神……\u003cbr\u003e\r\n几乎可以说每一个角色都好喜欢，小龙，侑斗，爱理，hana酱……第一次看靖子阿姨写的骑士就已经是靖子阿姨的狗了，主人我要永远追随你\u003cbr\u003e\r\n之前有看到网友说写一个好结局的技巧是一件成功的事、一件失败的事、一件模棱两可的事（大意）。我觉得靖子阿姨好会写这种结局，处于BE和HE之间的模糊地带，还说不上来结局是否圆满，眼泪就已经在流了，只知道列车还会一直地开。\u003cbr\u003e\r\n回忆起来有很多很有印象的片段，虽然细节都已经有点记不清了……我觉得我最喜欢的还是圣诞节吧，在最开心最美的时候把一切打碎，打碎之后又修修补补缝回来，虽然赚了我好多眼泪但电王还是我心里特别特别美好的一个奇幻故事。&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-7N56h7Ox5S7sySJ8Ha3uWc&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-7N56h7Ox5S7sySJ8Ha3uWc-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/7N56h7Ox5S7sySJ8Ha3uWc&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-7N56h7Ox5S7sySJ8Ha3uWc-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-7N56h7Ox5S7sySJ8Ha3uWc-content&#34;&gt;
+                
+                是我看的第一部井上敏树主笔的骑士，在看Kiva之前就已经久仰敏树的大名，看过他在其他骑士写的单元回，还意外发现朝日版游戏王有他（和小林阿姨）参与。&lt;br&gt;
+我认为（可能也是客观事实）本作是敏树恋父之作，红音也是一个滥情、没有家庭观念、但又很有才华的浪子，一开始跟yuri在一起大约是欣赏她的事业心，一结婚yuri开始全身心投入家庭了他就立即热情退却了。Queen在这个时机趁虚而入恰好给了他满足感和新鲜感……孩子没出生就早早地死了真是便宜他了，都不会有老去的时候，也不用带孩子（我觉得这样的人老了是最惹人嫌的时候）。也不用分担他死后Queen感受到的痛苦。虽然骂了他很多但抛开伦理观念他确实是个有魅力的角色……&lt;br&gt;
+（题外话，死在Queen膝枕上bgm放着小提琴，这个镜头很像P3结局好吗！）&lt;br&gt;
+整部TV甚至剧场版《魔界城之王》都充斥着小渡对自己为何出生的疑问和对父亲复杂的情结。看Kiva一直在猜小渡是爹跟谁生的，惠跟小渡又是什么关系，反复猜答案……&lt;del&gt;不要怪我嗑儿子操爸爸了，次郎都更像小渡他爸，要找红音也问个说法甚至还需要穿越时空。爹这么年轻让儿子操一下怎么了！&lt;/del&gt;&lt;br&gt;
+名护启介也是个很神人的角色，我将推荐喜欢753的人去玩《弹丸论破 Another》，推荐喜欢弹A里的金城剑的人来鉴赏753。世界上竟有两片如此相似的树叶！要说区别的话，可能还是成长走向不同吧，金城剑可以偏执到底，而753他开悟了甚至有点变成搞笑角色。&lt;br&gt;
+翻观影串翻到很好笑的：
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;温馨的三人约会闯入随地大小抓逃犯的753  
+753和逃犯你追我赶的场面可以放在任何一张kiva同人图的背景里&lt;/blockquote&gt;
+Kiva还有骨，骨之间还有三角恋（可能四角？还有静香），要素过多了，看mio跟静香雌竞看得我挺无语的。妈还活着也是没想到的，“通过战斗来感受彼此的灵魂”这台词也是看得我大脑发光&lt;br&gt;
+爱看Kiva就得能忍受敏树的恶俗多角恋，看了这个再看555毫无接受压力甚至觉得555的多角恋挺清新的（真的）。&lt;br&gt;
+结局也是无了我个大语，名护跟惠结婚，小渡未来的儿子长得跟红音也一模一样，有敏树这样的神人编剧你是可以在本篇看到孙子长得随爷爷的……&lt;del&gt;爸爸变成了儿子的儿子，儿子做了爸爸的爸爸，我怎么会做这种梦&lt;/del&gt;&lt;br&gt;
+Kiva可能有很多缺点，也很不骑士，但爱看家庭伦理剧和鉴赏神人的看这个有福了，&lt;del&gt;像我这样喜欢儿子操爸爸的也可以看&lt;/del&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-7N56h7Ox5S7sySJ8Ha3uWc-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-7N56h7Ox5S7sySJ8Ha3uWc&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/7N56h7Ox5S7sySJ8Ha3uWc&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;是我看的第一部井上敏树主笔的骑士，在看Kiva之前就已经久仰敏树的大名，看过他在其他骑士写的单元回，还意外发现朝日版游戏王有他（和小林阿姨）参与。\u003cbr\u003e\r\n我认为（可能也是客观事实）本作是敏树恋父之作，红音也是一个滥情、没有家庭观念、但又很有才华的浪子，一开始跟yuri在一起大约是欣赏她的事业心，一结婚yuri开始全身心投入家庭了他就立即热情退却了。Queen在这个时机趁虚而入恰好给了他满足感和新鲜感……孩子没出生就早早地死了真是便宜他了，都不会有老去的时候，也不用带孩子（我觉得这样的人老了是最惹人嫌的时候）。也不用分担他死后Queen感受到的痛苦。虽然骂了他很多但抛开伦理观念他确实是个有魅力的角色……\u003cbr\u003e\r\n（题外话，死在Queen膝枕上bgm放着小提琴，这个镜头很像P3结局好吗！）\u003cbr\u003e\r\n整部TV甚至剧场版《魔界城之王》都充斥着小渡对自己为何出生的疑问和对父亲复杂的情结。看Kiva一直在猜小渡是爹跟谁生的，惠跟小渡又是什么关系，反复猜答案……\u003cdel\u003e不要怪我嗑儿子操爸爸了，次郎都更像小渡他爸，要找红音也问个说法甚至还需要穿越时空。爹这么年轻让儿子操一下怎么了！\u003c\/del\u003e\u003cbr\u003e\r\n名护启介也是个很神人的角色，我将推荐喜欢753的人去玩《弹丸论破 Another》，推荐喜欢弹A里的金城剑的人来鉴赏753。世界上竟有两片如此相似的树叶！要说区别的话，可能还是成长走向不同吧，金城剑可以偏执到底，而753他开悟了甚至有点变成搞笑角色。\u003cbr\u003e\r\n翻观影串翻到很好笑的：\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e温馨的三人约会闯入随地大小抓逃犯的753  \r\n753和逃犯你追我赶的场面可以放在任何一张kiva同人图的背景里\u003c\/blockquote\u003e\r\nKiva还有骨，骨之间还有三角恋（可能四角？还有静香），要素过多了，看mio跟静香雌竞看得我挺无语的。妈还活着也是没想到的，“通过战斗来感受彼此的灵魂”这台词也是看得我大脑发光\u003cbr\u003e\r\n爱看Kiva就得能忍受敏树的恶俗多角恋，看了这个再看555毫无接受压力甚至觉得555的多角恋挺清新的（真的）。\u003cbr\u003e\r\n结局也是无了我个大语，名护跟惠结婚，小渡未来的儿子长得跟红音也一模一样，有敏树这样的神人编剧你是可以在本篇看到孙子长得随爷爷的……\u003cdel\u003e爸爸变成了儿子的儿子，儿子做了爸爸的爸爸，我怎么会做这种梦\u003c\/del\u003e\u003cbr\u003e\r\nKiva可能有很多缺点，也很不骑士，但爱看家庭伦理剧和鉴赏神人的看这个有福了，\u003cdel\u003e像我这样喜欢儿子操爸爸的也可以看\u003c\/del\u003e&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-703NhgO2RlKPJHTXTvIBoZ&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-703NhgO2RlKPJHTXTvIBoZ-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/703NhgO2RlKPJHTXTvIBoZ&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-703NhgO2RlKPJHTXTvIBoZ-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-703NhgO2RlKPJHTXTvIBoZ-content&#34;&gt;
+                
+                我至今觉得DCD是我看过最难看的骑士，可能也就利维斯后半能跟它分庭抗礼。从这里认识米村正二这个编剧，原来皮套大战剧场版也几乎是他写的，求停笔。导致我至今没看他主笔的甲斗。&lt;br&gt;
+我接受程度很高所以前面的单元回都看得下去，可能也因为前面一部分是会川升写的吧。接受了平行世界设定，再加上当时看过的骑士还不多，所以没有觉得ooc的部分，虽然555那集导致我误以为555是校园主题，后来看了555才发现并不是……&lt;br&gt;
+以及我觉得前面不难看很重要的原因是有海东大树这个角色，不然我看得犯困，回忆起来确实除了主角团的部分对你们这些单元回剧情没留下多少印象&lt;br&gt;
+也是有觉得好看的单元回，比如电王回（小林阿姨写的）、Black回（主要是主角团的部分，前辈的部分我没印象），29集士海卖了个大的，但30集一出来一切都不一样了&lt;br&gt;
+&lt;br&gt;
+当时的观看感想：
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;剑崎对士：我能明白你的心情但是你得消失（大意）  
+哦莫能不能别让剑崎说这种话……  
+他可是会想尽办法拯救被全世界排挤的相川始的人啊 与命运战斗到底的人啊  
+就算剑崎在tv结局后一个人生活很久性格可能变沉稳了但是这种角色灵魂的东西不会变吧  
+米村正二你在写什么东西&lt;/blockquote&gt;
+结局也不知道在写什么东西，当然也可能受场外因素影响吧，我为了知道结局到底是个什么东西看完TV本篇又看了《全骑士大战大修卡》剧场版，又再看一次跟W的电影大战，我真的找不到门矢士这个角色的定位了，现在回忆起来我除了记得士海又卖了完全不记得结局讲什么了，我也在寻找答案，&lt;br&gt;
+实在没印象只好再翻找出看电影大战时的感想：
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;补充了好多信息  
+整理一下至今的故事  
+1-29集是失忆的士旅行和寻找归宿的故事  
+大修卡剧场版是士的世界和找回记忆（十年前父母死了开始在平行世界旅行 不咋在乎妹妹还当上了大修卡首领 莫名其妙失忆之后回到这个世界找回记忆发现妹妹已黑化 感到被全世界抛弃连本来的世界和旅伴都不接纳自己 被莫名其妙冒出来的仇人结城丈二莫名其妙点醒之后莫名其妙走回了正路跟前辈们一起捅穿了大修卡老巢）  
+30-31发现世界已经开始融合 跟红渡对话后接到主线任务破坏后创造  
+w剧场版这里是破坏了全部骑士包括自己之后创造的故事  
+夏海跟海东和红渡对话，原来只要有骑士的记忆就可以创造（类似电王里的设定）
+
+↑没理解的地方  
+1.diend和牙兰为什么不在骑士行列 他们不是也有自己的世界吗  
+2.我咋记得tv还是大修卡剧场版里面夏海不是给士拍了一张咧嘴笑的吗，怎么就仅剩的士的照片只有这个w联动剧场版里拍的那张了  
+3.鸣泷这个角色到底哪来的，他在干嘛
+
+&lt;del&gt;↑小野寺都被破坏创造回自己的世界了，他怎么又出现在大修卡世界&lt;/del&gt;←可能是那个穿越时空的幕布设定没有随着破坏创造消失，总之这里小野寺像后面那两个小孩一样穿回来了，虽然很早以前就不知道为什么他们都有随随便便穿越世界的能力&lt;/blockquote&gt;
+谁来安慰一下我的一头雾水，后来士海俩人又在时王大卖一场，我对门矢士这个角色更一头雾水了。对中之人也很无语，到底谁能赔我点钱
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-703NhgO2RlKPJHTXTvIBoZ-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-703NhgO2RlKPJHTXTvIBoZ&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/703NhgO2RlKPJHTXTvIBoZ&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;我至今觉得DCD是我看过最难看的骑士，可能也就利维斯后半能跟它分庭抗礼。从这里认识米村正二这个编剧，原来皮套大战剧场版也几乎是他写的，求停笔。导致我至今没看他主笔的甲斗。\u003cbr\u003e\r\n我接受程度很高所以前面的单元回都看得下去，可能也因为前面一部分是会川升写的吧。接受了平行世界设定，再加上当时看过的骑士还不多，所以没有觉得ooc的部分，虽然555那集导致我误以为555是校园主题，后来看了555才发现并不是……\u003cbr\u003e\r\n以及我觉得前面不难看很重要的原因是有海东大树这个角色，不然我看得犯困，回忆起来确实除了主角团的部分对你们这些单元回剧情没留下多少印象\u003cbr\u003e\r\n也是有觉得好看的单元回，比如电王回（小林阿姨写的）、Black回（主要是主角团的部分，前辈的部分我没印象），29集士海卖了个大的，但30集一出来一切都不一样了\u003cbr\u003e\r\n\u003cbr\u003e\r\n当时的观看感想：\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e剑崎对士：我能明白你的心情但是你得消失（大意）  \r\n哦莫能不能别让剑崎说这种话……  \r\n他可是会想尽办法拯救被全世界排挤的相川始的人啊 与命运战斗到底的人啊  \r\n就算剑崎在tv结局后一个人生活很久性格可能变沉稳了但是这种角色灵魂的东西不会变吧  \r\n米村正二你在写什么东西\u003c\/blockquote\u003e\r\n结局也不知道在写什么东西，当然也可能受场外因素影响吧，我为了知道结局到底是个什么东西看完TV本篇又看了《全骑士大战大修卡》剧场版，又再看一次跟W的电影大战，我真的找不到门矢士这个角色的定位了，现在回忆起来我除了记得士海又卖了完全不记得结局讲什么了，我也在寻找答案，\u003cbr\u003e\r\n实在没印象只好再翻找出看电影大战时的感想：\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e补充了好多信息  \r\n整理一下至今的故事  \r\n1-29集是失忆的士旅行和寻找归宿的故事  \r\n大修卡剧场版是士的世界和找回记忆（十年前父母死了开始在平行世界旅行 不咋在乎妹妹还当上了大修卡首领 莫名其妙失忆之后回到这个世界找回记忆发现妹妹已黑化 感到被全世界抛弃连本来的世界和旅伴都不接纳自己 被莫名其妙冒出来的仇人结城丈二莫名其妙点醒之后莫名其妙走回了正路跟前辈们一起捅穿了大修卡老巢）  \r\n30-31发现世界已经开始融合 跟红渡对话后接到主线任务破坏后创造  \r\nw剧场版这里是破坏了全部骑士包括自己之后创造的故事  \r\n夏海跟海东和红渡对话，原来只要有骑士的记忆就可以创造（类似电王里的设定）\r\n\r\n↑没理解的地方  \r\n1.diend和牙兰为什么不在骑士行列 他们不是也有自己的世界吗  \r\n2.我咋记得tv还是大修卡剧场版里面夏海不是给士拍了一张咧嘴笑的吗，怎么就仅剩的士的照片只有这个w联动剧场版里拍的那张了  \r\n3.鸣泷这个角色到底哪来的，他在干嘛\r\n\r\n\u003cdel\u003e↑小野寺都被破坏创造回自己的世界了，他怎么又出现在大修卡世界\u003c\/del\u003e←可能是那个穿越时空的幕布设定没有随着破坏创造消失，总之这里小野寺像后面那两个小孩一样穿回来了，虽然很早以前就不知道为什么他们都有随随便便穿越世界的能力\u003c\/blockquote\u003e\r\n谁来安慰一下我的一头雾水，后来士海俩人又在时王大卖一场，我对门矢士这个角色更一头雾水了。对中之人也很无语，到底谁能赔我点钱&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;&lt;/p&gt;
+&lt;h3 id=&#34;新平成骑士&#34;&gt;新平成骑士
+&lt;/h3&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-31Czum2IycRIH3CNp56Ild&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-31Czum2IycRIH3CNp56Ild-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/31Czum2IycRIH3CNp56Ild&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-31Czum2IycRIH3CNp56Ild-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-31Czum2IycRIH3CNp56Ild-content&#34;&gt;
+                
+                W真的太好看了，是我看的第一部三条陆主笔的骑士，他好擅长在单元回里面穿插主线，单元回的主题和主线进行到的部分总是互相呼应，无论是单元回的内容还是主线都好好看，都不无聊。&lt;br&gt;
+我看到“两人一体的假面骑士”这个概念，我的游戏王脑子又发力了，跟34说卧槽这不是W游戏吗你快来看。34看了觉得菲利普像Astral，天呐好精准！&lt;br&gt;
+&lt;br&gt;
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;陪着恶魔一起走到地狱的尽头吧 翔太郎&lt;/blockquote&gt;
+看到这里感觉W给我下猛药了SOS 好喜欢这种深度绑定关系，主要还是三条陆写得太好了（磕头）虽然你俩性格并不像W游戏，但这个关系走向真的让我想起看游戏王的时候了，好多地方都感动到，一起当蒙面唱将、一起骑摩托、獠牙记忆体、初次相遇、家人和aibo之间的抉择、最后舍不得拔掉记忆体的部分&lt;br&gt;
+&lt;br&gt;
+这是我当时很喜欢的一个网友评价我要贴出来：
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;极限那两集，翔太郎跟不上菲利普的力量导致没法变身，按通常套路来说，之后的发展应该是翔太郎努力变强最后跟上菲利普，但最后的结局是他们还是变身了，但并不是翔太郎变强，而是菲利普接受了他的弱。当时真的很触动。不仅仅是两个人一起变强，更是接受对方的一切，包括弱点。这就是最佳搭档啊！&lt;/blockquote&gt;
+&lt;br&gt;
+侦探事务所的大家都太萌了，即使是偶尔出现的配角也萌的要死，好喜欢风都，好喜欢大家。写到这里回忆起一些剧情画面眼睛又尿尿了。好喜欢剧场版的风都的风。反派角色的大家也好有魅力，好喜欢前姐夫，好喜欢若菜，姐也是个苦命人，不得不想到Drive的反派也好有爱，这个以后再写。&lt;br&gt;
+颅骨跟翔太郎的精神传承也看得好感动，总之感动的地方太多了……&lt;br&gt;
+&lt;br&gt;
+但我对三条陆可能唯一的不满是他太喜欢写结婚了……我喜欢看暧昧的留白，但我不喜欢看你们真的结婚；喜欢看为了推进剧情的结婚（姐姐姐夫），不喜欢看包饺子式的结婚；而且我花了很长的时间试图去理解为什么亚树子突然就爱上照井龙了，最后还是没能理解&lt;br&gt;
+我觉得菲翔真的很纯美但最后也没能成为我特别留恋的cp可能也因为三条陆写得太满了，没有不好的意思，就是觉得他在TV里面已经诠释得太到位了。&lt;br&gt;
+&lt;br&gt;
+最后贴一下当时看最后一集的感想：
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;终于还是等来了饺子  
+虽然全家都穿回了初期的衣服这里很感动……
+
+唉但是 但是  
+若叶给身体给来人是不是太突兀了  
+来人就这么欣然接受了会不会太突兀了  
+总觉得故事其实在46炸了园咲家就已经结束了 但为了让财团x现身强行写了三集
+
+不过翔太郎守寡和菲利普一直看着饱受守寡折磨的翔太郎这一点挺好看的呃……&lt;/blockquote&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-31Czum2IycRIH3CNp56Ild-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-31Czum2IycRIH3CNp56Ild&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/31Czum2IycRIH3CNp56Ild&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;W真的太好看了，是我看的第一部三条陆主笔的骑士，他好擅长在单元回里面穿插主线，单元回的主题和主线进行到的部分总是互相呼应，无论是单元回的内容还是主线都好好看，都不无聊。\u003cbr\u003e\r\n我看到“两人一体的假面骑士”这个概念，我的游戏王脑子又发力了，跟34说卧槽这不是W游戏吗你快来看。34看了觉得菲利普像Astral，天呐好精准！\u003cbr\u003e\r\n\u003cbr\u003e\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e陪着恶魔一起走到地狱的尽头吧 翔太郎\u003c\/blockquote\u003e\r\n看到这里感觉W给我下猛药了SOS 好喜欢这种深度绑定关系，主要还是三条陆写得太好了（磕头）虽然你俩性格并不像W游戏，但这个关系走向真的让我想起看游戏王的时候了，好多地方都感动到，一起当蒙面唱将、一起骑摩托、獠牙记忆体、初次相遇、家人和aibo之间的抉择、最后舍不得拔掉记忆体的部分\u003cbr\u003e\r\n\u003cbr\u003e\r\n这是我当时很喜欢的一个网友评价我要贴出来：\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e极限那两集，翔太郎跟不上菲利普的力量导致没法变身，按通常套路来说，之后的发展应该是翔太郎努力变强最后跟上菲利普，但最后的结局是他们还是变身了，但并不是翔太郎变强，而是菲利普接受了他的弱。当时真的很触动。不仅仅是两个人一起变强，更是接受对方的一切，包括弱点。这就是最佳搭档啊！\u003c\/blockquote\u003e\r\n\u003cbr\u003e\r\n侦探事务所的大家都太萌了，即使是偶尔出现的配角也萌的要死，好喜欢风都，好喜欢大家。写到这里回忆起一些剧情画面眼睛又尿尿了。好喜欢剧场版的风都的风。反派角色的大家也好有魅力，好喜欢前姐夫，好喜欢若菜，姐也是个苦命人，不得不想到Drive的反派也好有爱，这个以后再写。\u003cbr\u003e\r\n颅骨跟翔太郎的精神传承也看得好感动，总之感动的地方太多了……\u003cbr\u003e\r\n\u003cbr\u003e\r\n但我对三条陆可能唯一的不满是他太喜欢写结婚了……我喜欢看暧昧的留白，但我不喜欢看你们真的结婚；喜欢看为了推进剧情的结婚（姐姐姐夫），不喜欢看包饺子式的结婚；而且我花了很长的时间试图去理解为什么亚树子突然就爱上照井龙了，最后还是没能理解\u003cbr\u003e\r\n我觉得菲翔真的很纯美但最后也没能成为我特别留恋的cp可能也因为三条陆写得太满了，没有不好的意思，就是觉得他在TV里面已经诠释得太到位了。\u003cbr\u003e\r\n\u003cbr\u003e\r\n最后贴一下当时看最后一集的感想：\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e终于还是等来了饺子  \r\n虽然全家都穿回了初期的衣服这里很感动……\r\n\r\n唉但是 但是  \r\n若叶给身体给来人是不是太突兀了  \r\n来人就这么欣然接受了会不会太突兀了  \r\n总觉得故事其实在46炸了园咲家就已经结束了 但为了让财团x现身强行写了三集\r\n\r\n不过翔太郎守寡和菲利普一直看着饱受守寡折磨的翔太郎这一点挺好看的呃……\u003c\/blockquote\u003e&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-5zqiKLuyTKemFxyyzEELzI&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-5zqiKLuyTKemFxyyzEELzI-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/5zqiKLuyTKemFxyyzEELzI&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-5zqiKLuyTKemFxyyzEELzI-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-5zqiKLuyTKemFxyyzEELzI-content&#34;&gt;
+                
+                新平成最喜欢的一部，小林阿姨写的三部骑士都好好看。&lt;br&gt;
+OOO太纯美了我都不知道该怎么评价才好，不想写得很没水平但我就是这么个没水平的人。。&lt;br&gt;
+一看到映司我就惊呼好大一只狗，喜欢狗的看这个有福了。一整部下来感觉满满都在讲映an的事。小鸟遇到映司和比奈之后就像有了家，好喜欢家的感觉，逐渐把鸟也变得通人性了。一开始看鸟给狗扔硬币我觉得鸟是训狗大师，结果发现这店里人人都是训鸟大师啊！前面映an一直是事业伙伴的风味，虽然互相都有看不顺眼的地方但是目的一致，经过磨合之后配合得很好，虽然看不顺眼但是事业上互相信赖，好喜欢这种感觉。小林阿姨好会写互动啊，OOO全片我一直在疯狂进食这对男同性恋。&lt;br&gt;
+也好喜欢其他四位greed，好喜欢mezuru和gameru，虽然大家都没有人性但是模仿着母性和婴儿学习爱的样子太纯美了。&lt;br&gt;
+也很喜欢双birth呀！&lt;del&gt;令我回忆起以前搞的一对道域师徒……&lt;/del&gt;后藤酱对待人事物都好认真，总是觉得自己不够格，好喜欢这种谦逊。关心师父（师父）身体健康的后藤酱也好萌。伊达演了一把假死让后藤酱继承腰带也好萌……当时真的以为伊达要死了，往后看意识到虽然真的要死不活的了但是演了后藤酱一把突破了后藤酱觉得自己不够格的那种理智，看得我好爽好想哭。两位真是萌死我了。&lt;br&gt;
+&lt;br&gt;
+看这个OOO后期我一直在哭，我知道安库迟早要碎掉的只是不知道到来的时机。小林阿姨也一直在乐景衬哀情，给我哭出脑损伤了。好喜欢店长对比奈说，可以贪心两个都可以要之类的话，比奈就这样用超强的腕力握起两个人的手。好纯美啊想到这里又要哭了。&lt;br&gt;
+&lt;br&gt;
+很惆怅的是看完OOO我看不下去任何OOO同人，我觉得原作的诠释太全面了写得太好了……好想失忆重看一次……
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-5zqiKLuyTKemFxyyzEELzI-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-5zqiKLuyTKemFxyyzEELzI&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/5zqiKLuyTKemFxyyzEELzI&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;新平成最喜欢的一部，小林阿姨写的三部骑士都好好看。\u003cbr\u003e\r\nOOO太纯美了我都不知道该怎么评价才好，不想写得很没水平但我就是这么个没水平的人。。\u003cbr\u003e\r\n一看到映司我就惊呼好大一只狗，喜欢狗的看这个有福了。一整部下来感觉满满都在讲映an的事。小鸟遇到映司和比奈之后就像有了家，好喜欢家的感觉，逐渐把鸟也变得通人性了。一开始看鸟给狗扔硬币我觉得鸟是训狗大师，结果发现这店里人人都是训鸟大师啊！前面映an一直是事业伙伴的风味，虽然互相都有看不顺眼的地方但是目的一致，经过磨合之后配合得很好，虽然看不顺眼但是事业上互相信赖，好喜欢这种感觉。小林阿姨好会写互动啊，OOO全片我一直在疯狂进食这对男同性恋。\u003cbr\u003e\r\n也好喜欢其他四位greed，好喜欢mezuru和gameru，虽然大家都没有人性但是模仿着母性和婴儿学习爱的样子太纯美了。\u003cbr\u003e\r\n也很喜欢双birth呀！\u003cdel\u003e令我回忆起以前搞的一对道域师徒……\u003c\/del\u003e后藤酱对待人事物都好认真，总是觉得自己不够格，好喜欢这种谦逊。关心师父（师父）身体健康的后藤酱也好萌。伊达演了一把假死让后藤酱继承腰带也好萌……当时真的以为伊达要死了，往后看意识到虽然真的要死不活的了但是演了后藤酱一把突破了后藤酱觉得自己不够格的那种理智，看得我好爽好想哭。两位真是萌死我了。\u003cbr\u003e\r\n\u003cbr\u003e\r\n看这个OOO后期我一直在哭，我知道安库迟早要碎掉的只是不知道到来的时机。小林阿姨也一直在乐景衬哀情，给我哭出脑损伤了。好喜欢店长对比奈说，可以贪心两个都可以要之类的话，比奈就这样用超强的腕力握起两个人的手。好纯美啊想到这里又要哭了。\u003cbr\u003e\r\n\u003cbr\u003e\r\n很惆怅的是看完OOO我看不下去任何OOO同人，我觉得原作的诠释太全面了写得太好了……好想失忆重看一次……&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-3RTb1sybRUZ1CJ0XPm7bnp&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-3RTb1sybRUZ1CJ0XPm7bnp-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/3RTb1sybRUZ1CJ0XPm7bnp&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-3RTb1sybRUZ1CJ0XPm7bnp-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-3RTb1sybRUZ1CJ0XPm7bnp-content&#34;&gt;
+                
+                四仔真好看！好喜欢来打部啊，好青春，好校园。&lt;br&gt;
+&lt;br&gt;
+整部剧我最喜欢的角色可能是二骑哥吧。我记得弦太朗身世还挺惨的，还能这么积极，像太阳一样一点阴暗的部分都找不到；二骑哥就比较活在阴影里，像月亮一样难以捉摸难以接近。虽然前面觉得流星（终于想起名字了对不起）好神秘，但第20集的时候发现他人还挺好的呀可能就是有点硬装！该给的建议一样不落，明明立场上贤吾的事跟他没有关系，却还是说了出来。一开始以为是他人的事情完全无所谓只要达成自己目的就好的那种角色，这里开始发现哥们真的很有自己的正义感……遇到有悖正义感的事情身体会比理智先一步行动的类型。看人也很细致，好聪明的人……弦太朗就比较大条比较baka&lt;br&gt;
+23集还发现流星会照顾到魔女这样的边缘人士，虽然感觉这集他是自己也想出去透气了所以拉上看起来需要透气的魔女一起出去透气，但就意外的很贴心&lt;br&gt;
+流星跟魔女真的很萌啊如果要在四仔支持一对cp可能我就支持他俩了吧。卖得淡淡的很清新还带点四爱感。&lt;br&gt;
+&lt;br&gt;
+流星也是重男一枚吧，弦太朗要跟他交朋友，他说别拿你的友情跟我的友情相提并论。在流星眼里弦太朗交1000个朋友的友情是轻飘飘的，反复强调友達の重さ（
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;第31集：
+“你说过如果事关朋友就什么都会接受吧，那么你就接受然后去死吧，如月！”
+
+第32集：
+“那我为什么要失去如月？”
+“我想和如月成为朋友”
+“如月！！！&lt;del&gt;（张口闭眼）&lt;/del&gt;”
+
+“如月，你还活着！？”
+如月：“已经没有任何阴影了”&lt;/blockquote&gt;
+这个32集把我看得晒伤了、、、怎么有这样全方位放射太阳光的人啊，如果要在四仔找一对男同我很难不支持你们了。但小异性恋太萌了后来我放过了这对男同&lt;br&gt;
+&lt;br&gt;
+还有弦太朗和贤吾，感觉在看99游马和Astral，亲友你来看吧可以捡
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-3RTb1sybRUZ1CJ0XPm7bnp-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-3RTb1sybRUZ1CJ0XPm7bnp&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/3RTb1sybRUZ1CJ0XPm7bnp&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;四仔真好看！好喜欢来打部啊，好青春，好校园。\u003cbr\u003e\r\n\u003cbr\u003e\r\n整部剧我最喜欢的角色可能是二骑哥吧。我记得弦太朗身世还挺惨的，还能这么积极，像太阳一样一点阴暗的部分都找不到；二骑哥就比较活在阴影里，像月亮一样难以捉摸难以接近。虽然前面觉得流星（终于想起名字了对不起）好神秘，但第20集的时候发现他人还挺好的呀可能就是有点硬装！该给的建议一样不落，明明立场上贤吾的事跟他没有关系，却还是说了出来。一开始以为是他人的事情完全无所谓只要达成自己目的就好的那种角色，这里开始发现哥们真的很有自己的正义感……遇到有悖正义感的事情身体会比理智先一步行动的类型。看人也很细致，好聪明的人……弦太朗就比较大条比较baka\u003cbr\u003e\r\n23集还发现流星会照顾到魔女这样的边缘人士，虽然感觉这集他是自己也想出去透气了所以拉上看起来需要透气的魔女一起出去透气，但就意外的很贴心\u003cbr\u003e\r\n流星跟魔女真的很萌啊如果要在四仔支持一对cp可能我就支持他俩了吧。卖得淡淡的很清新还带点四爱感。\u003cbr\u003e\r\n\u003cbr\u003e\r\n流星也是重男一枚吧，弦太朗要跟他交朋友，他说别拿你的友情跟我的友情相提并论。在流星眼里弦太朗交1000个朋友的友情是轻飘飘的，反复强调友達の重さ（\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e第31集：\r\n“你说过如果事关朋友就什么都会接受吧，那么你就接受然后去死吧，如月！”\r\n\r\n第32集：\r\n“那我为什么要失去如月？”\r\n“我想和如月成为朋友”\r\n“如月！！！\u003cdel\u003e（张口闭眼）\u003c\/del\u003e”\r\n\r\n“如月，你还活着！？”\r\n如月：“已经没有任何阴影了”\u003c\/blockquote\u003e\r\n这个32集把我看得晒伤了、、、怎么有这样全方位放射太阳光的人啊，如果要在四仔找一对男同我很难不支持你们了。但小异性恋太萌了后来我放过了这对男同\u003cbr\u003e\r\n\u003cbr\u003e\r\n还有弦太朗和贤吾，感觉在看99游马和Astral，亲友你来看吧可以捡&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-33jaaqcSD5vdUdLpnwu5tp&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-33jaaqcSD5vdUdLpnwu5tp-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/33jaaqcSD5vdUdLpnwu5tp&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-33jaaqcSD5vdUdLpnwu5tp-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-33jaaqcSD5vdUdLpnwu5tp-content&#34;&gt;
+                
+                太白开水了，我现在对它的记忆只有甜甜圈和变身音效和异性恋，隐约记得结局无功无过吧，就这么淡淡从我大脑皮层滑走了&lt;br&gt;
+补这部剧的那几天我狂吃甜甜圈，现在想起来还是好想吃甜甜圈啊&lt;br&gt;
+鉴于实在没什么记忆，我只好精选一下我的观影串了：
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;（第5集） 啥时候有二骑已经有点受不了全世界围着男主转了（（🤦  
+（第10集）  真的很白开水啊我已经在百度二骑哥什么时候出场了  
+（第19集）  好吧香村很适合写男同 前面单元回看得我昏昏欲睡对男主也不怎么感冒 二骑来了两集戴个戒指我就精神了 目前配角感觉除了阿历有点存在感以外其他人也比较背景板  
+（第33集）  好童话的一集 攻介人太善了 认钱不认人的话命可以救但是真的还能继续做朋友吗  
+（第39集）  晴人意外地好像没有那么e（最开始几集的印象……见人就递戒指说什么我是你的希望什么的……轻浮男…… 这两集呃啊就不会为自己辩护的样子 是凛子和瞬平去做直美的思想工作 晴人：（沉默寡言特写镜头 虽然确实是绊了一脚可能没什么好嘴硬的吧但是该做的都做了还要缠着说我的不好的话！是我我就闹！  
+（第44集）  难道一切都是为复活阿历做的准备 难道这部其实是个温和版龙骑吗  
+（第46集）  只在十万火急的时候出现的爹，不肯与女儿相认的爹，好熟悉，这种感觉，使劲回忆，竟是藏镜人和忆无心………………………………  
+（第48集）  好一个 笛木：我的绝望在你之上！ 笛木是不是看上晴人好心肠了有意促成这门婚事 这样阿历就有稳定魔力供给源了（ 唉友情和爱情的界限在哪里 有时候觉得他俩挺友情的有时候又像第一集之前就谈了  
+（第50集）  阿历真是小小只…… 交还infinity戒指这里很有意义啊！ 因为是之前晴人为阿历流的泪水变成的戒指 &lt;del&gt;感想是香村看了龙骑之后觉得优衣酱太可怜了于是写了晴人和阿历的浪漫关系来拯救优衣酱&lt;/del&gt;
+（看完了）  原来骑士戒指是这两集限定的吗 真的看51集送两集骑士大战了（ 救了平行世界的阿历，这小孩还是平行世界的晴人，这个还挺浪漫的 主世界也算是he！！虽然阿历化灰了但是这个结局挺好的 早就说过忍界大战之后日本就该立法禁止秽土转生了&lt;/blockquote&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-33jaaqcSD5vdUdLpnwu5tp-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-33jaaqcSD5vdUdLpnwu5tp&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/33jaaqcSD5vdUdLpnwu5tp&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;太白开水了，我现在对它的记忆只有甜甜圈和变身音效和异性恋，隐约记得结局无功无过吧，就这么淡淡从我大脑皮层滑走了\u003cbr\u003e\r\n补这部剧的那几天我狂吃甜甜圈，现在想起来还是好想吃甜甜圈啊\u003cbr\u003e\r\n鉴于实在没什么记忆，我只好精选一下我的观影串了：\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e（第5集） 啥时候有二骑已经有点受不了全世界围着男主转了（（🤦  \r\n（第10集）  真的很白开水啊我已经在百度二骑哥什么时候出场了  \r\n（第19集）  好吧香村很适合写男同 前面单元回看得我昏昏欲睡对男主也不怎么感冒 二骑来了两集戴个戒指我就精神了 目前配角感觉除了阿历有点存在感以外其他人也比较背景板  \r\n（第33集）  好童话的一集 攻介人太善了 认钱不认人的话命可以救但是真的还能继续做朋友吗  \r\n（第39集）  晴人意外地好像没有那么e（最开始几集的印象……见人就递戒指说什么我是你的希望什么的……轻浮男…… 这两集呃啊就不会为自己辩护的样子 是凛子和瞬平去做直美的思想工作 晴人：（沉默寡言特写镜头 虽然确实是绊了一脚可能没什么好嘴硬的吧但是该做的都做了还要缠着说我的不好的话！是我我就闹！  \r\n（第44集）  难道一切都是为复活阿历做的准备 难道这部其实是个温和版龙骑吗  \r\n（第46集）  只在十万火急的时候出现的爹，不肯与女儿相认的爹，好熟悉，这种感觉，使劲回忆，竟是藏镜人和忆无心………………………………  \r\n（第48集）  好一个 笛木：我的绝望在你之上！ 笛木是不是看上晴人好心肠了有意促成这门婚事 这样阿历就有稳定魔力供给源了（ 唉友情和爱情的界限在哪里 有时候觉得他俩挺友情的有时候又像第一集之前就谈了  \r\n（第50集）  阿历真是小小只…… 交还infinity戒指这里很有意义啊！ 因为是之前晴人为阿历流的泪水变成的戒指 \u003cdel\u003e感想是香村看了龙骑之后觉得优衣酱太可怜了于是写了晴人和阿历的浪漫关系来拯救优衣酱\u003c\/del\u003e\r\n（看完了）  原来骑士戒指是这两集限定的吗 真的看51集送两集骑士大战了（ 救了平行世界的阿历，这小孩还是平行世界的晴人，这个还挺浪漫的 主世界也算是he！！虽然阿历化灰了但是这个结局挺好的 早就说过忍界大战之后日本就该立法禁止秽土转生了\u003c\/blockquote\u003e&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-3lJyUl4GCHaxEDGrtUHpyp&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-3lJyUl4GCHaxEDGrtUHpyp-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/3lJyUl4GCHaxEDGrtUHpyp&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-3lJyUl4GCHaxEDGrtUHpyp-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-3lJyUl4GCHaxEDGrtUHpyp-content&#34;&gt;
+                
+                待评价
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-3lJyUl4GCHaxEDGrtUHpyp-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-3lJyUl4GCHaxEDGrtUHpyp&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/3lJyUl4GCHaxEDGrtUHpyp&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;待评价&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-0vJQHFWWA0xuYU7g0zyDmV&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-0vJQHFWWA0xuYU7g0zyDmV-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/0vJQHFWWA0xuYU7g0zyDmV&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-0vJQHFWWA0xuYU7g0zyDmV-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-0vJQHFWWA0xuYU7g0zyDmV-content&#34;&gt;
+                
+                我觉得进雾关系像疯狂动物城的兔子狐狸，就是我求你们别结婚的那种，但三条陆又爱写，婚了不说小孩都有了（刚子外传），我淡淡……&lt;br&gt;
+还有外传刚子的女朋友，我觉得这就跟贤人的女朋友异曲同工，&lt;del&gt;TV男同卖都卖了，到了外传告诉你其实是直男啦会谈不知道哪冒出来的女朋友的。&lt;/del&gt;&lt;br&gt;
+切刚切卖很大呀，我觉得chaser好像我老婆布鲁诺（）。仿生人（？）什么的眼睛会发光什么的没有记忆什么的被主角团捡到&lt;del&gt;并饲养&lt;/del&gt;什么的最后为一个特定的人死了什么的还有修复可能什么的……&lt;br&gt;
+其实希望chaser永远修不好，就像我觉得不动游星也不会去修复布鲁诺，虽然同人爱写。刚子走上了修chaser的路，那就走一辈子吧&lt;br&gt;
+心脑护也很萌，哈特大人真是好有魅力的反派。三个roimude永远在一起好吗（仙山永聚x）&lt;br&gt;
+刚开始看的时候觉得进之介和腰带桑之间萌萌的，直到发现腰带桑真的是人（……）。但是回归腰带形态又萌了，好喜欢豆奶特浓，腰带桑和进之介的超融合（&lt;br&gt;
+Drive很好看，但回过头来发现我对它的印象也只停留在很好看，没有很深的角色理解……
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-0vJQHFWWA0xuYU7g0zyDmV-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-0vJQHFWWA0xuYU7g0zyDmV&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/0vJQHFWWA0xuYU7g0zyDmV&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;我觉得进雾关系像疯狂动物城的兔子狐狸，就是我求你们别结婚的那种，但三条陆又爱写，婚了不说小孩都有了（刚子外传），我淡淡……\u003cbr\u003e\r\n还有外传刚子的女朋友，我觉得这就跟贤人的女朋友异曲同工，\u003cdel\u003eTV男同卖都卖了，到了外传告诉你其实是直男啦会谈不知道哪冒出来的女朋友的。\u003c\/del\u003e\u003cbr\u003e\r\n切刚切卖很大呀，我觉得chaser好像我老婆布鲁诺（）。仿生人（？）什么的眼睛会发光什么的没有记忆什么的被主角团捡到\u003cdel\u003e并饲养\u003c\/del\u003e什么的最后为一个特定的人死了什么的还有修复可能什么的……\u003cbr\u003e\r\n其实希望chaser永远修不好，就像我觉得不动游星也不会去修复布鲁诺，虽然同人爱写。刚子走上了修chaser的路，那就走一辈子吧\u003cbr\u003e\r\n心脑护也很萌，哈特大人真是好有魅力的反派。三个roimude永远在一起好吗（仙山永聚x）\u003cbr\u003e\r\n刚开始看的时候觉得进之介和腰带桑之间萌萌的，直到发现腰带桑真的是人（……）。但是回归腰带形态又萌了，好喜欢豆奶特浓，腰带桑和进之介的超融合（\u003cbr\u003e\r\nDrive很好看，但回过头来发现我对它的印象也只停留在很好看，没有很深的角色理解……&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-0e8LSQ01bdaltA84K6hbxm&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-0e8LSQ01bdaltA84K6hbxm-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/0e8LSQ01bdaltA84K6hbxm&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-0e8LSQ01bdaltA84K6hbxm-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-0e8LSQ01bdaltA84K6hbxm-content&#34;&gt;
+                
+                没看
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-0e8LSQ01bdaltA84K6hbxm-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-0e8LSQ01bdaltA84K6hbxm&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/0e8LSQ01bdaltA84K6hbxm&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;没看&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-6tPYnexDe3m2y8m4U5YqiW&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-6tPYnexDe3m2y8m4U5YqiW-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/6tPYnexDe3m2y8m4U5YqiW&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-6tPYnexDe3m2y8m4U5YqiW-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-6tPYnexDe3m2y8m4U5YqiW-content&#34;&gt;
+                
+                最早看的骑士，突然开始看骑士第一是因为看到首页好多网友在看，第二是有天突然回忆起来以前刷微博有网友提过喜欢游戏王GX十尤十的都可以来看某部假面骑士！当时真的用心把这一部的名字记下来了，努力回忆居然真的回忆起来了，就是EA啊！&lt;br&gt;
+也是最早看的高桥作品了，出道即巅峰……看的时候带着十尤十的印象磕了梦帕，现在已经淡了，我觉得还是没有尤贝尔浓烈，帕被驯服之后完全就是永梦的好大儿，不是特别吃这一套……&lt;br&gt;
+抛开cp谈谈作品本身！当时看的时候真的被惊艳到了，假面骑士原来这么好看的吗怎么以前没人告诉我。不过回忆起来觉得最后几集还是太折磨了，那种打完一个boss发现boss后面还有boss的感觉，看得有点淡淡地累，当医生好累啊！结局包了个大饺子，当时看的时候不太喜欢，后来看太多be了觉得包饺子挺好的，起码EA这个饺子包得还可以吧。&lt;br&gt;
+看完本篇之后很久因为34磕了永黎被逼回来看小说和外传，小说写得太同人了啊啊啊……我不是很懂你们游戏制作人和天才玩家在玩什么play，这么一看EA封面M的背后就是一个很显眼的幻梦啊啊。原来你们是高桥心里的美帝。
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-6tPYnexDe3m2y8m4U5YqiW-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-6tPYnexDe3m2y8m4U5YqiW&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/6tPYnexDe3m2y8m4U5YqiW&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;最早看的骑士，突然开始看骑士第一是因为看到首页好多网友在看，第二是有天突然回忆起来以前刷微博有网友提过喜欢游戏王GX十尤十的都可以来看某部假面骑士！当时真的用心把这一部的名字记下来了，努力回忆居然真的回忆起来了，就是EA啊！\u003cbr\u003e\r\n也是最早看的高桥作品了，出道即巅峰……看的时候带着十尤十的印象磕了梦帕，现在已经淡了，我觉得还是没有尤贝尔浓烈，帕被驯服之后完全就是永梦的好大儿，不是特别吃这一套……\u003cbr\u003e\r\n抛开cp谈谈作品本身！当时看的时候真的被惊艳到了，假面骑士原来这么好看的吗怎么以前没人告诉我。不过回忆起来觉得最后几集还是太折磨了，那种打完一个boss发现boss后面还有boss的感觉，看得有点淡淡地累，当医生好累啊！结局包了个大饺子，当时看的时候不太喜欢，后来看太多be了觉得包饺子挺好的，起码EA这个饺子包得还可以吧。\u003cbr\u003e\r\n看完本篇之后很久因为34磕了永黎被逼回来看小说和外传，小说写得太同人了啊啊啊……我不是很懂你们游戏制作人和天才玩家在玩什么play，这么一看EA封面M的背后就是一个很显眼的幻梦啊啊。原来你们是高桥心里的美帝。&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-4kj9vwPsqGJ8CHejaSD4Jv&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-4kj9vwPsqGJ8CHejaSD4Jv-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/4kj9vwPsqGJ8CHejaSD4Jv&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-4kj9vwPsqGJ8CHejaSD4Jv-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-4kj9vwPsqGJ8CHejaSD4Jv-content&#34;&gt;
+                
+                网上看到喜欢这部的人很多，但这是第一部看了让我觉得假面骑士也没那么好看的作品，是我看的第三部骑士，前面看的是EA和电王（跟这两个比觉得难看也是情有可原，后面也看了更难看的骑士，build比起它们又还行吧）&lt;br&gt;
+前期看得难受的地方是兔龙一直在吵架又和好又吵架又和好，虽然后面俩人关系好起来了但我还是不太嗑得下&lt;br&gt;
+最令我看得难受的是国战篇，太儿戏了吧，即使是子供向也有点难以理解。&lt;br&gt;
+比较提神的地方可能是E总相关的部分，不打国战了开始讲外星人的事了开始变得好看了……后面也渐渐变得喜欢龙我了（前面真的不太喜欢得起来），大约是解锁熔岩龙之后吧，熔岩龙的皮套我也好喜欢&lt;br&gt;
+龙我的身份也是很没想到！一开始以为E总只是在养成战兔，没想到两个都是实验对象&lt;br&gt;
+&lt;br&gt;
+贴一点当时补剧的感想，我已经完全忘记了：
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;31 小嗑  
+
+又看了一遍 塔里兔兔跟恶霸打架这里 幻德没有管战兔叫葛城巧了  
+梳理一下 葛城巧在幻德心里从：事业伙伴→死了→改头换面背叛了事业的敌人→反正战兔就是比不过失忆前的葛城巧→我做不到所以悄悄告诉你后面靠你了  
+眼前人没有了跟自己共事的记忆模样也变得不同了，但是以前的记忆和以前的样子幻德却忘不掉，甚至开始对战兔产生了几分信任 浅嗑一口x  
+&lt;/blockquote&gt;
+好吓人，我完全忘记我嗑过他俩，对幻德的印象感觉从地狱回来那里好凯撒亮，没想到这后面就变成搞笑角色了好难受。一直凯撒亮下去好吗。&lt;br&gt;
+还有看了43集写的恶评：这个剧情每当我觉得开始好看了就给我来一坨。虽然完全忘记发生什么了但我现在对创骑也是这么个印象……&lt;br&gt;
+&lt;br&gt;
+我当时看完居然还写了总评，也拉出来溜溜：
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;看到49感觉 卧槽这个剧本是为了你俩在一起准备的吧  
+并不很嗑但是 这个世界上只有你们两个人保有共同的记忆的这种关系，已经是某种命运共同体了  
+结局虽然包饺子但是一股中了无限月读的感觉，拯救了世界但是大家都没有了以前那个世界的记忆，真的还能算是同一个世界 同一些人吗（还是说有什么外传里面大家会想起来这段经历什么的）  
+
+整个看下来感觉我比较喜欢的角色应该是后期龙我吧  
+前期挺讨厌的 成长比较慢 而且我不是很喜欢编剧同样的套路反复利用这种感觉  
+大概是到开始打外星人，终于有种看着角色长大的感觉，岩浆形态开始在我这里变得讨喜了，48、49集愿意自我毁灭来拯救世界这一段很好看  
+大家成就了桐生战兔的同时 也促使万丈龙我这个角色成长了（大部分是战兔的功劳，他超爱）  
+
+在幻德从地狱里出来之后 到变成谐星之前，我还是很喜欢幻德的x  
+48集的样子有体现对他爹的政治理念的认同，而不是执着于贯彻个人主义，这个地方也写得不错  
+（但是48集民众的呼声这个，我感觉全剧民众的参与度都不高 这里好突兀）  
+
+塑造得好的角色很多很多 只是我比较偏向于这俩人（大概是变化比较大  
+
+剧情方面……  
+大概到国战结束开始打外星人了我才觉得好看  
+我理解它是子供向不能较真 但是写得太儿戏了即使不去较真看着也会笑出来  
+不讲政治的部分，套路的桥段也比较多（还有一些为了推进剧情而写的工具桥段）  
+整体氛围比较压抑 好不容易升级了又被升级后的敌人爆锤，总是有送人头→救人→被爆锤了才获得关键道具/人物成长这种情节，看得很累  
+能夸的方面，是一个有头有尾的故事，有好几条脉络但是处理得比较清晰，主要角色都有用心塑造，人物之间的羁绊和复杂关系值得一品，伏笔应该是全部回收，结局没有烂尾  
+（有时候有种为了塑造角色推动成长牺牲剧情逻辑的感觉呢）  
+打斗的场面好多好多好多，有很多比较精彩的打戏，同时感觉皮演好辛苦……  
+
+目前只看了ea 电王 build三部，但只给build写了这么长的总评 心情比较复杂  
+ea是很简单的那种好看 电王是有深度的那种好看  
+build在我这里就比较复杂，我觉得它大概是精彩的 但是没办法忽略掉难绷的部分 需要分析一下哪里好看哪里歹看巩固记忆  
+&lt;/blockquote&gt;
+这么回头一看当时的评价，看来现在的我虽然已经记不清剧情了，但是大体印象还是跟当时吻合的嘛
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-4kj9vwPsqGJ8CHejaSD4Jv-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-4kj9vwPsqGJ8CHejaSD4Jv&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/4kj9vwPsqGJ8CHejaSD4Jv&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;网上看到喜欢这部的人很多，但这是第一部看了让我觉得假面骑士也没那么好看的作品，是我看的第三部骑士，前面看的是EA和电王（跟这两个比觉得难看也是情有可原，后面也看了更难看的骑士，build比起它们又还行吧）\u003cbr\u003e\r\n前期看得难受的地方是兔龙一直在吵架又和好又吵架又和好，虽然后面俩人关系好起来了但我还是不太嗑得下\u003cbr\u003e\r\n最令我看得难受的是国战篇，太儿戏了吧，即使是子供向也有点难以理解。\u003cbr\u003e\r\n比较提神的地方可能是E总相关的部分，不打国战了开始讲外星人的事了开始变得好看了……后面也渐渐变得喜欢龙我了（前面真的不太喜欢得起来），大约是解锁熔岩龙之后吧，熔岩龙的皮套我也好喜欢\u003cbr\u003e\r\n龙我的身份也是很没想到！一开始以为E总只是在养成战兔，没想到两个都是实验对象\u003cbr\u003e\r\n\u003cbr\u003e\r\n贴一点当时补剧的感想，我已经完全忘记了：\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e31 小嗑  \r\n\r\n又看了一遍 塔里兔兔跟恶霸打架这里 幻德没有管战兔叫葛城巧了  \r\n梳理一下 葛城巧在幻德心里从：事业伙伴→死了→改头换面背叛了事业的敌人→反正战兔就是比不过失忆前的葛城巧→我做不到所以悄悄告诉你后面靠你了  \r\n眼前人没有了跟自己共事的记忆模样也变得不同了，但是以前的记忆和以前的样子幻德却忘不掉，甚至开始对战兔产生了几分信任 浅嗑一口x  \r\n\u003c\/blockquote\u003e\r\n好吓人，我完全忘记我嗑过他俩，对幻德的印象感觉从地狱回来那里好凯撒亮，没想到这后面就变成搞笑角色了好难受。一直凯撒亮下去好吗。\u003cbr\u003e\r\n还有看了43集写的恶评：这个剧情每当我觉得开始好看了就给我来一坨。虽然完全忘记发生什么了但我现在对创骑也是这么个印象……\u003cbr\u003e\r\n\u003cbr\u003e\r\n我当时看完居然还写了总评，也拉出来溜溜：\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e看到49感觉 卧槽这个剧本是为了你俩在一起准备的吧  \r\n并不很嗑但是 这个世界上只有你们两个人保有共同的记忆的这种关系，已经是某种命运共同体了  \r\n结局虽然包饺子但是一股中了无限月读的感觉，拯救了世界但是大家都没有了以前那个世界的记忆，真的还能算是同一个世界 同一些人吗（还是说有什么外传里面大家会想起来这段经历什么的）  \r\n\r\n整个看下来感觉我比较喜欢的角色应该是后期龙我吧  \r\n前期挺讨厌的 成长比较慢 而且我不是很喜欢编剧同样的套路反复利用这种感觉  \r\n大概是到开始打外星人，终于有种看着角色长大的感觉，岩浆形态开始在我这里变得讨喜了，48、49集愿意自我毁灭来拯救世界这一段很好看  \r\n大家成就了桐生战兔的同时 也促使万丈龙我这个角色成长了（大部分是战兔的功劳，他超爱）  \r\n\r\n在幻德从地狱里出来之后 到变成谐星之前，我还是很喜欢幻德的x  \r\n48集的样子有体现对他爹的政治理念的认同，而不是执着于贯彻个人主义，这个地方也写得不错  \r\n（但是48集民众的呼声这个，我感觉全剧民众的参与度都不高 这里好突兀）  \r\n\r\n塑造得好的角色很多很多 只是我比较偏向于这俩人（大概是变化比较大  \r\n\r\n剧情方面……  \r\n大概到国战结束开始打外星人了我才觉得好看  \r\n我理解它是子供向不能较真 但是写得太儿戏了即使不去较真看着也会笑出来  \r\n不讲政治的部分，套路的桥段也比较多（还有一些为了推进剧情而写的工具桥段）  \r\n整体氛围比较压抑 好不容易升级了又被升级后的敌人爆锤，总是有送人头→救人→被爆锤了才获得关键道具\/人物成长这种情节，看得很累  \r\n能夸的方面，是一个有头有尾的故事，有好几条脉络但是处理得比较清晰，主要角色都有用心塑造，人物之间的羁绊和复杂关系值得一品，伏笔应该是全部回收，结局没有烂尾  \r\n（有时候有种为了塑造角色推动成长牺牲剧情逻辑的感觉呢）  \r\n打斗的场面好多好多好多，有很多比较精彩的打戏，同时感觉皮演好辛苦……  \r\n\r\n目前只看了ea 电王 build三部，但只给build写了这么长的总评 心情比较复杂  \r\nea是很简单的那种好看 电王是有深度的那种好看  \r\nbuild在我这里就比较复杂，我觉得它大概是精彩的 但是没办法忽略掉难绷的部分 需要分析一下哪里好看哪里歹看巩固记忆  \r\n\u003c\/blockquote\u003e\r\n这么回头一看当时的评价，看来现在的我虽然已经记不清剧情了，但是大体印象还是跟当时吻合的嘛&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-5cGLPzEnRNTwS4b03I2Cmo&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-5cGLPzEnRNTwS4b03I2Cmo-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/5cGLPzEnRNTwS4b03I2Cmo&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-5cGLPzEnRNTwS4b03I2Cmo-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-5cGLPzEnRNTwS4b03I2Cmo-content&#34;&gt;
+                
+                时王在B站评分6.2，DCD评分6.9，网友对DCD是否太宽容了。我觉得同样是纪念作，时王比DCD好看多了，单元回虽然也有无聊的部分但也没DCD那么无聊。不过要我打分差不多也6分吧！DCD4分。利维斯4.5。&lt;br&gt;
+时王还请得起原演员，虽然我大部分看了觉得要不还是搞平行世界吧起码避免原作角色ooc（……）&lt;br&gt;
+单元回没有太多的印象了，比较有印象的是檀黎斗、剑和kiva。没有宝生永梦在檀黎斗味大收不住了看得我想打报警电话；剑是因为写烂了导致印象深刻，我觉得剑TV结局留白挺好的，我不想看他俩见面口牙，求你们除了会川升都别写剑崎了；Kiva篇虽然井盖女王有点雷人，但对着这个可口的小魔王我的四爱魂熊熊燃烧了，井盖女王两次撩小魔王下巴的动作让我对自己一直以来的主骑左产生了质疑（虽然在时王没有嗑到cp但这个小魔王太适合四爱了），感想是不愧是敏树写的……&lt;br&gt;
+时王的皮套太丑了我无法评价。&lt;br&gt;
+时王主角团真的很萌啊！无论是小魔王月读还是盖茨，还是黑沃兹白沃兹，还是叔公，都好萌。大家一起上学也好萌。当王真好啊，比当神好多了。&lt;br&gt;
+虽然时王有很多设定逻辑冲突的部分，看完这么久了我也记不清了，但我在看之前就被灌输了白仓说的“假面骑士的事不要搞太清楚！”这样的话，就这么接受了逻辑漏洞、甚至有些觉得还是能圆上的，&lt;del&gt;比如锻炼身体克服副作用&lt;/del&gt;&lt;br&gt;
+士海这俩人在时王狂刷存在感看得醉醉的，有时候觉得难道我在看DCD第二季吗？但想到他们是没有自己故事的骑士就原谅了吧，什么帝骑补完计划……&lt;br&gt;
+虽然时王有很多缺陷，但抱着很低的期望值来看看得很开心很有乐子，总之我看爽了。结局也很美好啊！真把我看感动了！DCD能比吗！而且时王有如此可口的小魔王和沃兹做颜值担当。如果有人想看一部纪念作顺便认识前辈骑士我可能会推荐时王但绝对不推荐DCD。
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-5cGLPzEnRNTwS4b03I2Cmo-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-5cGLPzEnRNTwS4b03I2Cmo&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/5cGLPzEnRNTwS4b03I2Cmo&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;时王在B站评分6.2，DCD评分6.9，网友对DCD是否太宽容了。我觉得同样是纪念作，时王比DCD好看多了，单元回虽然也有无聊的部分但也没DCD那么无聊。不过要我打分差不多也6分吧！DCD4分。利维斯4.5。\u003cbr\u003e\r\n时王还请得起原演员，虽然我大部分看了觉得要不还是搞平行世界吧起码避免原作角色ooc（……）\u003cbr\u003e\r\n单元回没有太多的印象了，比较有印象的是檀黎斗、剑和kiva。没有宝生永梦在檀黎斗味大收不住了看得我想打报警电话；剑是因为写烂了导致印象深刻，我觉得剑TV结局留白挺好的，我不想看他俩见面口牙，求你们除了会川升都别写剑崎了；Kiva篇虽然井盖女王有点雷人，但对着这个可口的小魔王我的四爱魂熊熊燃烧了，井盖女王两次撩小魔王下巴的动作让我对自己一直以来的主骑左产生了质疑（虽然在时王没有嗑到cp但这个小魔王太适合四爱了），感想是不愧是敏树写的……\u003cbr\u003e\r\n时王的皮套太丑了我无法评价。\u003cbr\u003e\r\n时王主角团真的很萌啊！无论是小魔王月读还是盖茨，还是黑沃兹白沃兹，还是叔公，都好萌。大家一起上学也好萌。当王真好啊，比当神好多了。\u003cbr\u003e\r\n虽然时王有很多设定逻辑冲突的部分，看完这么久了我也记不清了，但我在看之前就被灌输了白仓说的“假面骑士的事不要搞太清楚！”这样的话，就这么接受了逻辑漏洞、甚至有些觉得还是能圆上的，\u003cdel\u003e比如锻炼身体克服副作用\u003c\/del\u003e\u003cbr\u003e\r\n士海这俩人在时王狂刷存在感看得醉醉的，有时候觉得难道我在看DCD第二季吗？但想到他们是没有自己故事的骑士就原谅了吧，什么帝骑补完计划……\u003cbr\u003e\r\n虽然时王有很多缺陷，但抱着很低的期望值来看看得很开心很有乐子，总之我看爽了。结局也很美好啊！真把我看感动了！DCD能比吗！而且时王有如此可口的小魔王和沃兹做颜值担当。如果有人想看一部纪念作顺便认识前辈骑士我可能会推荐时王但绝对不推荐DCD。&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;&lt;/p&gt;
+&lt;h3 id=&#34;令和骑士&#34;&gt;令和骑士
+&lt;/h3&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-4IPqXsIp1KNEa7M6rkCTfu&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-4IPqXsIp1KNEa7M6rkCTfu-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/4IPqXsIp1KNEa7M6rkCTfu&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-4IPqXsIp1KNEa7M6rkCTfu-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-4IPqXsIp1KNEa7M6rkCTfu-content&#34;&gt;
+                
+                我完全不能理解这个世界观，我只能把“修码吉亚也是有梦想的”这句话当作游戏王里面警察也得打牌一样的设定层面的事实来观看这部作品，不然我会陷入无尽的发问&lt;br&gt;
+即使这样对很多部分也是理解不能，但它特效做得挺好的、反转也挺多的，大脑直接放弃逻辑地看，除了商战篇无聊了一点其他部分也是难看得很精彩吧！&lt;br&gt;
+&lt;br&gt;
+本作最喜欢的角色是不破谏其次刃唯阿。不想嗑他俩cp只是喜欢他俩的同事情，&lt;del&gt;但外传又把这一切都毁了&lt;/del&gt;&lt;br&gt;
+虽然刃服从天津垓的部分很漫长但我觉得这就是istj特质吧，刃虽然动摇甚至脑子里真的没被植入芯片。但就是这么服从怎么回事。看得我好难受，我一直在等刃反叛，这个过程就像等睦月成长一样难受，但我对刃又如此溺爱&lt;br&gt;
+不破谏也是个狼塑istp，不得不说这种角色怎么这么多啊我见一个爱一个，对这俩人都用赛博八字来概括我很抱歉。。。27集消防员回不破拉走虽然动摇但始终服从老千的刃，我对这对同事就从这里爱上。&lt;br&gt;
+虽然憋了很久但29集狂暴加特林暴打千骑和豺狗看得我好爽啊，这个反复给我寸止的剧情！&lt;br&gt;
+33集刃也是终于反抗了，可能导火索是不破吧，这前面不破知道了自己其实是小白鼠落泪了但很快找回状态，“我已经不需要把憎恨当作动力了”，这里也看爽了&lt;br&gt;
+&lt;br&gt;
+不破谏对于老千来说原来是宝生永梦吗，为什么你可以变身！为什么可以用射击升级器！放走灭的人到底是谁！答案只有一个！不↑破↓谏↑ 因为你是我们的小白鼠啊！&lt;br&gt;
+你以为老千是一个檀黎斗那样的社长吗，其实老千的人设是灰太狼。&lt;br&gt;
+&lt;br&gt;
+也很喜欢迅宝，我的好大儿，挺喜欢迅是灭造出来的这个设定的，不属于飞电的迅，自由的鸟儿。虽然我大部分时间不知道高桥在写什么，如今对灭亡迅雷的剧情也很失忆了，但我的xp令我支持儿子草爸爸&lt;br&gt;
+&lt;br&gt;
+虽然主角是或人，但我真的无法共情呀，看这片我全程关注艾姆斯和灭亡迅雷动向。不过白手起家那段人机恋还挺萌的！&lt;br&gt;
+&lt;br&gt;
+关于此剧与极狐的联系我在当时的观影串找到了两点发想：&lt;br&gt;
+&lt;blockquote style=&#34;
+  margin: 0;
+  white-space: pre-line;
+  width: auto;
+&#34;&gt;（第43集）  我想想或人是早期太狸吧（汗）  
+（第44集）  这真的不是极狐吗 跟极狐的差别是想修伊兹的不是灭（  
+（还是第44集）  （灭）这发言简直太霸牛了  
+（第46集）  死了的人/修码吉亚修好了就不会生气了，此事在极狐亦有记载&lt;/blockquote&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-4IPqXsIp1KNEa7M6rkCTfu-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-4IPqXsIp1KNEa7M6rkCTfu&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/4IPqXsIp1KNEa7M6rkCTfu&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;我完全不能理解这个世界观，我只能把“修码吉亚也是有梦想的”这句话当作游戏王里面警察也得打牌一样的设定层面的事实来观看这部作品，不然我会陷入无尽的发问\u003cbr\u003e\r\n即使这样对很多部分也是理解不能，但它特效做得挺好的、反转也挺多的，大脑直接放弃逻辑地看，除了商战篇无聊了一点其他部分也是难看得很精彩吧！\u003cbr\u003e\r\n\u003cbr\u003e\r\n本作最喜欢的角色是不破谏其次刃唯阿。不想嗑他俩cp只是喜欢他俩的同事情，\u003cdel\u003e但外传又把这一切都毁了\u003c\/del\u003e\u003cbr\u003e\r\n虽然刃服从天津垓的部分很漫长但我觉得这就是istj特质吧，刃虽然动摇甚至脑子里真的没被植入芯片。但就是这么服从怎么回事。看得我好难受，我一直在等刃反叛，这个过程就像等睦月成长一样难受，但我对刃又如此溺爱\u003cbr\u003e\r\n不破谏也是个狼塑istp，不得不说这种角色怎么这么多啊我见一个爱一个，对这俩人都用赛博八字来概括我很抱歉。。。27集消防员回不破拉走虽然动摇但始终服从老千的刃，我对这对同事就从这里爱上。\u003cbr\u003e\r\n虽然憋了很久但29集狂暴加特林暴打千骑和豺狗看得我好爽啊，这个反复给我寸止的剧情！\u003cbr\u003e\r\n33集刃也是终于反抗了，可能导火索是不破吧，这前面不破知道了自己其实是小白鼠落泪了但很快找回状态，“我已经不需要把憎恨当作动力了”，这里也看爽了\u003cbr\u003e\r\n\u003cbr\u003e\r\n不破谏对于老千来说原来是宝生永梦吗，为什么你可以变身！为什么可以用射击升级器！放走灭的人到底是谁！答案只有一个！不↑破↓谏↑ 因为你是我们的小白鼠啊！\u003cbr\u003e\r\n你以为老千是一个檀黎斗那样的社长吗，其实老千的人设是灰太狼。\u003cbr\u003e\r\n\u003cbr\u003e\r\n也很喜欢迅宝，我的好大儿，挺喜欢迅是灭造出来的这个设定的，不属于飞电的迅，自由的鸟儿。虽然我大部分时间不知道高桥在写什么，如今对灭亡迅雷的剧情也很失忆了，但我的xp令我支持儿子草爸爸\u003cbr\u003e\r\n\u003cbr\u003e\r\n虽然主角是或人，但我真的无法共情呀，看这片我全程关注艾姆斯和灭亡迅雷动向。不过白手起家那段人机恋还挺萌的！\u003cbr\u003e\r\n\u003cbr\u003e\r\n关于此剧与极狐的联系我在当时的观影串找到了两点发想：\u003cbr\u003e\r\n\u003cblockquote style=\u0022\r\n  margin: 0;\r\n  white-space: pre-line;\r\n  width: auto;\r\n\u0022\u003e（第43集）  我想想或人是早期太狸吧（汗）  \r\n（第44集）  这真的不是极狐吗 跟极狐的差别是想修伊兹的不是灭（  \r\n（还是第44集）  （灭）这发言简直太霸牛了  \r\n（第46集）  死了的人\/修码吉亚修好了就不会生气了，此事在极狐亦有记载\u003c\/blockquote\u003e&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-4GDidv4XXsJMUFFMmNSCuY&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-4GDidv4XXsJMUFFMmNSCuY-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/4GDidv4XXsJMUFFMmNSCuY&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-4GDidv4XXsJMUFFMmNSCuY-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-4GDidv4XXsJMUFFMmNSCuY-content&#34;&gt;
+                
+                看的时候觉得很好看很王道来着，现在回忆起来又觉得还好了一般般吧，想来是因为没有捡到一对能留住我的心的cp&lt;br&gt;
+网友好像大多觉得前面的部分无聊？但我觉得还好吧，跟剑士一个一个对决很公路片的感觉，因为角色比较多这样写对我来说也比较容易认人。不得不说圣刃好战队啊，甚至有ED舞。&lt;br&gt;
+但是主角团里面我很无感的角色太多了……我比较在意的可能就贤人和绯道莲吧。反派阵营，也，没有很激起我的兴趣。要说剧情的话后面十圣刃的部分真写得挺好的，好有团魂。结局也很萌很温馨。&lt;br&gt;
+&lt;br&gt;
+关于贤人，好喜欢贤人做晓美焰的时候。前期太健康了后期太健康了，剧场版更是交女朋友了，好无趣。请支持贤人晓美焰时候。&lt;br&gt;
+关于绯道莲，孩子从长相到性格到经历都好像睦月啊！谁看了不惊呼一声这就是令和睦月。我并不讨厌编剧这样写小孩，谁都有过青春期迷茫又添乱、觉得自己有无限可能但又发现自己啥也不能的时候。对睦月对绯道莲都很溺爱。当然莲的成长历程写得比睦月好看，虽然我对灾莲灾的cp感觉比较一般般、&lt;br&gt;
+尤里也很萌，不过我没什么角色理解，萌就一个字&lt;br&gt;
+这片居然有神代凌牙，甚至也是妹控，虽然姓氏读音不一样&lt;br&gt;
+要说反派我有印象的只能是老乌了，我觉得老乌写得还是挺有魅力的，只是诗人这种东西对我来说有点太抽象了很难共情、、&lt;br&gt;
+&lt;br&gt;
+不得不嘴一句圣刃的特效做得好穷好丑，在最应该渲染气氛调动观众情绪的时候制造名场面出乐子&lt;br&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-4GDidv4XXsJMUFFMmNSCuY-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-4GDidv4XXsJMUFFMmNSCuY&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/4GDidv4XXsJMUFFMmNSCuY&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;看的时候觉得很好看很王道来着，现在回忆起来又觉得还好了一般般吧，想来是因为没有捡到一对能留住我的心的cp\u003cbr\u003e\r\n网友好像大多觉得前面的部分无聊？但我觉得还好吧，跟剑士一个一个对决很公路片的感觉，因为角色比较多这样写对我来说也比较容易认人。不得不说圣刃好战队啊，甚至有ED舞。\u003cbr\u003e\r\n但是主角团里面我很无感的角色太多了……我比较在意的可能就贤人和绯道莲吧。反派阵营，也，没有很激起我的兴趣。要说剧情的话后面十圣刃的部分真写得挺好的，好有团魂。结局也很萌很温馨。\u003cbr\u003e\r\n\u003cbr\u003e\r\n关于贤人，好喜欢贤人做晓美焰的时候。前期太健康了后期太健康了，剧场版更是交女朋友了，好无趣。请支持贤人晓美焰时候。\u003cbr\u003e\r\n关于绯道莲，孩子从长相到性格到经历都好像睦月啊！谁看了不惊呼一声这就是令和睦月。我并不讨厌编剧这样写小孩，谁都有过青春期迷茫又添乱、觉得自己有无限可能但又发现自己啥也不能的时候。对睦月对绯道莲都很溺爱。当然莲的成长历程写得比睦月好看，虽然我对灾莲灾的cp感觉比较一般般、\u003cbr\u003e\r\n尤里也很萌，不过我没什么角色理解，萌就一个字\u003cbr\u003e\r\n这片居然有神代凌牙，甚至也是妹控，虽然姓氏读音不一样\u003cbr\u003e\r\n要说反派我有印象的只能是老乌了，我觉得老乌写得还是挺有魅力的，只是诗人这种东西对我来说有点太抽象了很难共情、、\u003cbr\u003e\r\n\u003cbr\u003e\r\n不得不嘴一句圣刃的特效做得好穷好丑，在最应该渲染气氛调动观众情绪的时候制造名场面出乐子\u003cbr\u003e&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-7e3QXyj2Wo8CiirTJ74Iom&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-7e3QXyj2Wo8CiirTJ74Iom-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/7e3QXyj2Wo8CiirTJ74Iom&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-7e3QXyj2Wo8CiirTJ74Iom-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-7e3QXyj2Wo8CiirTJ74Iom-content&#34;&gt;
+                
+                待评价
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-7e3QXyj2Wo8CiirTJ74Iom-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-7e3QXyj2Wo8CiirTJ74Iom&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/7e3QXyj2Wo8CiirTJ74Iom&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;待评价&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-29R8lvF8XhnY2EMM5X77hb&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-29R8lvF8XhnY2EMM5X77hb-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/29R8lvF8XhnY2EMM5X77hb&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-29R8lvF8XhnY2EMM5X77hb-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-29R8lvF8XhnY2EMM5X77hb-content&#34;&gt;
+                
+                是我看的第二部高桥悠也主笔的骑士，我觉得其实没大家骂的那么烂吧，虽然最后有几集是挺满头问号的，但我大部分时间看得挺开心的。可能这就是期待值越低越容易满足吧！&lt;br&gt;
+我觉得极狐是高桥悠也致敬龙骑之作，但真的比不了龙骑。有的地方也像《弹丸论破V3》。&lt;br&gt;
+回忆一下人与人之间的关系真写得挺糟的，主角团也没什么团魂，但打戏和反转看爽了（爆笑）&lt;br&gt;
+大家都说霸牛是第五牛格，我要替他辩解，我觉得孩子是有一套自己的逻辑的，只是脑回路比较短不怎么考虑长远的事、又比较沉浸在自己的世界、还不会说话，外人看起来就：嗯他在想什么？？但我觉得牛的动机很简单，看他眼前有什么就是了。。（嗯所以40集被贝洛芭玩弄于股掌之间）&lt;br&gt;
+看完我对狐对猫对其他人实在没什么感想，最后嗑的狸牛cb，网友的受是我拉的左位（大笑离去）
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-29R8lvF8XhnY2EMM5X77hb-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-29R8lvF8XhnY2EMM5X77hb&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/29R8lvF8XhnY2EMM5X77hb&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;是我看的第二部高桥悠也主笔的骑士，我觉得其实没大家骂的那么烂吧，虽然最后有几集是挺满头问号的，但我大部分时间看得挺开心的。可能这就是期待值越低越容易满足吧！\u003cbr\u003e\r\n我觉得极狐是高桥悠也致敬龙骑之作，但真的比不了龙骑。有的地方也像《弹丸论破V3》。\u003cbr\u003e\r\n回忆一下人与人之间的关系真写得挺糟的，主角团也没什么团魂，但打戏和反转看爽了（爆笑）\u003cbr\u003e\r\n大家都说霸牛是第五牛格，我要替他辩解，我觉得孩子是有一套自己的逻辑的，只是脑回路比较短不怎么考虑长远的事、又比较沉浸在自己的世界、还不会说话，外人看起来就：嗯他在想什么？？但我觉得牛的动机很简单，看他眼前有什么就是了。。（嗯所以40集被贝洛芭玩弄于股掌之间）\u003cbr\u003e\r\n看完我对狐对猫对其他人实在没什么感想，最后嗑的狸牛cb，网友的受是我拉的左位（大笑离去）&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-2YKsenhOC3GRWdmimKUbnB&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-2YKsenhOC3GRWdmimKUbnB-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/2YKsenhOC3GRWdmimKUbnB&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-2YKsenhOC3GRWdmimKUbnB-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-2YKsenhOC3GRWdmimKUbnB-content&#34;&gt;
+                
+                待评价
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-2YKsenhOC3GRWdmimKUbnB-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-2YKsenhOC3GRWdmimKUbnB&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/2YKsenhOC3GRWdmimKUbnB&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;待评价&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-02UCgBWxiIiv5iXIxQ5P6G&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-02UCgBWxiIiv5iXIxQ5P6G-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/02UCgBWxiIiv5iXIxQ5P6G&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-02UCgBWxiIiv5iXIxQ5P6G-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-02UCgBWxiIiv5iXIxQ5P6G-content&#34;&gt;
+                
+                从十几集开始追更，是我看的第一部香村写的骑士，追更途中把Wizard和快警也给补了。&lt;br&gt;
+回顾起来我觉得水母哥登场前期的那几集是全片最好看的几集。水母哥一开始变身布丁的那两集打戏真的看的我人心黄黄。当时觉得比Wizard好看，照这个势头下去说不定能有快警那么好看。&lt;br&gt;
+我觉得剧情应该是从酸贺退场开始难看的吧，后面酸贺莫名其妙被秽土转生又很快被打死，纯当工具用了，真是酸涩……&lt;br&gt;
+这之后绊斗原谅狗头人、叔公死了大家过于理智把情绪收着、大后期幸果开始介意布丁砂糖人身份、绊斗放过亡命鸳鸯、二哥玉面手雷王，我真的看力竭了，我已经很包容这个剧情了追更的时候一直到快40集才觉得好难看。&lt;br&gt;
+前期真的很有团魂，好喜欢万事屋的氛围，生真是一只很萌的狗，想要为妈妈和师父复仇的绊斗也很有自己的觉悟和信念，布丁，布丁是整个TV写得最好的角色了，幸果虽然没法变身但很会为大家加油打气。到底为什么后来会变成这样，香村，武部，你们有什么头绪吗
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-02UCgBWxiIiv5iXIxQ5P6G-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-02UCgBWxiIiv5iXIxQ5P6G&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/02UCgBWxiIiv5iXIxQ5P6G&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;从十几集开始追更，是我看的第一部香村写的骑士，追更途中把Wizard和快警也给补了。\u003cbr\u003e\r\n回顾起来我觉得水母哥登场前期的那几集是全片最好看的几集。水母哥一开始变身布丁的那两集打戏真的看的我人心黄黄。当时觉得比Wizard好看，照这个势头下去说不定能有快警那么好看。\u003cbr\u003e\r\n我觉得剧情应该是从酸贺退场开始难看的吧，后面酸贺莫名其妙被秽土转生又很快被打死，纯当工具用了，真是酸涩……\u003cbr\u003e\r\n这之后绊斗原谅狗头人、叔公死了大家过于理智把情绪收着、大后期幸果开始介意布丁砂糖人身份、绊斗放过亡命鸳鸯、二哥玉面手雷王，我真的看力竭了，我已经很包容这个剧情了追更的时候一直到快40集才觉得好难看。\u003cbr\u003e\r\n前期真的很有团魂，好喜欢万事屋的氛围，生真是一只很萌的狗，想要为妈妈和师父复仇的绊斗也很有自己的觉悟和信念，布丁，布丁是整个TV写得最好的角色了，幸果虽然没法变身但很会为大家加油打气。到底为什么后来会变成这样，香村，武部，你们有什么头绪吗&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-5qLDfrx6C5qKPr3lNVznRi&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-5qLDfrx6C5qKPr3lNVznRi-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/5qLDfrx6C5qKPr3lNVznRi&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-5qLDfrx6C5qKPr3lNVznRi-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-5qLDfrx6C5qKPr3lNVznRi-content&#34;&gt;
+                
+                完结了再写
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-5qLDfrx6C5qKPr3lNVznRi-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-5qLDfrx6C5qKPr3lNVznRi&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/5qLDfrx6C5qKPr3lNVznRi&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;完结了再写&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;&lt;/p&gt;
+&lt;h2 id=&#34;超级战队&#34;&gt;超级战队
+&lt;/h2&gt;&lt;p&gt;看的还不太多先把看过的摆上来&lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-5XrqhPgHFpCNpgLo2cfVpI&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-5XrqhPgHFpCNpgLo2cfVpI-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/5XrqhPgHFpCNpgLo2cfVpI&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-5XrqhPgHFpCNpgLo2cfVpI-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-5XrqhPgHFpCNpgLo2cfVpI-content&#34;&gt;
+                
+                是我看的第一部战队作品，当时正在追更加布，想了解香村纯子的往期作品于是看了快警。&lt;br&gt;
+快警好看啊！&lt;br&gt;
+虽然我对这部作品没有很深的角色理解，我只会说大家都好萌……喜欢魁利和初美花、魁利和圭一郎、初美花和司、魁利和noel、noel和圭一郎、noel和透真、透真和初美花、初美花和咲也之间的互动……（点兵点将）&lt;br&gt;
+虽然我觉得本作很多精彩部分都在双红卖腐的时候，但我最喜欢的角色还是初美花吧，年纪小小的能力在快盗里也不是很出众，会被其他两位担心，但为成长付出的努力也不输其他两位，好有骨气的小女孩，13集跟司的情意绵绵剑也看得我捂嘴笑&lt;br&gt;
+快警整部作品的基调都比较轻松明快，没有很压抑的部分，7个人也都萌萌的看得很舒服，我觉得香村是能hold住这么多人的塑造的呢，至少快警我没挑出毛病来。（可是加布……&lt;br&gt;
+关于双红，虽然是挺好嗑的但我常常想你俩是不是卖太过了，TV里贴脸对视我就不说啥了吧，舞台剧啵嘴是在！？看了这个片段的剪辑这之后一直没有勇气打开舞台剧
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-5XrqhPgHFpCNpgLo2cfVpI-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-5XrqhPgHFpCNpgLo2cfVpI&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/5XrqhPgHFpCNpgLo2cfVpI&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;是我看的第一部战队作品，当时正在追更加布，想了解香村纯子的往期作品于是看了快警。\u003cbr\u003e\r\n快警好看啊！\u003cbr\u003e\r\n虽然我对这部作品没有很深的角色理解，我只会说大家都好萌……喜欢魁利和初美花、魁利和圭一郎、初美花和司、魁利和noel、noel和圭一郎、noel和透真、透真和初美花、初美花和咲也之间的互动……（点兵点将）\u003cbr\u003e\r\n虽然我觉得本作很多精彩部分都在双红卖腐的时候，但我最喜欢的角色还是初美花吧，年纪小小的能力在快盗里也不是很出众，会被其他两位担心，但为成长付出的努力也不输其他两位，好有骨气的小女孩，13集跟司的情意绵绵剑也看得我捂嘴笑\u003cbr\u003e\r\n快警整部作品的基调都比较轻松明快，没有很压抑的部分，7个人也都萌萌的看得很舒服，我觉得香村是能hold住这么多人的塑造的呢，至少快警我没挑出毛病来。（可是加布……\u003cbr\u003e\r\n关于双红，虽然是挺好嗑的但我常常想你俩是不是卖太过了，TV里贴脸对视我就不说啥了吧，舞台剧啵嘴是在！？看了这个片段的剪辑这之后一直没有勇气打开舞台剧&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-6b54TacNtiZL1N1g8NLXl7&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-6b54TacNtiZL1N1g8NLXl7-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/6b54TacNtiZL1N1g8NLXl7&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-6b54TacNtiZL1N1g8NLXl7-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-6b54TacNtiZL1N1g8NLXl7-content&#34;&gt;
+                
+                待评价
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-6b54TacNtiZL1N1g8NLXl7-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-6b54TacNtiZL1N1g8NLXl7&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/6b54TacNtiZL1N1g8NLXl7&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;待评价&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-6UVNzV3ZZLTxCvTSY4gBxc&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-6UVNzV3ZZLTxCvTSY4gBxc-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/6UVNzV3ZZLTxCvTSY4gBxc&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-6UVNzV3ZZLTxCvTSY4gBxc-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-6UVNzV3ZZLTxCvTSY4gBxc-content&#34;&gt;
+                
+                待评价
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-6UVNzV3ZZLTxCvTSY4gBxc-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-6UVNzV3ZZLTxCvTSY4gBxc&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/6UVNzV3ZZLTxCvTSY4gBxc&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;待评价&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-5zYMHW8TTds4SPp5vqhFGQ&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-5zYMHW8TTds4SPp5vqhFGQ-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/5zYMHW8TTds4SPp5vqhFGQ&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-5zYMHW8TTds4SPp5vqhFGQ-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-5zYMHW8TTds4SPp5vqhFGQ-content&#34;&gt;
+                
+                待评价
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-5zYMHW8TTds4SPp5vqhFGQ-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-5zYMHW8TTds4SPp5vqhFGQ&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/5zYMHW8TTds4SPp5vqhFGQ&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;待评价&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;db-card&#34; id=&#34;neodb-card-6TxtiOjCGL7XLNN5KvrwmD&#34;&gt;
+    &lt;div class=&#34;db-card-subject&#34;&gt;
+        &lt;div class=&#34;db-card-post&#34;&gt;
+            &lt;img src=&#34;https://ryihuan.github.io/neodb.jpg&#34; alt=&#34;加载中...&#34; id=&#34;neodb-card-6TxtiOjCGL7XLNN5KvrwmD-img&#34; style=&#34;max-width: 100%; height: auto;&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-content&#34;&gt;
+            &lt;div class=&#34;db-card-title&#34;&gt;
+                &lt;a href=&#34;https://neodb.social/tv/season/6TxtiOjCGL7XLNN5KvrwmD&#34; class=&#34;cute&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34; id=&#34;neodb-card-6TxtiOjCGL7XLNN5KvrwmD-title&#34;&gt;
+                    加载中...
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;db-card-abstract&#34; id=&#34;neodb-card-6TxtiOjCGL7XLNN5KvrwmD-content&#34;&gt;
+                
+                完结了再写
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;db-card-cate&#34; id=&#34;neodb-card-6TxtiOjCGL7XLNN5KvrwmD-category&#34;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+        const cardId = &#39;neodb-card-6TxtiOjCGL7XLNN5KvrwmD&#39;;
+        const apiUrl = &#39;https:\/\/neodb.social\/api\/tv\/season\/6TxtiOjCGL7XLNN5KvrwmD&#39;;
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response =&gt; {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data =&gt; {
+                
+                const titleEl = document.getElementById(cardId + &#39;-title&#39;);
+                if (titleEl &amp;&amp; data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + &#39;-img&#39;);
+                if (imgEl &amp;&amp; data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || &#39;封面图片&#39;;
+                }
+
+                
+                const contentEl = document.getElementById(cardId + &#39;-content&#39;);
+                const customContent = &#39;完结了再写&#39;;
+                if (contentEl &amp;&amp; !customContent.trim() &amp;&amp; data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + &#39;-category&#39;);
+                if (cateEl &amp;&amp; data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error =&gt; {
+                console.error(&#39;Failed to fetch NeoDB data:&#39;, error);
+                
+            });
+    });
+&lt;/script&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

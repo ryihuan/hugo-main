@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="修了一点手机网页bug，背景图画完了，在归档页加入了标签显示，添加了手机网页文章目录，添加了NeoDB卡片">
+<title>又一次Stack主题博客装修</title>
+
+<link rel='canonical' href='https://ryihuan.github.io/p/%E5%8F%88%E4%B8%80%E6%AC%A1stack%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%BF%AE/'>
+
+<link rel="stylesheet" href="/scss/style.min.393afdb0c7704406cf19ca665dc6a24fc1658904bcbac07ecd9b0e4d49ae9a6a.css"><meta property='og:title' content="又一次Stack主题博客装修">
+<meta property='og:description' content="修了一点手机网页bug，背景图画完了，在归档页加入了标签显示，添加了手机网页文章目录，添加了NeoDB卡片">
+<meta property='og:url' content='https://ryihuan.github.io/p/%E5%8F%88%E4%B8%80%E6%AC%A1stack%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%BF%AE/'>
+<meta property='og:site_name' content='某人的小窝'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Stack' /><meta property='article:tag' content='博客装修' /><meta property='article:tag' content='NeoDB' /><meta property='article:published_time' content='2026-01-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-01-14T00:37:41&#43;08:00'/>
+<meta name="twitter:title" content="又一次Stack主题博客装修">
+<meta name="twitter:description" content="修了一点手机网页bug，背景图画完了，在归档页加入了标签显示，添加了手机网页文章目录，添加了NeoDB卡片">
+    <link rel="shortcut icon" href="/favicon.png" />
+<script>
+
+function updateAvatar() {
+  const avatarImg = document.querySelector('.site-avatar .site-logo');
+  if (!avatarImg) return;
+  
+  const isDark = document.documentElement.getAttribute('data-scheme') === 'dark';
+  const lightSrc = avatarImg.getAttribute('data-src-light') || avatarImg.src;
+  const darkSrc = avatarImg.getAttribute('data-src-dark');
+  
+  if (darkSrc && isDark) {
+    avatarImg.src = darkSrc;
+    
+    triggerAvatarAnimation(avatarImg);
+  } else if (lightSrc && !isDark) {
+    avatarImg.src = lightSrc;
+  }
+}
+
+
+function triggerAvatarAnimation(avatarImg) {
+  avatarImg.classList.add('rotating-overshoot');
+  setTimeout(() => {
+    avatarImg.classList.remove('rotating-overshoot');
+  }, 2000); 
+}
+
+
+document.addEventListener('DOMContentLoaded', updateAvatar);
+
+
+new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.attributeName === 'data-scheme') {
+      setTimeout(updateAvatar, 50);
+    }
+  });
+}).observe(document.documentElement, { attributes: true });
+</script>
+
+
+<script>
+document.addEventListener('click', function(e) {
+    const articleDetails = e.target.closest('.article-details');
+    if (articleDetails && !e.target.closest('.article-category a')) {
+        const titleLink = articleDetails.querySelector('.article-title a');
+        if (titleLink) {
+            window.location.href = titleLink.href;
+        }
+    }
+});
+</script>
+
+    </head>
+    <body class="
+    article-page
+    
+    has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                    
+                        
+                        
+                        <img src="/img/light_hu_ef46a703a97cb3c9.jpg" 
+                            data-src-light="/img/light_hu_ef46a703a97cb3c9.jpg"
+                            data-src-dark="/img/dark_hu_206abf790e78d3dd.jpg"
+                            width="300" 
+                            height="300" 
+                            class="site-logo" 
+                            loading="lazy" 
+                            alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">某人的小窝</a></h1>
+            <h2 class="site-description">互联网有房一族。</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#修bug">修bug</a></li>
+    <li><a href="#背景图">背景图</a></li>
+    <li><a href="#归档页加入标签云">归档页加入标签云</a></li>
+    <li><a href="#手机网页文章目录按钮">手机网页文章目录按钮</a></li>
+    <li><a href="#neodb短代码">NeoDB短代码</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/diary/" style="background-color: #c02c2cb9; color: #fff;">
+                博客装修日志
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%8F%88%E4%B8%80%E6%AC%A1stack%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%BF%AE/">又一次Stack主题博客装修</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            修了一点手机网页bug，背景图画完了，在归档页加入了标签显示，添加了手机网页文章目录，添加了NeoDB卡片
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 02, 2026</time>
+            </div>
+        
+        <div class="article-lastmod">
+                <?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <g id="g137" transform="matrix(0.344676, 0, 0, 0.344676, -1.097733, -1.110916)">
+    <path d="M 65.269 18.765 L 57.863 11.359 C 57.472 10.968 56.84 10.968 56.449 11.359 L 51.688 16.12 L 30.527 37.28 L 28.411 39.396 C 28.298000000000002 39.509 28.213 39.648 28.165 39.801 L 24.727 50.646 C 24.614 51.001 24.709 51.391 24.973 51.655 C 25.163 51.845 25.419 51.948 25.68 51.948 C 25.781 51.948 25.883 51.932 25.982 51.901 L 36.826 48.463 C 36.979 48.415 37.118 48.33 37.231 48.217 L 39.347 46.101 L 60.508 24.941 L 65.269 20.18 C 65.66 19.789 65.66 19.156 65.269 18.765 Z M 39.378 45.993 L 30.558 37.173 M 60.325 24.77 L 52.057 16.501" id="path133" style="stroke-width: 3.8587px;"/>
+    <path d="M 39.438 15.934 L 15.95 15.95 C 13.194 15.95 10.438 18.706 10.438 21.463 L 10.438 59.498 C 10.438 62.255 13.194 65.011 15.95 65.011 L 54.813 65.011 C 57.569 65.011 60.325 62.255 60.325 59.498 L 60.438 36.934" id="path135" style="stroke-width: 3.8587px;"/>
+  </g>
+</svg>
+                <time>
+                    Jan 14, 2026 00:37 CST
+                </time>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="修bug">修bug
+</h2><p>之前给分类卡片做放大动画效果的时候，发现左边和上边会超出框外导致水平裁切（好难描述的情况已尽力），于是当时问了AI怎么解决，最后写了<code>overflow: visible</code>，动画效果是正常了但是导致手机网页出现一些无法滚动显示的问题<br>
+改不好于是把动画效果去掉了把这一行删了……回归质朴</p>
+<p>此外调整了一下电脑网页图片基础大小，调到了满意的尺寸</p>
+<p>之前做了相册，但是又有被爬走喂AI的忧虑，于是前几天把相册页面下线了……</p>
+<h2 id="背景图">背景图
+</h2><p>经过三个月我终于想起来要把这图画完了！主角是我OC，其他人临时捏的<br>
+防止以后会换，把这一刻保存一下吧<br>
+<img src="/p/26010201.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1"
+	
+	
+><img src="/p/26010202.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="2"
+	
+	
+><br>
+是的，头像还没画完，有空一定……</p>
+<h2 id="归档页加入标签云">归档页加入标签云
+</h2><p>因为发现首页的标签云组件会有显示不全的问题（主要是我不喜欢右侧栏会滑动，所以限制了tag显示数），于是把这个功能加在了归档页里<br>
+如下代码加在<code>&lt;/header&gt;</code>下面即可：</p>
+
+<div class="highlight-with-title" data-title="主题文件夹&gt;layouts&gt;_default&gt;archives.html">
+
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tag-cloud-section widget tagCloud&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;section-title widget-header&#34;</span><span class="p">&gt;</span>TAGS<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;widget-content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tagCloud-tags&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">            {{ range .Site.Taxonomies.tags }}
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Page.RelPermalink }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">                {{ .Page.Title }}
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">            {{ end }}
+</span></span><span class="line"><span class="ln">11</span><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div><h2 id="手机网页文章目录按钮">手机网页文章目录按钮
+</h2><p>DeepSeek帮写的，更改相应代码即可</p>
+
+<div class="highlight-with-title" data-title="更改主题文件夹&gt;layouts&gt;_default&gt;single.html，添加有注释的几行即可">
+
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">{{ define &#34;body-class&#34; }}
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">    article-page
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    {{/* 
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">        Enable the right sidebar if
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">            - Widget different from &#39;TOC&#39; is enabled
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">            - TOC is enabled and not empty
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    */}}
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    {{- $HasWidgetNotTOC := false -}}
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    {{- $TOCWidgetEnabled := false -}}
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    {{- range .Site.Params.widgets.page -}}
+</span></span><span class="line"><span class="ln">11</span><span class="cl">        {{- if ne .type &#34;toc&#34; -}}
+</span></span><span class="line"><span class="ln">12</span><span class="cl">            {{ $HasWidgetNotTOC = true -}}
+</span></span><span class="line"><span class="ln">13</span><span class="cl">        {{- else -}}
+</span></span><span class="line"><span class="ln">14</span><span class="cl">            {{ $TOCWidgetEnabled = true -}}
+</span></span><span class="line"><span class="ln">15</span><span class="cl">        {{- end -}}
+</span></span><span class="line"><span class="ln">16</span><span class="cl">    {{- end -}}
+</span></span><span class="line"><span class="ln">17</span><span class="cl">
+</span></span><span class="line"><span class="ln">18</span><span class="cl">    {{- $TOCManuallyDisabled := eq .Params.toc false -}}
+</span></span><span class="line"><span class="ln">19</span><span class="cl">    {{- $TOCEnabled := and (not $TOCManuallyDisabled) $TOCWidgetEnabled -}}
+</span></span><span class="line"><span class="ln">20</span><span class="cl">    {{- $hasTOC := ge (len .TableOfContents) 100 -}}
+</span></span><span class="line"><span class="ln">21</span><span class="cl">    {{- .Scratch.Set &#34;TOCEnabled&#34; (and $TOCEnabled $hasTOC) -}}
+</span></span><span class="line"><span class="ln">22</span><span class="cl">    
+</span></span><span class="line"><span class="ln">23</span><span class="cl">    {{- .Scratch.Set &#34;hasWidget&#34; (or $HasWidgetNotTOC (and $TOCEnabled $hasTOC)) -}}
+</span></span><span class="line"><span class="ln">24</span><span class="cl">    
+</span></span><span class="line"><span class="ln">25</span><span class="cl">    {{/* 添加一个类标识文章页面有TOC */}}
+</span></span><span class="line"><span class="ln">26</span><span class="cl">    {{ if (and $TOCEnabled $hasTOC) }}has-toc{{ end }}
+</span></span><span class="line"><span class="ln">27</span><span class="cl">{{ end }}
+</span></span><span class="line"><span class="ln">28</span><span class="cl">
+</span></span><span class="line"><span class="ln">29</span><span class="cl">{{ define &#34;main&#34; }}
+</span></span><span class="line"><span class="ln">30</span><span class="cl">    {{ partial &#34;article/article.html&#34; . }}
+</span></span><span class="line"><span class="ln">31</span><span class="cl">
+</span></span><span class="line"><span class="ln">32</span><span class="cl">    {{ if .Params.links }}
+</span></span><span class="line"><span class="ln">33</span><span class="cl">        {{ partial &#34;article/components/links&#34; . }}
+</span></span><span class="line"><span class="ln">34</span><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="ln">35</span><span class="cl">
+</span></span><span class="line"><span class="ln">36</span><span class="cl">    {{ partial &#34;article/components/related-content&#34; . }}
+</span></span><span class="line"><span class="ln">37</span><span class="cl">     
+</span></span><span class="line"><span class="ln">38</span><span class="cl">    {{ if not (eq .Params.comments false) }}
+</span></span><span class="line"><span class="ln">39</span><span class="cl">        {{ partial &#34;comments/include&#34; . }}
+</span></span><span class="line"><span class="ln">40</span><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="ln">41</span><span class="cl">
+</span></span><span class="line"><span class="ln">42</span><span class="cl">    {{ partialCached &#34;footer/footer&#34; . }}
+</span></span><span class="line"><span class="ln">43</span><span class="cl">
+</span></span><span class="line"><span class="ln">44</span><span class="cl">    {{ partialCached &#34;article/components/photoswipe&#34; . }}
+</span></span><span class="line"><span class="ln">45</span><span class="cl">    
+</span></span><span class="line"><span class="ln">46</span><span class="cl">    {{/* 添加手机端TOC按钮 */}}
+</span></span><span class="line"><span class="ln">47</span><span class="cl">    {{ if .Scratch.Get &#34;TOCEnabled&#34; }}
+</span></span><span class="line"><span class="ln">48</span><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toc-toggle hamburger hamburger--spin&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;toggle-toc&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Toggle table of contents&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">49</span><span class="cl">        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-box&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">50</span><span class="cl">            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hamburger-inner&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">51</span><span class="cl">        <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">52</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">53</span><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="ln">54</span><span class="cl">{{ end }}
+</span></span><span class="line"><span class="ln">55</span><span class="cl">
+</span></span><span class="line"><span class="ln">56</span><span class="cl">{{ define &#34;right-sidebar&#34; }}
+</span></span><span class="line"><span class="ln">57</span><span class="cl">    {{ if .Scratch.Get &#34;hasWidget&#34; }}{{ partial &#34;sidebar/right.html&#34; (dict &#34;Context&#34; . &#34;Scope&#34; &#34;page&#34;) }}{{ end}}
+</span></span><span class="line"><span class="ln">58</span><span class="cl">{{ end }}</span></span></code></pre></div>
+</div>
+<div class="highlight-with-title" data-title="在 主题文件夹&gt;layouts&gt;partials&gt;footer&gt;custom.html 中添加">
+
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c">&lt;!-- 手机网页汉堡包目录 --&gt;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">            <span class="kr">const</span> <span class="nx">tocToggle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;toggle-toc&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">tocToggle</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">                <span class="kr">const</span> <span class="nx">rightSidebar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.sidebar.right-sidebar&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">                <span class="c1">// 1. 滚动显示/隐藏按钮
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="c1"></span>                <span class="kd">function</span> <span class="nx">updateButtonVisibility</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">                    <span class="kr">const</span> <span class="nx">scrollTop</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">pageYOffset</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">                    <span class="kr">const</span> <span class="nx">showThreshold</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">
+</span></span><span class="line"><span class="ln">14</span><span class="cl">                    <span class="k">if</span> <span class="p">(</span><span class="nx">scrollTop</span> <span class="o">&gt;</span> <span class="nx">showThreshold</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">                        <span class="nx">tocToggle</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">                        <span class="c1">// 如果侧边栏是打开的，不要隐藏按钮
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="c1"></span>                        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">rightSidebar</span> <span class="o">||</span> <span class="o">!</span><span class="nx">rightSidebar</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">                            <span class="nx">tocToggle</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">
+</span></span><span class="line"><span class="ln">24</span><span class="cl">                <span class="c1">// 防抖函数
+</span></span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="c1"></span>                <span class="kd">function</span> <span class="nx">debounce</span><span class="p">(</span><span class="nx">func</span><span class="p">,</span> <span class="nx">wait</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">                    <span class="kd">let</span> <span class="nx">timeout</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">                    <span class="k">return</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">                        <span class="kr">const</span> <span class="nx">context</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl">                        <span class="kr">const</span> <span class="nx">args</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">                        <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timeout</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl">                        <span class="nx">timeout</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">func</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">args</span><span class="p">),</span> <span class="nx">wait</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">                    <span class="p">};</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl">
+</span></span><span class="line"><span class="ln">35</span><span class="cl">                <span class="c1">// 监听滚动
+</span></span></span><span class="line"><span class="ln">36</span><span class="cl"><span class="c1"></span>                <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;scroll&#39;</span><span class="p">,</span> <span class="nx">debounce</span><span class="p">(</span><span class="nx">updateButtonVisibility</span><span class="p">,</span> <span class="mi">100</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl">
+</span></span><span class="line"><span class="ln">38</span><span class="cl">                <span class="c1">// 初始检查
+</span></span></span><span class="line"><span class="ln">39</span><span class="cl"><span class="c1"></span>                <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">updateButtonVisibility</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">40</span><span class="cl">
+</span></span><span class="line"><span class="ln">41</span><span class="cl">                <span class="c1">// 2. 侧边栏控制逻辑
+</span></span></span><span class="line"><span class="ln">42</span><span class="cl"><span class="c1"></span>                <span class="k">if</span> <span class="p">(</span><span class="nx">rightSidebar</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">43</span><span class="cl">                    <span class="c1">// 创建遮罩层
+</span></span></span><span class="line"><span class="ln">44</span><span class="cl"><span class="c1"></span>                    <span class="kr">const</span> <span class="nx">mask</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">45</span><span class="cl">                    <span class="nx">mask</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="s1">&#39;toc-mask&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">46</span><span class="cl">                    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">mask</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">47</span><span class="cl">
+</span></span><span class="line"><span class="ln">48</span><span class="cl">                    <span class="c1">// 切换显示/隐藏
+</span></span></span><span class="line"><span class="ln">49</span><span class="cl"><span class="c1"></span>                    <span class="nx">tocToggle</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">50</span><span class="cl">                        <span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;is-active&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">51</span><span class="cl">                        <span class="nx">rightSidebar</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">52</span><span class="cl">                        <span class="nx">mask</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">53</span><span class="cl">                        <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;no-scroll&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">54</span><span class="cl">
+</span></span><span class="line"><span class="ln">55</span><span class="cl">                        <span class="c1">// 点击时确保按钮可见
+</span></span></span><span class="line"><span class="ln">56</span><span class="cl"><span class="c1"></span>                        <span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">57</span><span class="cl">                    <span class="p">});</span>
+</span></span><span class="line"><span class="ln">58</span><span class="cl">
+</span></span><span class="line"><span class="ln">59</span><span class="cl">                    <span class="c1">// 点击遮罩层关闭
+</span></span></span><span class="line"><span class="ln">60</span><span class="cl"><span class="c1"></span>                    <span class="nx">mask</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">61</span><span class="cl">                        <span class="nx">tocToggle</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;is-active&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">62</span><span class="cl">                        <span class="nx">rightSidebar</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">63</span><span class="cl">                        <span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">64</span><span class="cl">                        <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;no-scroll&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">65</span><span class="cl">                    <span class="p">});</span>
+</span></span><span class="line"><span class="ln">66</span><span class="cl">
+</span></span><span class="line"><span class="ln">67</span><span class="cl">                    <span class="c1">// ESC键关闭
+</span></span></span><span class="line"><span class="ln">68</span><span class="cl"><span class="c1"></span>                    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">69</span><span class="cl">                        <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">key</span> <span class="o">===</span> <span class="s1">&#39;Escape&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">rightSidebar</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">70</span><span class="cl">                            <span class="nx">tocToggle</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;is-active&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">71</span><span class="cl">                            <span class="nx">rightSidebar</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">72</span><span class="cl">                            <span class="nx">mask</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">73</span><span class="cl">                            <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;no-scroll&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">74</span><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="ln">75</span><span class="cl">                    <span class="p">});</span>
+</span></span><span class="line"><span class="ln">76</span><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="ln">77</span><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="ln">78</span><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="ln">79</span><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
+<div class="highlight-with-title" data-title="custom.scss中添加">
+
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cm">/* 手机端TOC按钮 - 右下角 */</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nc">.toc-toggle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="na">position</span><span class="o">:</span> <span class="ni">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="na">right</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="na">bottom</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="na">z-index</span><span class="o">:</span> <span class="mi">1001</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="na">background</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">card-background</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="na">border-radius</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="na">height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="na">align-items</span><span class="o">:</span> <span class="ni">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="na">justify-content</span><span class="o">:</span> <span class="ni">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">    <span class="na">box-shadow</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">shadow-l2</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="na">border</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="ni">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">border-color</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">    <span class="na">cursor</span><span class="o">:</span> <span class="ni">pointer</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">    <span class="na">opacity</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="na">transform</span><span class="o">:</span> <span class="nf">translateY</span><span class="p">(</span><span class="mi">20</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="na">transition</span><span class="o">:</span> <span class="ni">opacity</span> <span class="mi">0</span><span class="mf">.3</span><span class="kt">s</span> <span class="ni">ease</span><span class="o">,</span> <span class="ni">transform</span> <span class="mi">0</span><span class="mf">.3</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">
+</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="cm">/* 显示状态 */</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="nc">.toc-toggle.visible</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">    <span class="na">opacity</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">    <span class="na">transform</span><span class="o">:</span> <span class="nf">translateY</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">
+</span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="cm">/* 手机端：只在有TOC的文章页面显示按钮和侧边栏 */</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="k">@media</span> <span class="p">(</span><span class="na">max-width</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">    <span class="nt">body</span><span class="nc">.has-toc</span> <span class="nc">.toc-toggle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl">        <span class="na">display</span><span class="o">:</span> <span class="ni">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl">
+</span></span><span class="line"><span class="ln">34</span><span class="cl">    <span class="cm">/* 右侧边栏改为抽屉式 */</span>
+</span></span><span class="line"><span class="ln">35</span><span class="cl">    <span class="nt">body</span><span class="nc">.has-toc</span> <span class="nc">.sidebar.right-sidebar</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">36</span><span class="cl">        <span class="na">display</span><span class="o">:</span> <span class="ni">block</span> <span class="k">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl">        <span class="na">position</span><span class="o">:</span> <span class="ni">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">38</span><span class="cl">        <span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">39</span><span class="cl">        <span class="na">right</span><span class="o">:</span> <span class="o">-</span><span class="mi">320</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">40</span><span class="cl">        <span class="na">width</span><span class="o">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">41</span><span class="cl">        <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">42</span><span class="cl">        <span class="na">z-index</span><span class="o">:</span> <span class="mi">1000</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">43</span><span class="cl">        <span class="na">transition</span><span class="o">:</span> <span class="ni">right</span> <span class="mi">0</span><span class="mf">.3</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">44</span><span class="cl">        <span class="na">background</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">card-background</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">45</span><span class="cl">        <span class="na">box-shadow</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">shadow-l2</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">46</span><span class="cl">        <span class="na">overflow-y</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">47</span><span class="cl">        <span class="na">padding</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">48</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">49</span><span class="cl">
+</span></span><span class="line"><span class="ln">50</span><span class="cl">    <span class="nt">body</span><span class="nc">.has-toc</span> <span class="nc">.sidebar.right-sidebar.show</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">51</span><span class="cl">        <span class="na">right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">52</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">53</span><span class="cl">
+</span></span><span class="line"><span class="ln">54</span><span class="cl">    <span class="cm">/* 遮罩层 */</span>
+</span></span><span class="line"><span class="ln">55</span><span class="cl">    <span class="nc">.toc-mask</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">56</span><span class="cl">        <span class="na">position</span><span class="o">:</span> <span class="ni">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">57</span><span class="cl">        <span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">58</span><span class="cl">        <span class="na">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">59</span><span class="cl">        <span class="na">right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">60</span><span class="cl">        <span class="na">bottom</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">61</span><span class="cl">        <span class="na">background</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">62</span><span class="cl">        <span class="na">z-index</span><span class="o">:</span> <span class="mi">999</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">63</span><span class="cl">        <span class="na">opacity</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">64</span><span class="cl">        <span class="na">visibility</span><span class="o">:</span> <span class="ni">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">65</span><span class="cl">        <span class="na">transition</span><span class="o">:</span> <span class="ni">all</span> <span class="mi">0</span><span class="mf">.3</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">66</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">67</span><span class="cl">
+</span></span><span class="line"><span class="ln">68</span><span class="cl">    <span class="nc">.toc-mask.show</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">69</span><span class="cl">        <span class="na">opacity</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">70</span><span class="cl">        <span class="na">visibility</span><span class="o">:</span> <span class="ni">visible</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">71</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">72</span><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+</div><p>目前来说效果还是比较简陋和粗暴，还会受网页加载速度影响，但我实在是不会改了，如果有更好的代码可以让我抄请务必告诉我……</p>
+<h2 id="neodb短代码">NeoDB短代码
+</h2><p><a class="link" href="https://neodb.social/"  target="_blank" rel="noopener"
+    >NeoDB网址
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a></p>
+<p>我的Hugo版本是v0.150.0，尝试抄了很多Neodb短代码都有网络连接丢失等问题，于是拷打DeepSeek生成了一个……！<br>
+也放一下作业，希望对遇到同样困难的人有帮助</p>
+
+<div class="highlight-with-title" data-title="在主题目录&gt;layouts&gt;shortcodes下新建neodb.html">
+
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="ln"> 1</span><span class="cl">{{ $dbUrl := .Get 0 }}
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">{{ $customContent := trim .Inner &#34; \n\r&#34; }}
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c">&lt;!-- 解析 item_uuid --&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">{{ $itemUuid := &#34;&#34; }}
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">{{ if (findRE `.*neodb\.social\/.*\/(.*)` $dbUrl) }}
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">{{ $itemUuid = replaceRE `.*neodb\.social\/.*\/(.*)` &#34;$1&#34; $dbUrl }}
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">{{ end }}
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">{{ $uniqueId := (print &#34;neodb-card-&#34; $itemUuid) }}
+</span></span><span class="line"><span class="ln">10</span><span class="cl">{{ $apiUrl := &#34;&#34; }}
+</span></span><span class="line"><span class="ln">11</span><span class="cl">
+</span></span><span class="line"><span class="ln">12</span><span class="cl">{{ if (findRE `^.*neodb\.social\/.*` $dbUrl) }}
+</span></span><span class="line"><span class="ln">13</span><span class="cl">{{ $dbPath := replaceRE `.*neodb.social\/(.*\/.*)` &#34;$1&#34; $dbUrl }}
+</span></span><span class="line"><span class="ln">14</span><span class="cl">{{ $apiUrl = print &#34;https://neodb.social/api/&#34; $dbPath }}
+</span></span><span class="line"><span class="ln">15</span><span class="cl">{{ else }}
+</span></span><span class="line"><span class="ln">16</span><span class="cl">{{ $apiUrl = print &#34;https://neodb.social/api/catalog/fetch?url=&#34; $dbUrl }}
+</span></span><span class="line"><span class="ln">17</span><span class="cl">{{ end }}
+</span></span><span class="line"><span class="ln">18</span><span class="cl">
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;db-card&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ $uniqueId }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;db-card-subject&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;db-card-post&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;加载中...&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ $uniqueId }}-img&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;max-width: 100%; height: auto;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;db-card-content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;db-card-title&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $dbUrl }}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;cute&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;noreferrer&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ $uniqueId }}-title&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">                    加载中...
+</span></span><span class="line"><span class="ln">28</span><span class="cl">                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;db-card-abstract&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ $uniqueId }}-content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl">                {{ if $customContent }}
+</span></span><span class="line"><span class="ln">32</span><span class="cl">                {{ $customContent | safeHTML }}
+</span></span><span class="line"><span class="ln">33</span><span class="cl">                {{ else }}
+</span></span><span class="line"><span class="ln">34</span><span class="cl">                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>正在加载数据...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">35</span><span class="cl">                {{ end }}
+</span></span><span class="line"><span class="ln">36</span><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">38</span><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;db-card-cate&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ $uniqueId }}-category&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">39</span><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">40</span><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">41</span><span class="cl">
+</span></span><span class="line"><span class="ln">42</span><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="ln">43</span><span class="cl">    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">44</span><span class="cl">        <span class="kr">const</span> <span class="nx">cardId</span> <span class="o">=</span> <span class="s1">&#39;{{ $uniqueId }}&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">45</span><span class="cl">        <span class="kr">const</span> <span class="nx">apiUrl</span> <span class="o">=</span> <span class="s1">&#39;{{ $apiUrl }}&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">46</span><span class="cl">
+</span></span><span class="line"><span class="ln">47</span><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">apiUrl</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">48</span><span class="cl">
+</span></span><span class="line"><span class="ln">49</span><span class="cl">        <span class="c1">// 前端获取数据
+</span></span></span><span class="line"><span class="ln">50</span><span class="cl"><span class="c1"></span>        <span class="nx">fetch</span><span class="p">(</span><span class="nx">apiUrl</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">51</span><span class="cl">            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">52</span><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">53</span><span class="cl">                    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="sb">`HTTP error! status: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">54</span><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="ln">55</span><span class="cl">                <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span></span><span class="line"><span class="ln">56</span><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="ln">57</span><span class="cl">            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">58</span><span class="cl">                <span class="c1">// 更新标题
+</span></span></span><span class="line"><span class="ln">59</span><span class="cl"><span class="c1"></span>                <span class="kr">const</span> <span class="nx">titleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">cardId</span> <span class="o">+</span> <span class="s1">&#39;-title&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">60</span><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nx">titleEl</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">title</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">61</span><span class="cl">                    <span class="nx">titleEl</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">title</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">62</span><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="ln">63</span><span class="cl">
+</span></span><span class="line"><span class="ln">64</span><span class="cl">                <span class="c1">// 更新图片
+</span></span></span><span class="line"><span class="ln">65</span><span class="cl"><span class="c1"></span>                <span class="kr">const</span> <span class="nx">imgEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">cardId</span> <span class="o">+</span> <span class="s1">&#39;-img&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">66</span><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nx">imgEl</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">cover_image_url</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">67</span><span class="cl">                    <span class="nx">imgEl</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">cover_image_url</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">68</span><span class="cl">                    <span class="nx">imgEl</span><span class="p">.</span><span class="nx">alt</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s1">&#39;封面图片&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">69</span><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="ln">70</span><span class="cl">
+</span></span><span class="line"><span class="ln">71</span><span class="cl">                <span class="c1">// 更新内容（如果没有自定义内容）
+</span></span></span><span class="line"><span class="ln">72</span><span class="cl"><span class="c1"></span>                <span class="kr">const</span> <span class="nx">contentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">cardId</span> <span class="o">+</span> <span class="s1">&#39;-content&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">73</span><span class="cl">                <span class="kr">const</span> <span class="nx">customContent</span> <span class="o">=</span> <span class="s1">&#39;{{ $customContent }}&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">74</span><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nx">contentEl</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">customContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">brief</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">75</span><span class="cl">                    <span class="nx">contentEl</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">brief</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">76</span><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="ln">77</span><span class="cl">
+</span></span><span class="line"><span class="ln">78</span><span class="cl">                <span class="c1">// 更新分类
+</span></span></span><span class="line"><span class="ln">79</span><span class="cl"><span class="c1"></span>                <span class="kr">const</span> <span class="nx">cateEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">cardId</span> <span class="o">+</span> <span class="s1">&#39;-category&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">80</span><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nx">cateEl</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">category</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">81</span><span class="cl">                    <span class="nx">cateEl</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">category</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">82</span><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="ln">83</span><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="ln">84</span><span class="cl">            <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">85</span><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Failed to fetch NeoDB data:&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">86</span><span class="cl">                <span class="c1">// 可以显示错误信息或保持默认状态
+</span></span></span><span class="line"><span class="ln">87</span><span class="cl"><span class="c1"></span>            <span class="p">});</span>
+</span></span><span class="line"><span class="ln">88</span><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="ln">89</span><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div><p>上述代码在<code>&lt;img src=&quot;&quot;</code>这一行中双引号内可以加上想要用作加载时的占位图片的链接<br>
+<em>（外链用网址即可，</em><br>
+<em>（也可以使用本地图片，将图片放在<code>项目文件夹\stastic</code>路径下，写上该文件夹内的路径即可，如<code>src=&quot;/image/neodb.jpg&quot;</code>）</em></p>
+
+<div class="highlight-with-title" data-title="markdown内写法：（删掉&lt; &gt;两侧空格）">
+
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="ln">1</span><span class="cl">{{ &lt;neodb &#34;https://neodb.social/tv/season/6tPYnexDe3m2y8m4U5YqiW&#34;&gt; }}
+</span></span><span class="line"><span class="ln">2</span><span class="cl">测试
+</span></span><span class="line"><span class="ln">3</span><span class="cl">{{ &lt;/neodb&gt; }}</span></span></code></pre></div>
+</div><p>效果：<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="db-card" id="neodb-card-6tPYnexDe3m2y8m4U5YqiW">
+    <div class="db-card-subject">
+        <div class="db-card-post">
+            <img src="/neodb.jpg" alt="加载中..." id="neodb-card-6tPYnexDe3m2y8m4U5YqiW-img" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="db-card-content">
+            <div class="db-card-title">
+                <a href="https://neodb.social/tv/season/6tPYnexDe3m2y8m4U5YqiW" class="cute" target="_blank" rel="noreferrer" id="neodb-card-6tPYnexDe3m2y8m4U5YqiW-title">
+                    加载中...
+                </a>
+            </div>
+            <div class="db-card-abstract" id="neodb-card-6tPYnexDe3m2y8m4U5YqiW-content">
+                
+                测试
+                
+            </div>
+        </div>
+        <div class="db-card-cate" id="neodb-card-6tPYnexDe3m2y8m4U5YqiW-category">...</div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cardId = 'neodb-card-6tPYnexDe3m2y8m4U5YqiW';
+        const apiUrl = 'https:\/\/neodb.social\/api\/tv\/season\/6tPYnexDe3m2y8m4U5YqiW';
+
+        if (!apiUrl) return;
+
+        
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                
+                const titleEl = document.getElementById(cardId + '-title');
+                if (titleEl && data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                
+                const imgEl = document.getElementById(cardId + '-img');
+                if (imgEl && data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || '封面图片';
+                }
+
+                
+                const contentEl = document.getElementById(cardId + '-content');
+                const customContent = '测试';
+                if (contentEl && !customContent.trim() && data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                
+                const cateEl = document.getElementById(cardId + '-category');
+                if (cateEl && data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error => {
+                console.error('Failed to fetch NeoDB data:', error);
+                
+            });
+    });
+</script></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/stack/">Stack</a>
+        
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%BF%AE/">博客装修</a>
+        
+            <a href="/tags/neodb/">NeoDB</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a> 丨 署名 · 非商业性使用 · 相同方式共享</span>
+    </section>
+    
+
+    
+</footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E4%BD%A0%E5%A5%BDstack%E4%B8%BB%E9%A2%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">你好，Stack主题</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/hugo-stack%E4%B8%BB%E9%A2%98%E4%BB%A3%E7%A0%81%E5%9D%97%E7%BE%8E%E5%8C%96/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Stack主题代码块美化</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%94%A8markdown%E5%86%99hugo%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">用Markdown写Hugo博客的一些小技巧</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E6%88%90%E7%AB%8B%E5%8D%9A%E5%AE%A2/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">成立博客</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 尺途
+    </section>
+    
+        
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了11篇文章 · 
+        总计65.89k字
+    </section>
+
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+    
+    
+    
+    <button class="toc-toggle hamburger hamburger--spin" type="button" id="toggle-toc" aria-label="Toggle table of contents">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    
+
+            </main>
+        </div>
+        <script type="text/javascript" src="/ts/main.0cfc05a2fb3e93f4fdb0c9e18b6a4c98cb32316def8db6fc5b2a1522bc17af8c.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+    @font-face {
+        font-family: 'mkty';
+        src: url(https://ryihuan.github.io/font/mkty.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Fira Code';
+        src: 
+            url('/font/fira-code/FiraCode-Light.woff2') format('woff2'),
+            url('/font/fira-code/FiraCode-Light.woff') format('woff');
+    }
+
+    :root {
+        --base-font-family: 'mkty';
+        --code-font-family: 'Fira Code', 'mkty';
+    }
+
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        z-index: 99;
+        cursor: url('/mouse/pointer.png'), pointer;
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+        background-color: var(--body-text-color);
+        mask-image: url(https://ryihuan.github.io/icons/top.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: 30px 30px;
+    }
+
+    #backTopBtn:hover {
+        transform: scale(1.1);
+        background-color: var(--light-red);
+    }
+       
+
+</style>
+
+
+
+
+
+<style>
+[data-scheme="light"] body {
+    background: url('/background/light.057962b46384af00f94f39b9d159d278a3306c2c0abb37b1ebc64ac4dd4ddb31.jpg') no-repeat center top/cover fixed;
+}
+[data-scheme="dark"] body {
+    background: url('/background/dark.a6d74c49c491cbf1c6f832e8d95ef606caf9bb6a3f1c256e21d578231d048e09.jpg') no-repeat center top/cover fixed;
+}
+</style>
+
+
+<script>
+function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+        return;
+    }
+    
+    window.addEventListener('scroll', function() {
+        
+        let openUl = document.querySelectorAll(".open");
+        if (openUl.length > 0) {
+            openUl.forEach((ul) => {
+            ul.classList.remove("open")
+            })
+        }
+        
+        let currentLi = document.querySelector(".active-class");
+        if (!currentLi) {
+            return
+        }
+        
+        if (currentLi.children.length > 1) {
+            currentLi.children[1].classList.add("open")
+        }
+        
+        let ul = currentLi.parentElement;
+        do {
+            ul.classList.add("open");
+            ul = ul.parentElement.parentElement
+        } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+}
+initTocHide()
+
+ 
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+     
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+<script>
+      
+    let s1 = '2025-09-22'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+<script>
+ 
+document.addEventListener('DOMContentLoaded', function() {
+    const pagination = document.querySelector('.pagination');
+    const pageLinks = document.querySelectorAll('.page-link');
+    let currentPage = document.querySelector('.page-link.current');
+
+    pageLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            
+            if (!this.classList.contains('current') && currentPage) {
+                currentPage.classList.add('reset-style');
+            }
+        });
+
+        link.addEventListener('mouseleave', function() {
+            
+            if (currentPage) {
+                currentPage.classList.remove('reset-style');
+            }
+        });
+    });
+});
+</script>
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(var(--card-background)));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn, .code-less-btn {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 78px;
+        background: none;
+    }
+
+    .code-less-btn {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .code-more-img, .code-less-img{
+        display: block;
+        margin: auto;
+        padding-right: 1rem;
+        width: 60px;
+        position: absolute;
+        right: 2.5rem;
+        bottom: 30px;
+    }
+
+    .code-less-img {
+        bottom: 25px !important;
+    }
+</style>
+
+
+<script>
+  function initCodeMoreBox() {
+    
+    
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        
+        document.querySelectorAll('.highlight').forEach(block => {
+            block.style.maxHeight = 'none';
+            block.style.overflow = 'auto';
+        });
+        return;
+    }
+    
+
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks || codeBlocks.length === 0) {
+        return;
+    }
+    
+    codeBlocks.forEach(codeBlock => {
+        
+        if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+            return;
+        }
+      
+        
+        const originalPosition = codeBlock.getBoundingClientRect().top + window.pageYOffset;
+      
+        
+        let codeMoreBox = document.createElement('div');
+        codeMoreBox.classList.add('code-more-box');
+        
+        
+        let codeMoreBtn = document.createElement('span');
+        codeMoreBtn.classList.add('code-more-btn');
+      
+        
+        let moreImg = document.createElement('img');
+        moreImg.classList.add('code-more-img');
+        moreImg.src = "https://ryihuan.github.io/icons/bottom.svg";
+        
+        
+        codeMoreBtn.appendChild(moreImg);
+        codeMoreBox.appendChild(codeMoreBtn);
+        codeBlock.appendChild(codeMoreBox);
+      
+        
+        codeMoreBox.addEventListener('click', function() {
+            
+            codeMoreBox.style.display = 'none';
+            
+            
+            codeBlock.classList.add('code-show');
+            
+            
+            let codeLessBox = document.createElement('div');
+            codeLessBox.classList.add('code-less-box');
+            
+            let codeLessBtn = document.createElement('span');
+            codeLessBtn.classList.add('code-less-btn');
+            
+            let lessImg = document.createElement('img');
+            lessImg.classList.add('code-less-img');
+            lessImg.src = "https://ryihuan.github.io/icons/top-pre.svg";
+            
+            
+            codeLessBtn.appendChild(lessImg);
+            codeLessBox.appendChild(codeLessBtn);
+            codeBlock.appendChild(codeLessBox);
+            
+            
+            codeLessBox.addEventListener('click', function() {
+                
+                codeLessBox.remove();
+                
+                
+                codeBlock.classList.remove('code-show');
+                
+                
+                codeMoreBox.style.display = 'block';
+                
+                
+                scrollToInitialPositionIfNeeded(originalPosition, codeBlock);
+                
+                
+                window.dispatchEvent(new Event('resize'));
+            });
+            
+            
+            window.dispatchEvent(new Event('resize'));
+        });
+    });
+}
+
+    function scrollToInitialPositionIfNeeded(originalPosition, codeBlock) {
+        
+        const viewportHeight = window.innerHeight;
+        const currentScroll = window.pageYOffset;
+        
+        
+        const isOriginalPositionInViewport = 
+        originalPosition >= currentScroll && 
+        originalPosition <= currentScroll + viewportHeight;
+        
+        
+        const codeBlockRect = codeBlock.getBoundingClientRect();
+        const isCodeBlockInViewport = 
+        codeBlockRect.top >= 0 && 
+        codeBlockRect.top <= viewportHeight;
+        
+        
+        if (!isOriginalPositionInViewport && !isCodeBlockInViewport) {
+            const header = document.querySelector('header');
+            let headerOffset = 0;
+      
+        if (header) {
+            const headerHeight = window.getComputedStyle(header).getPropertyValue('height');
+            headerOffset = parseInt(headerHeight.replace('px', '')) || 0;
+        }
+      
+        
+        const targetPosition = originalPosition - headerOffset - 20;
+      
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+      
+        console.log('触发滚动：初始位置不在视口内');
+        } else {
+        console.log('不触发滚动：初始位置或代码块在视口内');
+        }
+    }
+  
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        initCodeMoreBox();
+    });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+            const tocToggle = document.getElementById('toggle-toc');
+
+            if (tocToggle) {
+                const rightSidebar = document.querySelector('.sidebar.right-sidebar');
+
+                
+                function updateButtonVisibility() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const showThreshold = 200;
+
+                    if (scrollTop > showThreshold) {
+                        tocToggle.classList.add('visible');
+                    } else {
+                        
+                        if (!rightSidebar || !rightSidebar.classList.contains('show')) {
+                            tocToggle.classList.remove('visible');
+                        }
+                    }
+                }
+
+                
+                function debounce(func, wait) {
+                    let timeout;
+                    return function () {
+                        const context = this;
+                        const args = arguments;
+                        clearTimeout(timeout);
+                        timeout = setTimeout(() => func.apply(context, args), wait);
+                    };
+                }
+
+                
+                window.addEventListener('scroll', debounce(updateButtonVisibility, 100));
+
+                
+                setTimeout(updateButtonVisibility, 500);
+
+                
+                if (rightSidebar) {
+                    
+                    const mask = document.createElement('div');
+                    mask.className = 'toc-mask';
+                    document.body.appendChild(mask);
+
+                    
+                    tocToggle.addEventListener('click', function () {
+                        this.classList.toggle('is-active');
+                        rightSidebar.classList.toggle('show');
+                        mask.classList.toggle('show');
+                        document.body.classList.toggle('no-scroll');
+
+                        
+                        this.classList.add('visible');
+                    });
+
+                    
+                    mask.addEventListener('click', function () {
+                        tocToggle.classList.remove('is-active');
+                        rightSidebar.classList.remove('show');
+                        this.classList.remove('show');
+                        document.body.classList.remove('no-scroll');
+                    });
+
+                    
+                    document.addEventListener('keydown', function (e) {
+                        if (e.key === 'Escape' && rightSidebar.classList.contains('show')) {
+                            tocToggle.classList.remove('is-active');
+                            rightSidebar.classList.remove('show');
+                            mask.classList.remove('show');
+                            document.body.classList.remove('no-scroll');
+                        }
+                    });
+                }
+            }
+        });
+</script>
+    </body>
+</html>

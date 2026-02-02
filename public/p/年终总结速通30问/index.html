@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="再不写就2026了，写点吧">
+<title>年终总结速通30问</title>
+
+<link rel='canonical' href='https://ryihuan.github.io/p/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93%E9%80%9F%E9%80%9A30%E9%97%AE/'>
+
+<link rel="stylesheet" href="/scss/style.min.393afdb0c7704406cf19ca665dc6a24fc1658904bcbac07ecd9b0e4d49ae9a6a.css"><meta property='og:title' content="年终总结速通30问">
+<meta property='og:description' content="再不写就2026了，写点吧">
+<meta property='og:url' content='https://ryihuan.github.io/p/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93%E9%80%9F%E9%80%9A30%E9%97%AE/'>
+<meta property='og:site_name' content='某人的小窝'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='年终总结' /><meta property='article:published_time' content='2025-12-30T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-01-27T23:10:14&#43;08:00'/>
+<meta name="twitter:title" content="年终总结速通30问">
+<meta name="twitter:description" content="再不写就2026了，写点吧">
+    <link rel="shortcut icon" href="/favicon.png" />
+<script>
+
+function updateAvatar() {
+  const avatarImg = document.querySelector('.site-avatar .site-logo');
+  if (!avatarImg) return;
+  
+  const isDark = document.documentElement.getAttribute('data-scheme') === 'dark';
+  const lightSrc = avatarImg.getAttribute('data-src-light') || avatarImg.src;
+  const darkSrc = avatarImg.getAttribute('data-src-dark');
+  
+  if (darkSrc && isDark) {
+    avatarImg.src = darkSrc;
+    
+    triggerAvatarAnimation(avatarImg);
+  } else if (lightSrc && !isDark) {
+    avatarImg.src = lightSrc;
+  }
+}
+
+
+function triggerAvatarAnimation(avatarImg) {
+  avatarImg.classList.add('rotating-overshoot');
+  setTimeout(() => {
+    avatarImg.classList.remove('rotating-overshoot');
+  }, 2000); 
+}
+
+
+document.addEventListener('DOMContentLoaded', updateAvatar);
+
+
+new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.attributeName === 'data-scheme') {
+      setTimeout(updateAvatar, 50);
+    }
+  });
+}).observe(document.documentElement, { attributes: true });
+</script>
+
+
+<script>
+document.addEventListener('click', function(e) {
+    const articleDetails = e.target.closest('.article-details');
+    if (articleDetails && !e.target.closest('.article-category a')) {
+        const titleLink = articleDetails.querySelector('.article-title a');
+        if (titleLink) {
+            window.location.href = titleLink.href;
+        }
+    }
+});
+</script>
+
+    </head>
+    <body class="
+    article-page
+    
+    
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                    
+                        
+                        
+                        <img src="/img/light_hu_ef46a703a97cb3c9.jpg" 
+                            data-src-light="/img/light_hu_ef46a703a97cb3c9.jpg"
+                            data-src-dark="/img/dark_hu_206abf790e78d3dd.jpg"
+                            width="300" 
+                            height="300" 
+                            class="site-logo" 
+                            loading="lazy" 
+                            alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">某人的小窝</a></h1>
+            <h2 class="site-description">互联网有房一族。</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/life/" style="background-color: #4310db9f; color: #ffffffff;">
+                生活
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93%E9%80%9F%E9%80%9A30%E9%97%AE/">年终总结速通30问</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            再不写就2026了，写点吧
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 30, 2025</time>
+            </div>
+        
+        <div class="article-lastmod">
+                <?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <g id="g137" transform="matrix(0.344676, 0, 0, 0.344676, -1.097733, -1.110916)">
+    <path d="M 65.269 18.765 L 57.863 11.359 C 57.472 10.968 56.84 10.968 56.449 11.359 L 51.688 16.12 L 30.527 37.28 L 28.411 39.396 C 28.298000000000002 39.509 28.213 39.648 28.165 39.801 L 24.727 50.646 C 24.614 51.001 24.709 51.391 24.973 51.655 C 25.163 51.845 25.419 51.948 25.68 51.948 C 25.781 51.948 25.883 51.932 25.982 51.901 L 36.826 48.463 C 36.979 48.415 37.118 48.33 37.231 48.217 L 39.347 46.101 L 60.508 24.941 L 65.269 20.18 C 65.66 19.789 65.66 19.156 65.269 18.765 Z M 39.378 45.993 L 30.558 37.173 M 60.325 24.77 L 52.057 16.501" id="path133" style="stroke-width: 3.8587px;"/>
+    <path d="M 39.438 15.934 L 15.95 15.95 C 13.194 15.95 10.438 18.706 10.438 21.463 L 10.438 59.498 C 10.438 62.255 13.194 65.011 15.95 65.011 L 54.813 65.011 C 57.569 65.011 60.325 62.255 60.325 59.498 L 60.438 36.934" id="path135" style="stroke-width: 3.8587px;"/>
+  </g>
+</svg>
+                <time>
+                    Jan 27, 2026 23:10 CST
+                </time>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 6 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><em>我想不出太多问题来让AI来问了，挑了点答</em></p>
+<hr>
+<p>Q1. 如果用一个词/一句话定义你的2025年，会是什么？</p>
+<p>A. 单机<br>
+今年也是除了跟少数几个老朋友经常联系，线上线下都没与人深入交流的一年<br>
+即使经常联系，也不会深入去讲自己的事和想法<br>
+连游戏也只想玩单机的</p>
+<hr>
+<p>Q2. 今年年你最骄傲的成就是什么？</p>
+<p>A. 建立了个人博客<br>
+发现博客对我来说是很适合倾泻表达欲的地方</p>
+<hr>
+<p>Q3. 今年你做过最“像自己”的一件事是什么？</p>
+<p>A. 可以说是每一件<br>
+做得好的和做得不好的地方都太像自己了，反而很难回想今年有没有什么不像自己的地方</p>
+<p>如果有这么一个不像自己的时候可能是把自己的身心全盘托付给另一个独立的人吧，这样的事还没有发生过</p>
+<hr>
+<p>Q4. 哪一刻让你觉得“今年真的没白过”？</p>
+<p>A. 因为回想不起会觉得今年白过的地方，所以今年可以说是没白过吧</p>
+<hr>
+<p>Q5. 今年你最大的突破或改变是什么？</p>
+<p>A. 愿意在网上倾泻表达欲了<br>
+前面两年比较喜欢在非公开账号憋着<br>
+早几年上网其实讲话也肆无忌惮，但慢慢变得不愿意跟人交流了，现在应该是找到了更合理的倾泻表达欲的场所和方式吧（指跟少数网友交流和写博客）</p>
+<hr>
+<p>Q6. 今年最让你惊喜的一次经历是什么？</p>
+<p>A. 特摄茶话会</p>
+<hr>
+<p>Q7. 今年尝试过哪些全新的体验？</p>
+<p>A. 做菜方面吧，比较放得开手脚了，开始用一些以前不敢加的调料，比如豆豉<br>
+现在做红烧排骨和照烧鸡腿本当上手<br>
+主食也尝试添加杂粮和海苔碎，但后来觉得种类太多了懒得一样样去买，每次要用还要一样一样拿出来，又回归初心白米饭和意大利面了。</p>
+<p>饮食方面变得更能吃蔬菜了，会自己出于营养全面的考虑做一点蔬菜吃，以前只炒黄瓜、胡萝卜、番茄，今年解锁了上海青、包菜、菜心、茄子</p>
+<hr>
+<p>Q8. 今年哪件事让你走出了舒适区？</p>
+<p>A. 其实一直在舒适区打滚，不够舒适我是不会去做的，事情发展到不舒适的程度我就已经退出了</p>
+<hr>
+<p>Q9. 有没有什么“年初没想到会发生”的事？</p>
+<p>A. 目前发生的事都在能解释的范围内，也不会感到特别意外</p>
+<p>如果要有这么一件没想到发生的事可能是我去相亲结婚了吧，这件事也没有发生过</p>
+<hr>
+<p>Q10. 今年你放下了哪些过去的执念或焦虑？</p>
+<p>A. 一直会为接下来往哪个方向走而焦虑，找不到目标和方向，或者找到了就很快厌烦了<br>
+不过大部分时间也没有在焦虑，只有被现实逼迫到又需要想起这个问题才会焦虑<br>
+我觉得我现在的状态就是被温水煮的青蛙，觉得烫了才跳一下，但又没法一下跳出去，就这样混日子得过且过</p>
+<p>如果能放下这样的焦虑可能需要我找到一件可以让我执着并愿意付出长期努力的事吧</p>
+<hr>
+<p>Q11. 你对自己有了什么新的认识？</p>
+<p>A. 原来自己还挺会共情的，只是不擅长处理罢了<br>
+看到了别人的冷漠才对比发现自己在一些事上还挺能去共情的<br>
+当然只共情也没用，大多数情况我应该都是冷处理，实际上也是冷漠的</p>
+<hr>
+<p>Q12. 今年哪本书/电影/课程对你影响最大？</p>
+<p>A. 至今受游戏王5D&rsquo;s影响中<br>
+要说今年看的可能是假面骑士555吧<br>
+豪兽者也挺喜欢的，但是它没完结我不好说</p>
+<p>要说5D&rsquo;s和555有什么共同点，可能是让我感觉被作品救赎了<br>
+豪兽不好说但有我今年最喜欢的角色，也看得挺开心的</p>
+<hr>
+<p>Q13. 你培养了哪些新习惯或放弃了哪些旧习惯？</p>
+<p>A. 写博客了，但习不习惯还不好说<br>
+不能不间断地一直写，但是有想写的冲动的时候写一下还是能持续下去的吧</p>
+<p>戒奶茶咖啡中但也没成功，喝的频率低了点，现在发现咖啡因真的很影响我睡眠</p>
+<hr>
+<p>Q14. 今年你最想感谢的人是谁？为什么？</p>
+<p>A. 每一个帮助支持到我的人我都想感谢<br>
+要是没有这些人我觉得自己真的如蜉蝣如草芥了，但我还能扎根在这个地球上都是因为身边还有人支持</p>
+<hr>
+<p>Q15. 你主动建立或深化了哪些联系？</p>
+<p>A. 加入星屑实例一年了认识了一些好网友，<br>
+主动建立深化倒是很难说，比较顺其自然吧</p>
+<p>要说的话今年有主动想要改善跟我爸和他的家庭的关系，但一超出我舒适区我就又把这样的主动给中断了<br>
+我还是比较自我中心，我希望家人和我的联系建立在满足我自由的基础上</p>
+<hr>
+<p>Q16. 今年你情绪最低落的时刻是如何度过的？</p>
+<p>A. 给自己找点事做，动起来就忘了，让我回想我也想不起今年最低落到底是什么时候，当然确实存在过一些低落的时候</p>
+<hr>
+<p>Q17. 你为身心健康做过哪些努力？</p>
+<p>A. 一旦熬夜或者外食到一定程度反馈在身体上就会开始下意识控制<br>
+不过基本是坚持到状态好转之后又松懈了</p>
+<p>会下意识提醒自己22点要开始洗漱，坐久了要站起来运动一下，每天喝2L水，需要摄入蔬菜，高钠食品吃多了要多喝水<br>
+当然能不能执行就有点看心情了</p>
+<p>心态和情绪倒是一直有一套自我调节系统（？）<br>
+感觉到不太好、太沉浸在一件事上，就会努力让自己注意力转移一下，或者找朋友聊天去</p>
+<hr>
+<p>Q18. 你学会了哪些与情绪共处的方法？</p>
+<p>A. 一直以来都是冷处理抛之脑后，所以真说不上什么共处<br>
+如果要说共处可能就是习惯它存在吧，比如我的焦虑，习惯了就感觉不到存在了</p>
+<hr>
+<p>Q19. 你是如何定义“好好生活”的？今年做到了吗？</p>
+<p>A. 今年比以往任何一年都要“好好生活”<br>
+除了房子不是自己的，其他的一切生活都是自己的，在自己把控中，虽然也有不安存在但我觉得今年的状态很好了</p>
+<hr>
+<p>Q20. 有没有哪件事让你重新思考生活的意义？</p>
+<p>A. 焦虑的时候就会思考，不焦虑不思考，焦虑时候的思考也提供不了太多价值</p>
+<hr>
+<p>Q21. 今年最大的遗憾是什么？</p>
+<p>A. 好像没有什么特别值得遗憾的<br>
+要说的话可能是中日关系更紧张了搞同人更不自由了</p>
+<hr>
+<p>Q22. 今年你告别了什么（人/事/物/心态）？</p>
+<p>A. 所有过去的人事物都或多或少影响了我促成了现在的我，在我心里我没觉得我有告别过<br>
+但确实拉黑了前女友应该再也不会联系了吧，其实我不是很希望她一直存在在我拉黑列表里面，但我又怕她有机会来找我<br>
+既想又不想，真的联系过了所以最后觉得还是不联系比较好</p>
+<hr>
+<p>Q23. 如果重来，你会改变今年的哪个决定？</p>
+<p>A. 跟前女友联系<br>
+当时无视了最好，不要徒增一些没必要的记忆</p>
+<hr>
+<p>Q24. 今年你有哪些“未完成”？</p>
+<p>A. godot学了一点皮毛没继续研究了，学着学着热情就像水一样从指缝流走又晒干了</p>
+<hr>
+<p>Q25. 你的手机相册里今年最多的照片类型是？</p>
+<p>A. 猫照和特摄剧截图，还有我做的菜<br>
+其他就是生活的点点滴滴</p>
+<hr>
+<p>Q26. 今年你对自己说的最多的一句话是什么？</p>
+<p>A. 其实不会对自己说话欸，至少不会反复说一句完整的话<br>
+如果要说大脑对身体下的命令，可能是“动起来”“找点事做”之类的吧</p>
+<hr>
+<p>Q27. 明年你最想延续的状态是什么？</p>
+<p>A. 现在的状态挺好的吧，希望自己保持情绪稳定，保持健康</p>
+<hr>
+<p>Q28. 明年你决心少做什么？</p>
+<p>A. 对周围的人态度好一点吧，我希望我更多地逃避矛盾而不是去吵架<br>
+一直因为同事抽烟的事吵过不少架最后发现真的没用还不如走远点，此为《忍人是如何养成的》</p>
+<p>包括跟我爸吵的几次架我也希望我以后直接夺门而出而不是浪费口舌</p>
+<p>当然也知道有更好的更圆滑的处理方式，但我做不到，对自己、对会和我吵架的那些人我也没有那样的预期</p>
+<hr>
+<p>Q29. 你最期待2026年发生什么？</p>
+<p>A. 豪兽剧组来大陆开见面会并且我能去</p>
+<p>也希望能有多一点假期跟朋友见面 陪妈妈旅游 希望时间和金钱多到可以兼顾吧</p>
+<hr>
+<p>Q30. 明年此刻，你希望自己有哪些改变？</p>
+<p>A. 说不太好，我现在希望的改变明年此刻就不见得会希望了<br>
+而且无论怎么改变我还是在“我”的这个体系里面吧，单就我个人我觉得只要是好的改变那么怎么改变都可以</p>
+<p>只能说一些比较现实的比如希望有自己的房子并且维持现在的生活状态</p>
+<hr>
+<p>写完了，感觉明年不能写这种QA形式的了呢，好多问题感觉我一直都是差不多的做法，明年来写答案可能也差不多吧<br>
+今天刚好是博客运行100天哇咔咔</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a> 丨 署名 · 非商业性使用 · 相同方式共享</span>
+    </section>
+    
+
+    
+</footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 尺途
+    </section>
+    
+        
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了11篇文章 · 
+        总计65.89k字
+    </section>
+
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+    
+    
+    
+
+            </main>
+        </div>
+        <script type="text/javascript" src="/ts/main.0cfc05a2fb3e93f4fdb0c9e18b6a4c98cb32316def8db6fc5b2a1522bc17af8c.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+    @font-face {
+        font-family: 'mkty';
+        src: url(https://ryihuan.github.io/font/mkty.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Fira Code';
+        src: 
+            url('/font/fira-code/FiraCode-Light.woff2') format('woff2'),
+            url('/font/fira-code/FiraCode-Light.woff') format('woff');
+    }
+
+    :root {
+        --base-font-family: 'mkty';
+        --code-font-family: 'Fira Code', 'mkty';
+    }
+
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        z-index: 99;
+        cursor: url('/mouse/pointer.png'), pointer;
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease-in-out;
+        background-color: var(--body-text-color);
+        mask-image: url(https://ryihuan.github.io/icons/top.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: 30px 30px;
+    }
+
+    #backTopBtn:hover {
+        transform: scale(1.1);
+        background-color: var(--light-red);
+    }
+       
+
+</style>
+
+
+
+
+
+<style>
+[data-scheme="light"] body {
+    background: url('/background/light.057962b46384af00f94f39b9d159d278a3306c2c0abb37b1ebc64ac4dd4ddb31.jpg') no-repeat center top/cover fixed;
+}
+[data-scheme="dark"] body {
+    background: url('/background/dark.a6d74c49c491cbf1c6f832e8d95ef606caf9bb6a3f1c256e21d578231d048e09.jpg') no-repeat center top/cover fixed;
+}
+</style>
+
+
+<script>
+function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+        return;
+    }
+    
+    window.addEventListener('scroll', function() {
+        
+        let openUl = document.querySelectorAll(".open");
+        if (openUl.length > 0) {
+            openUl.forEach((ul) => {
+            ul.classList.remove("open")
+            })
+        }
+        
+        let currentLi = document.querySelector(".active-class");
+        if (!currentLi) {
+            return
+        }
+        
+        if (currentLi.children.length > 1) {
+            currentLi.children[1].classList.add("open")
+        }
+        
+        let ul = currentLi.parentElement;
+        do {
+            ul.classList.add("open");
+            ul = ul.parentElement.parentElement
+        } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+}
+initTocHide()
+
+ 
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+     
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+<script>
+      
+    let s1 = '2025-09-22'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+<script>
+ 
+document.addEventListener('DOMContentLoaded', function() {
+    const pagination = document.querySelector('.pagination');
+    const pageLinks = document.querySelectorAll('.page-link');
+    let currentPage = document.querySelector('.page-link.current');
+
+    pageLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            
+            if (!this.classList.contains('current') && currentPage) {
+                currentPage.classList.add('reset-style');
+            }
+        });
+
+        link.addEventListener('mouseleave', function() {
+            
+            if (currentPage) {
+                currentPage.classList.remove('reset-style');
+            }
+        });
+    });
+});
+</script>
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(var(--card-background)));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn, .code-less-btn {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 78px;
+        background: none;
+    }
+
+    .code-less-btn {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .code-more-img, .code-less-img{
+        display: block;
+        margin: auto;
+        padding-right: 1rem;
+        width: 60px;
+        position: absolute;
+        right: 2.5rem;
+        bottom: 30px;
+    }
+
+    .code-less-img {
+        bottom: 25px !important;
+    }
+</style>
+
+
+<script>
+  function initCodeMoreBox() {
+    
+    
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        
+        document.querySelectorAll('.highlight').forEach(block => {
+            block.style.maxHeight = 'none';
+            block.style.overflow = 'auto';
+        });
+        return;
+    }
+    
+
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks || codeBlocks.length === 0) {
+        return;
+    }
+    
+    codeBlocks.forEach(codeBlock => {
+        
+        if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+            return;
+        }
+      
+        
+        const originalPosition = codeBlock.getBoundingClientRect().top + window.pageYOffset;
+      
+        
+        let codeMoreBox = document.createElement('div');
+        codeMoreBox.classList.add('code-more-box');
+        
+        
+        let codeMoreBtn = document.createElement('span');
+        codeMoreBtn.classList.add('code-more-btn');
+      
+        
+        let moreImg = document.createElement('img');
+        moreImg.classList.add('code-more-img');
+        moreImg.src = "https://ryihuan.github.io/icons/bottom.svg";
+        
+        
+        codeMoreBtn.appendChild(moreImg);
+        codeMoreBox.appendChild(codeMoreBtn);
+        codeBlock.appendChild(codeMoreBox);
+      
+        
+        codeMoreBox.addEventListener('click', function() {
+            
+            codeMoreBox.style.display = 'none';
+            
+            
+            codeBlock.classList.add('code-show');
+            
+            
+            let codeLessBox = document.createElement('div');
+            codeLessBox.classList.add('code-less-box');
+            
+            let codeLessBtn = document.createElement('span');
+            codeLessBtn.classList.add('code-less-btn');
+            
+            let lessImg = document.createElement('img');
+            lessImg.classList.add('code-less-img');
+            lessImg.src = "https://ryihuan.github.io/icons/top-pre.svg";
+            
+            
+            codeLessBtn.appendChild(lessImg);
+            codeLessBox.appendChild(codeLessBtn);
+            codeBlock.appendChild(codeLessBox);
+            
+            
+            codeLessBox.addEventListener('click', function() {
+                
+                codeLessBox.remove();
+                
+                
+                codeBlock.classList.remove('code-show');
+                
+                
+                codeMoreBox.style.display = 'block';
+                
+                
+                scrollToInitialPositionIfNeeded(originalPosition, codeBlock);
+                
+                
+                window.dispatchEvent(new Event('resize'));
+            });
+            
+            
+            window.dispatchEvent(new Event('resize'));
+        });
+    });
+}
+
+    function scrollToInitialPositionIfNeeded(originalPosition, codeBlock) {
+        
+        const viewportHeight = window.innerHeight;
+        const currentScroll = window.pageYOffset;
+        
+        
+        const isOriginalPositionInViewport = 
+        originalPosition >= currentScroll && 
+        originalPosition <= currentScroll + viewportHeight;
+        
+        
+        const codeBlockRect = codeBlock.getBoundingClientRect();
+        const isCodeBlockInViewport = 
+        codeBlockRect.top >= 0 && 
+        codeBlockRect.top <= viewportHeight;
+        
+        
+        if (!isOriginalPositionInViewport && !isCodeBlockInViewport) {
+            const header = document.querySelector('header');
+            let headerOffset = 0;
+      
+        if (header) {
+            const headerHeight = window.getComputedStyle(header).getPropertyValue('height');
+            headerOffset = parseInt(headerHeight.replace('px', '')) || 0;
+        }
+      
+        
+        const targetPosition = originalPosition - headerOffset - 20;
+      
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+      
+        console.log('触发滚动：初始位置不在视口内');
+        } else {
+        console.log('不触发滚动：初始位置或代码块在视口内');
+        }
+    }
+  
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        initCodeMoreBox();
+    });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+            const tocToggle = document.getElementById('toggle-toc');
+
+            if (tocToggle) {
+                const rightSidebar = document.querySelector('.sidebar.right-sidebar');
+
+                
+                function updateButtonVisibility() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const showThreshold = 200;
+
+                    if (scrollTop > showThreshold) {
+                        tocToggle.classList.add('visible');
+                    } else {
+                        
+                        if (!rightSidebar || !rightSidebar.classList.contains('show')) {
+                            tocToggle.classList.remove('visible');
+                        }
+                    }
+                }
+
+                
+                function debounce(func, wait) {
+                    let timeout;
+                    return function () {
+                        const context = this;
+                        const args = arguments;
+                        clearTimeout(timeout);
+                        timeout = setTimeout(() => func.apply(context, args), wait);
+                    };
+                }
+
+                
+                window.addEventListener('scroll', debounce(updateButtonVisibility, 100));
+
+                
+                setTimeout(updateButtonVisibility, 500);
+
+                
+                if (rightSidebar) {
+                    
+                    const mask = document.createElement('div');
+                    mask.className = 'toc-mask';
+                    document.body.appendChild(mask);
+
+                    
+                    tocToggle.addEventListener('click', function () {
+                        this.classList.toggle('is-active');
+                        rightSidebar.classList.toggle('show');
+                        mask.classList.toggle('show');
+                        document.body.classList.toggle('no-scroll');
+
+                        
+                        this.classList.add('visible');
+                    });
+
+                    
+                    mask.addEventListener('click', function () {
+                        tocToggle.classList.remove('is-active');
+                        rightSidebar.classList.remove('show');
+                        this.classList.remove('show');
+                        document.body.classList.remove('no-scroll');
+                    });
+
+                    
+                    document.addEventListener('keydown', function (e) {
+                        if (e.key === 'Escape' && rightSidebar.classList.contains('show')) {
+                            tocToggle.classList.remove('is-active');
+                            rightSidebar.classList.remove('show');
+                            mask.classList.remove('show');
+                            document.body.classList.remove('no-scroll');
+                        }
+                    });
+                }
+            }
+        });
+</script>
+    </body>
+</html>
