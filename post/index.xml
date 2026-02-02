@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>某人的小窝</title>
-        <link>https://ryihuan.github.io/</link>
-        <description>Recent content on 某人的小窝</description>
+        <title>Posts on 某人的小窝</title>
+        <link>https://ryihuan.github.io/post/</link>
+        <description>Recent content in Posts on 某人的小窝</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>尺途</copyright><atom:link href="https://ryihuan.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>尺途</copyright>
+        <lastBuildDate>Sun, 19 Oct 2025 01:42:37 +0800</lastBuildDate><atom:link href="https://ryihuan.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>行测错题</title>
         <link>https://ryihuan.github.io/p/%E8%A1%8C%E6%B5%8B%E9%94%99%E9%A2%98/</link>
         <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
@@ -4206,114 +4207,6 @@ Godot实际上非常倾向于使用另一种叫做组合结构的方式。&lt;/p
 &lt;p&gt;谢谢gpt老师 deepseek老师&lt;/p&gt;
 &lt;h3 id=&#34;总之我终于可以开启博客生涯耶耶耶&#34;&gt;总之我终于可以开启博客生涯耶耶耶
 &lt;/h3&gt;</description>
-        </item>
-        <item>
-        <title>archives</title>
-        <link>https://ryihuan.github.io/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://ryihuan.github.io/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://ryihuan.github.io/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://ryihuan.github.io/search/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>关于</title>
-        <link>https://ryihuan.github.io/about/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://ryihuan.github.io/about/</guid>
-        <description>&lt;h2 id=&#34;关于博主&#34;&gt;关于博主
-&lt;/h2&gt;&lt;p&gt;没啥好说的，也没啥特别的，&lt;br&gt;
-地球OL上的NPC，互联网上的标点符号&lt;br&gt;
-伤心了会哭，高兴了会笑，生气了会小打小闹&lt;/p&gt;
-&lt;p&gt;于茫茫联邦宇宙中深居简出，你能看到我说明你视力很好&lt;/p&gt;
-&lt;h2 id=&#34;关于本博客&#34;&gt;关于本博客
-&lt;/h2&gt;&lt;h3 id=&#34;推荐打开方式&#34;&gt;推荐打开方式
-&lt;/h3&gt;&lt;p&gt;除了Stack主题自带的设置以外，博主未对移动端浏览体验做任何优化，推荐使用电脑网页端打开食用&lt;/p&gt;
-&lt;h3 id=&#34;内容转载&#34;&gt;内容转载
-&lt;/h3&gt;&lt;p&gt;请不要全文转载本博客内的任何内容&lt;br&gt;
-可以在标注来源的情况下引用或分享链接、非商业性使用本博客分享的内容&lt;/p&gt;
-&lt;h3 id=&#34;评论区的说明&#34;&gt;评论区的说明
-&lt;/h3&gt;&lt;p&gt;评论区服务由Waline提供，由Vercel部署并提供域名。&lt;br&gt;
-由于&lt;code&gt;vercel.app&lt;/code&gt;域名受到DNS污染，大陆ip地址无法访问评论区内容，也无法参与评论。&lt;/p&gt;
-&lt;p&gt;非登录状态下发表的评论只能由管理员删除。1分钟内只能评论1次。&lt;/p&gt;
-&lt;p&gt;虽然设置了评论邮箱通知，但博主并不经常检查邮件，留言也未必会得到回复，还请见谅&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>画廊</title>
-        <link>https://ryihuan.github.io/gallery/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://ryihuan.github.io/gallery/</guid>
-        <description>&lt;details&gt;&lt;summary&gt;对着墙壁说话&lt;/summary&gt;
-&lt;p&gt;当我想要设置一个版面堆放我的画的时候，我会想，我应该这么做吗？ &lt;br&gt;
-我全堆一个页面上，爬虫要爬的话不全爬了？&lt;/p&gt;
-&lt;p&gt;别人会拿我的画在我看不到的地方做什么？&lt;br&gt;
-还是说我自我意识过剩？&lt;/p&gt;
-&lt;p&gt;我做这件事是有意义的吗？还是只会对我带来潜在的负面影响？&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;整理的时候发现CSP到期有的图没导出JPG/PNG，不激活软件就打不开了，很崩溃&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;时间跨度很大，网名也换了很多，曾经发布图片的账号也注销了很多，大部分在Pixiv有留档，目前还保留了Bluesky的账号用于发布。&lt;br&gt;
-绘画环境从SAI到SAI2到CSP到Procreate。&lt;/p&gt;
-&lt;p&gt;自从用了Procreate，整体完成度都下降了，自从注销了社交媒体账号，画的东西也基本偏向于自娱自乐了&lt;/p&gt;
-&lt;hr&gt;
-&lt;/details&gt;
-&lt;h2 id=&#34;作者尺途r1a_&#34;&gt;作者：尺途（R1A_）
-&lt;/h2&gt;&lt;p&gt;收录了本人2020年至今的大部分创作，主要为同人图，角色版权归原作所有。&lt;/p&gt;
-&lt;p&gt;可能包括原作剧透、同性恋、血腥、不含性行为的色情、对原作的曲解、其他引起不适的内容&lt;br&gt;
-不建议任何16岁以下或是有雷点、洁癖的网友翻看。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;不接受批评，禁止盗图、二次创作、AI模型训练、商业性行为、任何未经授权的转载。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;相册模板来自&lt;a class=&#34;link&#34; href=&#34;https://www.blain.top/p/renovation/#%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;B1ain&amp;rsquo;s Blog：添加相册功能
-    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
-        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
-        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
-        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
-            fill=&#34;currentColor&#34;&gt;
-    &lt;/svg&gt;&lt;/span&gt;
-    
-&lt;/a&gt;，十分感谢。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>友情链接</title>
-        <link>https://ryihuan.github.io/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://ryihuan.github.io/links/</guid>
-        <description>&lt;p&gt;欢迎交换友情链接，可以在评论区留下您的网址！&lt;/p&gt;
-&lt;details&gt;&lt;summary&gt;我的友链信息&lt;/summary&gt;
-
-
-    &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;某人的小窝&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;互联网有房一族。&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://ryihuan.github.io/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://ryihuan.github.io/img/dark_hu_206abf790e78d3dd.jpg&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- To use this feature, add `links` section to frontmatter.
-
-This page&#39;s frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world&#39;s largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
-
-`image` field accepts both local and external images. --&gt;</description>
         </item>
         
     </channel>
