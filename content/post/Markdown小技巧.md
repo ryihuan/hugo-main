@@ -5,6 +5,7 @@ date: 2025-10-17
 tags: [Markdown, hugo, KaTeX, iframe, markmap]
 license: ""
 categories: diary
+comments: false
 ---
 *本文主要基于Hugo和Stack主题*
 ## 基本语法
@@ -17,6 +18,7 @@ categories: diary
 Stack主题支持KaTeX。[KaTeX数学公式](https://katex.org/docs/supported.html)  
 注意如果需要显示KaTeX公式需要在Frontmatter里写`math: true`  
 
+### 渲染问题1：转义符号无法显示
 Hugo有时会有无法正确渲染KaTeX的问题，我遇到的问题是用`$$`包裹的`%`或`\%`无法显示  
 上网搜索找到了相应的解决办法：[Chlorine：在Hugo博客中正确渲染多行数学公式](https://chlo.is/hugo-math-rendering/)
 
@@ -40,6 +42,31 @@ markup:
                           - $ # 这里
 ```
 注意输入百分号或下划线等需要转义的符号还是需要在前面加反斜杠：`\%` `\_`
+### 渲染问题2：CDN被墙
+更新一下：发现了新的问题，魔法上网KaTeX可以正确渲染，反之不能，排查后发现原因是`主题文件夹\data\external.yaml`中引用的CDN被墙  
+解决办法：  
+把`主题文件夹\data\external.yaml`（该路径仅对于Stack主题）下KaTeX的CDN地址换成墙内镜像站：    
+```yaml {title="external.yaml"}
+KaTeX:
+    # - src: https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+    - src: https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.9/katex.min.css
+      integrity: sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV
+      type: style
+
+    # - src: https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+    - src: https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.9/katex.min.js
+      integrity: sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8
+      type: script
+      defer: true
+
+    # - src: https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+    - src: https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
+      integrity: sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05
+      type: script
+      defer: true
+```
+修改后F5刷新一下本地预览页面应该就正常了
+
 ## 短代码
 可以参见[树响集：短代码应用](https://donbro.vercel.app/p/daima/#%E7%9F%AD%E4%BB%A3%E7%A0%81%E5%BA%94%E7%94%A8)，整理的很全
 ## 构建网页时不上传草稿

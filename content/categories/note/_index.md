@@ -1,5 +1,5 @@
 ---
-title: "Godot学习笔记"
+title: "个人学习笔记"
 description: ""
 slug: "note"
 image: "godot_hit_me.png"

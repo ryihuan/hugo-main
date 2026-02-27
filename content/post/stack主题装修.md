@@ -5,6 +5,7 @@ tags: ["Hugo", "Stack", "Waline", "博客装修"]
 description: "Hugo Stack 主题装修历程分享"
 draft: false
 categories: ["diary"]
+comments: false
 ---
 *本文基于Hugo版本0.150.0，Stack版本3.31.0，部分代码使用AI完成*
 
@@ -182,7 +183,7 @@ new MutationObserver(function(mutations) {
 </details>
 
 ### 编辑svg文件
-使用编辑工具对svg文件进行编辑，这里我用的是[一个免费的在线svg编辑工具（需要注册）](https://boxy-svg.com/)
+使用编辑工具对svg文件进行编辑，这里我用的是[https://boxy-svg.com/ （需要注册，15天免费试用）](https://boxy-svg.com/)  
 
 主要需要做的是先把view box调到24x24像素，再把图像调整到view box范围内，四周适当留出2px左右的空白（视具体图像而定），之后就可以保存了  
 <details><summary>展开图像</summary>  
@@ -228,6 +229,8 @@ new MutationObserver(function(mutations) {
 ### 应用到主页
 把做好的文件放到`主题目录\assets\icons\`中，并在`hugo.yaml`<small>（也可能叫`config.yaml`，我不记得我改过名字吗）</small>里修改`menu-social-icon`的设置（与文件的标题一致），这样就可以应用到博客页面上了  
 如果需要更改图标链接的顺序，在`params:`前面一行添加`weight: 数字`即可，数字越小则越前
+### 其他工具
+找资料的时候又发现一个好用的工具： https://www.svgviewer.dev/ ，有自带的素材库，可以直接改代码看效果，如果只需要基础的图标这个够用了，也比较简单
 ## 添加文章封面渐变效果
 参考了[田八-使用CSS让图片透明渐变](https://juejin.cn/post/7115236719019950088)中第三种方法的代码。
 <details><summary>效果预览</summary>

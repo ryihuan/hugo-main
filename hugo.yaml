@@ -185,7 +185,7 @@ params:
                   limit: 10
             - type: tag-cloud
               params:
-                  limit: 10
+                  limit: 6
         page:
             - type: toc
 
@@ -219,24 +219,24 @@ params:
 ### Custom menu
 ### See https://stack.jimmycai.com/config/menu
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
-menu:
-    main: []
+# menu:
+#     main: []
 
-    social:
+#     social:
 
-        - identifier: misskey
-          name: misskey
-          url: https://stelpolva.moe/@R1A_
-          weight: 1
-          params:
-              icon: misskey
+        # - identifier: misskey
+        #   name: misskey
+        #   url: https://stelpolva.moe/@R1A_
+        #   weight: 1
+        #   params:
+        #       icon: misskey
               
-        - identifier: bluesky
-          name: bluesky
-          url: https://bsky.app/profile/ber1a.bsky.social
-          weight: 2
-          params:
-              icon: bluesky
+        # - identifier: bluesky
+        #   name: bluesky
+        #   url: https://bsky.app/profile/ber1a.bsky.social
+        #   weight: 2
+        #   params:
+        #       icon: bluesky
 
 related:
     includeNewer: true
@@ -278,7 +278,7 @@ markup:
         codeFences: true
         guessSyntax: true
         lineNoStart: 1
-        lineNos: true
+        lineNos: false
         lineNumbersInTable: false
         tabWidth: 4
         style: ""

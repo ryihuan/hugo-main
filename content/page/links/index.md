@@ -14,6 +14,17 @@ links:
     description: 欢迎访问虚拟仓库
     website: https://hirate3.wordpress.com/
     image: https://hirate3.wordpress.com/wp-content/uploads/2023/03/cropped-e5b18fe5b995e688aae59bbe2409.png?w=150&h=136
+
+  - title: 咕噜咕庐
+    description: 某天，一个人类想制作一个灵魂容器…
+    website: https://blog.gulugulurave.com/
+    image: https://blog.gulugulurave.com/img/avatar.png
+
+  - title: 皮裂魂奔
+    description: 花园是病魔的大敌
+    website: https://hauntedblog.pages.dev/
+    image: https://s3.bmp.ovh/imgs/2025/08/16/6c25de4c5adba188.png
+
   # - title: TypeScript
   #   description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
   #   website: https://www.typescriptlang.org
@@ -25,9 +36,9 @@ menu:
         params:
             icon: link
 
-comments: true
+comments: false
 ---
-欢迎交换友情链接，可以在评论区留下您的网址！
+<!-- 欢迎交换友情链接，可以在评论区留下您的网址！
 <details><summary>我的友链信息</summary>
 
 ```yaml
@@ -35,7 +46,7 @@ comments: true
   description: 互联网有房一族。
   website: https://ryihuan.github.io/
   image: https://ryihuan.github.io/img/dark_hu_206abf790e78d3dd.jpg
-```
+``` -->
 
 <!-- To use this feature, add `links` section to frontmatter.
 

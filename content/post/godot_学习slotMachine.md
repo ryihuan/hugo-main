@@ -5,7 +5,9 @@ date: 2025-10-13
 tags: [Godot, Slot Machine,]
 license: ""
 categories: note
+draft: true
 image: 
+comments: false
 ---
 ## 学习目的
 前两天跟着Godot官方入门教程把“你的第一个2D游戏”做出来了（[帖子](https://ryihuan.github.io/p/%E7%AC%AC%E4%B8%80%E4%B8%AA2d%E6%B8%B8%E6%88%8F/)）  

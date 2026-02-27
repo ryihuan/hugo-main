@@ -3,13 +3,14 @@ title: 画廊
 layout: gallery
 slug: gallery
 type: gallery
+draft: true
 description: 本页面可能存在各种加载问题；已使用图片压制工具压缩
 comments: true
 menu:
     main: 
         weight: -60
         params:
-            icon: top
+            icon: gallery
 comments: false
 ---
 <details><summary>对着墙壁说话</summary>

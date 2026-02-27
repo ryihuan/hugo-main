@@ -1,0 +1,89 @@
+{{ $dbUrl := .Get 0 }}
+{{ $customContent := trim .Inner " \n\r" }}
+
+<!-- 解析 item_uuid -->
+{{ $itemUuid := "" }}
+{{ if (findRE `.*neodb\.social\/.*\/(.*)` $dbUrl) }}
+{{ $itemUuid = replaceRE `.*neodb\.social\/.*\/(.*)` "$1" $dbUrl }}
+{{ end }}
+{{ $uniqueId := (print "neodb-card-" $itemUuid) }}
+{{ $apiUrl := "" }}
+
+{{ if (findRE `^.*neodb\.social\/.*` $dbUrl) }}
+{{ $dbPath := replaceRE `.*neodb.social\/(.*\/.*)` "$1" $dbUrl }}
+{{ $apiUrl = print "https://neodb.social/api/" $dbPath }}
+{{ else }}
+{{ $apiUrl = print "https://neodb.social/api/catalog/fetch?url=" $dbUrl }}
+{{ end }}
+
+<div class="db-card" id="{{ $uniqueId }}">
+    <div class="db-card-subject">
+        <div class="db-card-post">
+            <img src="/neodb.jpg" alt="加载中..." id="{{ $uniqueId }}-img" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="db-card-content">
+            <div class="db-card-title">
+                <a href="{{ $dbUrl }}" class="cute" target="_blank" rel="noreferrer" id="{{ $uniqueId }}-title">
+                    加载中...
+                </a>
+            </div>
+            <div class="db-card-abstract" id="{{ $uniqueId }}-content">
+                {{ if $customContent }}
+                {{ $customContent | safeHTML }}
+                {{ else }}
+                <p>正在加载数据...</p>
+                {{ end }}
+            </div>
+        </div>
+        <div class="db-card-cate" id="{{ $uniqueId }}-category">...</div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cardId = '{{ $uniqueId }}';
+        const apiUrl = '{{ $apiUrl }}';
+
+        if (!apiUrl) return;
+
+        // 前端获取数据
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // 更新标题
+                const titleEl = document.getElementById(cardId + '-title');
+                if (titleEl && data.title) {
+                    titleEl.textContent = data.title;
+                }
+
+                // 更新图片
+                const imgEl = document.getElementById(cardId + '-img');
+                if (imgEl && data.cover_image_url) {
+                    imgEl.src = data.cover_image_url;
+                    imgEl.alt = data.title || '封面图片';
+                }
+
+                // 更新内容（如果没有自定义内容）
+                const contentEl = document.getElementById(cardId + '-content');
+                const customContent = '{{ $customContent }}';
+                if (contentEl && !customContent.trim() && data.brief) {
+                    contentEl.innerHTML = data.brief;
+                }
+
+                // 更新分类
+                const cateEl = document.getElementById(cardId + '-category');
+                if (cateEl && data.category) {
+                    cateEl.textContent = data.category;
+                }
+            })
+            .catch(error => {
+                console.error('Failed to fetch NeoDB data:', error);
+                // 可以显示错误信息或保持默认状态
+            });
+    });
+</script>

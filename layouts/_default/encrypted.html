@@ -1,0 +1,149 @@
+{{ define "body-class" }}
+article-page
+{{/*
+Enable the right sidebar if
+- Widget different from 'TOC' is enabled
+- TOC is enabled and not empty
+*/}}
+{{- $HasWidgetNotTOC := false -}}
+{{- $TOCWidgetEnabled := false -}}
+{{- range .Site.Params.widgets.page -}}
+{{- if ne .type "toc" -}}
+{{ $HasWidgetNotTOC = true -}}
+{{- else -}}
+{{ $TOCWidgetEnabled = true -}}
+{{- end -}}
+{{- end -}}
+
+{{- $TOCManuallyDisabled := eq .Params.toc false -}}
+{{- $TOCEnabled := and (not $TOCManuallyDisabled) $TOCWidgetEnabled -}}
+{{- $hasTOC := ge (len .TableOfContents) 100 -}}
+{{- .Scratch.Set "TOCEnabled" (and $TOCEnabled $hasTOC) -}}
+
+{{- .Scratch.Set "hasWidget" (or $HasWidgetNotTOC (and $TOCEnabled $hasTOC)) -}}
+
+{{ if (and $TOCEnabled $hasTOC) }}has-toc{{ end }}
+{{ end }}
+
+{{ define "main" }}
+{{ $password := .Params.password }}
+
+{{ if $password }}
+<script>
+    (function () {
+        var correctPwd = "{{ $password }}";
+        var passwordHint = "{{ .Params.passwordHint | default "请输入密码查看内容" }}";
+
+        // 创建密码输入界面
+        var overlay = document.createElement('div');
+        overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--base-font-family);
+    `;
+
+        overlay.innerHTML = `
+        <div style="text-align: center; width: 300px; padding: 2rem; background: var(--card-background); border-radius: var(--card-border-radius); box-shadow: var(--shadow-l2); color: var(--card-text-color-main);">
+            <h3 style="margin-bottom: 1rem; color: var(--text-color);">需要密码哟(◦'∀-◦)~☆</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--card-text-color-secondary);">${passwordHint}</p>
+            <input type="password" id="initialPassword" placeholder="密码" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid var(--border-color); border-radius: var(--tag-border-radius); background: var(--card-background); color: var(--text-color); font-size: 1rem; box-sizing: border-box;">
+            <p id="initialError" style="color: #dc3545; margin-top: 0.8rem; font-size: 1.2rem;display: none;">密码错误，请重试</p>
+            <button id="initialSubmit" style="padding: 0.8rem 2rem; background: var(--light-red); color: white; border: none; border-radius: var(--tag-border-radius); cursor: pointer; font-size: 1.7rem; width: 100%;">提交</button>
+        </div>
+    `;
+        // 禁用鼠标滚轮
+        overlay.addEventListener('wheel', function (e) {
+            e.preventDefault();
+        }, { passive: false });
+
+        overlay.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        }, { passive: false });
+        
+        document.body.appendChild(overlay);
+
+        // 获取元素
+        var passwordInput = document.getElementById('initialPassword');
+        var submitBtn = document.getElementById('initialSubmit');
+        var errorMsg = document.getElementById('initialError');
+
+        // 提交函数
+        function checkPassword() {
+            if (passwordInput.value === correctPwd) {
+                overlay.remove();
+            } else {
+                errorMsg.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        }
+
+        // 点击提交
+        submitBtn.addEventListener('click', checkPassword);
+
+        // 回车提交
+        passwordInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+
+        // 输入时隐藏错误提示
+        passwordInput.addEventListener('input', function () {
+            errorMsg.style.display = 'none';
+        });
+
+        // 自动聚焦
+        passwordInput.focus();
+    })();
+        function retrySubmit() {
+            var inputPwd = document.getElementById('retryPassword').value;
+            var correctPwd = "{{ $password }}";
+
+            if (inputPwd === correctPwd) {
+                location.reload(); // 密码正确，刷新页面重新进入（会直接通过验证）
+            } else {
+                alert('密码错误');
+            }
+        }
+</script>
+{{ end }}
+
+{{ partial "article/article.html" . }}
+
+{{ if .Params.links }}
+{{ partial "article/components/links" . }}
+{{ end }}
+
+{{ partial "article/components/related-content" . }}
+
+{{ if not (eq .Params.comments false) }}
+{{ partial "comments/include" . }}
+{{ end }}
+
+{{ partialCached "footer/footer" . }}
+
+{{ partialCached "article/components/photoswipe" . }}
+
+{{ if .Scratch.Get "TOCEnabled" }}
+<button class="toc-toggle hamburger hamburger--spin" type="button" id="toggle-toc"
+    aria-label="Toggle table of contents">
+    <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+    </span>
+</button>
+{{ end }}
+{{ end }}
+
+{{ define "right-sidebar" }}
+{{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ end}}
+{{ end }}

@@ -15,6 +15,20 @@
         {{ end }}
     </header>
 
+    <div class="tag-cloud-section widget tagCloud">
+        <h2 class="section-title widget-header">TAGS</h2>
+
+        <div class="widget-content">
+            <div class="tagCloud-tags">
+                {{ range .Site.Taxonomies.tags }}
+                <a href="{{ .Page.RelPermalink }}">
+                    {{ .Page.Title }}
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
     {{ $filtered := ($pages | intersect $notHidden) }}

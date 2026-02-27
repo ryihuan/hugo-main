@@ -378,3 +378,83 @@ document.addEventListener('DOMContentLoaded', function() {
         initCodeMoreBox();
     });
 </script>
+
+<!-- 手机网页汉堡包目录 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+            const tocToggle = document.getElementById('toggle-toc');
+
+            if (tocToggle) {
+                const rightSidebar = document.querySelector('.sidebar.right-sidebar');
+
+                // 1. 滚动显示/隐藏按钮
+                function updateButtonVisibility() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const showThreshold = 200;
+
+                    if (scrollTop > showThreshold) {
+                        tocToggle.classList.add('visible');
+                    } else {
+                        // 如果侧边栏是打开的，不要隐藏按钮
+                        if (!rightSidebar || !rightSidebar.classList.contains('show')) {
+                            tocToggle.classList.remove('visible');
+                        }
+                    }
+                }
+
+                // 防抖函数
+                function debounce(func, wait) {
+                    let timeout;
+                    return function () {
+                        const context = this;
+                        const args = arguments;
+                        clearTimeout(timeout);
+                        timeout = setTimeout(() => func.apply(context, args), wait);
+                    };
+                }
+
+                // 监听滚动
+                window.addEventListener('scroll', debounce(updateButtonVisibility, 100));
+
+                // 初始检查
+                setTimeout(updateButtonVisibility, 500);
+
+                // 2. 侧边栏控制逻辑
+                if (rightSidebar) {
+                    // 创建遮罩层
+                    const mask = document.createElement('div');
+                    mask.className = 'toc-mask';
+                    document.body.appendChild(mask);
+
+                    // 切换显示/隐藏
+                    tocToggle.addEventListener('click', function () {
+                        this.classList.toggle('is-active');
+                        rightSidebar.classList.toggle('show');
+                        mask.classList.toggle('show');
+                        document.body.classList.toggle('no-scroll');
+
+                        // 点击时确保按钮可见
+                        this.classList.add('visible');
+                    });
+
+                    // 点击遮罩层关闭
+                    mask.addEventListener('click', function () {
+                        tocToggle.classList.remove('is-active');
+                        rightSidebar.classList.remove('show');
+                        this.classList.remove('show');
+                        document.body.classList.remove('no-scroll');
+                    });
+
+                    // ESC键关闭
+                    document.addEventListener('keydown', function (e) {
+                        if (e.key === 'Escape' && rightSidebar.classList.contains('show')) {
+                            tocToggle.classList.remove('is-active');
+                            rightSidebar.classList.remove('show');
+                            mask.classList.remove('show');
+                            document.body.classList.remove('no-scroll');
+                        }
+                    });
+                }
+            }
+        });
+</script>
