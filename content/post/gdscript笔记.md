@@ -4,7 +4,7 @@ description: 对照Brackeys的GD Script视频教程做的个人学习笔记
 date: "2025-09-23"
 tags: ["Godot", "GD Script", ]
 categories: ["note"]
-draft: false
+draft: true
 comments: false
 ---
 _本来写在星屑页面上，但觉得搭个博客来写会更好阅读一些，于是就搭了这个博客（？饺子醋）_

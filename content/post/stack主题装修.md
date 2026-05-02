@@ -3,7 +3,7 @@ title: 你好，Stack主题
 date: "2025-10-01"
 tags: ["Hugo", "Stack", "Waline", "博客装修"]
 description: "Hugo Stack 主题装修历程分享"
-draft: false
+draft: true
 categories: ["diary"]
 comments: false
 ---
