@@ -1,10 +1,7 @@
-// middleware.js - 正确版本
-import { withPasswordProtect } from '@tommyvez/passfort/next';
-
-export default withPasswordProtect({
-  protectAll: true,  // 保护全站
-});
+import { withPassfort } from '@tommyvez/passfort';
 
 export const config = {
-  matcher: ['/((?!api|_next|favicon.ico).*)'],
+  matcher: ['/((?!.*\\..*|_next).*)', '/'],
 };
+
+export default withPassfort();
