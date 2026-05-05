@@ -127,18 +127,15 @@ params:
             emoji:
                 - https://gcore.jsdelivr.net/gh/Saidosi/azuki-emoji-for-waline@1.0/azukisan/
             requiredMeta: 
-                - name
-                - email
-                - url
+                - nick
+                - mail
             locale:
                 admin: 博主
                 placeholder: |-
-                    您无需登录即可发表评论。如果需要收到回复通知，请留下您的邮箱地址。
-                    非登录状态下，如果您留下邮箱，您的头像将自动获取并设置为您的邮箱账户头像。
-                    由于vercle.app域名受到DNS污染，大陆ip地址无法参与评论。
-                nick: 昵称（选填）
-                mail: 邮箱（选填）
-                link: 网址（选填）
+                    您必须填写昵称和邮箱地址才能发表评论。
+                nick: 昵称
+                mail: 邮箱
+                link: 网址
 
         twikoo:
             envId:
